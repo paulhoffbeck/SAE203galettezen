@@ -51,7 +51,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-7">
         <center>
-          <h1 class="display-4">Oups, une erreur ...</h1>
+          <h1 class="display-4">Oups..., il y a une erreur !</h1>
           <p class="lead">Il semblerait qu'il y ait eu une erreur quelque part...</p>
           <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
