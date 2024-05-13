@@ -28,7 +28,7 @@
         <center>
           <h1 class="display-4">Accès interdit</h1>
           <h1 class="display-1 text-danger font-weight-bold">403</h1>
-          <p class="lead">Désolé, vous n'avez pas la permission d'accéder à cette ressource.</p>
+          <p class="lead">Désolé mais vous n'avez pas la permission d'accéder à cette ressource.</p>
           <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
       </div>
