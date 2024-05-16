@@ -1,11 +1,15 @@
 <?php
 
 function head(){
-echo('
-<div class="bg-pastel" class=" p-3 text-white">
-  <h1 class="text-center pb-3 pt-2">GaleteZen</h1>
-</div>
-');
+echo'
+<div class="bg-pastel" class="p-3">
+  <img src="./img/logo.png" alt="Logo de GaletZen" class=" texte-center mr-3 rounded" 
+  style="max-width: 50px; max-height: 50px;">
+  <h1 class=" texte-center"> GaleteZen</h1>'; 
+  if(isset($_SESSION["prenom"])){
+    echo '<span class="text-indigo">Bonjour '.$_SESSION["prenom"].' '. $_SESSION["nom"]. ' !</span>
+        <a href="deconnexion.php" class="btn btn-outline-dark btn-sm">Deconnexion</a>';}
+  echo'</div>';
 }
 
 function  navbar(){
