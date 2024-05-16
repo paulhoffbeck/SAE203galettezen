@@ -7,14 +7,15 @@ navbar();
 
 
 ?>
-
-  
-
-
   <br><br><br><br><br><br><br><br><br><br><br>
-  
+
+<?php
+
+var_dump($_POST);
 
 
+
+?>
 <?php
 
 footer();
