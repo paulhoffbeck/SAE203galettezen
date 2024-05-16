@@ -1,4 +1,5 @@
-<?php require_once "./fonctions/main.php"; ?>
+<?php
+require_once("fonctions/main.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
