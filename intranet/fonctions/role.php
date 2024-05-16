@@ -1,5 +1,5 @@
 <?php
-echo "test2";
+
 function databaseRoleLoader(){  
     $json = file_get_contents('../database/role.json'); 
     return json_decode($json,true);
