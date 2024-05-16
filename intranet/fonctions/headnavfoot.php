@@ -21,7 +21,7 @@ echo('
                 <a class="nav-link text-white" href="index.php">Accueil</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link text-white" href="#">Inscription</a>
+                <a class="nav-link text-white" href="inscription.php">Inscription</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">Membres</a>
