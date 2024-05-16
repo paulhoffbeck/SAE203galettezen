@@ -2,28 +2,28 @@
 function connexion(){
     echo '
     <br>
-    <div class="bg-pastel">
-    <div class="card d-flex justify-content-around">
-    <div class="card-body">
     <div class="row justify-content-center">
-        <div class="col-md-6 col-sm-12 text-center">
-            <div class="login-form">
-                <form method="post">
-                <div class="form-group">
-                <label>Utilisateur :</label>
-                <input type="text" class="form-control" name="utilisateur" placeholder="Entrez votre nom d\'utilisateur">
+        <div class="col-lg-4 col-md-8 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <p> Connectez-vous pour accéder à l\'intranet </p>
+                    <div class="login-form">
+                        <form method="post">
+                        <div class="form-group">
+                        <label>Utilisateur :</label>
+                        <input type="text" class="form-control" name="utilisateur" placeholder="Entrez votre nom d\'utilisateur">
+                        </div>
+                        <div class="form-group">
+                        <label>Mot de passe :</label>
+                        <input type="password" class="form-control" name="motdepasse" placeholder="Entrez votre mot de passe">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                <label>Mot de passe :</label>
-                <input type="password" class="form-control" name="motdepasse" placeholder="Entrez votre mot de passe">
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Se connecter</button>
-                </form>
-            </div>
             </div>
         </div>
-    </div>
     </div>';
     if(isset($_POST['utilisateur']) && isset($_POST['motdepasse'])){
         $json = file_get_contents('../data/user.json');

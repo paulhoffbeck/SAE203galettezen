@@ -3,7 +3,7 @@
 function head(){
 echo('
 <div class="bg-pastel" class=" p-3 text-white">
-  <h1 class="text-center pb-3 pt-2">galetezen</h1>
+  <h1 class="text-center pb-3 pt-2">GaleteZen</h1>
 </div>
 ');
 }
@@ -54,9 +54,9 @@ echo('
     <div class="container-fluid jumbotron " style="background-color: #0078B8; ">
       <div class="row justify-content-center"> 
         <div class="col text-white m-5">
-          nous contacter : <br>
-          mail : contact@galetezen.com <br>
-          telephone : 0299123456
+          Nous contacter : <br>
+          Mail : contact@galetezen.com <br>
+          Téléphone : 02-99-12-34-56
 
         </div>
         

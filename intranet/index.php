@@ -8,7 +8,8 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <link href="css/style.css" rel="stylesheet">
   </head>
-<body>
+
+<body  class="bg-pastel">
 <?php
 require_once ("fonctions/main.php");
 
