@@ -36,7 +36,7 @@ if ($domaine == "galetezen.com") {
 }else{
   
   $to      = 'simoncollet2005@gmail.com';
-  $subject = 'le sujet est';
+  $subject = 'le sujet est super';
   $message = 'Bonjour !';
   $headers = 'From: simoncollet2005@gmail.com';
 
