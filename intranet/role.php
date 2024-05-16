@@ -1,13 +1,8 @@
-<?php
-require_once "./fonctions/main.php";
-if(isset($_POST['create_role'])){
-    // createRole($_POST['role_name']);
-}
-?>
+<?php require_once "./fonctions/main.php"; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Bootstrap 5 Example</title>
+    <title>Gestion des Rôles</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,32 +17,12 @@ if(isset($_POST['create_role'])){
                         Liste des Rôles
                     </div>
                     <div class="card-body">
+                        <?php 
+                        if(isset($_POST['create_role'])){
+                            createRole($_POST['role_name']);
+                        } ?>
                         <table class="table">
                             <tbody>
-                                <tr>
-                                    <td>Directeur Général</td>
-                                    <td>
-                                        <a href="role.php" class="btn btn-sm btn-azur">Permissions</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Directeur Marketing</td>
-                                    <td>
-                                        <a href="role.php" class="btn btn-sm btn-azur">Permissions</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Responsable Informatique</td>
-                                    <td>
-                                        <a href="role.php" class="btn btn-sm btn-azur">Permissions</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Commercial</td>
-                                    <td>
-                                        <a href="role.php" class="btn btn-sm btn-azur">Permissions</a>
-                                    </td>
-                                </tr>
                                 <tr>
                                     <form method="POST" class="form">
                                         <td>
@@ -58,21 +33,24 @@ if(isset($_POST['create_role'])){
                                         </td>
                                     </form>
                                 </tr>
+                                <?php loadRoleListe() ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9">
-                <div class="card">
-                    <div class="card-header">
-                        Modification des permissions de "Commercial"
-                    </div>
-                    <div class="card-body">
-                        
+            <?php if (isset($_GET['uid'])){ ?>
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-header">
+                            Modification des permissions de "Commercial"
+                        </div>
+                        <div class="card-body">
+                            <?php permissionEditor($_GET['uid']) ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
