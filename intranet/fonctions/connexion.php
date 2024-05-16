@@ -2,6 +2,9 @@
 function connexion(){
     echo '
     <br>
+    <div class="bg-pastel">
+    <div class="card d-flex justify-content-around">
+    <div class="card-body">
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-12 text-center">
             <div class="login-form">
@@ -18,7 +21,9 @@ function connexion(){
                 <button type="submit" class="btn btn-primary">Se connecter</button>
                 </form>
             </div>
+            </div>
         </div>
+    </div>
     </div>';
     if(isset($_POST['utilisateur']) && isset($_POST['motdepasse'])){
         $json = file_get_contents('../data/user.json');
@@ -52,6 +57,7 @@ function connexion(){
     <div class="text-center">
     <br>
     <p> Pas encore inscrit : <a href="inscription.php"> Inscrivez-vous </a> </p>
+    <br>
     </div>
     ';
 }
