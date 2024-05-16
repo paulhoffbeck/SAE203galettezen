@@ -13,8 +13,6 @@
 <?php
 function afficher_sidebar() {
   
-  echo '';
-  
   echo '<div class="col-auto col-md-3 col-xl-2 px-0 bg-white">';
   echo '<img src="logo.png" width=80 height=80 class="rounded-circle ml-3" alt="Cinque Terre">';
   echo '<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">';
@@ -47,6 +45,7 @@ function afficher_sidebar() {
   echo '</div>';
   echo '</div>';
   echo '</div>';
+
 
 }
 afficher_sidebar();
