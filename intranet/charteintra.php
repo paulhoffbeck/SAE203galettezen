@@ -1,16 +1,23 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color:#CEF1F9;">
 
-function head(){
-echo('
-<div class="bg-pastel" class=" p-3 text-white">
-  <h1 class="text-center pb-3 pt-2">GaleteZen</h1>
+
+
+
+<div style="background-color:#03045F;" class=" p-3 text-white">
+  <h1 style="color:#EEE6D8;">galetezen</h1>
+  <p style="color:#EEE6D8;"></p>
 </div>
-');
-}
 
-function  navbar(){
-echo('
-<nav class="navbar bg-azur navbar-expand-sm">
+<nav style="background-color:#0078B8;" class="navbar navbar-expand-sm">
   
           <div class="container-fluid">
             <!-- Links -->
@@ -19,7 +26,7 @@ echo('
                 <a class="nav-link text-white" href="index.php">Accueil</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link text-white" href="inscription.php">Inscription</a>
+                <a class="nav-link text-white" href="#">Inscription</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">Membres</a>
@@ -44,28 +51,32 @@ echo('
             </ul>
             </div>
         </nav>
-');
-}
 
-function footer(){
+  <div>
 
-echo('
-<footer class="footer mb-0" style="background-color: #0078B8;">
+
+  <br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+
+
+  <footer class="footer mb-0" style="background-color: #0078B8;">
     <div class="container-fluid jumbotron " style="background-color: #0078B8; ">
       <div class="row justify-content-center"> 
         <div class="col text-white m-5">
-          Nous contacter : <br>
-          Mail : contact@galetezen.com <br>
-          Téléphone : 02-99-12-34-56
+          nous contacter : <br>
+          mail : contact@galetezen.com <br>
+          telephone : 0299123456
 
         </div>
-        
+        <div class="col m-5">
+          <a href="nous.html">A Propos</a> <br>
+          <a href="aide.html"> Aide</a>
+
+
+        </div>
       </div>
     </div>
   </footer>
-');
 
-}
-
-
-?>
+</body>
+</html>
