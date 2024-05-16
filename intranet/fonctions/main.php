@@ -6,5 +6,4 @@ session_start();
 require_once('headnavfoot.php');
 require_once('connexion.php');
 require_once('role.php');
-require_once("headnavfoot.php");
 ?>
