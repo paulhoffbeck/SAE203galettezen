@@ -2,23 +2,15 @@
 
 function head(){
 echo('
-<head>
-<title>Bootstrap 5 Example</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<script src="js/bootstrap.bundle.min.js"></script>
-</head>
-<div style="background-color:#03045F;" class=" p-3 text-white">
-  <h1 style="color:#EEE6D8;">galetezen</h1>
-  <p style="color:#EEE6D8;"></p>
+<div class="bg-pastel" class=" p-3 text-white">
+  <h1 class="text-center pb-3 pt-2">GaleteZen</h1>
 </div>
 ');
 }
 
 function  navbar(){
 echo('
-<nav style="background-color:#0078B8;" class="navbar navbar-expand-sm">
+<nav class="navbar bg-azur navbar-expand-sm">
   
           <div class="container-fluid">
             <!-- Links -->
@@ -62,18 +54,15 @@ echo('
     <div class="container-fluid jumbotron " style="background-color: #0078B8; ">
       <div class="row justify-content-center"> 
         <div class="col text-white m-5">
-          nous contacter : <br>
-          mail : contact@galetezen.com <br>
-          telephone : 0299123456
+          Nous contacter : <br>
+          Mail : contact@galetezen.com <br>
+          Téléphone : 02-99-12-34-56
 
         </div>
         
       </div>
     </div>
   </footer>
-
-</body>
-</html>
 ');
 
 }
