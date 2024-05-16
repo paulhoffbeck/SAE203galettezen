@@ -48,10 +48,8 @@ function afficher_sidebar() {
 
 
 }
-afficher_sidebar();
 ?>  
-<div class="col-auto col-md-3 col-xl-2 px-0 bg-white">
-    <p>bonjour</p>
+
 
 
 
