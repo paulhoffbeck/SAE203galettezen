@@ -1,3 +1,6 @@
+<?php
+include '../functions/functions.php'
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,27 +13,9 @@
 </head>
 
 <body>
-
-    <?php session_start(); 
-    echo '<div class="container-fluid">';
-    include("sidebar.php"); 
-    echo '</div>';
-    entete();
-
-    ?>
-
-    <?php // Vérifier si l'utilisateur est connecté 
-
-    if (isset($_SESSION["username"])) { 
-        $username = $_SESSION["username"];
-    ?>
-    <div class="container">
-        <h1>Bienvenue sur mon site de partage de voiture</h1>
-        <p>Vous êtes actuellement connecté en tant que <?=  $username ?></p>
-    <?php
-    } 
-    ?>
-    <?php basdepage(); ?>
+    <div class="container-fluid">
+    <div class="row flex-nowrap">
+    
 </body>
 
 </html>
