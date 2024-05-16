@@ -26,7 +26,7 @@ function connexion(){
         </div>
     </div>';
     if(isset($_POST['utilisateur']) && isset($_POST['motdepasse'])){
-        $json = file_get_contents('../data/user.json');
+        $json = file_get_contents('./data/user.json');
         $donnee = json_decode($json, true);
 
         foreach($donnee as $user){
