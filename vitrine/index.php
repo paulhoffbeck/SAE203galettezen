@@ -15,6 +15,13 @@ include '../functions/functions.php'
 <body>
     <div class="container-fluid">
     <div class="row flex-nowrap">
+    <?php
+    afficher_sidebar();
+    ?>
+    <div class="col-auto col-md-3 col-xl-2 px-0 bg-white">
+    
+</div>
+</div>
     
 </body>
 

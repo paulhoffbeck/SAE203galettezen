@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <title>GaleteZen</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-<div class="container-fluid">
-<div class="row flex-nowrap">
 <?php
 function afficher_sidebar() {
-  
   echo '<div class="col-auto col-md-3 col-xl-2 px-0 bg-white">';
   echo '<img src="logo.png" width=80 height=80 class="rounded-circle ml-3" alt="Cinque Terre">';
   echo '<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">';
