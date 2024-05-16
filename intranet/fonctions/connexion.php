@@ -10,8 +10,8 @@ function connexion(){
                     <div class="login-form">
                         <form method="post">
                         <div class="form-group">
-                        <label>Utilisateur :</label>
-                        <input type="text" class="form-control" name="utilisateur" placeholder="Entrez votre nom d\'utilisateur">
+                        <label>Nom :</label>
+                        <input type="text" class="form-control" name="nom" placeholder="Entrez votre nom">
                         </div>
                         <div class="form-group">
                         <label>Mot de passe :</label>
@@ -25,13 +25,13 @@ function connexion(){
             </div>
         </div>
     </div>';
-    if(isset($_POST['utilisateur']) && isset($_POST['motdepasse'])){
+    if(isset($_POST['nom']) && isset($_POST['motdepasse'])){
         $json = file_get_contents('./data/user.json');
         $donnee = json_decode($json, true);
 
         foreach($donnee as $user){
             if ($user['role'] != ""){
-                if($user['utilisateur'] === $_POST['utilisateur']){
+                if($user['nom'] === $_POST['nom']){
                     if(password_verify($_POST['motdepasse'], $user['motdepasse'])){
                         $_SESSION['iud'] = $user['iud'];
                         $_SESSION['nom'] = $user['nom'];
