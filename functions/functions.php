@@ -48,6 +48,21 @@ function afficher_sidebar() {
 
 
 }
+
+function entete()
+{
+    echo '<div class="col-auto col-md-3 col-xl-2 px-0 bg-white">';
+    echo '<header class="jumbotron">';
+    echo '<div class="container">';
+    echo '<div class="row align-items-center">';
+    echo '<div class="col">';
+    echo '<h1 class="display-4">Bavard Boulevard</h1>';
+    echo '<p class="lead">Date et heure: ' . date("d/m/Y H:i:s") . '</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</header>';
+}
 ?>  
 
 
