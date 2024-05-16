@@ -1,21 +1,4 @@
 <?php
-function loadRoleListe(){  
-    try {
-        $json = file_get_contents('database/role.json'); 
-        if ($json === false) {
-            throw new Exception("Impossible de trouver la base de données des rôles.");
-        }    
-        $DB_role = json_decode($json, true);
-        if ($DB_role === null) {
-            throw new Exception("Erreur lors du charger la base de données des rôles.");
-        }
-        foreach ($DB_role as $uid => $role){
-            echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-azur'>Permissions</a></td></tr>";
-        }
-    } catch (Exception $e) {
-        echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
-    }
-}
 function createRole($name){
     try {
         $json = file_get_contents('database/role.json'); 
