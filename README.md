@@ -5,7 +5,7 @@
 - Simon Collet
 - Maxime Despres
 - Paul Hoffbeck
-- Yannick
+- Yannick Henaff
 - Téo Hubert
 
 
