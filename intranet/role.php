@@ -53,7 +53,7 @@
                 <div class="col-lg-3">
                     <div class="card">
                         <div class="card-header">
-                            Memnbres de "<?= getRoleName($_GET['uid']) ?>"
+                            Membres de "<?= getRoleName($_GET['uid']) ?>"
                         </div>
                         <div class="card-body">
                             <?php getMembreRoleListe($_GET['uid']) ?>
