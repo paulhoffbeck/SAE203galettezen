@@ -49,6 +49,11 @@ echo'<br>';
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
 
+            <div class="form-group">
+                <label for="password">Confirmation de Mot de passe :</label>
+                <input type="password" class="form-control" id="cpassword" name="cpassword" required>
+            </div>
+            
             <button type="submit" class="btn btn-azur">S'inscrire</button>
         </form>
 
