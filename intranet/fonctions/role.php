@@ -11,9 +11,9 @@ function loadRoleListe(){
         }
         foreach ($DB_role as $uid => $role){
             if(isset($_GET['uid']) && $_GET['uid'] === $uid){
-                echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-outline-ciel'>Permissions</a></td></tr>";
+                echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-outline-ciel'>Détails</a></td></tr>";
             }else{
-                echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-azur'>Permissions</a></td></tr>";
+                echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-azur'>Détails</a></td></tr>";
             }
         }
     } catch (Exception $e) {
@@ -144,10 +144,10 @@ function getMembreRoleListe($roleUID){
             throw new Exception("Erreur lors du charger la base de données des utilisateurs.");
         }
         echo "<table class='table text-center'>";
-        echo "<thead><tr><th>Prénom Nombre</th></tr></thead><tbody>";
+        echo "<thead><tr><th>Prénom Nom</th><th>Profil</th></tr></thead><tbody>";
         foreach($DB_users as $key => $data) {
             if($data['role_uid'] === $roleUID){
-                echo "<tr><td>".$data['prenom']." ".$data['nom']."</td><tr>";
+                echo "<tr><td>".$data['prenom']." ".$data['nom']."</td><td><a class='btn btn-indigo btn-sm' href=''>?</button></td><tr>";
             }
         }
         echo "</tbody></table>";
