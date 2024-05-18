@@ -1,5 +1,4 @@
-<?php
-require_once("fonctions/main.php"); ?>
+<?php require_once("fonctions/main.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,13 +40,23 @@ require_once("fonctions/main.php"); ?>
                 </div>
             </div>
             <?php if (isset($_GET['uid'])){ ?>
-                <div class="col-lg-9">
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            Modification des permissions de "Commercial"
+                            Modification des permissions de "<?= getRoleName($_GET['uid']) ?>"
                         </div>
                         <div class="card-body">
                             <?php permissionEditor($_GET['uid']) ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Memnbres de "<?= getRoleName($_GET['uid']) ?>"
+                        </div>
+                        <div class="card-body">
+                            <?php getMembreRoleListe($_GET['uid']) ?>
                         </div>
                     </div>
                 </div>

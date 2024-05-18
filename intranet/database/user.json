@@ -5,7 +5,7 @@
         "prenom": "Jean",
         "email": "jean.dupont@example.com",
         "mot_de_passe": "password123",
-        "role": "admin"
+        "role_uid": "6647aa89001db"
         },
         {
         "uid": "def456",
@@ -13,7 +13,7 @@
         "prenom": "Pierre",
         "email": "pierre.durand@example.com",
         "mot_de_passe": "password456",
-        "role": "utilisateur"
+        "role_uid": "6647aa89001db"
         },
         {
         "uid": "ghi789",
@@ -21,7 +21,7 @@
         "prenom": "Marie",
         "email": "marie.martin@example.com",
         "mot_de_passe": "password789",
-        "role": "invite"
+        "role_uid": "invite"
         }
     ]
   
