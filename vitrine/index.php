@@ -18,7 +18,7 @@ include '../functions/functions.php'
     sidebar();
     ?>
     <h2 class="text-center">Nous sommes une entreprise malouine de crêpe bretonne que nous vendons à l'international</h2>
-    <p class="text-center"> Nous fabriquons nos crêpes avec des produits locaux ! Nous fabriquons des crêtes de qualité tout en soutenant l'agriculture locale</p>
+    <p class="text-center"> Nous fabriquons nos crêpes avec des produits locaux ! Nous fabriquons des crêtes de qualité tout en soutenant l'agriculture locale. </p>
 
 
 
