@@ -1,7 +1,12 @@
-[
-    {
-        "uid": "da5ab76",
-        "name": "Directeur Général",
-        "permission": ""
+{
+    "6647aa89001db": {
+        "name": "Commercial",
+        "permissions": {
+            "admin": {
+                "manage-role": "true"
+            },
+            "modo": [],
+            "general": []
+        }
     }
-]
+}

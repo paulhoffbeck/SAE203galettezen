@@ -1,0 +1,11 @@
+{
+    "admin":{
+        "manage-role": "Créer, renommer de changer les permissions des rôles."
+    },
+    "modo":{
+        "partenaires": "Créer, modifier ou supprimer des partenaires."
+    },
+    "general":{
+        "connexion": "Permet à l'utilisateur de se connecter à son compte."
+    }
+}

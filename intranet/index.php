@@ -11,7 +11,13 @@
 
 <body  class="bg-pastel">
 <?php
+
 require_once ("fonctions/main.php");
+
+if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"]) !==true){
+  header('Location: connexion.php');
+  exit;
+}
 
 head();
 navbar();
