@@ -3,7 +3,6 @@
 function head(){
 var_dump($_SESSION);
 echo'
-
 <div class="bg-azur p-3">
   <div class="row">
     <div class="col-auto">
@@ -16,7 +15,8 @@ echo'
 </div>';
 }
 
-function  navbar(){ ?>
+function  navbar(){ 
+echo '
 <nav class="navbar navbar-expand-lg navbar-light bg-azur">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,14 +49,16 @@ function  navbar(){ ?>
           <a class="nav-link text-white" href="#">Wiki</a>
         </li>
       </ul>
-      <form class="d-flex">
-          <span class="mt-1 text-white">Bonjour Jean Marie Le Pen ! </span>
-          <a href="deconnexion.php" class="btn btn-outline-ciel btn-sm text-white">Deconnexion</a>
-      </form>
+      <form class="d-flex">';
+      if(isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
+          echo '<span class="mt-1 text-white">Bonjour '.$_SESSION['prenom'].' '.$_SESSION['nom'].'</span>
+          <a href="deconnexion.php" class="btn btn-outline-ciel btn-sm text-white">Deconnexion</a>';
+        }
+      echo '</form>
     </div>
   </div>
-</nav>
-<?php }
+</nav>';
+}
 
 function footer(){
 
