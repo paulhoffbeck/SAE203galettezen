@@ -1,11 +1,12 @@
 {
-    "6645d7de3fb04": {
+    "6647aa89001db": {
         "name": "Commercial",
-        "permissions":
-        { 
-            "admin":{
-                "mangage-role": "true"
-            }
+        "permissions": {
+            "admin": {
+                "manage-role": "true"
+            },
+            "modo": [],
+            "general": []
         }
     }
 }
