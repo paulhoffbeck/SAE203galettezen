@@ -1,27 +1,23 @@
-    [
-        {
-        "uid": "abc123",
+{
+    "abc123":{
         "nom": "Dupont",
         "prenom": "Jean",
-        "email": "jean.dupont@galetezen.com",
-        "motdepasse": "password123",
-        "role": "admin"
-        },
-        {
-        "uid": "def456",
+        "email": "jean.dupont@example.com",
+        "mot_de_passe": "password123",
+        "role_uid": "6647aa89001db"
+    },
+    "def456":{
         "nom": "Durand",
         "prenom": "Pierre",
-        "email": "pierre.durand@galetezen.com",
-        "motdepasse": "password456",
-        "role": "utilisateur"
-        },
-        {
-        "uid": "ghi789",
+        "email": "pierre.durand@example.com",
+        "mot_de_passe": "password456",
+        "role_uid": "6647aa89001db"
+    },
+    "ghi789":{
         "nom": "Martin",
         "prenom": "Marie",
-        "email": "marie.martin@galetezen.com",
-        "motdepasse": "password789",
-        "role": "invite"
-        }
-    ]
-  
+        "email": "marie.martin@example.com",
+        "mot_de_passe": "password789",
+        "role_uid": "6647aa89001db"
+    }
+}
