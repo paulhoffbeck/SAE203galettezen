@@ -2,8 +2,8 @@
 
 function head(){
 var_dump($_SESSION);
-  echo'
-<div class="bg-pastel" class="p-3">
+echo'
+  <div class="bg-pastel" class="p-3">
   <img src="./img/logo.png" alt="Logo de GaletZen" class=" texte-center mr-3 rounded" 
   style="max-width: 50px; max-height: 50px;">
   <h1 class=" texte-center"> GaleteZen</h1>'; 
@@ -18,7 +18,6 @@ echo('
 <nav class="navbar bg-azur navbar-expand-sm">
   
           <div class="container-fluid">
-            <!-- Links -->
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link text-white" href="index.php">Accueil</a>
