@@ -24,6 +24,7 @@ navbar();
 
 <?php
 
+
 var_dump($_POST);
 
 $mail = $_POST["email"];
