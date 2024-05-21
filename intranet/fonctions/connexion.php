@@ -15,7 +15,7 @@ function connexion(){
                         </div>
                         <div class="form-group">
                         <label>Mot de passe :</label>
-                        <input type="password" class="form-control" name="motdepasse" placeholder="Entrez votre mot de passe">
+                        <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe">
                         </div>
                         <br>
                         <button type="submit" class="btn btn-primary">Se connecter</button>
@@ -25,23 +25,22 @@ function connexion(){
             </div>
         </div>
     </div>';
-    if(isset($_POST['nom']) && isset($_POST['motdepasse'])){
+    if(isset($_POST['nom']) && isset($_POST['mot_de_passe'])){
         $json = file_get_contents('./database/user.json');
         $donnee = json_decode($json, true);
 
-        foreach($donnee as $user){
-            if ($user['role'] != ""){
+        foreach($donnee as $uid => $user){
+            if ($user['role_uid'] != ""){
                 if($user['nom'] === $_POST['nom']){
-                    //if(password_verify($_POST['motdepasse'], $user['motdepasse'])){
-                        $_SESSION['iud'] = $user['iud'];
+                    //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
+                        $_SESSION['iud'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
                         $_SESSION['email'] = $user['email'];
-                        $_SESSION['motdepasse'] = $user['motdepasse'];
+                        $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
                         $_SESSION['role_uid'] = $user['role_uid'];
-                        echo "<a href='index.php'> Connexion validé</a>";
-                        header("Refresh:0");
-                        return;
+                        header('Location: index.php');
+                        exit;
                     /*}
                     else {
                         echo "Mot de passe incorrect.";              

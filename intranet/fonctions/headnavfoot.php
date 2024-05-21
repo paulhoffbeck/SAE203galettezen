@@ -18,7 +18,6 @@ echo('
 <nav class="navbar bg-azur navbar-expand-sm">
   
           <div class="container-fluid">
-            <!-- Links -->
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link text-white" href="index.php">Accueil</a>
