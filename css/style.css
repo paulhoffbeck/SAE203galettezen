@@ -1,0 +1,223 @@
+/* Class de la couleurs Ketchup */
+.bg-ketchup {
+    background-color: #A7001E !important;
+}
+.text-ketchup {
+    color: #A7001E !important;
+}
+.border-ketchup {
+    border-color: #A7001E !important;
+}
+.btn-ketchup {
+    color: #fff;
+    background-color: #A7001E;
+    border-color: #A7001E;
+}
+.btn-ketchup:hover {
+    color: #fff;
+    background-color: #93001A;
+    border-color: #870018;
+}
+.list-group-item-ketchup {
+    color: #A7001E;
+    background-color: #FCE4EC;
+}
+.list-group-item-ketchup.active {
+    color: #fff;
+    background-color: #A7001E;
+    border-color: #A7001E;
+}
+.badge-ketchup {
+    color: #fff;
+    background-color: #A7001E;
+}
+.table-ketchup, .table-ketchup > th, .table-ketchup > td {
+    background-color: #FCE4EC;
+}
+.table-bordered.table-ketchup, .table-bordered.table-ketchup > th, .table-bordered.table-ketchup > td {
+    border: 1px solid #A7001E;
+}
+.table-hover .table-ketchup:hover, .table-hover .table-ketchup:hover > th, .table-hover .table-ketchup:hover > td {
+    background-color: #FFD7E6;
+}
+
+
+
+
+/* Class de la couleurs Moutarde */
+.bg-moutarde {
+    background-color: #DAAB3A !important;
+}
+.text-moutarde {
+    color: #DAAB3A !important;
+}
+.border-moutarde {
+    border-color: #DAAB3A !important;
+}
+.btn-moutarde {
+    color: #fff;
+    background-color: #DAAB3A;
+    border-color: #DAAB3A;
+}
+.btn-moutarde:hover {
+    color: #fff;
+    background-color: #B48225;
+    border-color: #A27721;
+}
+.list-group-item-moutarde {
+    color: #DAAB3A;
+    background-color: #FEF3C3;
+}
+.list-group-item-moutarde.active {
+    color: #fff;
+    background-color: #DAAB3A;
+    border-color: #DAAB3A;
+}
+.badge-moutarde {
+    color: #fff;
+    background-color: #DAAB3A;
+}
+.table-moutarde, .table-moutarde > th, .table-moutarde > td {
+    background-color: #FEF3C3;
+}
+.table-bordered.table-moutarde, .table-bordered.table-moutarde > th, .table-bordered.table-moutarde > td {
+    border: 1px solid #DAAB3A;
+}
+.table-hover .table-moutarde:hover, .table-hover .table-moutarde:hover > th, .table-hover .table-moutarde:hover > td {
+    background-color: #FEEFA5;
+}
+
+
+
+/* Class de la couleurs Crue */
+.bg-crue {
+    background-color: #EEE6D8 !important;
+}
+.text-crue {
+    color: #EEE6D8 !important;
+}
+.border-crue {
+    border-color: #EEE6D8 !important;
+}
+.btn-crue {
+    color: #000;
+    background-color: #EEE6D8;
+    border-color: #EEE6D8;
+}
+.btn-crue:hover {
+    color: #000;
+    background-color: #DCD1BE;
+    border-color: #D2C1A1;
+}
+.list-group-item-crue {
+    color: #EEE6D8;
+    background-color: #F7F4EC;
+}
+.list-group-item-crue.active {
+    color: #000;
+    background-color: #EEE6D8;
+    border-color: #EEE6D8;
+}
+.badge-crue {
+    color: #000;
+    background-color: #EEE6D8;
+}
+.table-crue, .table-crue > th, .table-crue > td {
+    background-color: #F7F4EC;
+}
+.table-bordered.table-crue, .table-bordered.table-crue > th, .table-bordered.table-crue > td {
+    border: 1px solid #EEE6D8;
+}
+.table-hover .table-crue:hover, .table-hover .table-crue:hover > th, .table-hover .table-crue:hover > td {
+    background-color: #F0EBE0;
+}
+
+
+
+/* Class de la couleurs Cuit */
+.bg-cuit {
+    background-color: #B67332 !important;
+}
+.text-cuit {
+    color: #B67332 !important;
+}
+.border-cuit {
+    border-color: #B67332 !important;
+}
+.btn-cuit {
+    color: #fff;
+    background-color: #B67332;
+    border-color: #B67332;
+}
+.btn-cuit:hover {
+    color: #fff;
+    background-color: #9E5A27;
+    border-color: #944E24;
+}
+.list-group-item-cuit {
+    color: #B67332;
+    background-color: #FEE8D7;
+}
+.list-group-item-cuit.active {
+    color: #fff;
+    background-color: #B67332;
+    border-color: #B67332;
+}
+.badge-cuit {
+    color: #fff;
+    background-color: #B67332;
+}
+.table-cuit, .table-cuit > th, .table-cuit > td {
+    background-color: #FEE8D7;
+}
+.table-bordered.table-cuit, .table-bordered.table-cuit > th, .table-bordered.table-cuit > td {
+    border: 1px solid #B67332;
+}
+.table-hover .table-cuit:hover, .table-hover .table-cuit:hover > th, .table-hover .table-cuit:hover > td {
+    background-color: #FED9B7;
+}
+
+
+
+/* Class de la couleurs brule */
+.bg-brule {
+    background-color: #93441A !important;
+}
+.text-brule {
+    color: #93441A !important;
+}
+.border-brule {
+    border-color: #93441A !important;
+}
+.btn-brule {
+    color: #fff;
+    background-color: #93441A;
+    border-color: #93441A;
+}
+.btn-brule:hover {
+    color: #fff;
+    background-color: #7B3814;
+    border-color: #712F12;
+}
+.list-group-item-brule {
+    color: #93441A;
+    background-color: #F8E4DB;
+}
+.list-group-item-brule.active {
+    color: #fff;
+    background-color: #93441A;
+    border-color: #93441A;
+}
+.badge-brule {
+    color: #fff;
+    background-color: #93441A;
+}
+.table-brule, .table-brule > th, .table-brule > td {
+    background-color: #F8E4DB;
+}
+.table-bordered.table-brule, .table-bordered.table-brule > th, .table-bordered.table-brule > td {
+    border: 1px solid #93441A;
+}
+.table-hover .table-brule:hover, .table-hover .table-brule:hover > th, .table-hover .table-brule:hover > td {
+    background-color: #F3D5C9;
+}

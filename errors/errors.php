@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erreur <?= $_GET['code'] ?></title>
   <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
   <style>
     html, body {
       height: 100%;
@@ -28,7 +28,7 @@
         <center>
           <h1 class="display-4">Accès interdit</h1>
           <h1 class="display-1 text-danger font-weight-bold">403</h1>
-          <p class="lead">Désolé, vous n'avez pas la permission d'accéder à cette ressource.</p>
+          <p class="lead">Vous ne pouvez pas accéder à cette ressource, désolé.</p>
           <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
       </div>
@@ -51,7 +51,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-7">
         <center>
-          <h1 class="display-4">Oups, une erreur ...</h1>
+          <h1 class="display-4">Oups..., il y a une erreur !</h1>
           <p class="lead">Il semblerait qu'il y ait eu une erreur quelque part...</p>
           <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
@@ -61,5 +61,6 @@
       </div>
     </div>
   <?php } ?>
+  <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
