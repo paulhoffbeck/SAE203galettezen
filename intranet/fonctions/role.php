@@ -155,4 +155,23 @@ function getMembreRoleListe($roleUID){
         echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
     }
 }
-?>    
+function loadSessionPermissions($roleUID) {
+    try {
+        $json = file_get_contents('database/role.json'); 
+        if ($json === false) {
+            throw new Exception("Impossible de trouver la base de données des rôles.");
+        }    
+        $DB_role = json_decode($json, true);
+        $_SESSION['role_name'] = $DB_role[$roleUID]['name'];
+        $_SESSION['role_permissions'] = $DB_role[$roleUID]['permissions'];
+    } catch (Exception $e) {
+        echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
+    }
+}
+function hasPermission($categorie,$permission){
+    if(isset($_SESSION['role_permission'][$categorie][$permission])){
+        return true;
+    }else{
+        return false;
+    }
+} ?>    
