@@ -2,8 +2,8 @@
 
 function head(){
 var_dump($_SESSION);
-  echo'
-<div class="bg-pastel" class="p-3">
+echo'
+  <div class="bg-pastel" class="p-3">
   <img src="./img/logo.png" alt="Logo de GaletZen" class=" texte-center mr-3 rounded" 
   style="max-width: 50px; max-height: 50px;">
   <h1 class=" texte-center"> GaleteZen</h1>'; 

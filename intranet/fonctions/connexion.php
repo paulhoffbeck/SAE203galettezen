@@ -6,8 +6,11 @@ function connexion(){
         <div class="col-lg-4 col-md-8 col-12">
             <div class="card">
                 <div class="card-body">
-                    <p> Connectez-vous pour accéder à l\'intranet </p>
-                    <div class="login-form">
+                    <p> Connectez-vous pour accéder à l\'intranet </p>';
+                    if(isset($_SESSION['nom']) && isset($_SESSION['mot_de_passe'])){
+                        echo '<a href="index.php"> Connexion validé, rendez-vous à l\'acceuil</a>';
+                    }
+                    echo '<div class="login-form">
                         <form method="post">
                         <div class="form-group">
                         <label>Nom :</label>
@@ -39,8 +42,7 @@ function connexion(){
                         $_SESSION['email'] = $user['email'];
                         $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
                         $_SESSION['role_uid'] = $user['role_uid'];
-                        header('Location: index.php');
-                        exit;
+                        header("Refresh:0");
                     /*}
                     else {
                         echo "Mot de passe incorrect.";              
