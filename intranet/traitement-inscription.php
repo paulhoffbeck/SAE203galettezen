@@ -24,9 +24,6 @@ navbar();
 
 <?php
 
-if ($_POST["password"]==$_POST["cpassword"]) {
-  echo("parfait");
-}
 
 var_dump($_POST);
 

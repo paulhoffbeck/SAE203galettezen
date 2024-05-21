@@ -28,12 +28,12 @@ echo'<br>';
 
     <div class="card-body">
         
-    <form action="traitement-inscription.php" method="post" class="mt-3">
+    <form action="inscription.php" method="post" class="mt-3">
             <div class="form-group">
                 <label for="nom">Nom :</label>
                 <input type="text" class="form-control" id="nom" name="nom" required>
             </div>
-
+            <input type="hidden" class="form-control" id="uid" name="uid" value=<?php echo('"'.uniqid().'"'); ?>>
             <div class="form-group">
                 <label for="prenom">Prénom :</label>
                 <input type="text" class="form-control" id="prenom" name="prenom" required>
@@ -53,6 +53,42 @@ echo'<br>';
                 <label for="password">Confirmation de Mot de passe :</label>
                 <input type="password" class="form-control" id="cpassword" name="cpassword" required>
             </div>
+            <?php
+                $verif = True;
+                if(isset($_POST["password"]) && isset($_POST["cpassword"])){
+                  if ($_POST["password"]!=$_POST["cpassword"]) {
+                    echo("<p class='text-danger'>mauvais mot de passe</p>");
+                    $verif = False;
+                  }
+                  
+                //   header('Location: traitement-inscription.php');
+
+
+
+                    var_dump($_POST);
+
+                    $mail = $_POST["email"];
+                    $domaine = explode("@",$mail)[1];
+
+                    var_dump($domaine);
+
+                    if ($domaine != "galetezen.com") {
+                    echo("l'adresse mail n'appartient pas au domaine de l'entrprise.");
+                    }else{
+                    
+                    // $to      = 'simoncollet2005@gmail.com';
+                    // $subject = 'le sujet est super';
+                    // $message = 'Bonjour !';
+                    // $headers = 'From: simoncollet2005@gmail.com';
+
+                    // mail($to, $subject, $message, $headers);
+                    
+                    $alea = rand(000000,999999);
+                    echo($alea);
+
+                    }
+                }
+            ?>
             
             <button type="submit" class="btn btn-azur">S'inscrire</button>
         </form>
