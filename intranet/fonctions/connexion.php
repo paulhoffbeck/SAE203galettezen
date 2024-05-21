@@ -37,7 +37,7 @@ function connexion(){
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
                         $_SESSION['motdepasse'] = $user['motdepasse'];
-                        $_SESSION['role'] = $user['role'];
+                        $_SESSION['role_uid'] = $user['role_uid'];
                         echo "<a href='index.php'> Connexion validé</a>";
                         header("Refresh:0");
                         return;
