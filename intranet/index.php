@@ -14,7 +14,7 @@
 
 require_once ("fonctions/main.php");
 
-if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"]) !==true){
+if(!isset($_SESSION["prenom"]) && !isset($_SESSION["nom"]) !==true){
   header('Location: connexion.php');
   exit;
 }
