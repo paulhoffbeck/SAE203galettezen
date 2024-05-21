@@ -1,7 +1,4 @@
 <?php
-
-
-
 function sidebar() {
     echo '<div class="col-sm-2 bg-ketchup">';
     echo '  <img src="../logo.png" width="80" height="80" class="rounded-circle ml-3" alt="Logo">';
@@ -37,3 +34,6 @@ function sidebar() {
     echo '  </nav>';
     echo '</div>';
 }
+
+
+?> 
