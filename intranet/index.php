@@ -11,7 +11,7 @@
 
 <body  class="bg-pastel">
 <?php
-require_once("fonctions/main.php");
+require_once ("fonctions/main.php");
 
 head();
 navbar();
