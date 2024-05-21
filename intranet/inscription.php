@@ -14,14 +14,13 @@
 require_once("fonctions/main.php");
 
 head();
-navbar();
 
 echo'<br>';
 
 
 ?>
 
-<h1>inscription</h1>
+<h1>Inscription</h1>
 
 
 <div class="card">
