@@ -169,7 +169,7 @@ function loadSessionPermissions($roleUID) {
     }
 }
 function hasPermission($categorie,$permission){
-    if(isset($_SESSION['role_permission'][$categorie][$permission])){
+    if(isset($_SESSION['role_permission'][$categorie][$permission]) && $_SESSION['role_permission'][$categorie][$permission] === "true"){
         return true;
     }else{
         return false;

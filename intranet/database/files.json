@@ -46,7 +46,12 @@
         "owner": "086bae09778db_",
         "size": 31351,
         "share": {
-            "type": "private"
+            "type": "public",
+            "access": {
+                "public": [
+                    "download"
+                ]
+            }
         }
     }
 }
