@@ -14,11 +14,10 @@ include '../functions/functions.php'
 </head>
 
 <body>
-<body>
 
 <div class="d-flex">
-  <div id="sidebar" class="bg-dark text-white p-3">
-    <h4>Sidebar</h4>
+  <div id="sidebar" class="bg-ketchup text-white p-3" style="display: none;">
+    <h4>Au menu :</h4>
     <ul class="list-unstyled">
       <li><a href="#" class="text-white">Item 1</a></li>
       <li><a href="#" class="text-white">Item 2</a></li>
@@ -26,15 +25,19 @@ include '../functions/functions.php'
     </ul>
   </div>
 
-  <div id="content" class="p-3 flex-grow-1">
-    <button id="toggleButton" class="btn btn-primary mb-3">
-        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-    </button>
-    <h1>Contenu Principal</h1>
-    <p>Voici le contenu principal de la page.</p>
+  <div class="p-3 flex-grow-1 bg-crue">
+    <div class="d-flex mb-3">
+      <button id="toggleButton" class="btn btn-ketchup mr-2">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <h1 class="mb-0 mx-auto">GaleteZen</h1>
+    </div>
+    <p class="text-center">Voici le contenu principal de la page.</p>
   </div>
-</div>
 
+
+
+</div>
 <script>
   document.getElementById('toggleButton').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar');
@@ -44,6 +47,11 @@ include '../functions/functions.php'
       sidebar.style.display = 'none';
     }
   });
+
 </script>
 
 </body>
+<footer class="bg-ketchup">
+test
+</footer>
+</html>
