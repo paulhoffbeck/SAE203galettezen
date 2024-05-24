@@ -18,15 +18,27 @@ include '../functions/functions.php';
             <?php
               sidebar();
               ?>
-            <div id="content" class="p-3 flex-grow-1">
-                <button id="toggleButton" class="btn btn-ketchup mb-3">
-                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-                </button>
+            <div class="p-3 flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+            <button id="toggleButton" class="btn btn-ketchup">
+                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                    </button>        
+            <div class="d-flex align-items-center">
+                        <img src="../intranet/img/logo.png" alt="logo" style="width: 80px;">
+                        
+                    </div>
+                </div>
+
                 <div class="text-center">
                     <h1>GaleteZen</h1>
-                    <p>Entreprise malouine de crêpes et galettes</p>
+                    <h5>Entreprise malouine de crêpes et galettes</h5>
+                    <p>France, Allemagne, Etats-Unis, Japon, Russie, Afrique du Sud... Grâce à nous la bonne galette bretonne est exportée partout dans le monde !</p>
+                    <p>Avec des produits locaux et de qualités, emportez un bout de Bretagne partout dans le monde avec GaleteZen</p>
+                    <h3>Quelques exemples de nos produits :<h3>
                 </div>
-                <div id="demo" class="carousel slide bg-crue" data-bs-ride="carousel">
+               
+
+                <div class="carousel slide bg-crue" id="demo" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
                         <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -35,17 +47,17 @@ include '../functions/functions.php';
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <img src="../intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 img-fluid">
+                                <img src="../intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                                <img src="../intranet/img/sitevitrine/galete2.jpg" alt="galette2" class="d-block w-50 img-fluid">
+                            <img src="../intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                                <img src="../intranet/img/sitevitrine/Galete4.jpeg" alt="galete3" class="d-block w-50 img-fluid">
+                            <img src="../intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                     </div>
@@ -63,5 +75,7 @@ include '../functions/functions.php';
       action();
     </script>
 </body>
-<footer class="bg-crue">test</footer>
+<?php
+footer();
+?>
 </html>
