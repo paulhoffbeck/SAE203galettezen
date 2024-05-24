@@ -313,6 +313,7 @@ function SelectionContextMenuDetails($elementUID) {
             document.getElementById('NameEditorForm').classList.remove('d-none');
         }
     </script>
+    <?php footer(); ?>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
