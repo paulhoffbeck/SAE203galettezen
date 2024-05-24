@@ -25,6 +25,15 @@
             }
         }
     },
+    "6650c5e9ca0c0": {
+        "name": "Test",
+        "parent_uid": "racine",
+        "type": "folder",
+        "owner": "086bae09778db",
+        "share": {
+            "type": "private"
+        }
+    },
     "664b722d4be1f": {
         "name": "T\u00e9o 2",
         "parent_uid": "racine",
