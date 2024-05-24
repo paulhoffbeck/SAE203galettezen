@@ -174,4 +174,12 @@ function hasPermission($categorie,$permission){
     }else{
         return false;
     }
-} ?>    
+} 
+
+function alreadylogin(){
+if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
+    header('Location: connexion.php');
+    exit;
+  }
+}
+?>    
