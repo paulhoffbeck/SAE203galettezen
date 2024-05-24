@@ -64,12 +64,12 @@ echo'<br>';
 
 
 
-                    var_dump($_POST);
+                    //var_dump($_POST);
 
                     $mail = $_POST["email"];
                     $domaine = explode("@",$mail)[1];
 
-                    var_dump($domaine);
+                    //var_dump($domaine);
 
                     if ($domaine != "galetezen.com") {
                     echo("l'adresse mail n'appartient pas au domaine de l'entrprise.");
@@ -97,11 +97,11 @@ echo'<br>';
                         "role_uid"=> "",
                         "validation" => $_SESSION["nombre_aleatoire"]);
 
-                    var_dump($userTable);
+                    //var_dump($userTable);
 
 
-                    $_SESSION["nombre_aleatoire"]=$alea;
-                    $file = json_encode($userTable);
+                    $_SESSION["nombre_aleatoire"]=password_hash($alea, PASSWORD_DEFAULT);
+                    $file = json_encode($userTable, JSON_PRETTY_PRINT);
                     file_put_contents("database/user.json",$file);
                     
                     header('Location: traitement-inscription.php');

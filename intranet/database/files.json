@@ -53,5 +53,15 @@
                 ]
             }
         }
+    },
+    "664e574dd2a4d": {
+        "name": "Palette_couleur.pdf - raccourci",
+        "type": "shortcut",
+        "parent_uid": "664b722d4be1f",
+        "link": "664b7250b2164",
+        "owner": "086bae09778db",
+        "share": {
+            "type": "private"
+        }
     }
 }
