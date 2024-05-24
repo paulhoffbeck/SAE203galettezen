@@ -116,3 +116,9 @@ function Aff_Users_Options(){
         }
     }
 }
+function Aff_Roles_Options(){
+    $roleTable = loadJson('database/role.json');
+    foreach ($roleTable as $key => $role) {
+        echo("<option value='".$key."'>".$role["name"]."</option>");
+    }
+}

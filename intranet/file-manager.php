@@ -141,7 +141,12 @@ function SelectionContextMenuDetails($elementUID) {
                                         <tr>
                                             <td>
                                                 <select class="form-control form-control-sm" id="userSelect">
-                                                    <?php Aff_Users_Options() ?>
+                                                    <optgroup label="Utilisateurs">
+                                                        <?php Aff_Users_Options() ?>
+                                                    </optgroup>
+                                                    <optgroup label="Groupes">
+                                                        <?php Aff_Roles_Options() ?>
+                                                    </optgroup>
                                                 </select>
                                             </td>
                                             <td><span class="btn btn-sm btn-ciel" id="addButton">+</span></td>
