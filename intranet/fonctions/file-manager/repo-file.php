@@ -84,4 +84,24 @@ if(isset($_POST['renameElement'])){
     $DB_files[$elementUID]['name'] = $_POST['NewName'];
     saveJson('database/files.json', $DB_files);
 }
-
+if(isset($_POST['create_shortcut'])){
+    $elementUID = $_POST['create_shortcut'];
+    $uid = uniqid();
+    $DB_files = loadJson('database/files.json');
+    $DB_files[$uid]['name'] = $DB_files[$elementUID]['name']." - raccourci";
+    $DB_files[$uid]['type'] = "shortcut";
+    $DB_files[$uid]['parent_uid'] = $DB_files[$elementUID]['parent_uid'];
+    $DB_files[$uid]['link'] = $elementUID;
+    $DB_files[$uid]['owner'] = $_SESSION['uid'];
+    $DB_files[$uid]['share']['type'] = "private";
+    saveJson('database/files.json', $DB_files);
+}
+if(isset($_POST['move_file_here'])){
+    $DB_files = loadJson('database/files.json');
+    if($DB_files[$move_file]['owner'] == $_SESSION['uid']){
+        $move_file = $_GET['move'];
+        $DB_files[$move_file]['parent_uid'] = $_GET['path'];
+        saveJson('database/files.json', $DB_files);
+    }
+    header('Location: ?path='.$_GET['path']);
+}
