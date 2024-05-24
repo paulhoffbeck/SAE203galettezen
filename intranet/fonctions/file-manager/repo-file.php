@@ -1,4 +1,6 @@
 <?php
+$_ENV['FILE_REPOSITORY'] = "/var/repository/";
+
 function loadJson($filename) {
     $data = file_get_contents($filename);
     return json_decode($data, true);
@@ -49,7 +51,7 @@ function UploadFile($post,$files){
             $fileName = $files['file']['name'];
             $fileSize = $files['file']['size'];
             $uid = uniqid();
-            $dest_path = './uploads/' . $uid;
+            $dest_path = $_ENV['FILE_REPOSITORY'].$uid;
             if (move_uploaded_file($fileTmpPath, $dest_path)) {
                 $DB_files[$uid] = array(
                     'name' => $fileName, // le nom original du fichier
