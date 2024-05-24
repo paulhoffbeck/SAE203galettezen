@@ -27,11 +27,8 @@ echo '
         <li class="nav-item">
           <a class="nav-link text-white" href="index.php">Accueil</a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link text-white" href="inscription.php">Inscription</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Moderation</a>
+          <a class="nav-link text-white" href="role.php">Rôles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Fournisseurs</a>
@@ -46,7 +43,7 @@ echo '
           <a class="nav-link text-white" href="file-manager?path=racine">Fichiers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Wiki</a>
+          <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
         </li>
       </ul>
       <form class="d-flex">';
