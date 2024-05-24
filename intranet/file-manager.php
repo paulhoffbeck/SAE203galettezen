@@ -89,7 +89,7 @@ function SelectionContextMenuDetails($elementUID) {
                 <button type="submit" name="create_shortcut" value="<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-link"></i> Raccourcis</button>
                 <a href="?path=<?= $DB_files[$elementUID]['parent_uid'] ?>&move=<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-up-down-left-right"></i> Déplacer</a>
                 <button type="button" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
-            </div>
+            </form>
         </div>
         <?php if(FindPermissions($elementUID,$_SESSION['uid'],"perms")){ ?>
             <div class="collapse mt-3" id="editPermissions">
@@ -141,10 +141,12 @@ function SelectionContextMenuDetails($elementUID) {
                                         <tr>
                                             <td>
                                                 <select class="form-control form-control-sm" id="userSelect">
-                                                    <option value="XJ7K4Z">Jean Marc</option>
-                                                    <option value="T8G2YD">Louise</option>
-                                                    <option value="WQ1M9L">Pierre</option>
-                                                    <option value="P5RV2H">Marie</option>
+                                                    <optgroup label="Utilisateurs">
+                                                        <?php Aff_Users_Options() ?>
+                                                    </optgroup>
+                                                    <optgroup label="Groupes">
+                                                        <?php Aff_Roles_Options() ?>
+                                                    </optgroup>
                                                 </select>
                                             </td>
                                             <td><span class="btn btn-sm btn-ciel" id="addButton">+</span></td>
@@ -311,6 +313,7 @@ function SelectionContextMenuDetails($elementUID) {
             document.getElementById('NameEditorForm').classList.remove('d-none');
         }
     </script>
+    <?php footer(); ?>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

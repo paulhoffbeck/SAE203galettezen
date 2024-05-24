@@ -9,49 +9,7 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link"href="ketchup.html">Ketchup</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="moutarde.html"">Moutarde</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="crue.html">Crue</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cuit.html">Cuit</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="brule.html">Brule</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav d-flex">
-                <li class="nav-item">
-                    <a class="nav-link" href="couleurs.html">Couleurs</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav d-flex">
-                <li class="nav-item">
-                    <a class="nav-link" href="indigo.html">Indigo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="azur.html"">Azur</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="turquoise.html">Turquoise</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ciel.html">Ciel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pastel.html">Pastel</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'fonctions/navbar.php'; ?>
     <div class="container">
         <center><h1 class="mt-3 mb-5">Guide class crue</h1></center>
         <div class="row">
@@ -165,5 +123,6 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -9,7 +9,8 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="bg-pastel">
-    <div class="container-fluid">
+    <?php head(); navbar() ?>
+    <div class="container mt-5">
         <div class="row">
             <div class="col-lg-3">
                 <div class="card">
@@ -26,7 +27,7 @@
                                 <tr>
                                     <form method="POST" class="form">
                                         <td>
-                                            <input type="text" name="role_name" id="role_name" class="form-control form-control-sm" placeholder="Nouveau rôle">
+                                            <input type="text" name="role_name" id="role_name" class="form-control form-control-sm" placeholder="Nouveau rôle" required>
                                         </td>
                                         <td>
                                             <button type="submit" name="create_role" class="btn btn-sm btn-turquoise">Créer</button>
@@ -64,6 +65,7 @@
         </div>
     </div>
 
+    <?php footer(); ?>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
