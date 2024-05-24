@@ -1,39 +1,110 @@
 <?php
 function sidebar() {
-    echo '<div class="col-sm-2 bg-ketchup">';
-    echo '  <img src="../logo.png" width="80" height="80" class="rounded-circle ml-3" alt="Logo">';
-    echo '  <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">';
-    echo '    <nav class="navbar">';
-    echo '      <div class="container-fluid">';
-    echo '          <button class="navbar-toggler bg-moutarde" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">';
-    echo '            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>';
-    echo '          </button>';
-    echo '        </div>';
-    echo '    </nav>';
-    echo '    <div class="sidebar collapse" id="sidebar" data-bs-theme="dark">';
-    echo '      <div class="p-4">';
-    echo '        <a type="button" href="index.php" class="bg-moutarde btn btn-outline-dark">Accueil</a>';
-    echo '        <br><br>';
-    echo '        <a type="button" href="index.php" class="bg-moutarde btn btn-outline-dark">Qui sommes nous ?</a>';
-    echo '        <br><br>';
-    echo '        <a type="button" href="index.php" class="bg-moutarde btn btn-outline-dark">Histoire</a>';
-    echo '        <br><br>';
-    echo '        <a type="button" href="index.php" class="bg-moutarde btn btn-outline-dark">Activité</a>';
-    echo '        <br><br>';
-    echo '        <a type="button" href="index.php" class="bg-moutarde btn btn-outline-dark">Contacts</a>';
-    echo '        <br><br>';
-    echo '        <a type="button" href="index.php" class="bg-moutarde btn btn-outline-dark">Partenaires</a>';  
-    echo '      </div>'; 
-    echo '    </div>'; 
-    echo '  </div>'; 
-    echo '</div>'; 
-    echo'<div class="col-sm-10 px-0 bg-crue">';
-    echo '<div>';
-    echo '  <nav class="navbar navbar-expand-sm bg-crue navbar-dark">';
-    echo '    <h1>Galettezen, des crêpes bretonnes dans le monde entier !</h1>';
-    echo '  </nav>';
-    echo '</div>';
+    echo '
+    <nav id="sidebar" class="bg-ketchup text-white p-4">
+        <h4>Au Menu</h4>
+        <ul class="list-unstyled">
+            <br>
+            <li><a href="index.php" class="text-white">Accueil</a></li>
+            <br>
+            <li><a href="partenaires.php" class="text-white">Partenaires</a></li>
+            <br>
+            <li><a href="about.php" class="text-white">Qui sommes-nous</a></li>
+            <br>
+            <li><a href="history.php" class="text-white">Histoire</a></li>
+            <br>
+            <li><a href="activity.php" class="text-white">Activité</a></li>
+            <br>
+            <li><a href="contacts.php" class="text-white">Contacts</a></li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="../intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
+        <img src="../intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
+    </nav>
+    ';
 }
-
-
+function footer() {
+    echo '
+    <footer class="bg-cuit text-center text-white">
+        <div class="container p-4">
+            <section>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">A propos</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Qui sommes-nous ?</a>
+                            </li>
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Notre Histoire</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-white">
+                        <h5 class="text-uppercase">Nos Produits</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Galettes Saucisses</a>
+                            </li>
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Galettes</a>
+                            </li>
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Crêpes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Partenaires</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Airbus</a>
+                            </li>
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Stade Rennais</a>
+                            </li>
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Amora</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Tous droits réservés</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a class="text-body text-crue text-decoration-none link-light">XDDL Enterprise ©</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </footer>
+    ';
+}
 ?> 
+    <script>
+      function action(){
+        
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+        });
+
+      }
+      action();
+    </script>
