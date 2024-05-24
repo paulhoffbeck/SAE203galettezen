@@ -85,6 +85,11 @@ function SelectionContextMenuDetails($elementUID) {
                     echo "<br><b>Détails : </b>".listeTextePermissionsForPublic($DB_files[$elementUID]['share']);
                 } ?>
             </div>
+            <form method="POST" class="btn-group" role="group" aria-label="Basic example">
+                <button type="submit" name="create_shortcut" value="<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-link"></i> Raccourcis</button>
+                <a href="?path=<?= $DB_files[$elementUID]['parent_uid'] ?>&move=<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-up-down-left-right"></i> Déplacer</a>
+                <button type="button" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
+            </div>
         </div>
         <?php if(FindPermissions($elementUID,$_SESSION['uid'],"perms")){ ?>
             <div class="collapse mt-3" id="editPermissions">
@@ -183,7 +188,6 @@ function SelectionContextMenuDetails($elementUID) {
                     </div>
                     <div class="card-body">
                         <table class="table">
-
                         </table>
                     </div>
                 </div>
