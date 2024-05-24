@@ -1,15 +1,12 @@
 <?php
-
-
-
 function sidebar() {
-    echo '<div class="col-sm-2 bg-cuit">';
+    echo '<div class="col-sm-2 bg-ketchup">';
     echo '  <img src="../logo.png" width="80" height="80" class="rounded-circle ml-3" alt="Logo">';
     echo '  <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">';
     echo '    <nav class="navbar">';
     echo '      <div class="container-fluid">';
     echo '          <button class="navbar-toggler bg-moutarde" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">';
-    echo '            <span class="navbar-toggler-icon"></span>';
+    echo '            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>';
     echo '          </button>';
     echo '        </div>';
     echo '    </nav>';
@@ -37,4 +34,6 @@ function sidebar() {
     echo '  </nav>';
     echo '</div>';
 }
-?>  
+
+
+?> 

@@ -27,23 +27,6 @@ navbar();
 
 var_dump($_POST);
 
-$mail = $_POST["email"];
-$domaine = explode("@",$mail)[1];
-
-var_dump($domaine);
-
-if ($domaine == "galetezen.com") {
-  echo("l'adresse mail n'appartient pas au domaine de l'entrprise.");
-}else{
-  
-  $to      = 'simoncollet2005@gmail.com';
-  $subject = 'le sujet est super';
-  $message = 'Bonjour !';
-  $headers = 'From: simoncollet2005@gmail.com';
-
-  mail($to, $subject, $message, $headers);
-
-}
 
 ?>
 <?php
