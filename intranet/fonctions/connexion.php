@@ -3,45 +3,52 @@ function connexion(){
     echo '
     <br>
     <div class="row justify-content-center">
-        <div class="col-md-6 col-sm-12 text-center">
-            <div class="login-form">
-                <form method="post">
-                <div class="form-group">
-                <label>Utilisateur :</label>
-                <input type="text" class="form-control" name="utilisateur" placeholder="Entrez votre nom d\'utilisateur">
+        <div class="col-lg-4 col-md-8 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <p> Connectez-vous pour accéder à l\'intranet </p>';
+                    if(isset($_SESSION['nom']) && isset($_SESSION['mot_de_passe'])){
+                        echo '<a href="index.php"> Connexion validé, rendez-vous à l\'acceuil</a>';
+                    }
+                    echo '<div class="login-form">
+                        <form method="post">
+                        <div class="form-group">
+                        <label>Nom :</label>
+                        <input type="text" class="form-control" name="nom" placeholder="Entrez votre nom">
+                        </div>
+                        <div class="form-group">
+                        <label>Mot de passe :</label>
+                        <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                <label>Mot de passe :</label>
-                <input type="password" class="form-control" name="motdepasse" placeholder="Entrez votre mot de passe">
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Se connecter</button>
-                </form>
             </div>
         </div>
     </div>';
-    if(isset($_POST['utilisateur']) && isset($_POST['motdepasse'])){
-        $json = file_get_contents('../data/user.json');
+    if(isset($_POST['nom']) && isset($_POST['mot_de_passe'])){
+        $json = file_get_contents('./database/user.json');
         $donnee = json_decode($json, true);
 
-        foreach($donnee as $user){
-            if ($user['role'] != ""){
-                if($user['utilisateur'] === $_POST['utilisateur']){
-                    if(password_verify($_POST['motdepasse'], $user['motdepasse'])){
-                        $_SESSION['iud'] = $user['iud'];
+        foreach($donnee as $uid => $user){
+            if ($user['role_uid'] != ""){
+                if($user['nom'] === $_POST['nom']){
+                    //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
+                        $_SESSION['iud'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
-                        $_SESSION['motdepasse'] = $user['motdepasse'];
-                        $_SESSION['role'] = $user['role'];
-                        echo "<a href='index.php'> Connexion validé</a>";
+                        $_SESSION['email'] = $user['email'];
+                        $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
+                        $_SESSION['role_uid'] = $user['role_uid'];
                         header("Refresh:0");
-                        return;
-                    }
+                    /*}
                     else {
                         echo "Mot de passe incorrect.";              
-                    }
+                    }*/
                 }
-            }
+                }
             else{
                 echo "Votre rôle n'a pas été accepté par le responsable du service.";
             }
@@ -52,6 +59,7 @@ function connexion(){
     <div class="text-center">
     <br>
     <p> Pas encore inscrit : <a href="inscription.php"> Inscrivez-vous </a> </p>
+    <br>
     </div>
     ';
 }

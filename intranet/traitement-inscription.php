@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
   <head>
-  <title>Acceuil</title>
+  <title>traitement</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -10,19 +10,26 @@
   </head>
 
 <body  class="bg-pastel">
+
+
 <?php
 
 require_once ("fonctions/main.php");
-
-if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
-  header('Location: connexion.php');
-  exit;
-}
-
 head();
 navbar();
 
-echo'<br>';
+
+?>
+  <br><br><br><br><br><br><br><br><br><br><br>
+
+<?php
+
+
+var_dump($_POST);
+
+
+?>
+<?php
 
 footer();
 

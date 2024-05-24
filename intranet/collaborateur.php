@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
   <head>
-  <title>Acceuil</title>
+  <title>Collaborateurs</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,15 +14,11 @@
 
 require_once ("fonctions/main.php");
 
-if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
-  header('Location: connexion.php');
-  exit;
-}
-
 head();
 navbar();
 
-echo'<br>';
+collaborateur();
+
 
 footer();
 
