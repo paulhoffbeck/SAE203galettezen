@@ -12,7 +12,6 @@
 <body  class="bg-pastel">
 <?php
 require_once("fonctions/main.php");
-
 head();
 
 echo'<br>';
