@@ -94,13 +94,17 @@ echo'<br>';
                         "prenom"=> $_POST["prenom"],
                         "email"=> $_POST["email"],
                         "motdepasse" => password_hash($_POST["password"], PASSWORD_DEFAULT),
-                        "role_uid"=> "");
+                        "role_uid"=> "",
+                        "validation" => $_SESSION["nombre_aleatoire"]);
 
                     var_dump($userTable);
 
 
                     $_SESSION["nombre_aleatoire"]=$alea;
-
+                    $file = json_encode($userTable);
+                    file_put_contents("database/user.json",$file);
+                    
+                    header('Location: traitement-inscription.php');
                     }
                 }
             ?>
