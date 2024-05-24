@@ -31,9 +31,6 @@ echo '
           <a class="nav-link text-white" href="inscription.php">Inscription</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Membres</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-white" href="#">Moderation</a>
         </li>
         <li class="nav-item">
@@ -41,6 +38,9 @@ echo '
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Fichiers</a>
