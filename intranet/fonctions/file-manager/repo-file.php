@@ -84,3 +84,4 @@ if(isset($_POST['renameElement'])){
     $DB_files[$elementUID]['name'] = $_POST['NewName'];
     saveJson('database/files.json', $DB_files);
 }
+
