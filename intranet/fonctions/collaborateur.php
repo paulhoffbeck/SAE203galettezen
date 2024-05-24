@@ -2,7 +2,7 @@
 
 function collaborateur(){
     echo '<div class="container mb-5">
-    <h1 class="my-4">Liste des collaborateurs</h1>
+    <h1 class="my-4">Liste de nos collaborateurs</h1>
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
