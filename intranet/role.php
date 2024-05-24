@@ -26,7 +26,7 @@
                                 <tr>
                                     <form method="POST" class="form">
                                         <td>
-                                            <input type="text" name="role_name" id="role_name" class="form-control form-control-sm" placeholder="Nouveau rôle">
+                                            <input type="text" name="role_name" id="role_name" class="form-control form-control-sm" placeholder="Nouveau rôle" required>
                                         </td>
                                         <td>
                                             <button type="submit" name="create_role" class="btn btn-sm btn-turquoise">Créer</button>
