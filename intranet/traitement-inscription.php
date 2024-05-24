@@ -32,7 +32,7 @@ $domaine = explode("@",$mail)[1];
 
 var_dump($domaine);
 
-if ($domaine == "galetezen.com") {
+if ($domaine != "galetezen.com") {
   echo("l'adresse mail n'appartient pas au domaine de l'entrprise.");
 }else{
   

@@ -32,7 +32,7 @@ echo'<br>';
                 <label for="nom">Nom :</label>
                 <input type="text" class="form-control" id="nom" name="nom" required>
             </div>
-            <input type="hidden" class="form-control" id="uid" name="uid" value=<?php echo('"'.uniqid().'"'); ?>>
+            
             <div class="form-group">
                 <label for="prenom">Prénom :</label>
                 <input type="text" class="form-control" id="prenom" name="prenom" required>
@@ -81,9 +81,25 @@ echo'<br>';
                     // $headers = 'From: simoncollet2005@gmail.com';
 
                     // mail($to, $subject, $message, $headers);
-                    
+
                     $alea = rand(000000,999999);
                     echo($alea);
+
+                    $userData = file_get_contents('database/user.json', true);
+                    $userTable = json_decode($userData, true);
+                    $uid = uniqid();
+
+                    $userTable[$uid] = array(
+                        "nom"=> $_POST["nom"],
+                        "prenom"=> $_POST["prenom"],
+                        "email"=> $_POST["email"],
+                        "motdepasse" => password_hash($_POST["password"], PASSWORD_DEFAULT),
+                        "role_uid"=> "");
+
+                    var_dump($userTable);
+
+
+                    $_SESSION["nombre_aleatoire"]=$alea;
 
                     }
                 }
