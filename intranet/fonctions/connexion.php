@@ -13,8 +13,8 @@ function connexion(){
                     echo '<div class="login-form">
                         <form method="post">
                         <div class="form-group">
-                        <label>Nom :</label>
-                        <input type="text" class="form-control" name="nom" placeholder="Entrez votre nom">
+                        <label>Adresse mail :</label>
+                        <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail">
                         </div>
                         <div class="form-group">
                         <label>Mot de passe :</label>
@@ -28,13 +28,13 @@ function connexion(){
             </div>
         </div>
     </div>';
-    if(isset($_POST['nom']) && isset($_POST['mot_de_passe'])){
+    if(isset($_POST['email']) && isset($_POST['mot_de_passe'])){
         $json = file_get_contents('./database/user.json');
         $donnee = json_decode($json, true);
 
         foreach($donnee as $uid => $user){
             if ($user['role_uid'] != ""){
-                if($user['nom'] === $_POST['nom']){
+                if($user['email'] === $_POST['email']){
                     //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
                         $_SESSION['iud'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
