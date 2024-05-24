@@ -2,15 +2,15 @@
 {
     "abc123":{
         "nom": "Dupont",
-        "prenom": "Jean",
-        "email": "jean.dupont@galetzen.com",        
+        "prenom": "Xavier",
+        "email": "xavier.dupont@galetzen.com",        
         "telephone": "02-22-22-22-22",
         "poste":"chomeur",
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db"
     },
     "def456":{
-        "nom": "Durand",
+        "nom": "Ligonnes",
         "prenom": "Pierre",
         "email": "pierre.durand@galetzen.com",
         "telephone": "02-12-12-12-12",
