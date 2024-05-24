@@ -9,7 +9,7 @@
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db"
     },
-    "def456":{
+    "djf456":{
         "nom": "Ligonnes",
         "prenom": "Pierre",
         "email": "pierre.durand@galetezen.com",
@@ -18,7 +18,7 @@
         "mot_de_passe": "password456",
         "role_uid": "6647aa89001db"
     },
-    "ghi789":{
+    "gzi789":{
         "nom": "Martin",
         "prenom": "Marie",
         "email": "marie.martin@galetezen.com",        
@@ -26,6 +26,159 @@
         "poste":"chomeur",
         "mot_de_passe": "password789",
         "role_uid": "6647aa89001db"
+    },
+    "det56": {
+        "nom": "Martin",
+        "prenom": "Lucie",
+        "email": "lucie.martin@galetezen.com",
+        "telephone": "03-33-33-33-33",
+        "poste": "RH",
+        "mot_de_passe": "password456",
+        "role_uid": "6647aa89002dc"
+    },
+    "ghi789": {
+    "nom": "Bernard",
+    "prenom": "Emmanuel",
+    "email": "emmanuel.bernard@galetezen.com",
+    "telephone": "04-44-44-44-44",
+    "poste": "cuisinier",
+    "mot_de_passe": "password789",
+    "role_uid": "6647aa89003ed"
+    },
+    "jkl012": {
+    "nom": "Durand",
+    "prenom": "Sophie",
+    "email": "sophie.durand@galetezen.com",
+    "telephone": "05-55-55-55-55",
+    "poste": "comptabilité",
+    "mot_de_passe": "password012",
+    "role_uid": "6647aa89004fe"
+    },
+    "mno345": {
+    "nom": "Lefevre",
+    "prenom": "Julien",
+    "email": "julien.lefevre@galetezen.com",
+    "telephone": "06-66-66-66-66",
+    "poste": "directeur",
+    "mot_de_passe": "password345",
+    "role_uid": "6647aa89005gf"
+    },
+    "pqr678": {
+    "nom": "Petit",
+    "prenom": "Isabelle",
+    "email": "isabelle.petit@galetezen.com",
+    "telephone": "07-77-77-77-77",
+    "poste": "stagiaire",
+    "mot_de_passe": "password678",
+    "role_uid": "6647aa89006hg"
+    },
+    "stu901": {
+    "nom": "Robert",
+    "prenom": "Thomas",
+    "email": "thomas.robert@galetezen.com",
+    "telephone": "08-88-88-88-88",
+    "poste": "alternant",
+    "mot_de_passe": "password901",
+    "role_uid": "6647aa89007ih"
+    },
+    "vwx234": {
+    "nom": "Moreau",
+    "prenom": "Claire",
+    "email": "claire.moreau@galetezen.com",
+    "telephone": "09-99-99-99-99",
+    "poste": "RH",
+    "mot_de_passe": "password234",
+    "role_uid": "6647aa89008ji"
+    },
+    "yzb567": {
+    "nom": "Simon",
+    "prenom": "Etienne",
+    "email": "etienne.simon@galetezen.com",
+    "telephone": "01-11-11-11-11",
+    "poste": "cuisinier",
+    "mot_de_passe": "password567",
+    "role_uid": "6647aa89009kj"
+    },
+    "cde890": {
+    "nom": "Richard",
+    "prenom": "Elodie",
+    "email": "elodie.richard@galetezen.com",
+    "telephone": "02-22-22-22-21",
+    "poste": "comptabilité",
+    "mot_de_passe": "password890",
+    "role_uid": "6647aa89010kl"
+    },
+    "fgh123": {
+    "nom": "Michel",
+    "prenom": "Paul",
+    "email": "paul.michel@galetezen.com",
+    "telephone": "03-33-33-33-32",
+    "poste": "directeur",
+    "mot_de_passe": "password1234",
+    "role_uid": "6647aa89011lm"
+    },
+    "ijk456": {
+    "nom": "Garcia",
+    "prenom": "Helene",
+    "email": "helene.garcia@galetezen.com",
+    "telephone": "04-44-44-44-43",
+    "poste": "stagiaire",
+    "mot_de_passe": "password5678",
+    "role_uid": "6647aa89012mn"
+    },
+    "lmn789": {
+    "nom": "Perrin",
+    "prenom": "Marc",
+    "email": "marc.perrin@galetezen.com",
+    "telephone": "05-55-55-55-54",
+    "poste": "alternant",
+    "mot_de_passe": "password9012",
+    "role_uid": "6647aa89013no"
+    },
+    "opq012": {
+    "nom": "Fabre",
+    "prenom": "Laura",
+    "email": "laura.fabre@galetezen.com",
+    "telephone": "06-66-66-66-65",
+    "poste": "RH",
+    "mot_de_passe": "password3456",
+    "role_uid": "6647aa89014op"
+    },
+    "rst345": {
+    "nom": "Fontaine",
+    "prenom": "Olivier",
+    "email": "olivier.fontaine@galetezen.com",
+    "telephone": "07-77-77-77-76",
+    "poste": "cuisinier",
+    "mot_de_passe": "password7890",
+    "role_uid": "6647aa89015pq"
+    },
+    "uvw678": {
+    "nom": "Benoit",
+    "prenom": "Marie",
+    "email": "marie.benoit@galetezen.com",
+    "telephone": "08-88-88-88-87",
+    "poste": "comptabilité",
+    "mot_de_passe": "password12345",
+    "role_uid": "6647aa89016qr"
+    },
+    "xyz901": {
+    "nom": "Dupuis",
+    "prenom": "Antoine",
+    "email": "antoine.dupuis@galetezen.com",
+    "telephone": "09-99-99-99-98",
+    "poste": "directeur",
+    "mot_de_passe": "password67890",
+    "role_uid": "6647aa89017rs"
+    },
+    "abc234": {
+    "nom": "Gauthier",
+    "prenom": "Julie",
+    "email": "julie.gauthier@galetezen.com",
+    "telephone": "01-11-11-11-12",
+    "poste": "stagiaire",
+    "mot_de_passe": "password23456",
+    "role_uid": "6647aa89018st"
     }
 }
 
