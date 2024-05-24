@@ -9,7 +9,8 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="bg-pastel">
-    <div class="container-fluid">
+    <?php head(); navbar() ?>
+    <div class="container mt-5">
         <div class="row">
             <div class="col-lg-3">
                 <div class="card">
@@ -64,6 +65,7 @@
         </div>
     </div>
 
+    <?php footer(); ?>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
