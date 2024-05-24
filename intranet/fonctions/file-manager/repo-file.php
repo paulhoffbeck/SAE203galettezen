@@ -107,3 +107,12 @@ if(isset($_POST['move_file_here'])){
     }
     header('Location: ?path='.$_GET['path']);
 }
+
+function Aff_Users_Options(){
+    $userTable = loadJson('database/user.json');
+    foreach ($userTable as $key => $user) {
+        if ($user["role_uid"]!="") {
+            echo("<option value='".$key."'>".strtoupper($user["nom"])." ".$user["prenom"]."</option>");
+        }
+    }
+}
