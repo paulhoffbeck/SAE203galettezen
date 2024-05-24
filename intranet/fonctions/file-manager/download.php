@@ -1,12 +1,12 @@
 <?php 
-function AllowDownloadByHeritedPermissions($elementUID,$userUID){
+function FindPermissions($elementUID,$userUID,$permission){
     $DB_files = loadJson('database/files.json');
     if($elementUID === "racine"){
         return true;
-    }elseif($DB_files[$elementUID]['owner'] === $userUID || (isset($DB_files[$elementUID]['share']['access']['public']) && in_array('download', $DB_files[$elementUID]['share']['access']['public'])) || (isset($DB_files[$elementUID]['share']['access'][$userUID]) && in_array('download', $DB_files[$elementUID]['share'][$userUID]['public']))){
+    }elseif($DB_files[$elementUID]['owner'] === $userUID || (isset($DB_files[$elementUID]['share']['access']['public']) && in_array($permission, $DB_files[$elementUID]['share']['access']['public'])) || (isset($DB_files[$elementUID]['share']['access'][$userUID]) && in_array($permission, $DB_files[$elementUID]['share'][$userUID]['public']))){
         return true;
     }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
-        return AllowAccessByHeritedPermissions($DB_files[$elementUID]['parent_uid'],$userUID);
+        return FindPermissions($DB_files[$elementUID]['parent_uid'],$userUID,"download");
     }
     return false;
 }
@@ -15,7 +15,7 @@ function closeWindow(){
 }
 function downloaderRessource($elementUID){
     $DB_files = loadJson('database/files.json');
-    if(isset($DB_files[$elementUID]) && $DB_files[$elementUID]['type'] == 'file' && AllowDownloadByHeritedPermissions($elementUID,$_SESSION['uid'])){
+    if(isset($DB_files[$elementUID]) && $DB_files[$elementUID]['type'] == 'file' && FindPermissions($elementUID,$_SESSION['uid'],'download')){
         $file = './uploads/' . $elementUID;
         $downloadFileName = $DB_files[$elementUID]['name'];
         if (file_exists($file)) {
