@@ -40,17 +40,7 @@ include '../functions/functions.php'
       <h1>GaleteZen</h1>
       <p>Entreprise malouine de crêpes et galettes</p>
   </div>
-    
-    
-  </div>
-</div>
-</div>
-<div>
-
-
-<div id="demo" class="carousel slide bg-crue" data-bs-ride="carousel">
-
-<!-- Indicators/dots -->
+  <div id="demo" class="carousel slide bg-crue" data-bs-ride="carousel">
 <div class="carousel-indicators">
   <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
   <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -60,37 +50,21 @@ include '../functions/functions.php'
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="d-flex justify-content-center">
-        <img src="galete1.jpg" alt="galette1" class="d-block w-50 img-fluid">
+        <img src="../intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 img-fluid">
       </div>
     </div>
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
-        <img src="galete2.jpg" alt="galette2" class="d-block w-50 img-fluid">
+        <img src="../intranet/img/sitevitrine/galete2.jpg" alt="galette2" class="d-block w-50 img-fluid">
       </div>
     </div>
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
-        <img src="Galete4.jpeg" alt="galete3" class="d-block w-50 img-fluid">
+        <img src="../intranet/img/sitevitrine/Galete4.jpeg" alt="galete3" class="d-block w-50 img-fluid">
       </div>
     </div>
   </div>
-
-<!-- The slideshow/carousel 
-<div class="carousel-inner">
-  <div class="carousel-item active container">
-    <div class="text-center">
-      <img src="galete1.jpg" alt="Los Angeles" class="d-block w-50 img-fluid mx-auto" style="columns: md -6px;">
-    </div>
-  </div>
-  <div class="carousel-item container">
-    <img src="galete2.jpg" alt="Chicago" class="d-block w-50 img-fluid mx-auto" style="columns: md -6px;">
-  </div>
-  <div class="carousel-item container">
-    <img src="test.jpg" alt="New York" class="d-block w-50 img-fluid mx-auto" style="columns: md -6px;"> 
-  </div>
-</div>-->
-
-<!-- Left and right controls/icons -->
+  
 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
   <span class="carousel-control-prev-icon"></span>
 </button>
@@ -102,6 +76,14 @@ include '../functions/functions.php'
 
 
 </div>
+    
+  </div>
+</div>
+</div>
+<div>
+
+
+
 <div>
   <script>
     document.getElementById('toggleButton').addEventListener('click', function() {
