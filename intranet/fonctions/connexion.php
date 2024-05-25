@@ -24,7 +24,7 @@ function connexion(){
                         <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe">
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        <button type="submit" class="btn btn-azur">Se connecter</button>
                         </form>
                     </div>
                 </div>
