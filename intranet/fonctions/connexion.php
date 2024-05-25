@@ -1,5 +1,8 @@
 <?php
 function connexion(){
+    if(isset($_SESSION['nom']) && isset($_SESSION['mot_de_passe'])){
+        header('Location: index.php');  
+    }
     echo '
     <br>
     <div class="row justify-content-center">
