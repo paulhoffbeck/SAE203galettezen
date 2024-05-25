@@ -15,6 +15,136 @@ function collaborateur(){
     </script>
 
     <?php
+    $json = file_get_contents('./database/user.json');
+    $users = json_decode($json, true);
+
+    function chercherNom($users, $nom) {
+        $resultats = [];
+        foreach ($users as $key => $user) {
+            if (stripos($user['nom'], $nom) !== false) {
+                $resultats[$key] = $user;
+            }
+        }
+        return $resultats;
+    }
+    function chercherPrenom($users, $prenom) {
+        $resultats = [];
+        foreach ($users as $key => $user) {
+            if (stripos($user['prenom'], $prenom) !== false) {
+                $resultats[$key] = $user;
+            }
+        }
+        return $resultats;
+    }
+    function chercherPoste($users, $poste) {
+        $resultats = [];
+        foreach ($users as $key => $user) {
+            if (stripos($user['poste'], $poste) !== false) {
+                $resultats[$key] = $user;
+            }
+        }
+        return $resultats;
+    }
+    function chercherEmail($users, $email) {
+        $resultats = [];
+        foreach ($users as $key => $user) {
+            if (stripos($user['email'], $email) !== false) {
+                $resultats[$key] = $user;
+            }
+        }
+        return $resultats;
+    }
+    function chercherTelephone($users, $telephone) {
+        $resultats = [];
+        foreach ($users as $key => $user) {
+            if (stripos($user['telephone'], $telephone) !== false) {
+                $resultats[$key] = $user;
+            }
+        }
+        return $resultats;
+    }
+
+    // Formulaire de recherche
+    echo '
+    <div class="text-center">
+        <h2>Recherche d\'utilisateurs</h2>
+        <form method="post">
+            <label><button type="submit" class="btn btn-pastel">Nom :</button></label>
+            <input class="bg-turquoise border-0" type="text" name="nom">
+        </form>
+        <form method="post">
+            <label><button type="submit" class="btn btn-pastel">Prenom :</button></label>
+            <input class="bg-turquoise border-0" type="text" name="prenom">
+        </form>
+        <form method="post">
+            <label><button type="submit" class="btn btn-pastel">Poste :</button></label>
+            <input class="bg-turquoise border-0" type="text" name="poste">
+        </form>
+        <form method="post">
+            <label><button type="submit" class="btn btn-pastel">E-mail :</button></label>
+            <input class="bg-turquoise border-0" type="email" name="email">
+        </form>
+        <form method="post">
+            <label><button type="submit" class="btn btn-pastel">Téléphone :</button></label>
+            <input class="bg-turquoise border-0" type="tel" name="telephone">
+        </form>
+    </div>';
+
+    if(isset($_POST['nom'])){
+        $nomRecherche = $_POST['nom'];
+        $resultatsNom = chercherNom($users, $nomRecherche);
+        echo '<div class="container mb-5">
+            <h2>Résultats de la recherche pour le Nom ('.strtoupper($nomRecherche).')</h2>';
+                foreach ($resultatsNom as $key => $user) {
+                    echo '<b>Nom: '. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Email: <b>'. $user['email'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
+                }
+        echo'</div>';
+    }
+
+    if(isset($_POST['prenom'])){
+        $prenomRecherche = $_POST['prenom'];
+        $resultatsPrenom = chercherPrenom($users, $prenomRecherche);
+        echo '<div class="container mb-5">
+            <h2>Résultats de la recherche pour le Prénom ('.$prenomRecherche.')</h2>';
+                foreach ($resultatsPrenom as $key => $user) {
+                    echo '<b>Prénom: '. $user['prenom'].'</b>, Nom: <b>'. $user['nom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Email: <b>'. $user['email'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
+                }
+        echo'</div>';
+    }
+
+    if(isset($_POST['poste'])){
+        $posteRecherche = $_POST['poste'];
+        $resultatsPoste = chercherPoste($users, $posteRecherche);
+            echo '<div class="container mb-5">
+                <h2>Résultats de la recherche pour le Poste ('.$posteRecherche.')</h2>';
+                    foreach ($resultatsPoste as $key => $user){
+                        echo '<b>Poste: '. $user['poste'].'</b>, Nom: <b>'. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Email: <b>'. $user['email'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
+                    }
+            echo'</div>';
+    }
+    
+    if(isset($_POST['email'])){
+        $emailRecherche = $_POST['email'];
+        $resultatsEmail = chercherEmail($users, $emailRecherche);
+            echo '<div class="container mb-5">
+                <h2>Résultats de la recherche pour le Poste ('.$emailRecherche.')</h2>';
+                    foreach ($resultatsEmail as $key => $user){
+                        echo '<b>Email: '. $user['email'].'</b>, Nom: <b>'. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
+                    }
+            echo'</div>';
+    }
+
+    if(isset($_POST['telephone'])){
+        $telephoneRecherche = $_POST['telephone'];
+        $resultatsTelephone = chercherTelephone($users, $telephoneRecherche);
+            echo '<div class="container mb-5">
+                <h2>Résultats de la recherche pour le Nom ('.$telephoneRecherche.')</h2>';
+                    foreach ($resultatsTelephone as $key => $user) {
+                        echo 'Téléphone: <b>'.$user['telephone'].'</b>, Nom: <b>'. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Email: <b>'. $user['email'].'</b><br>';
+                    } 
+            echo'</div>';
+    }
+
     // Création du tableau
     echo '<div class="container mb-5">
     <h1 class="my-4">Liste de nos collaborateurs</h1>
