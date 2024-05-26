@@ -43,31 +43,31 @@ function CreateFolder($post){
         return "<div class='alert alert-warning'>Une erreur est arrivée lors de la création de votre dossier...</div>";
     }
 }
-function UploadFile($post,$files){
+function UploadFile($post, $files){
     $DB_files = loadJson('database/files.json');
-    try{
-        if (isset($files['file']) && $files['file']['error'] == UPLOAD_ERR_OK) {
-            $fileTmpPath = $files['file']['tmp_name'];
-            $fileName = $files['file']['name'];
-            $fileSize = $files['file']['size'];
-            $uid = uniqid();
-            $dest_path = $_ENV['FILE_REPOSITORY'].$uid;
-            if (move_uploaded_file($fileTmpPath, $dest_path)) {
-                $DB_files[$uid] = array(
-                    'name' => $fileName, // le nom original du fichier
-                    'parent_uid' => $post['parent_uid'],
-                    'type' => 'file',
-                    'owner' => $_SESSION['uid'],
-                    'size' => $fileSize,
-                    'share' => array('type' => 'private')
-                );
-                saveJson('database/files.json', $DB_files);
-                echo '<script type="text/javascript">location.reload();</script>';
+    try {
+        foreach ($files['file']['tmp_name'] as $index => $fileTmpPath) {
+            $fileName = $files['file']['name'][$index];
+            $fileSize = $files['file']['size'][$index];
+            if ($files['file']['error'][$index] == UPLOAD_ERR_OK) {
+                $uid = uniqid();
+                $dest_path = $_ENV['FILE_REPOSITORY'] . $uid;
+                if (move_uploaded_file($fileTmpPath, $dest_path)) {
+                    $DB_files[$uid] = array(
+                        'name' => $fileName, // le nom original du fichier
+                        'parent_uid' => $post['parent_uid'],
+                        'type' => 'file',
+                        'owner' => $_SESSION['uid'],
+                        'size' => $fileSize,
+                        'share' => array('type' => 'private')
+                    );
+                }
             }
         }
-    }
-    catch (\Exception $e){
-        echo "<div class='alert alert-warning'>Une erreur est arrivée lors du transfert de votre fichier...</div>";
+        saveJson('database/files.json', $DB_files);
+        // echo '<script type="text/javascript">location.reload();</script>';
+    } catch (\Exception $e) {
+        echo "<div class='alert alert-warning'>Une erreur est survenue lors du transfert de votre fichier...</div>";
     }
 }
 if(isset($_POST['savePermissions'])) {

@@ -73,7 +73,11 @@ function WebExplorer($parentUID){
     if($_GET['path'] != "racine" && $DB_files[$parentUID]['type'] != "folder"){
         echo '<script>window.location.href = "?path='.$DB_files[$parentUID]['parent_uid'].'";</script>';
     }
-    echo '<div style="overflow: auto;"><table class="table table-hover"><thead><tr><th>Nom</th><th>Taille</th><th>Propriétaire</th><th>Permissions</th><th></th></tr></thead><tbody>';
+    echo '<div id="drop-zone" style="overflow: auto; position: relative;">
+    <div id="drag-message" class="d-none d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 bg-white opacity-75 text-dark border border-secondary rounded">
+        <h3 class="text-center">Déposez votre fichier ici</h3>
+    </div>
+    <table class="table table-hover"><thead><tr><th>Nom</th><th>Taille</th><th>Propriétaire</th><th>Permissions</th><th></th></tr></thead><tbody>';
     $movelink = "";
     if(isset($_GET['move'])){
         $movelink = "&move=".$_GET['move'];

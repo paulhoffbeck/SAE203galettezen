@@ -233,10 +233,10 @@ function SelectionContextMenuDetails($elementUID) {
                 <h5 class="modal-title" id="ModalUploadFileLabel">Télécharger un fichier</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" enctype="multipart/form-data">
+            <form id="uploadForm" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <label for="FileUploader">Choisir un fichier</label>
-                    <input type="file" id="FileUploader" class="form-control" name="file" required>
+                    <input type="file" id="FileUploader" class="form-control" name="file[]" multiple webkitdirectory directory required>
                     <input type="hidden" name="parent_uid" value="<?= $_GET['path'] ?>" required>
                 </div>
                 <div class="modal-footer">
@@ -313,7 +313,62 @@ function SelectionContextMenuDetails($elementUID) {
             document.getElementById('NameEditorForm').classList.remove('d-none');
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropZone = document.getElementById('drop-zone');
+            var dragMessage = document.getElementById('drag-message');
+            var fileInput = document.getElementById('FileUploader');
+            var form = document.getElementById('uploadForm');
+            var dragCounter = 0;
+
+            dropZone.addEventListener('click', function() {
+                fileInput.click();
+            });
+
+            dropZone.addEventListener('dragenter', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragCounter++;
+                dragMessage.classList.remove('d-none');
+            });
+
+            dropZone.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragCounter--;
+                if (dragCounter === 0) {
+                    dragMessage.classList.add('d-none');
+                }
+            });
+
+            dropZone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+
+            dropZone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragMessage.classList.add('d-none');
+                dragCounter = 0;
+
+                var files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    fileInput.files = files;
+                    $('#ModalUploadFile').modal('show');
+                }
+            });
+
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    $('#ModalUploadFile').modal('show');
+                }
+            });
+        });
+    </script>
     <?php footer(); ?>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
 </body>
 </html>
