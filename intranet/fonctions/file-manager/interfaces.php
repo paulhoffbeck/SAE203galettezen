@@ -86,7 +86,7 @@ function WebExplorer($parentUID){
             if($element['type'] == 'folder'){
                 echo "<tr><td><a class='text-decoration-none text-dark' href='?path=$key$movelink'><i class='fa-solid fa-folder-closed'></i> ".$element['name']."</td><td>-</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
             }elseif($element['type'] == 'file'){
-                if(file_exists("./uploads/$key")){
+                if(file_exists($_ENV['FILE_REPOSITORY'].$key)){
                     echo "<tr><td><a class='text-decoration-none text-dark' href='file-downloader.php?elementUID=$key'><i class='fa-regular fa-file-lines'></i> ".$element['name']."</a></td><td>".formatSize($element['size'])."</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
                 }else{
                     echo "<tr title='Le fichier semble être perdu ...'><td><i class='fa-regular fa-file-lines'></i> <s>".$element['name']."</s></td><td>".formatSize($element['size'])."</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
@@ -129,7 +129,7 @@ function FileManagerMain($parentUID) {
         echo CreateFolder($_POST);
     }
     if (isset($_POST['UploadFile'])) {
-        echo UploadFile($_POST,$_FILES);
+        UploadFile($_POST,$_FILES);
     }
     WebExplorer($parentUID);
 }

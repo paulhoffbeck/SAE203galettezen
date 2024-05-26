@@ -180,7 +180,7 @@ function SelectionContextMenuDetails($elementUID) {
 </head>
 <body class="bg-pastel">
     <?php head(); navbar() ?>
-    <div class="container-fluid">
+    <div class="container-fluid mb-3">
         <div class="row">
             <div class="col-xl-2 col-md-12 mt-3">
                 <div class="card">

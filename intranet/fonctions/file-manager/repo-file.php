@@ -62,16 +62,12 @@ function UploadFile($post,$files){
                     'share' => array('type' => 'private')
                 );
                 saveJson('database/files.json', $DB_files);
-                return "<div class='alert alert-success'>Vous avez transféré le fichier $fileName !</div>";
-            }else{
-                return "<div class='alert alert-warning'>Une erreur est arrivée lors du transfert de votre fichier...</div>";
+                echo '<script type="text/javascript">location.reload();</script>';
             }
-        }else{
-            return "<div class='alert alert-warning'>Une erreur est arrivée lors du transfert de votre fichier...</div>";
         }
     }
     catch (\Exception $e){
-        return "<div class='alert alert-warning'>Une erreur est arrivée lors du transfert de votre fichier...</div>";
+        echo "<div class='alert alert-warning'>Une erreur est arrivée lors du transfert de votre fichier...</div>";
     }
 }
 if(isset($_POST['savePermissions'])) {

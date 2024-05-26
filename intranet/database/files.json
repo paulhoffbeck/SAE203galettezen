@@ -1,32 +1,6 @@
 {
-    "664c375d5ba6d": {
-        "name": "coucou",
-        "parent_uid": "664b722d4be1f",
-        "type": "folder",
-        "owner": "086bae09778db",
-        "share": {
-            "type": "private"
-        }
-    },
-    "664b720d3a8b0": {
-        "name": "Laura",
-        "parent_uid": "racine",
-        "type": "folder",
-        "owner": "086bae09778db",
-        "share": {
-            "type": "public",
-            "access": {
-                "public": [
-                    "view",
-                    "upload",
-                    "perms",
-                    "delet"
-                ]
-            }
-        }
-    },
-    "6650c5e9ca0c0": {
-        "name": "Test",
+    "665325e32604e": {
+        "name": "Communication",
         "parent_uid": "racine",
         "type": "folder",
         "owner": "086bae09778db",
@@ -34,41 +8,12 @@
             "type": "private"
         }
     },
-    "664b722d4be1f": {
-        "name": "T\u00e9o 2",
-        "parent_uid": "racine",
-        "type": "folder",
-        "owner": "086bae09778db",
-        "share": {
-            "type": "herited",
-            "access": {
-                "public": [
-                    "view"
-                ]
-            }
-        }
-    },
-    "664b7250b2164": {
-        "name": "Palette_couleur.pdf",
-        "parent_uid": "664b720d3a8b0",
+    "665325ed9e5fe": {
+        "name": "Designer-9.png",
+        "parent_uid": "665325e32604e",
         "type": "file",
-        "owner": "086bae09778db_",
-        "size": 31351,
-        "share": {
-            "type": "public",
-            "access": {
-                "public": [
-                    "download"
-                ]
-            }
-        }
-    },
-    "664e574dd2a4d": {
-        "name": "Palette_couleur.pdf - raccourci",
-        "type": "shortcut",
-        "parent_uid": "664b722d4be1f",
-        "link": "664b7250b2164",
         "owner": "086bae09778db",
+        "size": 579625,
         "share": {
             "type": "private"
         }
