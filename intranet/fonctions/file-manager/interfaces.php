@@ -84,15 +84,15 @@ function WebExplorer($parentUID){
     foreach ($DB_files as $key => $element) {
         if($element['parent_uid'] === $parentUID && AllowAccessByHeritedPermissions($key,$_SESSION['uid'])){
             if($element['type'] == 'folder'){
-                echo "<tr><td><a class='text-decoration-none text-dark' href='?path=$key$movelink'><i class='fa-solid fa-folder-closed'></i> ".$element['name']."</td><td>-</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
+                echo "<tr><td><a class='text-decoration-none text-dark' href='?path=$key$movelink'><i class='fa-solid fa-folder-closed'></i> ".$element['name']."</td><td>-</td><td>".getUserNameByUid($element['owner'])."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
             }elseif($element['type'] == 'file'){
                 if(file_exists($_ENV['FILE_REPOSITORY'].$key)){
-                    echo "<tr><td><a class='text-decoration-none text-dark' href='file-downloader.php?elementUID=$key'><i class='fa-regular fa-file-lines'></i> ".$element['name']."</a></td><td>".formatSize($element['size'])."</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
+                    echo "<tr><td><a class='text-decoration-none text-dark' href='file-downloader.php?elementUID=$key'><i class='fa-regular fa-file-lines'></i> ".$element['name']."</a></td><td>".formatSize($element['size'])."</td><td>".getUserNameByUid($element['owner'])."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
                 }else{
-                    echo "<tr title='Le fichier semble être perdu ...'><td><i class='fa-regular fa-file-lines'></i> <s>".$element['name']."</s></td><td>".formatSize($element['size'])."</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
+                    echo "<tr title='Le fichier semble être perdu ...'><td><i class='fa-regular fa-file-lines'></i> <s>".$element['name']."</s></td><td>".formatSize($element['size'])."</td><td>".getUserNameByUid($element['owner'])."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
                 }
             }elseif($element['type'] == 'shortcut'){
-                echo "<tr><td><a class='text-decoration-none text-dark' href='?path=".$element['link']."'><i class='fa-solid fa-up-right-from-square'></i> ".$element['name']."</a></td><td>-</td><td>".$element['owner']."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
+                echo "<tr><td><a class='text-decoration-none text-dark' href='?path=".$element['link']."'><i class='fa-solid fa-up-right-from-square'></i> ".$element['name']."</a></td><td>-</td><td>".getUserNameByUid($element['owner'])e."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
             }
         }
     }

@@ -3,19 +3,24 @@
         "name": "Communication",
         "parent_uid": "racine",
         "type": "folder",
-        "owner": "086bae09778db",
+        "owner": "abc123",
         "share": {
-            "type": "private"
+            "type": "public",
+            "access": {
+                "public": [
+                    "view"
+                ]
+            }
         }
     },
     "665325ed9e5fe": {
         "name": "Designer-9.png",
         "parent_uid": "665325e32604e",
         "type": "file",
-        "owner": "086bae09778db",
+        "owner": "abc123",
         "size": 579625,
         "share": {
-            "type": "private"
+            "type": "herited"
         }
     }
 }
