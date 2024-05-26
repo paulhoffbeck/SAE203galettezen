@@ -3,7 +3,7 @@ function FindPermissions($elementUID,$userUID,$permission){
     $DB_files = loadJson('database/files.json');
     if($elementUID === "racine"){
         return true;
-    }elseif($DB_files[$elementUID]['owner'] === $userUID || (isset($DB_files[$elementUID]['share']['access']['public']) && in_array($permission, $DB_files[$elementUID]['share']['access']['public'])) || (isset($DB_files[$elementUID]['share']['access'][$userUID]) && in_array($permission, $DB_files[$elementUID]['share'][$userUID]['public']))){
+    }elseif($DB_files[$elementUID]['owner'] === $userUID || (isset($DB_files[$elementUID]['share']['access']['public']) && in_array($permission, $DB_files[$elementUID]['share']['access']['public'])) || (isset($DB_files[$elementUID]['share']['access'][$userUID]) && in_array($permission, $DB_files[$elementUID]['share']['access'][$userUID]))){
         return true;
     }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
         return FindPermissions($DB_files[$elementUID]['parent_uid'],$userUID,"download");
