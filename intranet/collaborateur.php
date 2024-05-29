@@ -13,7 +13,7 @@
 <?php
 
 require_once ("fonctions/main.php");
-
+alreadylogin();
 head();
 navbar();
 
