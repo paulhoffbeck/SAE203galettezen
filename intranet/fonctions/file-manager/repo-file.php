@@ -1,5 +1,5 @@
 <?php
-$_ENV['FILE_REPOSITORY'] = "/var/repository/";
+$_ENV['FILE_REPOSITORY'] = "C:\Users\maxim\Downloads";
 
 function loadJson($filename) {
     $data = file_get_contents($filename);
@@ -104,6 +104,17 @@ if(isset($_POST['move_file_here'])){
     header('Location: ?path='.$_GET['path']);
 }
 
-if(!isset($_GET['path'])){
-    header("Location:?path=racine");
+function Aff_Users_Options(){
+    $userTable = loadJson('database/user.json');
+    foreach ($userTable as $key => $user) {
+        if ($user["role_uid"]!="") {
+            echo("<option value='".$key."'>".strtoupper($user["nom"])." ".$user["prenom"]."</option>");
+        }
+    }
+}
+function Aff_Roles_Options(){
+    $roleTable = loadJson('database/role.json');
+    foreach ($roleTable as $key => $role) {
+        echo("<option value='".$key."'>".$role["name"]."</option>");
+    }
 }

@@ -1,7 +1,6 @@
 <?php
 
 function head(){
-var_dump($_SESSION);
 echo'
 <div class="bg-azur p-3">
   <div class="row">
@@ -40,7 +39,7 @@ echo '
           <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="file-manager?path=racine">Fichiers</a>
+          <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
@@ -48,7 +47,7 @@ echo '
       </ul>
       <form class="d-flex">';
       if(isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
-          echo '<span class="mt-1 text-white">Bonjour '.$_SESSION['prenom'].' '.$_SESSION['nom'].'</span>
+          echo '<span class="mt-1 text-white">Bonjour '.$_SESSION['prenom'].' '.strtoupper($_SESSION['nom']).'</span>
           <a href="deconnexion.php" class="btn btn-outline-ciel btn-sm text-white">Deconnexion</a>';
         }
       echo '</form>
