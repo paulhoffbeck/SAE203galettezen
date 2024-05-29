@@ -1,0 +1,12 @@
+{
+    "6647aa89001db": {
+        "name": "Commercial",
+        "permissions": {
+            "admin": {
+                "manage-role": "true"
+            },
+            "modo": [],
+            "general": []
+        }
+    }
+}

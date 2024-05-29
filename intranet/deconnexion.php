@@ -15,7 +15,7 @@ require_once('fonctions/main.php');
 
 head();
 
-connexion();
+deconnexion();
 
 footer();
 ?>
