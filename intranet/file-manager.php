@@ -1,6 +1,8 @@
 <?php require_once("fonctions/main.php"); alreadylogin(); ?>
 <?php
-
+if(!isset($_GET['path'])){
+    header("Location:?path=racine");
+}
 
 
 
