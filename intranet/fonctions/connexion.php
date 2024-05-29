@@ -39,7 +39,7 @@ function connexion(){
             if ($user['role_uid'] != ""){
                 if($user['email'] === $_POST['email']){
                     //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
-                        $_SESSION['iud'] = $uid;
+                        $_SESSION['uid'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
                         $_SESSION['email'] = $user['email'];

@@ -1,5 +1,5 @@
 <?php
-$_ENV['FILE_REPOSITORY'] = "/var/repository/";
+$_ENV['FILE_REPOSITORY'] = "C:\Users\maxim\Downloads";
 
 function loadJson($filename) {
     $data = file_get_contents($filename);

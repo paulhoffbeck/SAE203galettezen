@@ -39,7 +39,7 @@ echo '
           <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="file-manager?path=racine">Fichiers</a>
+          <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
