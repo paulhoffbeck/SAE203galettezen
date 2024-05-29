@@ -84,7 +84,7 @@ function footer() {
                         <h5 class="text-uppercase">Tous droits réservés</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light">XDDL Enterprise ©</a>
+                                <a class="text-body text-crue text-decoration-none link-light">Galetezen Enterprise ©</a>
                             </li>
                             </li>
                         </ul>
