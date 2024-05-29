@@ -1,1 +1,17 @@
-{}
+{
+    "66535a7e0708b": {
+        "name": "Test",
+        "parent_uid": "racine",
+        "type": "folder",
+        "owner": "def456",
+        "share": {
+            "access": {
+                "abc123": [
+                    "upload",
+                    "download"
+                ]
+            },
+            "type": "shared"
+        }
+    }
+}
