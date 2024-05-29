@@ -1,6 +1,5 @@
-<?php require_once("fonctions/main.php"); ?>
+<?php require_once("fonctions/main.php"); alreadylogin(); ?>
 <?php
-$_SESSION['uid'] = "def456";
 if(!isset($_GET['path'])){
     header("Location:?path=racine");
 }

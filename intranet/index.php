@@ -13,12 +13,7 @@
 <?php
 
 require_once ("fonctions/main.php");
-
-if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
-  header('Location: connexion.php');
-  exit;
-}
-
+alreadylogin();
 head();
 navbar();
 

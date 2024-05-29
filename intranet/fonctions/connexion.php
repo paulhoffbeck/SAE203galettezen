@@ -1,5 +1,8 @@
 <?php
 function connexion(){
+    if(isset($_SESSION['nom']) && isset($_SESSION['mot_de_passe'])){
+        header('Location: index.php');  
+    }
     echo '
     <br>
     <div class="row justify-content-center">
@@ -21,7 +24,7 @@ function connexion(){
                         <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe">
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        <button type="submit" class="btn btn-azur">Se connecter</button>
                         </form>
                     </div>
                 </div>
@@ -36,7 +39,7 @@ function connexion(){
             if ($user['role_uid'] != ""){
                 if($user['email'] === $_POST['email']){
                     //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
-                        $_SESSION['iud'] = $uid;
+                        $_SESSION['uid'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
                         $_SESSION['email'] = $user['email'];
