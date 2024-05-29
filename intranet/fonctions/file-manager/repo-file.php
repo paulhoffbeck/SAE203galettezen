@@ -118,6 +118,3 @@ function Aff_Roles_Options(){
         echo("<option value='".$key."'>".$role["name"]."</option>");
     }
 }
-if(!isset($_GET['path'])){
-    header("Location:?path=racine");
-}
