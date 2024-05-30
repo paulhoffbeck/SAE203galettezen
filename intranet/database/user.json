@@ -7,7 +7,7 @@
         "poste": "chomeur",
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717095913
+        "last_activity": 1717096350
     },
     "djf456": {
         "nom": "Ligonnes",
@@ -33,7 +33,7 @@
         "prenom": "Lucie",
         "email": "lucie.martin@galetezen.com",
         "telephone": "03-33-33-33-33",
-        "poste": "RH",
+        "poste": "Responsable Resources Humaines",
         "mot_de_passe": "password456",
         "role_uid": "6647aa89002dc"
     },
@@ -51,7 +51,7 @@
         "prenom": "Sophie",
         "email": "sophie.durand@galetezen.com",
         "telephone": "05-55-55-55-55",
-        "poste": "comptabilit\u00e9",
+        "poste": "Comptable",
         "mot_de_passe": "password012",
         "role_uid": "6647aa89004fe"
     },
@@ -78,7 +78,7 @@
         "prenom": "Thomas",
         "email": "thomas.robert@galetezen.com",
         "telephone": "08-88-88-88-88",
-        "poste": "alternant",
+        "poste": "Ouvrier de Production - St Malo",
         "mot_de_passe": "password901",
         "role_uid": "6647aa89007ih"
     },
