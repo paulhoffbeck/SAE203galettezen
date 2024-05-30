@@ -9,7 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="bg-pastel">
-    <?php head(); navbar() ?>
+    <?php alreadylogin(); head(); navbar() ?>
     <div class="container mt-3 mb-3">
         <div class="row">
             <div class="col-lg-3">
