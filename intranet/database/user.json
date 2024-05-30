@@ -7,7 +7,7 @@
         "poste": "chomeur",
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717096350
+        "last_activity": 1717099717
     },
     "djf456": {
         "nom": "Ligonnes",
@@ -180,5 +180,8 @@
         "poste": "stagiaire",
         "mot_de_passe": "password23456",
         "role_uid": "6647aa89018st"
+    },
+    "": {
+        "last_activity": 1717099717
     }
 }
