@@ -7,7 +7,7 @@ echo'
     <div class="col-auto">
       <img src="./img/logo.png" alt="Logo de GaletZen" class=" texte-center mr-3 rounded" style="max-width: 50px; max-height: 50px;">
     </div>
-    <div class="col-auto">
+    <div class="col-auto text-white">
       <h1>GaleteZen</h1>
     </div>
   </div>
