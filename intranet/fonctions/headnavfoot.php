@@ -45,12 +45,19 @@ echo '
           <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
         </li>
       </ul>
-      <form class="d-flex">';
-      if(isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
-          echo '<span class="mt-1 text-white">Bonjour '.$_SESSION['prenom'].' '.strtoupper($_SESSION['nom']).'</span>
-          <a href="deconnexion.php" class="btn btn-outline-ciel btn-sm text-white">Deconnexion</a>';
-        }
-      echo '</form>
+      <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Bonjour '.$_SESSION['prenom'].' '.strtoupper($_SESSION['nom']).'
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profil.php">Profil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="deconnexion.php">Deconnexion</a></li>
+          </ul>
+        </li>
+      </form>
     </div>
   </div>
 </nav>';
