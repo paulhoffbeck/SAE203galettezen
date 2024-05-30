@@ -16,7 +16,7 @@ echo'
 
 function  navbar(){ 
 echo '
-<nav class="navbar navbar-expand-lg navbar-light bg-azur">
+<nav class="navbar navbar-expand-lg navbar-light bg-azur sticky-top">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -66,8 +66,8 @@ echo '
 function footer(){
 
 echo('
-<footer class="footer mb-0" style="background-color: #0078B8;">
-    <div class="container-fluid jumbotron " style="background-color: #0078B8; ">
+<footer class="footer mb-0 bg-azur">
+    <div class="container-fluid jumbotron bg-azur">
       <div class="row justify-content-center"> 
         <div class="col text-white m-5">
           Nous contacter : <br>
