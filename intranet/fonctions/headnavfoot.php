@@ -66,7 +66,7 @@ echo '
 function footer(){
 
 echo('
-<footer class="footer mb-0 bg-azur">
+<footer class="footer py-3 mt-auto bg-azur">
     <div class="container-fluid jumbotron bg-azur">
       <div class="row justify-content-center"> 
         <div class="col text-white m-5">
