@@ -19,12 +19,12 @@ function connexion(){
                         <label>Adresse mail :</label>
                         <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                         <label>Mot de passe :</label>
                         <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe">
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-azur">Se connecter</button>
+                        <center><button type="submit" class="btn btn-azur"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</button></center>
                         </form>
                     </div>
                 </div>
