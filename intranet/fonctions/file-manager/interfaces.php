@@ -86,7 +86,7 @@ function WebExplorer($parentUID){
         echo "<tr><td><a class='text-decoration-none' href='?path=".$DB_files[$parentUID]['parent_uid']."$movelink'><i class='fa-solid fa-folder-closed'></i> ..</td><td>-</td><td>-</td><td></td><td></td></tr>";
     }
     foreach ($DB_files as $key => $element) {
-        if($element['parent_uid'] === $parentUID && AllowAccessByHeritedPermissions($key,$_SESSION['uid'])){
+        if($element['parent_uid'] === $parentUID && AllowAccessByHeritedPermissions($key,$_SESSION['uid'],$_SESSION['role_uid'])){
             if($element['type'] == 'folder'){
                 echo "<tr><td><a class='text-decoration-none text-dark' href='?path=$key$movelink'><i class='fa-solid fa-folder-closed'></i> ".$element['name']."</td><td>-</td><td>".getUserNameByUid($element['owner'])."</td><td>".iconTypeShared($element['share']['type'])."</td><td><a class='text-dark text-decoration-none' href='?path=$parentUID&details=$key'><i class='fa-solid fa-ellipsis-vertical'></i></a></td></tr>";
             }elseif($element['type'] == 'file'){
@@ -112,7 +112,7 @@ function WebExplorer($parentUID){
 // Fonction qui centralise l'interface principal de navigation dans l'explorateur de fichiers.
 function FileManagerMain($parentUID) {
     $DB_files = loadJson('database/files.json');
-    if(($parentUID !== "racine" && !isset($DB_files[$parentUID])) OR !AllowAccessByHeritedPermissions($parentUID,$_SESSION['uid'])){ 
+    if(($parentUID !== "racine" && !isset($DB_files[$parentUID])) OR !AllowAccessByHeritedPermissions($parentUID,$_SESSION['uid'],$_SESSION['role_uid'])){ 
         ErrorPermissionsDenied();
         return;
     }

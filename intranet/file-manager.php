@@ -8,12 +8,12 @@ if(!isset($_GET['path'])){
 
 
 
-function AllowAccessByHeritedPermissions($elementUID,$userUID){
+function AllowAccessByHeritedPermissions($elementUID,$userUID,$roleUID){
     $DB_files = loadJson('database/files.json');
-    if($elementUID === "racine" || $DB_files[$elementUID]['owner'] === $userUID || isset($DB_files[$elementUID]['share']['access']['public']) || isset($DB_files[$elementUID]['share']['access'][$userUID])){
+    if($elementUID === "racine" || $DB_files[$elementUID]['owner'] === $userUID || isset($DB_files[$elementUID]['share']['access']['public']) || isset($DB_files[$elementUID]['share']['access']['user-'.$userUID]) || isset($DB_files[$elementUID]['share']['access']['role-'.$roleUID])){
         return true;
     }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
-        return AllowAccessByHeritedPermissions($DB_files[$elementUID]['parent_uid'],$userUID);
+        return AllowAccessByHeritedPermissions($DB_files[$elementUID]['parent_uid'],$userUID,$roleUID);
     }
     return false;
 }
@@ -59,7 +59,7 @@ function SelectionContextMenuDetails($elementUID) {
                 <a href="?path=<?= $_GET['path'] ?>" class="btn btn-sm btn-ciel ml-auto"><i class="fa-solid fa-xmark"></i></a>
             </div>
             <div class="card-body">
-                <?php if(FindPermissions($elementUID,$_SESSION['uid'],"rename")){ ?>
+                <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"rename")){ ?>
                     <div id="NameView">
                         <b>Nom : </b><?= $DB_files[$elementUID]['name'] ?> <a onclick="NameEditor()" class="btn btn-sm btn-light"><i class="fa-solid fa-pen-clip"></i></a><br>
                     </div>
@@ -79,11 +79,13 @@ function SelectionContextMenuDetails($elementUID) {
                 <b>Type : </b><?= textIconTypeResssource($DB_files[$elementUID]['type']) ?><br>
                 <b>Propriétaire : </b><?= getUserNameByUid($DB_files[$elementUID]['owner']).' '.$owner ?><br>
                 <b>Accès : </b><?= textTypeShared($DB_files[$elementUID]['share']['type']) ?>
-                <?php if(FindPermissions($elementUID,$_SESSION['uid'],"perms")){
+                <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"perms")){
                     echo '<a class="btn btn-sm btn-pastel" data-bs-toggle="collapse" href="#editPermissions" role="button" aria-expanded="false" aria-controls="editPermissions"><i class="fa-solid fa-pen-to-square"></i></a>';
                 }
                 if($DB_files[$elementUID]['share']['type'] === "public"){
                     echo "<br><b>Détails : </b>".listeTextePermissionsForPublic($DB_files[$elementUID]['share']);
+                }elseif($DB_files[$elementUID]['share']['type'] === "shared"){
+                    $sharedInitialesData = $DB_files[$elementUID]['share']['access'];
                 } ?>
             </div>
             <form method="POST" class="btn-group" role="group" aria-label="Basic example">
@@ -92,7 +94,7 @@ function SelectionContextMenuDetails($elementUID) {
                 <button type="button" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
             </form>
         </div>
-        <?php if(FindPermissions($elementUID,$_SESSION['uid'],"perms")){ ?>
+        <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"perms")){ ?>
             <div class="collapse mt-3" id="editPermissions">
                 <div class="card">
                     <div class="card-body">
@@ -153,19 +155,76 @@ function SelectionContextMenuDetails($elementUID) {
                             </form>
                         </div>
                         <div class="collapse mt-3 <?php if($DB_files[$elementUID]['share']['type'] === "shared"){ echo 'show'; } ?>" id="shareFolder">
-                            <form method="post">
-                                <small><span class="text-azur">*</span> <i>Pour accéder à une ressource partagée depuis arboreceance il faut avoir accès à tous les parents de celle-ci (<i class="fa-solid fa-unlock text-warning"></i> <i class="fa-solid fa-lock-open text-success"></i>) ou détenir un raccourcis.</i></small>
-                                <input type="hidden" name="share[type]" value="shared">
-                                <div class="text-center mt-3">
-                                    <button type="submit" name="savePermissions" value="<?= $_GET['details'] ?>" class="btn btn-outline-indigo btn-sm"><i class="fa-solid fa-floppy-disk"></i> Appliquer</button>
-                                </div>
-                            </form>
+                            <small><span class="text-azur">*</span> <i>Pour accéder à une ressource partagée depuis arboreceance il faut avoir accès à tous les parents de celle-ci (<i class="fa-solid fa-unlock text-warning"></i> <i class="fa-solid fa-lock-open text-success"></i>) ou détenir un raccourcis.</i></small>
+                            <div id="shared-interface">
+
+                            </div>
+                            <?php if($DB_files[$elementUID]['share']['type'] !== "shared"){ ?>
+                                <form method="post">
+                                    <div class="text-center mt-3">
+                                        <input type="hidden" name="share[type]" value="shared">
+                                        <input type="hidden" name="share[access][]" value="">
+                                        <button type="submit" name="savePermissions" value="<?= $_GET['details'] ?>" class="btn btn-outline-azur btn-sm"><i class="fa-solid fa-share-nodes"></i> Activer le partage</button>
+                                    </div>
+                                </form>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
             </div>
         <?php } ?>
     </div>
+    <script>
+        sharedData = <?= json_encode($sharedInitialesData) ?>;
+        function loadSharedInterface(sharedDataLocal) {
+            const sharedInterfaceDiv = document.getElementById('shared-interface');
+            fetch('./fonctions/file-manager/shared-interface.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ sharedData: sharedDataLocal })
+            })
+            .then(response => response.text())
+            .then(data => {
+                sharedInterfaceDiv.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Fetch error:', error); 
+            });
+        }
+        function addMemberShare(caller,action){
+            let typeANDuid, permName, newState, data;
+            let element = '<?= $elementUID ?>';
+            if (action == 'add') {
+                typeANDuid = document.querySelector('#selecteurUserRole').value;
+                data = { action: action, typeANDuid: typeANDuid, element: element };
+            } else if (action == 'remove') {
+                typeANDuid = caller.getAttribute('typeANDuid');
+                data = { action: action, typeANDuid: typeANDuid, element: element };
+            } else if (action == 'edit') {
+                typeANDuid = caller.getAttribute('typeANDuid');
+                permName = caller.getAttribute('perm-name');
+                newState = caller.checked;
+                data = { action: action, typeANDuid: typeANDuid, permName: permName, newState: newState, element: element };
+            }
+            fetch('./fonctions/file-manager/js-shared-modifier.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(sharedData => { 
+                loadSharedInterface(sharedData);
+            })
+            .catch(error => {
+                console.error('Error:', error.message); // Afficher le message d'erreur complet
+            });
+        }
+        loadSharedInterface(sharedData)
+    </script>
 <?php }
 
 
@@ -261,39 +320,6 @@ function SelectionContextMenuDetails($elementUID) {
         </div>
     </div>
     
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.removeButton').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Trouvez la ligne parente (tr) du bouton cliqué
-                const row = button.closest('tr');
-                
-                // Récupérez l'uid et le nom de l'utilisateur
-                const uid = button.getAttribute('data-value');
-                const username = document.getElementById('user-' + uid).getAttribute('data-username');
-
-                // Supprimez la ligne du tableau
-                row.remove();
-
-                // Ajoutez l'option correspondante au select dans l'optgroup "Utilisateurs"
-                const select = document.getElementById('userSelect');
-                const optgroup = select.querySelector('optgroup[label="Utilisateurs"]');
-                const option = document.createElement('option');
-                option.value = uid;
-                option.textContent = username;
-                optgroup.appendChild(option);
-            });
-        });
-    });
-    </script>
-
-
-
-
-
-
 
 
 
