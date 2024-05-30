@@ -297,7 +297,7 @@ function SelectionContextMenuDetails($elementUID) {
             <form id="uploadForm" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <label for="FileUploader">Choisir un fichier</label>
-                    <input type="file" id="FileUploader" class="form-control" name="file[]" multiple webkitdirectory directory required>
+                    <input type="file" id="FileUploader" class="form-control" name="file[]" multiple required>
                     <input type="hidden" name="parent_uid" value="<?= $_GET['path'] ?>" required>
                 </div>
                 <div class="modal-footer">
