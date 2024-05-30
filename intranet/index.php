@@ -20,6 +20,7 @@
           Personnes en ligne
         </div>
         <div class="card-body">
+          <?= lastUserActivity() ?>
         </div>
       </div>
     </div>
