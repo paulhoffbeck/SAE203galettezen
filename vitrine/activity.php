@@ -11,8 +11,11 @@
 
 <body>
 
-    <?php session_start(); ?>
-    <?php include("functionsvitrine.php"); ?>
+<div class="bg-crue">
+        <div class="d-flex">
+            <?php
+              sidebar();
+              ?>
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="accueil.php" role="tab" aria-controls="v-pills-home" aria-selected="true">Accueil</a>
         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="activite.php" role="tab" aria-controls="v-pills-profile" aria-selected="false">Activité</a>
