@@ -39,6 +39,11 @@ echo'<br>';
             </div>
 
             <div class="form-group">
+                <label for="prenom">Téléphone</label>
+                <input type="text" class="form-control" id="tel" name="tel" required>
+            </div>
+
+            <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
@@ -93,7 +98,8 @@ echo'<br>';
                         "nom"=> $_POST["nom"],
                         "prenom"=> $_POST["prenom"],
                         "email"=> $_POST["email"],
-                        "motdepasse" => password_hash($_POST["password"], PASSWORD_DEFAULT),
+                        "telephone"=> $_POST["téléphone"],
+                        "mot_de_passe" => password_hash($_POST["password"], PASSWORD_DEFAULT),
                         "role_uid"=> "",
                         "validation" => $_SESSION["nombre_aleatoire"]);
 

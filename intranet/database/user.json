@@ -1,31 +1,37 @@
-
 {
-    "abc123":{
+    "abc123": {
         "nom": "Dupont",
         "prenom": "Jean",
-        "email": "jean.dupont@galetzen.com",        
+        "email": "jean.dupont@galetzen.com",
         "telephone": "02-22-22-22-22",
-        "poste":"chomeur",
+        "poste": "chomeur",
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db"
     },
-    "def456":{
+    "def456": {
         "nom": "Durand",
         "prenom": "Pierre",
         "email": "pierre.durand@galetzen.com",
         "telephone": "02-12-12-12-12",
-        "poste":"chomeur",
+        "poste": "chomeur",
         "mot_de_passe": "password456",
         "role_uid": "6647aa89001db"
     },
-    "ghi789":{
+    "ghi789": {
         "nom": "Martin",
         "prenom": "Marie",
-        "email": "marie.martin@galetzen.com",        
+        "email": "marie.martin@galetzen.com",
         "telephone": "02-33-33-33-33",
-        "poste":"chomeur",
+        "poste": "chomeur",
         "mot_de_passe": "password789",
         "role_uid": "6647aa89001db"
+    },
+    "6656fc5cc3ed5": {
+        "nom": "vsdv",
+        "prenom": "sdv",
+        "email": "sim@galetezen.com",
+        "motdepasse": "$2y$10$AbJDtay9wc0HXnLM20KDs.h1PCFDzTf81oJ2AvVtqNuqaoDyECxPi",
+        "role_uid": "",
+        "validation": null
     }
 }
-
