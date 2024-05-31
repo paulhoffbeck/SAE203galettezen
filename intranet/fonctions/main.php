@@ -4,6 +4,7 @@
 session_start();
 require_once(__DIR__ . '/headnavfoot.php');
 require_once(__DIR__ . '/deconnexion.php');
+require_once(__DIR__ . '/inscription.php');
 require_once(__DIR__ . '/connexion.php');
 require_once(__DIR__ . '/general.php');
 require_once(__DIR__ . '/role.php');
