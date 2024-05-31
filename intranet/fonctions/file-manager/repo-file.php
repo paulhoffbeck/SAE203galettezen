@@ -1,5 +1,5 @@
 <?php
-$_ENV['FILE_REPOSITORY'] = "C:\Users\maxim\Downloads";
+$_ENV['FILE_REPOSITORY'] = "/var/repository/";
 
 function loadJson($filename) {
     $data = file_get_contents($filename);
@@ -96,6 +96,7 @@ if(isset($_POST['create_shortcut'])){
 }
 if(isset($_POST['move_file_here'])){
     $DB_files = loadJson('database/files.json');
+    $move_file = $_POST['move_file_here'];
     if($DB_files[$move_file]['owner'] == $_SESSION['uid']){
         $move_file = $_GET['move'];
         $DB_files[$move_file]['parent_uid'] = $_GET['path'];
