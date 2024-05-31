@@ -16,7 +16,7 @@ require_once('fonctions/main.php');
 head();
 
 echo "<main class\"flex-fill\">";
-connexion();
+connexionFormulaire();
 echo "</main>";
 
 footer();
