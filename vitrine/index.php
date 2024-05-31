@@ -26,8 +26,8 @@ include '../functions/functions.php';
             <div class="d-flex align-items-center">
                         <img src="../intranet/img/logo.png" alt="logo" style="width: 80px;">
                         
-                    </div>
-                </div>
+            </div>
+            </div>
 
                 <div class="text-center">
                     <h1>GaleteZen</h1>
