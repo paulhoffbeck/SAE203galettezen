@@ -114,5 +114,9 @@ function getSharedInterface($data){
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
-    echo getSharedInterface($data['sharedData']);
+    if(isset($data['sharedData'])){
+        echo getSharedInterface($data['sharedData']);
+    }else{
+        echo "<div class=\"alert alert-info mt-3 mb-2\"><b>Erreur : </b>Impossible de charger le menu, veuillez actualiser la page.</div>";
+    }
 } ?>

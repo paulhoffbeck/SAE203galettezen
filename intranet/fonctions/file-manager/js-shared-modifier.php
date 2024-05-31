@@ -1,5 +1,5 @@
 <?php
-require_once("../main.php");
+require_once("./repo-file.php");
 function addMemberOfShared($typeANDuid,$elementUID){
     $files = loadJson("./../../database/files.json");
     if(isset($files['shared']['access']) && isset($files['shared']['access'][$typeANDuid])){
@@ -55,7 +55,7 @@ function editMemberOfShared($typeANDuid,$permName,$newState,$elementUID){
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' || true){
     $json = file_get_contents('php://input');
-    //$json = '{"action": "remove", "uid": "role-6647aa89001db","element": "66570fa3a20fb"}';
+    // $json = '{"action": "add", "typeANDuid": "user-ghi789", "element": "665972dbb8869"}';
     $data = json_decode($json, true);
     if (isset($data['action']) && $data['action'] === "add" && isset($data['typeANDuid']) && isset($data['element'])){
         $newData = addMemberOfShared($data['typeANDuid'], $data['element']);
