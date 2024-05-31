@@ -26,9 +26,6 @@ echo '
           <a class="nav-link text-white" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="role.php">Rôles</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-white" href="partenaire.php">Partenaires</a>
         </li>
         <li class="nav-item">
@@ -36,6 +33,15 @@ echo '
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gestion</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="user-management.php">Membres</a></li>
+            <li><a class="dropdown-item" href="role.php">Rôles</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="">Something else here</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>

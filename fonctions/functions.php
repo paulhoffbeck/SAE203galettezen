@@ -6,17 +6,17 @@ function sidebar() {
         <h4>Au Menu</h4>
         <ul class="list-unstyled">
             <br>
-            <li><a href="index.php" class="text-white">Accueil</a></li>
+            <li><a href="index.php" class="text-white text-decoration-none">Accueil</a></li>
             <br>
-            <li><a href="partenaires.php" class="text-white">Partenaires</a></li>
+            <li><a href="partenaires.php" class="text-white text-decoration-none">Partenaires</a></li>
             <br>
-            <li><a href="about.php" class="text-white">Qui sommes-nous</a></li>
+            <li><a href="about.php" class="text-white text-decoration-none">Qui sommes-nous</a></li>
             <br>
-            <li><a href="history.php" class="text-white">Histoire</a></li>
+            <li><a href="history.php" class="text-white text-decoration-none">Histoire</a></li>
             <br>
-            <li><a href="activity.php" class="text-white">Activité</a></li>
+            <li><a href="activity.php" class="text-white text-decoration-none">Activité</a></li>
             <br>
-            <li><a href="contacts.php" class="text-white">Contacts</a></li>
+            <li><a href="contacts.php" class="text-white text-decoration-none">Contacts</a></li>
         </ul>
         <br>
         <br>
@@ -34,6 +34,7 @@ function sidebar() {
         <img src="../intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
         <img src="../intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
     </nav>
+        
     ';
 }
 function footer() {
