@@ -191,7 +191,7 @@
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "6647aa89018st",
         "last_activity": 1717148094
-    }
+    },
     "6659d93fe52f1": {
         "nom": "Despres",
         "prenom": "Maxime",
@@ -199,7 +199,7 @@
         "mot_de_passe": "$2y$10$GzZqlKEOmZYnvqVZsOK0sueYwnMhHU\/3tv55TtxlwzlAjv02xbBGq",
         "role_uid": "66599b314b005",
         "telephone": "01-02-03-04-05",
-        "poste": "Developpeur Projet"
+        "poste": "Developpeur Projet",
     },
     "6659da5784fa0": {
         "nom": "Collet",
