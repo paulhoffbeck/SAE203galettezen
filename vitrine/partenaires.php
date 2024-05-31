@@ -24,19 +24,18 @@ include '../functions/functions.php';
 
 
 echo("<div class=\"container mt-5\">
-        <table>");
+        <div class='row'");
 
 
 var_dump($partTable);
 foreach($partTable as $key => $value){
     echo("<div class=\"col-md-4\">
-                    <div class=\"card\" style=\"width: 18rem;\">
-                    <img src=\"".$value["image"]."\" class=\"card-img-top\" alt=\"\"\>
+                    <div class=\"card mb-4\">
+                        <img src=\"../intranet/img/parter/".$value["image"]."\" class=\"card-img-top img-fluid\" alt=\"\"\>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">".$key."</h5>
                             <p class=\"card-text\">".$value["description"]."</p>
-                            <p class=\"card-text\">".$value["email"]."</p>
-                            <a href=\"".$value["lien"]."\" class=\"btn btn-primary\">visiter</a>
+                            <a href=\"".$value["lien"]."\" class=\"btn btn-moutarde\">visiter</a>
                         </div>
                     </div>
                 </div>");
@@ -48,4 +47,4 @@ foreach($partTable as $key => $value){
                     
 
         </div>
-<table>
+</div>
