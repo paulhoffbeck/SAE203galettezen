@@ -24,6 +24,7 @@ head();
 echo "<main class\"flex-fill\">";
 echo inscriptionFormulaire();
 echo "</main>";
+
 footer();
 ?>
 
