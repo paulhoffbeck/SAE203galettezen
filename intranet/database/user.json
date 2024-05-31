@@ -7,17 +7,17 @@
         "poste": "chomeur",
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717099717
+        "last_activity": 1717158984
     },
     "djf456": {
         "nom": "Ligonnes",
         "prenom": "Pierre",
-        "email": "pierre.durand@galetezen.com",
+        "email": "pierre.ligonnes@galetezen.com",
         "telephone": "02-12-12-12-12",
         "poste": "chomeur",
         "mot_de_passe": "password456",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717099959
+        "last_activity": 1717147249
     },
     "gzi789": {
         "nom": "Martin",
@@ -91,15 +91,6 @@
         "poste": "RH",
         "mot_de_passe": "password234",
         "role_uid": "6647aa89008ji"
-    },
-    "djf456": {
-        "nom": "Ligonnes",
-        "prenom": "Pierre",
-        "email": "pierre.ligonnes@galetezen.com",
-        "telephone": "02-12-12-12-12",
-        "poste": "chomeur",
-        "mot_de_passe": "password456",
-        "role_uid": "6647aa89001db"
     },
     "yzb567": {
         "nom": "Simon",
@@ -190,5 +181,15 @@
         "poste": "stagiaire",
         "mot_de_passe": "password23456",
         "role_uid": "6647aa89018st"
+    },
+    "6659953053cfa": {
+        "nom": "Hubert",
+        "prenom": "T\u00e9o",
+        "email": "teohubert00@gmail.com",
+        "poste": "stagiaire",
+        "telephone": "01-11-11-11-12",
+        "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
+        "role_uid": "6647aa89018st",
+        "last_activity": 1717148094
     }
 }

@@ -7,6 +7,7 @@ function updateActivityNow(){
 if(isset($_SESSION['uid'])){
     updateActivityNow();
 }
+
 function collaborateur(){
     ?>
     <script>
@@ -22,141 +23,29 @@ function collaborateur(){
     </script>
 
     <?php
-    $json = file_get_contents('./database/user.json');
-    $users = json_decode($json, true);
-
-    function chercherNom($users, $nom) {
-        $resultats = [];
-        foreach ($users as $key => $user) {
-            if (stripos($user['nom'], $nom) !== false) {
-                $resultats[$key] = $user;
-            }
-        }
-        return $resultats;
-    }
-    function chercherPrenom($users, $prenom) {
-        $resultats = [];
-        foreach ($users as $key => $user) {
-            if (stripos($user['prenom'], $prenom) !== false) {
-                $resultats[$key] = $user;
-            }
-        }
-        return $resultats;
-    }
-    function chercherPoste($users, $poste) {
-        $resultats = [];
-        foreach ($users as $key => $user) {
-            if (stripos($user['poste'], $poste) !== false) {
-                $resultats[$key] = $user;
-            }
-        }
-        return $resultats;
-    }
-    function chercherEmail($users, $email) {
-        $resultats = [];
-        foreach ($users as $key => $user) {
-            if (stripos($user['email'], $email) !== false) {
-                $resultats[$key] = $user;
-            }
-        }
-        return $resultats;
-    }
-    function chercherTelephone($users, $telephone) {
-        $resultats = [];
-        foreach ($users as $key => $user) {
-            if (stripos($user['telephone'], $telephone) !== false) {
-                $resultats[$key] = $user;
-            }
-        }
-        return $resultats;
-    }
-
-    // Formulaire de recherche
-    echo '
-    <div class="text-center">
-        <h2>Recherche d\'utilisateurs</h2>
-        <form method="post">
-            <label><button type="submit" class="btn btn-pastel">Nom :</button></label>
-            <input class="bg-turquoise border-0" type="text" name="nom">
-        </form>
-        <form method="post">
-            <label><button type="submit" class="btn btn-pastel">Prenom :</button></label>
-            <input class="bg-turquoise border-0" type="text" name="prenom">
-        </form>
-        <form method="post">
-            <label><button type="submit" class="btn btn-pastel">Poste :</button></label>
-            <input class="bg-turquoise border-0" type="text" name="poste">
-        </form>
-        <form method="post">
-            <label><button type="submit" class="btn btn-pastel">E-mail :</button></label>
-            <input class="bg-turquoise border-0" type="email" name="email">
-        </form>
-        <form method="post">
-            <label><button type="submit" class="btn btn-pastel">Téléphone :</button></label>
-            <input class="bg-turquoise border-0" type="tel" name="telephone">
-        </form>
-    </div>';
-
-    if(isset($_POST['nom'])){
-        $nomRecherche = $_POST['nom'];
-        $resultatsNom = chercherNom($users, $nomRecherche);
-        echo '<div class="container mb-5">
-            <h2>Résultats de la recherche pour le Nom ('.strtoupper($nomRecherche).')</h2>';
-                foreach ($resultatsNom as $key => $user) {
-                    echo '<b>Nom: '. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Email: <b>'. $user['email'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
-                }
-        echo'</div>';
-    }
-
-    if(isset($_POST['prenom'])){
-        $prenomRecherche = $_POST['prenom'];
-        $resultatsPrenom = chercherPrenom($users, $prenomRecherche);
-        echo '<div class="container mb-5">
-            <h2>Résultats de la recherche pour le Prénom ('.$prenomRecherche.')</h2>';
-                foreach ($resultatsPrenom as $key => $user) {
-                    echo '<b>Prénom: '. $user['prenom'].'</b>, Nom: <b>'. $user['nom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Email: <b>'. $user['email'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
-                }
-        echo'</div>';
-    }
-
-    if(isset($_POST['poste'])){
-        $posteRecherche = $_POST['poste'];
-        $resultatsPoste = chercherPoste($users, $posteRecherche);
-            echo '<div class="container mb-5">
-                <h2>Résultats de la recherche pour le Poste ('.$posteRecherche.')</h2>';
-                    foreach ($resultatsPoste as $key => $user){
-                        echo '<b>Poste: '. $user['poste'].'</b>, Nom: <b>'. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Email: <b>'. $user['email'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
-                    }
-            echo'</div>';
-    }
-    
-    if(isset($_POST['email'])){
-        $emailRecherche = $_POST['email'];
-        $resultatsEmail = chercherEmail($users, $emailRecherche);
-            echo '<div class="container mb-5">
-                <h2>Résultats de la recherche pour le Poste ('.$emailRecherche.')</h2>';
-                    foreach ($resultatsEmail as $key => $user){
-                        echo '<b>Email: '. $user['email'].'</b>, Nom: <b>'. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Téléphone: <b>'.$user['telephone'].'</b><br>';
-                    }
-            echo'</div>';
-    }
-
-    if(isset($_POST['telephone'])){
-        $telephoneRecherche = $_POST['telephone'];
-        $resultatsTelephone = chercherTelephone($users, $telephoneRecherche);
-            echo '<div class="container mb-5">
-                <h2>Résultats de la recherche pour le Nom ('.$telephoneRecherche.')</h2>';
-                    foreach ($resultatsTelephone as $key => $user) {
-                        echo 'Téléphone: <b>'.$user['telephone'].'</b>, Nom: <b>'. $user['nom'].'</b>, Prénom: <b>'. $user['prenom'].'</b>, Poste: <b>'. $user['poste'].'</b>, Email: <b>'. $user['email'].'</b><br>';
-                    } 
-            echo'</div>';
-    }
 
     // Création du tableau
+        $json = file_get_contents('./database/role.json');
+        $roles = json_decode($json, true);
     echo '<div class="container mb-5">
     <h1 class="my-4">Liste de nos collaborateurs</h1>
     <table class="table table-striped table-bordered table-hover">
         <thead>
+            <tr>
+                <form method="post">
+                    <th class="bg-turquoise border-turquoise">Filtre</th>
+                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="nom" placeholder="Chercher par Nom"></th>
+                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="prenom" placeholder="Chercher par Prénom"></th>
+                    <th class="bg-turquoise border-turquoise"><select class="bg-turquoise border-0" type="text" name="poste">
+                        <option value="">Chercher par rôle</option>';
+                        foreach ($roles as $key => $role) {
+                        echo '<option value="'.$key.'">'.$role['name'].'</option>';}
+                    echo'</th>
+                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="email" name="email" placeholder="Chercher par Email"></th>
+                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="tel" name="telephone" placeholder="Chercher par Téléphone"></th>
+                    <th class="bg-turquoise border-turquoise"><button type="submit" name="rechercher" class="btn btn-pastel">Appliquer</button></th>
+                </form>
+            </tr>
             <tr>
                 <th>Photo</th>
                 <th>Nom</th>
@@ -167,34 +56,47 @@ function collaborateur(){
                 <th></th>
             </tr>
         </thead>
-        <tbody>';
+    <tbody>';
 
-            $json = file_get_contents('./database/user.json');
-            $donnee = json_decode($json, true);
+    // Condition pour les traitement
+    $json = file_get_contents('./database/user.json');
+    $donnee = json_decode($json, true);
 
-            foreach ($donnee as $key => $employee) {
-                echo '<tr>';
-                if(file_exists('./img/collaborateur/'. $key .'.png')){
+    extract($_POST);
+    foreach ($donnee as $key => $user) {
+        if((!empty($nom) && strtolower($nom) == strtolower($user['nom']))
+            ||(!empty($prenom) && strtolower($prenom) == strtolower($user['prenom']))
+            ||(!empty($email) && strtolower($email) == strtolower($user['email']))
+            ||(!empty($telephone) && $telephone == $user['telephone'])
+            ||(!empty($poste) && $poste == $user['role_uid']
+            ||(empty($nom) && empty($prenom) && empty($email) && empty($telephone) && empty($poste)))
+            ){
+
+            echo'<tr>';
+            if(file_exists('./img/collaborateur/'. $key .'.png')){
                 echo '<td> <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="./img/collaborateur/'.$key.'.png" width="28px"> </td>';}
-                else{
-                echo '<td> <img src="./img/collaborateur/pasdepp.png" width="28px"> </td>';}
-                echo '<td>' . strtoupper($employee['nom']) . '</td>';
-                echo '<td>' . $employee['prenom'] . '</td>';
-                echo '<td>' . $employee['poste'] . '</td>';
-                echo '<td>' . $employee['email'] . '</td>';
-                echo '<td>' . $employee['telephone'] . '</td>';
-                echo '<td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button>';
-                if($_SESSION['email'] == $employee['email']){
-                    echo '<button type="button" class="btn btn-sm btn-azur" data-bs-toggle="modal" data-bs-target="#'.$key.'1"> Modification </button></td>';
-                }
-                else{
-                    echo'</td>';
-                }
-                echo '</tr>';
+            else{
+                echo '<td> <img src="./img/collaborateur/pasdepp.png" width="28px"> </td>';} 
+            echo '</td>
+            <td>'. $user['nom'].'</td>
+            <td>'. $user['prenom'].'</td> 
+            <td>'. $role['name'] .'<br>'. $user['poste'].'</td>
+            <td>'. $user['email'].'</td> 
+            <td>'.$user['telephone'].'</td>
+            <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button>';
+            if($_SESSION['uid'] == $key){
+                echo '<button type="button" class="btn btn-sm btn-azur" data-bs-toggle="modal" data-bs-target="#'.$key.'1"> Modification </button></td>';
             }
-    echo ' </tbody>
-    </table></div>';
+            echo '</td>
+            </tr> ';
+        }
+    }
+    echo'</tbody></table></div>';
+
+
     // création des modaux
+    $json = file_get_contents('./database/user.json');
+            $donnee = json_decode($json, true);
     foreach ($donnee as $key => $employee) {
     echo'<div class="modal fade" id="'.$key.'" tabindex="-1" aria-labelledby="'.$key.'lLabel" aria-hidden="true">
         <div class="modal-dialog">

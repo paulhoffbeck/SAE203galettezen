@@ -113,3 +113,7 @@ function footer() {
       }
       action();
     </script>
+
+<?php
+require_once("partenaires.php");
+?>
