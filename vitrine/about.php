@@ -38,13 +38,14 @@ include '../functions/functions.php';
                     $fichierutilisateur = file_get_contents('../intranet/database/user.json');
                     $tableauutilisateur = json_decode($fichierutilisateur, true);
                     foreach ($tableauutilisateur as $keys => $user) {
-                      echo '<div class="col-md-4 mb-4">';
-                      echo '<div class="card">';
+                      echo '<div class="col-3 mb-4">';
+                      echo '<div class="card mb-4 d-flex h-100 flex-column" style="width: 18rem;">';
+                     
                       $imagePath = '../intranet/img/collaborateur/' . $keys . '.png';
                       if (file_exists($imagePath)) {
-                          echo '<img src="' . htmlspecialchars($imagePath) . '" class="card-img-top" alt="Image de ' . htmlspecialchars($user['prenom']) . ' ' . htmlspecialchars($user['nom']) . '">';
+                          echo '<img src="' . htmlspecialchars($imagePath) . '" class="card-img-top" alt="Image de ' . htmlspecialchars($user['prenom']) . ' ' . htmlspecialchars($user['nom']) . '" style="height: 200px; object-fit: cover;">';
                       } else {
-                          echo '<img src="../intranet/img/collaborateur/pasdepp.png" class="card-img-top" alt="Image par défaut">';
+                          echo '<img src="../intranet/img/collaborateur/pasdepp.png" class="card-img-top" alt="Image par défaut" style="height: 200px; object-fit: cover;">';
                       }
                       echo '<div class="card-body">';
                       echo '<h5 class="card-title">' . htmlspecialchars($user['nom']) . ' ' . htmlspecialchars($user['prenom']) . '</h5>';
