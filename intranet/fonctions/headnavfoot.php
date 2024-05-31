@@ -1,14 +1,13 @@
 <?php
 
 function head(){
-var_dump($_SESSION);
 echo'
 <div class="bg-azur p-3">
   <div class="row">
     <div class="col-auto">
       <img src="./img/logo.png" alt="Logo de GaletZen" class=" texte-center mr-3 rounded" style="max-width: 50px; max-height: 50px;">
     </div>
-    <div class="col-auto">
+    <div class="col-auto text-white">
       <h1>GaleteZen</h1>
     </div>
   </div>
@@ -17,7 +16,7 @@ echo'
 
 function  navbar(){ 
 echo '
-<nav class="navbar navbar-expand-lg navbar-light bg-azur">
+<nav class="navbar navbar-expand-lg navbar-light bg-azur sticky-top">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,11 +26,8 @@ echo '
         <li class="nav-item">
           <a class="nav-link text-white" href="index.php">Accueil</a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link text-white" href="inscription.php">Inscription</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Moderation</a>
+          <a class="nav-link text-white" href="role.php">Rôles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Fournisseurs</a>
@@ -43,18 +39,25 @@ echo '
           <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Fichiers</a>
+          <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Wiki</a>
+          <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
         </li>
       </ul>
-      <form class="d-flex">';
-      if(isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
-          echo '<span class="mt-1 text-white">Bonjour '.$_SESSION['prenom'].' '.$_SESSION['nom'].'</span>
-          <a href="deconnexion.php" class="btn btn-outline-ciel btn-sm text-white">Deconnexion</a>';
-        }
-      echo '</form>
+      <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Bonjour '.$_SESSION['prenom'].' '.strtoupper($_SESSION['nom']).'
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profil.php">Profil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="deconnexion.php">Deconnexion</a></li>
+          </ul>
+        </li>
+      </form>
     </div>
   </div>
 </nav>';
@@ -63,8 +66,8 @@ echo '
 function footer(){
 
 echo('
-<footer class="footer mb-0" style="background-color: #0078B8;">
-    <div class="container-fluid jumbotron " style="background-color: #0078B8; ">
+<footer class="footer py-3 mt-auto bg-azur">
+    <div class="container-fluid jumbotron bg-azur">
       <div class="row justify-content-center"> 
         <div class="col text-white m-5">
           Nous contacter : <br>

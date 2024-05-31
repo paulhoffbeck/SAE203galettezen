@@ -1,5 +1,8 @@
 <?php
 function connexion(){
+    if(isset($_SESSION['nom']) && isset($_SESSION['mot_de_passe'])){
+        header('Location: index.php');  
+    }
     echo '
     <br>
     <div class="row justify-content-center">
@@ -13,30 +16,30 @@ function connexion(){
                     echo '<div class="login-form">
                         <form method="post">
                         <div class="form-group">
-                        <label>Nom :</label>
-                        <input type="text" class="form-control" name="nom" placeholder="Entrez votre nom">
+                        <label>Adresse mail :</label>
+                        <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                         <label>Mot de passe :</label>
                         <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe">
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        <center><button type="submit" class="btn btn-azur"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</button></center>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>';
-    if(isset($_POST['nom']) && isset($_POST['mot_de_passe'])){
+    if(isset($_POST['email']) && isset($_POST['mot_de_passe'])){
         $json = file_get_contents('./database/user.json');
         $donnee = json_decode($json, true);
 
         foreach($donnee as $uid => $user){
             if ($user['role_uid'] != ""){
-                if($user['nom'] === $_POST['nom']){
+                if($user['email'] === $_POST['email']){
                     //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
-                        $_SESSION['iud'] = $uid;
+                        $_SESSION['uid'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
                         $_SESSION['email'] = $user['email'];

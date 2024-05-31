@@ -1,5 +1,4 @@
-<?php require_once("fonctions/main.php"); ?>
-<?php $_SESSION['uid'] = "086bae09778db"; ?>
+<?php require_once("fonctions/main.php"); alreadylogin(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
