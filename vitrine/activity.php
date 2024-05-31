@@ -39,6 +39,14 @@ include '../functions/functions.php';
 
             <div class="d-flex flex-wrap gap-3">
                 <div class="card" style="width: 18rem;">
+                    <img src="../intranet/img/sitevitrine/galete4.jpeg" class="card-img-top" alt="test">
+                    <div class="card-body">
+                        <h5 class="card-title">Nos galettes</h5>
+                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
+                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
                     <img src="../intranet/img/sitevitrine/galettesaucisse.jpeg" class="card-img-top" alt="test">
                     <div class="card-body">
                         <h5 class="card-title">Nos galettes saucisses</h5>
@@ -54,14 +62,7 @@ include '../functions/functions.php';
                         <a href="#" class="btn btn-ketchup">Déguster ma crêpe</a>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="../intranet/img/sitevitrine/galete4.jpeg" class="card-img-top" alt="test">
-                    <div class="card-body">
-                        <h5 class="card-title">Nos galettes</h5>
-                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
-                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
-                    </div>
-                </div>
+                
                 <div class="card" style="width: 18rem;">
                     <img src="../intranet/img/sitevitrine/caramel.jpeg" class="card-img-top" alt="test">
                     <div class="card-body">
