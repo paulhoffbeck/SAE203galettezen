@@ -32,9 +32,10 @@ include '../functions/functions.php';
             </div>
 
             <div class="text-center">
-                <h1>GaleteZen</h1>
-                <h5>Entreprise malouine de crêpes et galettes</h5>
-                <h3>Quelques exemples de nos produits :</h3>
+                <h1 class="text-uppercase">GaleteZen</h1>
+                <h4>Entreprise malouine de crêpes et galettes</h4>
+                <h4 class="text-uppercase">Notre Activité</h4>
+                
             </div>
             <div class="container card-wrapper d-flex justify-content-center align-items-center">
                 <div class="row">
