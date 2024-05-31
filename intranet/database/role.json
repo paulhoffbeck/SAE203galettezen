@@ -1,4 +1,28 @@
 {
+    "66599b314b005": {
+        "name": "Administrateur",
+        "permissions": {
+            "admin": {
+                "liste-role": "true",
+                "create-role": "true",
+                "perms-role": "true",
+                "modifier-role-user": "true",
+                "add-role-user": "true",
+                "delet-collaborateur": "true"
+            },
+            "modo": {
+                "partenaires": "true",
+                "create-collaborator": "true",
+                "edit-collaborator": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "view-collaborator-liste": "true",
+                "view-collaborator-details": "true",
+                "edit-self-informations": "true"
+            }
+        }
+    },
     "6647aa89001db": {
         "name": "Commercial",
         "permissions": {
