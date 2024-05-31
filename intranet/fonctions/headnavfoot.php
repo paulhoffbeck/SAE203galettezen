@@ -1,6 +1,7 @@
 <?php
 
 function head(){
+//var_dump($_SESSION);
 echo'
 <div class="bg-azur p-3">
   <div class="row">
