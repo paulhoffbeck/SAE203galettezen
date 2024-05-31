@@ -38,7 +38,7 @@ function connexion(){
         foreach($donnee as $uid => $user){
             if ($user['role_uid'] != ""){
                 if($user['email'] === $_POST['email']){
-                    //if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
+                    if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
                         $_SESSION['uid'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
@@ -46,10 +46,10 @@ function connexion(){
                         $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
                         $_SESSION['role_uid'] = $user['role_uid'];
                         header("Refresh:0");
-                    /*}
+                    }
                     else {
                         echo "Mot de passe incorrect.";              
-                    }*/
+                    }
                 }
                 }
             else{

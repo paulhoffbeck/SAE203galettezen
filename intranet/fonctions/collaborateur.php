@@ -96,7 +96,8 @@ function collaborateur(){
 
     // création des modaux
     $json = file_get_contents('./database/user.json');
-            $donnee = json_decode($json, true);
+    $donnee = json_decode($json, true);
+
     foreach ($donnee as $key => $employee) {
     echo'<div class="modal fade" id="'.$key.'" tabindex="-1" aria-labelledby="'.$key.'lLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -145,26 +146,29 @@ function collaborateur(){
                                 <label>Validez le changement de mot de passe :</label>
                                 <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
                             </div>
+                            <input type="hidden" name="uid" value="'.$key.'">
+                            <button type="submit" class="btn btn-azur">Valider</button>
                         </form>';
-                        /*$json = file_get_contents('./database/user.json');
-                        $donnee = json_decode($json, true);
-                        
-                        if($_POST['mot_de_passe1'] == $_POST['mot_de_passe2']){
-                            $employee['mot_de_passse'] = $_POST['mot_de_passe2'];
-
-                            $jason = json_encode($key);
-                            $cheminFichier = './database/user.json';
-                            file_put_contents($cheminFichier, s$jason);
-                        }
-                        else { echo "Mot de passe différent";}*/
                     echo '</div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-azur">Valider</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                     </div>
                 </div>
             </div>
         </div>';
-        }
+    }
+    
+    if($_POST['mot_de_passe1'] === $_POST['mot_de_passe2']){
+        $json = file_get_contents('./database/user.json');
+        $donnee = json_decode($json, true);
+
+        $mdphash = password_hash($_POST['mot_de_passe2'], PASSWORD_DEFAULT);
+
+        $donnee[$_POST['uid']]['mot_de_passe'] = $mdphash;
+
+        $json = json_encode($donnee, JSON_PRETTY_PRINT);
+        $cheminFichier = './database/user.json';
+        file_put_contents($cheminFichier, $json);
+    }
 }
 ?>
