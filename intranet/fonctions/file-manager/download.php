@@ -1,12 +1,17 @@
 <?php 
-function FindPermissions($elementUID,$userUID,$permission){
+function FindPermissions($elementUID,$userUID,$roleUID,$permission){
     $DB_files = loadJson('database/files.json');
     if($elementUID === "racine"){
         return true;
-    }elseif($DB_files[$elementUID]['owner'] === $userUID || (isset($DB_files[$elementUID]['share']['access']['public']) && in_array($permission, $DB_files[$elementUID]['share']['access']['public'])) || (isset($DB_files[$elementUID]['share']['access'][$userUID]) && in_array($permission, $DB_files[$elementUID]['share'][$userUID]['public']))){
+    }elseif(
+        $DB_files[$elementUID]['owner'] === $userUID ||
+        (isset($DB_files[$elementUID]['share']['access']['public']) && in_array($permission, $DB_files[$elementUID]['share']['access']['public'])) ||
+        (isset($DB_files[$elementUID]['share']['access']['user-'.$userUID]) && in_array($permission, $DB_files[$elementUID]['share']['access']['user-'.$userUID])) ||
+        (isset($DB_files[$elementUID]['share']['access']['role-'.$userUID]) && in_array($permission, $DB_files[$elementUID]['share']['access']['role-'.$userUID]))
+    ){
         return true;
     }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
-        return FindPermissions($DB_files[$elementUID]['parent_uid'],$userUID,"download");
+        return FindPermissions($DB_files[$elementUID]['parent_uid'],$_SESSION['role_uid'],$userUID,"download");
     }
     return false;
 }
@@ -15,9 +20,10 @@ function closeWindow(){
 }
 function downloaderRessource($elementUID){
     $DB_files = loadJson('database/files.json');
-    if(isset($DB_files[$elementUID]) && $DB_files[$elementUID]['type'] == 'file' && FindPermissions($elementUID,$_SESSION['uid'],'download')){
-        $file = './uploads/' . $elementUID;
+    if(isset($DB_files[$elementUID]) && $DB_files[$elementUID]['type'] == 'file' && FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],'download')){
+        $file = $_ENV['FILE_REPOSITORY'] . $elementUID;
         $downloadFileName = $DB_files[$elementUID]['name'];
+        var_dump(file_exists($file));
         if (file_exists($file)) {
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');

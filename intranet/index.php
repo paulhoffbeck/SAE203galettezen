@@ -1,3 +1,4 @@
+<?php require_once ("fonctions/main.php"); ?>
 <!doctype html>
 <html lang="fr">
   <head>
@@ -10,23 +11,23 @@
   </head>
 
 <body  class="bg-pastel">
-<?php
+<?php alreadylogin(); head(); navbar(); ?>
+<div class="container mt-3 mb-3">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card-header">
+          Personnes en ligne
+        </div>
+        <div class="card-body">
+          <?= lastUserActivity() ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-require_once ("fonctions/main.php");
-
-if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
-  header('Location: connexion.php');
-  exit;
-}
-
-head();
-navbar();
-
-echo'<br>';
-
-footer();
-
-?>
+<?php footer(); ?>
 
 </body>
 </html>

@@ -13,11 +13,10 @@
 
 <?php
 require_once('fonctions/main.php');
+alreadylogin();
 head();
+navbar();
 
-echo "<main class\"flex-fill\">";
-connexion();
-echo "</main>";
 
 footer();
 ?>

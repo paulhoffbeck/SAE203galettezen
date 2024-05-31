@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,6 +80,7 @@
     </style>
 </head>
 <body>
+    <?php include 'fonctions/navbar.php'; ?>
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-10 mb-3 mt-5">
@@ -87,7 +88,7 @@
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <a class="col-md-2 text-decoration-none" href="ketchup.html">
+            <a class="col-md-2 text-decoration-none" href="ketchup.php">
                 <div class="card card-ketchup text-center" style="height: 200px;">
                     <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
                         <h1 class="card-title text-white">Ketchup</h1>
@@ -97,7 +98,7 @@
                     </div>
                 </div>
             </a>
-            <a class="col-md-2 text-decoration-none" href="moutarde.html">
+            <a class="col-md-2 text-decoration-none" href="moutarde.php">
                 <div class="card card-moutarde text-center" style="height: 200px;">
                     <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
                         <h1 class="card-title text-dark">Moutarde</h1>
@@ -107,7 +108,7 @@
                     </div>
                 </div>
             </a>
-            <a class="col-md-2 text-decoration-none" href="crue.html">
+            <a class="col-md-2 text-decoration-none" href="crue.php">
                 <div class="card card-crue text-center" style="height: 200px;">
                     <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
                         <h1 class="card-title text-dark">Crue</h1>
@@ -117,7 +118,7 @@
                     </div>
                 </div>
             </a>
-            <a class="col-md-2 text-decoration-none" href="cuit.html">
+            <a class="col-md-2 text-decoration-none" href="cuit.php">
                 <div class="card card-cuit text-center" style="height: 200px;">
                     <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
                         <h1 class="card-title text-dark">Cuit</h1>
@@ -127,7 +128,7 @@
                     </div>
                 </div>
             </a>
-            <a class="col-md-2 text-decoration-none" href="brule.html">
+            <a class="col-md-2 text-decoration-none" href="brule.php">
                 <div class="card card-brule text-center" style="height: 200px;">
                     <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
                         <h1 class="card-title text-white">Brule</h1>
@@ -144,7 +145,7 @@
             </div>
         </div>
     <div class="row justify-content-center align-items-center">
-    <a class="col-md-2 text-decoration-none" href="indigo.html">
+    <a class="col-md-2 text-decoration-none" href="indigo.php">
         <div class="card card-indigo text-center" style="height: 200px;">
           <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
             <h1 class="card-title text-white">Indigo</h1>
@@ -154,7 +155,7 @@
           </div>
         </div>
     </a>
-    <a class="col-md-2 text-decoration-none" href="azur.html">
+    <a class="col-md-2 text-decoration-none" href="azur.php">
         <div class="card card-azur text-center" style="height: 200px;">
           <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
             <h1 class="card-title text-white">Azur</h1>
@@ -164,7 +165,7 @@
           </div>
         </div>
     </a>
-    <a class="col-md-2 text-decoration-none" href="turquoise.html">
+    <a class="col-md-2 text-decoration-none" href="turquoise.php">
         <div class="card card-turquoise text-center" style="height: 200px;">
           <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
             <h1 class="card-title text-dark">Turquoise</h1>
@@ -174,7 +175,7 @@
           </div>
         </div>
     </a>
-    <a class="col-md-2 text-decoration-none" href="ciel.html">
+    <a class="col-md-2 text-decoration-none" href="ciel.php">
         <div class="card card-ciel text-center" style="height: 200px;">
           <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
             <h1 class="card-title text-dark">Ciel</h1>
@@ -184,7 +185,7 @@
           </div>
         </div>
     </a>
-    <a class="col-md-2 text-decoration-none" href="pastel.html">
+    <a class="col-md-2 text-decoration-none" href="pastel.php">
         <div class="card card-pastel text-center" style="height: 200px;">
           <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%;">
             <h1 class="card-title text-dark">Pastel</h1>
