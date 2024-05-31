@@ -32,31 +32,54 @@ include '../functions/functions.php';
             </div>
 
             <div class="text-center">
-                <h1>GaleteZen</h1>
-                <h5>Entreprise malouine de crêpes et galettes</h5>
-                <p>France, Allemagne, Etats-Unis, Japon, Russie, Afrique du Sud... Grâce à nous la bonne galette bretonne est exportée partout dans le monde !</p>
-                <p>Avec des produits locaux et de qualités, emportez un bout de Bretagne partout dans le monde avec GaleteZen</p>
-                <h3>Quelques exemples de nos produits :</h3>
+                <h1 class="text-uppercase">GaleteZen</h1>
+                <h4>Entreprise malouine de crêpes et galettes</h4>
+                <h4 class="text-uppercase">Notre Activité</h4>
+                
             </div>
-
-            <div class="d-flex flex-wrap gap-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="../intranet/img/sitevitrine/galete1.jpg" class="card-img-top" alt="test">
-                    <div class="card-body">
-                        <h5 class="card-title">Nos galettes saucisses</h5>
-                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
-                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
+            <div class="container card-wrapper d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card mb-4 h-100">
+                                <img src="../intranet/img/sitevitrine/galete4.jpeg" class="card-img-top" alt="test">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nos galettes</h5>
+                                    <p class="card-text">Imaginez-vous savourer une délicieuse galette bretonne GaleteZen, croustillante à l'extérieur et moelleuse à l'intérieur, garnie de fromage fondu, de jambon savoureux et d'un œuf parfaitement coulant, le tout accompagné d'un verre de cidre frais. Un véritable festin pour vos papilles !</p>
+                                    <a href="#" class="btn btn-ketchup">Déguster ma galette</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card mb-4 h-100">
+                            <img src="../intranet/img/sitevitrine/galettesaucisse.jpeg" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Nos galettes saucisses</h5>
+                                <p class="card-text">Imaginez-vous croquer dans une galette saucisse, où la galette de sarrasin légèrement grillée enveloppe une saucisse parfaitement assaisonnée, accompagnée d'une pointe de moutarde Amora à l'ancienne. Une explosion de saveurs bretonnes qui éveillera tous vos sens !</p>
+                                <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-md-3">
+                        <div class="card mb-4 h-100">
+                                <img src="../intranet/img/sitevitrine/crepes.jpeg" class="card-img-top" alt="test">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nos crêpes</h5>
+                                    <p class="card-text">Savourez des crêpes bretonnes, fines et délicatement dorées, garnies de beurre fondant et de sucre, ou encore d'un caramel au beurre salé maison. Un véritable délice qui vous transporte au cœur de la Bretagne à chaque bouchée !</p>
+                                    <a href="#" class="btn btn-ketchup">Déguster ma crêpe</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card mb-4 h-100">
+                                <img src="../intranet/img/sitevitrine/caramel.jpeg" class="card-img-top" alt="test">
+                                <div class="card-body">
+                                    <h5 class="card-title">Notre caramel</h5>
+                                    <p class="card-text">Laissez-vous séduire par l'onctuosité du caramel au beurre salé, une symphonie de saveurs sucrées et salées qui enrobe délicieusement vos papilles, vous transportant dans un tourbillon de gourmandise à chaque dégustation.</p>
+                                    <a href="#" class="btn btn-ketchup">Goûter notre Caramel</a>
+                                </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="../intranet/img/sitevitrine/crepes.jpg" class="card-img-top" alt="test">
-                    <div class="card-body">
-                        <h5 class="card-title">Nos crêpes</h5>
-                        <p class="card-text">Imaginez une crêpe dorée et moelleuse, garnie de fraises fraîches et de crème fouettée, avec une légère touche de sucre glace qui fond délicieusement en bouche.</p>
-                        <a href="#" class="btn btn-ketchup">Déguster ma crêpe</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -68,3 +91,5 @@ include '../functions/functions.php';
 footer();
 ?>
 </html>
+
+
