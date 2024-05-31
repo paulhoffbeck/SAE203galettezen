@@ -1,7 +1,5 @@
 <?php
-
 function head(){
-//var_dump($_SESSION);
 echo'
 <div class="bg-azur p-3">
   <div class="row">
@@ -32,9 +30,6 @@ echo '
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="partenaire.php">Partenaires</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="partenaires.php">Partenaires</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Clients</a>
