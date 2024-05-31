@@ -55,12 +55,12 @@ include '../functions/functions.php';
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                            <img src="../intranet/img/sitevitrine/galete5.jpg" alt="galette5" class="d-block w-50 h-50 img-fluid">
+                            <img src="../intranet/img/sitevitrine/galete5.jpg" alt="galete5" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                            <img src="../intranet/img/sitevitrine/galete6.jpg" alt="galette6" class="d-block w-50 h-50 img-fluid">
+                            <img src="../intranet/img/sitevitrine/galete6.jpg" alt="galete6" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                     </div>

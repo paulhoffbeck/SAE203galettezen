@@ -41,7 +41,7 @@ include '../functions/functions.php';
                 <div class="row">
                     <div class="col-md-3">
                         <div class="card mb-4 h-100">
-                                <img src="../intranet/img/sitevitrine/galete4.jpeg" class="card-img-top" alt="test">
+                                <img src="../vitrine/img/galete4.jpeg" class="card-img-top" alt="test">
                                 <div class="card-body">
                                     <h5 class="card-title">Nos galettes</h5>
                                     <p class="card-text">Imaginez-vous savourer une délicieuse galette bretonne GaleteZen, croustillante à l'extérieur et moelleuse à l'intérieur, garnie de fromage fondu, de jambon savoureux et d'un œuf parfaitement coulant, le tout accompagné d'un verre de cidre frais. Un véritable festin pour vos papilles !</p>
@@ -51,7 +51,7 @@ include '../functions/functions.php';
                     </div>
                     <div class="col-md-3">
                         <div class="card mb-4 h-100">
-                            <img src="../intranet/img/sitevitrine/galettesaucisse.jpeg" class="card-img-top" alt="test">
+                            <img src="../vitrine/img/galettesaucisse.jpeg" class="card-img-top" alt="test">
                             <div class="card-body">
                                 <h5 class="card-title">Nos galettes saucisses</h5>
                                 <p class="card-text">Imaginez-vous croquer dans une galette saucisse, où la galette de sarrasin légèrement grillée enveloppe une saucisse parfaitement assaisonnée, accompagnée d'une pointe de moutarde Amora à l'ancienne. Une explosion de saveurs bretonnes qui éveillera tous vos sens !</p>
@@ -61,7 +61,7 @@ include '../functions/functions.php';
                     </div>    
                     <div class="col-md-3">
                         <div class="card mb-4 h-100">
-                                <img src="../intranet/img/sitevitrine/crepes.jpeg" class="card-img-top" alt="test">
+                                <img src="../vitrine/img/crepes.jpeg" class="card-img-top" alt="test">
                                 <div class="card-body">
                                     <h5 class="card-title">Nos crêpes</h5>
                                     <p class="card-text">Savourez des crêpes bretonnes, fines et délicatement dorées, garnies de beurre fondant et de sucre, ou encore d'un caramel au beurre salé maison. Un véritable délice qui vous transporte au cœur de la Bretagne à chaque bouchée !</p>
@@ -71,7 +71,7 @@ include '../functions/functions.php';
                     </div>
                     <div class="col-md-3">
                         <div class="card mb-4 h-100">
-                                <img src="../intranet/img/sitevitrine/caramel.jpeg" class="card-img-top" alt="test">
+                                <img src="../vitrine/img/caramel.jpeg" class="card-img-top" alt="test">
                                 <div class="card-body">
                                     <h5 class="card-title">Notre caramel</h5>
                                     <p class="card-text">Laissez-vous séduire par l'onctuosité du caramel au beurre salé, une symphonie de saveurs sucrées et salées qui enrobe délicieusement vos papilles, vous transportant dans un tourbillon de gourmandise à chaque dégustation.</p>
