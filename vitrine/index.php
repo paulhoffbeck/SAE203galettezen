@@ -4,7 +4,9 @@ include '../functions/functions.php';
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <title>GaleteZen - Accueil</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +14,7 @@ include '../functions/functions.php';
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+
 <body>
     <div class="bg-crue">
         <div class="d-flex">
@@ -79,3 +82,5 @@ include '../functions/functions.php';
 footer();
 ?>
 </html>
+
+

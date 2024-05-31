@@ -177,7 +177,7 @@ function hasPermission($categorie,$permission){
 } 
 
 function alreadylogin(){
-if(!isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
+if(!isset($_SESSION["uid"]) || !isset($_SESSION["prenom"]) || !isset($_SESSION["nom"])){
     header('Location: connexion.php');
     exit;
   }
