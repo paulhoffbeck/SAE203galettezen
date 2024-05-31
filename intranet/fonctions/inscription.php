@@ -19,7 +19,7 @@ function register(){
         }
         $mail = $_POST["email"];
         $domaine = explode("@",$mail)[1];
-        if ($domaine != "galetezen.com") {
+        if ($_POST['needDomaine'] && $domaine != "galetezen.com") {
             return "Votre adresse email n'est pas autorisée à créer un compte sur notre site.";
         }else{
             $alea = rand(100000,999999);
@@ -92,6 +92,10 @@ function inscriptionFormulaire(){
                         <div class=\"form-group mt-2\">
                             <label for=\"password\">Confirmation de Mot de passe :</label>
                             <input type=\"password\" class=\"form-control\" id=\"cpassword\" name=\"cpassword\" required>
+                        </div>
+                        <div class=\"form-check form-switch mt-3\">
+                          <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" name=\"needDomaine\" value=\"true\" checked>
+                          <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">[DEMO] Imposer le domaine @galetezen.com</label>
                         </div>
                         <center><button type=\"submit\" name=\"register\" class=\"btn btn-azur mt-3\"><i class=\"fa-solid fa-paper-plane\"></i> S'inscrire</button></center>
                     </form>
