@@ -1,5 +1,12 @@
 <?php
-
+function updateActivityNow(){
+    $data = json_decode(file_get_contents('./database/user.json'), true);
+    $data[$_SESSION['uid']]['last_activity'] = time();
+    file_put_contents('./database/user.json', json_encode($data, JSON_PRETTY_PRINT));
+}
+if(isset($_SESSION['uid'])){
+    updateActivityNow();
+}
 function collaborateur(){
     ?>
     <script>
