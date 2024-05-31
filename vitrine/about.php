@@ -32,7 +32,20 @@ include '../functions/functions.php';
                     <h1>Qui sommes-nous ?</h1>
                     <h5>Par soucis de transparence, voici toutes nos équipes !</h5>
                 </div>
-
+                  <?php
+                    $fichierutilisateur = file_get_contents('../intranet/database/user.json');
+                    $tableauutilisateur = json_decode($fichierutilisateur, true);
+                    foreach ($tableauutilisateur as $user) {
+                      echo '<div class="col-md-4 mb-4">';
+                      echo '<div class="card">';
+                      echo '<div class="card-body">';
+                      echo '<h5 class="card-title">' . htmlspecialchars($user['nom']) . ' ' . htmlspecialchars($user['prenom']) . '</h5>';
+                      echo '<p class="card-text">Role: ' . htmlspecialchars($user['poste']) . '</p>';
+                      echo '</div>';
+                      echo '</div>';
+                      echo '</div>';
+                  }
+                  ?>
 
             </div>
         </div>
