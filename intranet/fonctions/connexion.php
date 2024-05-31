@@ -1,30 +1,27 @@
 <?php
 function connexionApplication(){
-    if(isset($_POST)){
-        if(isset($_POST['email']) && isset($_POST['mot_de_passe'])){
-            $json = file_get_contents('./database/user.json');
-            $donnee = json_decode($json, true);
-            foreach($donnee as $uid => $user){
-                if ($user['role_uid'] != ""){
-                    if($user['email'] === $_POST['email']){
-                        if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
-                            $_SESSION['uid'] = $uid;
-                            $_SESSION['nom'] = $user['nom'];
-                            $_SESSION['prenom'] = $user['prenom'];
-                            $_SESSION['email'] = $user['email'];
-                            $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
-                            $_SESSION['role_uid'] = $user['role_uid'];
-                            header("Refresh:0");
-                        }
+    if(isset($_POST['email']) && isset($_POST['mot_de_passe'])){
+        $json = file_get_contents('./database/user.json');
+        $donnee = json_decode($json, true);
+        foreach($donnee as $uid => $user){
+            if ($user['role_uid'] != ""){
+                if($user['email'] === $_POST['email']){
+                    if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
+                        $_SESSION['uid'] = $uid;
+                        $_SESSION['nom'] = $user['nom'];
+                        $_SESSION['prenom'] = $user['prenom'];
+                        $_SESSION['email'] = $user['email'];
+                        $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
+                        $_SESSION['role_uid'] = $user['role_uid'];
+                        loadSessionPermissions($user['role_uid']);
+                        header("Refresh:0");
                     }
-                }else{
-                    return "<div class=\"alert alert-warning\"><b>Connexion :</b>Vous n'êtes pas autorisé à vous connecter.</div>";
                 }
+            }else{
+                return "<div class=\"alert alert-warning\"><b>Connexion :</b>Vous n'êtes pas autorisé à vous connecter.</div>";
             }
-            return "<div class=\"alert alert-warning\"><b>Connexion :</b> Données de connexion incorrects.</div>"; 
-        }else{
-            return "<div class=\"alert alert-warning\"><b>Connexion :</b> Erreur lors du traitement de votre demande.</div>"; 
         }
+        return "<div class=\"alert alert-warning\"><b>Connexion :</b> Données de connexion incorrects.</div>"; 
     }
 }
 

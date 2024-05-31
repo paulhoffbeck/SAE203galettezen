@@ -11,9 +11,9 @@ function loadRoleListe(){
         }
         foreach ($DB_role as $uid => $role){
             if(isset($_GET['uid']) && $_GET['uid'] === $uid){
-                echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-outline-ciel'>Détails</a></td></tr>";
+                echo "<tr><td>{$role['name']}</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-outline-ciel'>Détails</a></td></tr>";
             }else{
-                echo "<tr><td>".$role['name']."</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-azur'>Détails</a></td></tr>";
+                echo "<tr><td>{$role['name']}</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-azur'>Détails</a></td></tr>";
             }
         }
     } catch (Exception $e) {
@@ -168,11 +168,15 @@ function loadSessionPermissions($roleUID) {
         echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
     }
 }
-function hasPermission($categorie,$permission){
-    if(isset($_SESSION['role_permission'][$categorie][$permission]) && $_SESSION['role_permission'][$categorie][$permission] === "true"){
+function hasPermission($categorie,$permission,$returnIndex){
+    if(isset($_SESSION['role_permissions'][$categorie][$permission]) && $_SESSION['role_permissions'][$categorie][$permission] === "true"){
         return true;
     }else{
-        return false;
+        if($returnIndex){
+            header("Location: index.php");
+        }else{
+            return false;
+        }
     }
 } 
 
