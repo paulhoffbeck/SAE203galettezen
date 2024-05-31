@@ -43,7 +43,7 @@ include '../functions/functions.php';
                     <div class="card-body">
                         <h5 class="card-title">Nos galettes</h5>
                         <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
-                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
+                        <a href="#" class="btn btn-ketchup">Déguster ma galette</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
@@ -68,7 +68,7 @@ include '../functions/functions.php';
                     <div class="card-body">
                         <h5 class="card-title">Notre caramel</h5>
                         <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
-                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
+                        <a href="#" class="btn btn-ketchup">Goûter notre Caramel</a>
                     </div>
                 </div>
             </div>
