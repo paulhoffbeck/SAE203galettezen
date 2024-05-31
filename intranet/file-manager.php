@@ -193,9 +193,10 @@ function SelectionContextMenuDetails($elementUID) {
                 console.error('Fetch error:', error); 
             });
         }
-        function addMemberShare(caller,action){
+        function addMemberShare(caller, action) {
             let typeANDuid, permName, newState, data;
             let element = '<?= $elementUID ?>';
+
             if (action == 'add') {
                 typeANDuid = document.querySelector('#selecteurUserRole').value;
                 data = { action: action, typeANDuid: typeANDuid, element: element };
@@ -208,6 +209,7 @@ function SelectionContextMenuDetails($elementUID) {
                 newState = caller.checked;
                 data = { action: action, typeANDuid: typeANDuid, permName: permName, newState: newState, element: element };
             }
+
             fetch('./fonctions/file-manager/js-shared-modifier.php', {
                 method: 'POST',
                 headers: {
@@ -215,8 +217,13 @@ function SelectionContextMenuDetails($elementUID) {
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => response.json())
-            .then(sharedData => { 
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => { throw new Error(text) });
+                }
+                return response.json(); // Retourner la promesse ici
+            })
+            .then(sharedData => {
                 loadSharedInterface(sharedData);
             })
             .catch(error => {
