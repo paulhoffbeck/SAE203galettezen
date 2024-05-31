@@ -34,17 +34,15 @@ include '../functions/functions.php';
             <div class="text-center">
                 <h1>GaleteZen</h1>
                 <h5>Entreprise malouine de crêpes et galettes</h5>
-                <p>France, Allemagne, Etats-Unis, Japon, Russie, Afrique du Sud... Grâce à nous la bonne galette bretonne est exportée partout dans le monde !</p>
-                <p>Avec des produits locaux et de qualités, emportez un bout de Bretagne partout dans le monde avec GaleteZen</p>
                 <h3>Quelques exemples de nos produits :</h3>
             </div>
 
             <div class="d-flex flex-wrap gap-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="../intranet/img/sitevitrine/galete1.jpg" class="card-img-top" alt="test">
+                    <img src="../intranet/img/sitevitrine/galettesaucisse.jpeg" class="card-img-top" alt="test">
                     <div class="card-body">
                         <h5 class="card-title">Nos galettes saucisses</h5>
-                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
+                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
                         <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
                     </div>
                 </div>
@@ -54,6 +52,22 @@ include '../functions/functions.php';
                         <h5 class="card-title">Nos crêpes</h5>
                         <p class="card-text">Imaginez une crêpe dorée et moelleuse, garnie de fraises fraîches et de crème fouettée, avec une légère touche de sucre glace qui fond délicieusement en bouche.</p>
                         <a href="#" class="btn btn-ketchup">Déguster ma crêpe</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../intranet/img/sitevitrine/galete4.jpeg" class="card-img-top" alt="test">
+                    <div class="card-body">
+                        <h5 class="card-title">Nos galettes</h5>
+                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
+                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../intranet/img/sitevitrine/caramel.jpeg" class="card-img-top" alt="test">
+                    <div class="card-body">
+                        <h5 class="card-title">Notre caramel</h5>
+                        <p class="card-text">Imaginez une galette saucisse, chaude et croustillante, enveloppant une saucisse grillée, le tout garni d'une moutarde Amora légèrement piquante qui éveille vos papilles à chaque bouchée.</p>
+                        <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
                     </div>
                 </div>
             </div>
