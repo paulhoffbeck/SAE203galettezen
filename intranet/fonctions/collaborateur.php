@@ -65,7 +65,7 @@ function collaborateur(){
     extract($_POST);
     foreach ($donnee as $key => $user) {
         if((!empty($nom) && strtolower($nom) == strtolower($user['nom']))
-            ||(!empty($prenom) && strtolower($nom) == strtolower($user['prenom']))
+            ||(!empty($prenom) && strtolower($prenom) == strtolower($user['prenom']))
             ||(!empty($email) && strtolower($email) == strtolower($user['email']))
             ||(!empty($telephone) && $telephone == $user['telephone'])
             ||(!empty($poste) && $poste == $user['role_uid']
