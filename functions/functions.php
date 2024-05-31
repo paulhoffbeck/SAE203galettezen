@@ -1,5 +1,6 @@
 <?php
 function sidebar() {
+
     echo '
     <nav id="sidebar" class="bg-ketchup text-white p-4">
         <h4>Au Menu</h4>
@@ -96,6 +97,9 @@ function footer() {
     </footer>
     ';
 }
+
+
+
 ?> 
     <script>
       function action(){
