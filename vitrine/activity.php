@@ -49,7 +49,7 @@ include '../functions/functions.php';
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="../intranet/img/sitevitrine/crepes.jpg" class="card-img-top" alt="test">
+                    <img src="../intranet/img/sitevitrine/crepes.jpeg" class="card-img-top" alt="test">
                     <div class="card-body">
                         <h5 class="card-title">Nos crêpes</h5>
                         <p class="card-text">Imaginez une crêpe dorée et moelleuse, garnie de fraises fraîches et de crème fouettée, avec une légère touche de sucre glace qui fond délicieusement en bouche.</p>
