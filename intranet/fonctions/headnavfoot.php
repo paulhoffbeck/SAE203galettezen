@@ -28,7 +28,7 @@ echo '
           <a class="nav-link text-white" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="partenaires.php">Partenaires</a>
+          <a class="nav-link text-white" href="partenaire.php">Partenaires</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Clients</a>
