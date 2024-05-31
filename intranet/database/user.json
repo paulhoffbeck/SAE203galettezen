@@ -9,7 +9,16 @@
         "role_uid": "6647aa89001db",
         "last_activity": 1717099717
     },
-
+    "djf456": {
+        "nom": "Ligonnes",
+        "prenom": "Pierre",
+        "email": "pierre.durand@galetezen.com",
+        "telephone": "02-12-12-12-12",
+        "poste": "chomeur",
+        "mot_de_passe": "password456",
+        "role_uid": "6647aa89001db",
+        "last_activity": 1717099959
+    },
     "gzi789": {
         "nom": "Martin",
         "prenom": "Marie",
@@ -84,7 +93,7 @@
         "role_uid": "6647aa89008ji"
     },
     "djf456": {
-        "nom": "Ligonne",
+        "nom": "Ligonnes",
         "prenom": "Pierre",
         "email": "pierre.ligonnes@galetezen.com",
         "telephone": "02-12-12-12-12",
