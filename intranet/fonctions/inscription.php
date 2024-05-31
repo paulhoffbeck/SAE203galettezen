@@ -31,6 +31,8 @@ function register(){
                 "email"=> $_POST["email"],
                 "mot_de_passe" => password_hash($_POST["password"], PASSWORD_DEFAULT),
                 "role_uid" => "",
+                "telephone" => "",
+                "poste" => "",
                 "code_validation" => $alea,
             );
             $file = json_encode($userTable, JSON_PRETTY_PRINT);
