@@ -61,7 +61,7 @@ include '../functions/functions.php';
                     </div>    
                     <div class="col-md-3">
                         <div class="card mb-4 h-100">
-                                <img src="../vitrine/img/crepes.jpeg" class="card-img-top" alt="test">
+                                <img src="../vitrine/img/crepes.jpg" class="card-img-top" alt="test">
                                 <div class="card-body">
                                     <h5 class="card-title">Nos crêpes</h5>
                                     <p class="card-text">Savourez des crêpes bretonnes, fines et délicatement dorées, garnies de beurre fondant et de sucre, ou encore d'un caramel au beurre salé maison. Un véritable délice qui vous transporte au cœur de la Bretagne à chaque bouchée !</p>
