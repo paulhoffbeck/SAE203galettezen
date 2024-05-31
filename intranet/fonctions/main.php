@@ -5,10 +5,10 @@ session_start();
 require_once(__DIR__ . '/headnavfoot.php');
 require_once(__DIR__ . '/deconnexion.php');
 require_once(__DIR__ . '/connexion.php');
+require_once(__DIR__ . '/general.php');
 require_once(__DIR__ . '/role.php');
 require_once(__DIR__ . '/collaborateur.php');
 require_once(__DIR__ . '/file-manager/repo-file.php');
 require_once(__DIR__ . '/file-manager/download.php');
 require_once(__DIR__ . '/file-manager/interfaces.php');
-require_once(__DIR__ . '/Aff_Users_Options.php');
 ?>

@@ -12,7 +12,6 @@
 
 <?php
 require_once('fonctions/main.php');
-
 head();
 
 connexion();

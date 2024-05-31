@@ -1,11 +1,21 @@
 {
     "admin":{
-        "manage-role": "Créer, renommer de changer les permissions des rôles."
+        "liste-role": "Aficher la liste des rôles et leurs permissions.",
+        "create-role": "Créer un nouveau rôle dans la liste.",
+        "perms-role": "Modifier les permissions de tous les rôles de la liste.",
+        "modifier-role-user": "Modifier le rôle d'un utilisateur possédant déjà un rôle.",
+        "add-role-user": "Ajouter un rôle à un utilisateur n'en possédant pas (Recrutement).",
+        "delet-collaborateur": "Supprimer un collaborateur de la liste = Supprimer un compte utilisateur."
     },
     "modo":{
-        "partenaires": "Créer, modifier ou supprimer des partenaires."
+        "partenaires": "Créer, modifier ou supprimer des partenaires.",
+        "create-collaborator": "Créer un nouveau collaborateur depuis la liste.",
+        "edit-collaborator": "Modifier les informations d'un collaborateur."
     },
     "general":{
-        "connexion": "Permet à l'utilisateur de se connecter à son compte."
+        "acces-file-manager": "Accéder à l'espace de fichiers partagés.",
+        "view-collaborator-liste": "Afficher la liste des collaborateurs.",
+        "view-collaborator-details": "Afficher le détails des informations d'un collaborateur depuis la liste.",
+        "edit-self-informations": "Modifier les informations de son profil."
     }
 }
