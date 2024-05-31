@@ -192,4 +192,23 @@
         "role_uid": "6647aa89018st",
         "last_activity": 1717148094
     }
+    "6659d93fe52f1": {
+        "nom": "Despres",
+        "prenom": "Maxime",
+        "email": "maxime.despres72@gmail.com",
+        "mot_de_passe": "$2y$10$GzZqlKEOmZYnvqVZsOK0sueYwnMhHU\/3tv55TtxlwzlAjv02xbBGq",
+        "role_uid": "66599b314b005",
+        "telephone": "01-02-03-04-05",
+        "poste": "Developpeur Projet"
+    },
+    "6659da5784fa0": {
+        "nom": "Collet",
+        "prenom": "Simon",
+        "email": "simoncollet2005@gmail.com",
+        "mot_de_passe": "$2y$10$JpHhIivvf9KUfUocDtwXgekJcMMn3XmcdVkQV.z6UyD6AtKgNRD7m",
+        "role_uid": "66599b314b005",
+        "telephone": "02-03-04-05-06",
+        "poste": "Developpeur Projet",
+        "last_activity": 1717165152
+    }
 }
