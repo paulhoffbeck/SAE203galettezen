@@ -1,22 +1,16 @@
 {
     "abc123": {
         "nom": "Dupont",
-
         "prenom": "Xavier",
-
         "email": "xavier.dupont@galetezen.com",
-
         "telephone": "02-22-22-22-22",
         "poste": "chomeur",
         "mot_de_passe": "password123",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717149112
+        "last_activity": 1717157704
     },
-
     "djf456": {
-
         "nom": "Ligonnes",
-
         "prenom": "Pierre",
         "email": "pierre.ligonnes@galetezen.com",
         "telephone": "02-12-12-12-12",
@@ -25,9 +19,7 @@
         "role_uid": "6647aa89001db",
         "last_activity": 1717147249
     },
-
     "gzi789": {
-
         "nom": "Martin",
         "prenom": "Marie",
         "email": "marie.martin@galetezen.com",
@@ -37,7 +29,6 @@
         "role_uid": "6647aa89001db",
         "last_activity": 1717095330
     },
-
     "det56": {
         "nom": "Martin",
         "prenom": "Lucie",
@@ -183,7 +174,6 @@
         "role_uid": "6647aa89017rs"
     },
     "abc234": {
-
         "nom": "Gauthier",
         "prenom": "Julie",
         "email": "julie.gauthier@galetezen.com",
@@ -199,6 +189,5 @@
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "6647aa89018st",
         "last_activity": 1717148094
-
     }
 }

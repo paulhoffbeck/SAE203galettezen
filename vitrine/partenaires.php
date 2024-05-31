@@ -4,7 +4,9 @@ include '../functions/functions.php';
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <title>GaleteZen - Accueil</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,39 +14,36 @@ include '../functions/functions.php';
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+
 <body>
     <div class="bg-crue">
         <div class="d-flex">
             <?php
               sidebar();
-              
-
-                $partData = file_get_contents('../intranet/database/partenaire.json', true);
-                $partTable = json_decode($partData, true);
-
-
-echo("<div class=\"container mt-5\">
-        <div class='row'");
-
-
-var_dump($partTable);
-foreach($partTable as $key => $value){
-    echo("<div class=\"col-md-4\">
-                    <div class=\"card mb-4\">
-                        <img src=\"../intranet/img/parter/".$value["image"]."\" class=\"card-img-top img-fluid\" alt=\"\"\>
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">".$key."</h5>
-                            <p class=\"card-text\">".$value["description"]."</p>
-                            <a href=\"".$value["lien"]."\" class=\"btn btn-moutarde\">visiter</a>
-                        </div>
+            ?>
+            <div class="p-3 flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <button id="toggleButton" class="btn btn-ketchup">
+                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                    </button>        
+                    <div class="d-flex align-items-center">
+                        <img src="../intranet/img/logo.png" alt="logo" style="width: 80px;">
+                            
                     </div>
-                </div>");
-}
-
-?>
-
-
-                    
-
+                </div>
+                <?php
+                partenaires();
+                ?>
+            </div>
         </div>
-</div>
+    </div>
+    <script>
+      action();
+    </script>
+</body>
+<?php
+footer();
+?>
+</html>
+
+
