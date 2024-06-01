@@ -11,7 +11,8 @@ function connexionApplication(){
                         $_SESSION['nom'] = $user['nom'];
                         $_SESSION['prenom'] = $user['prenom'];
                         $_SESSION['email'] = $user['email'];
-                        $_SESSION['mot_de_passe'] = $user['mot_de_passe'];
+                        $_SESSION['telephone'] = $user['telephone'];
+                        $_SESSION['poste'] = $user['poste'];
                         $_SESSION['role_uid'] = $user['role_uid'];
                         loadSessionPermissions($user['role_uid']);
                         header("Refresh:0");

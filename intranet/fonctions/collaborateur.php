@@ -158,17 +158,5 @@ function collaborateur(){
         </div>';
     }
     
-    if($_POST['mot_de_passe1'] === $_POST['mot_de_passe2']){
-        $json = file_get_contents('./database/user.json');
-        $donnee = json_decode($json, true);
-
-        $mdphash = password_hash($_POST['mot_de_passe2'], PASSWORD_DEFAULT);
-
-        $donnee[$_POST['uid']]['mot_de_passe'] = $mdphash;
-
-        $json = json_encode($donnee, JSON_PRETTY_PRINT);
-        $cheminFichier = './database/user.json';
-        file_put_contents($cheminFichier, $json);
-    }
 }
 ?>
