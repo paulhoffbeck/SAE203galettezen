@@ -30,11 +30,12 @@ function activeUser(){
     $data = json_decode(file_get_contents('./database/user.json'), true);
     $interface = "<ol class=\"list-group\">";
     foreach($data as $uid => $user){
-        if(isset($user['role_uid'])){
+        if(!empty($user['role_uid'])){
             $interface .= "<li class=\"list-group-item d-flex justify-content-between align-items-start\">
                 <div class=\"ms-2 me-auto\">
                     <div class=\"fw-bold\">{$user['prenom']} {$user['nom']}</div>
-                    <small></small>
+                    <small class=\"badge bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill\">".getRoleName($user['role_uid'])."</small><br>
+                    <small class=\"badge bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill\">{$user['poste']}</small>
                 </div>
                 <a href=\"?uid=$uid\" class=\"btn btn-outline-azur btn-sm rounded-pill\"><i class=\"fa-solid fa-people-roof\"></i> Gérer</a>
             </li>";
@@ -55,8 +56,13 @@ function traitementUserValidation($uid){
         }
     }
     $selecteur .= "</select>";
+    if(file_exists('./img/collaborateur/'. $uid .'.png')){
+        $image = "./img/collaborateur/$uid.png";
+    }else{
+        $image = "./img/collaborateur/pasdepp.png";
+    }
     $interface = "
-    <div class=\"col-lg-9\">
+    <div class=\"col-lg-8\">
         <div class=\"card\">
             <div class=\"card-header\">
                 Traitement de l'intégration de {$data[$uid]['prenom']} {$data[$uid]['nom']}
@@ -64,6 +70,24 @@ function traitementUserValidation($uid){
             <div class=\"card-body\">
                 ".valideUser()."
                 <form method=\"post\" class=\"mt-3\">
+                    <div class=\"card\">
+                        <div class=\"card-body\">
+                            <div class=\"row\">
+                                <div class=\"col-lg-auto\">
+                                    <center>
+                                        <img src=\"$image\" class=\"rounded\" width=\"128px\">
+                                    </center>
+                                </div>
+                                <div class=\"col-lg-auto\">
+                                    <h4>{$data[$uid]['prenom']} {$data[$uid]['nom']}</h4>
+                                    <b>Email : </b>{$data[$uid]['email']}<br>
+                                    <b>Téléphone : </b>{$data[$uid]['telephone']}<br>
+                                    Occupe le poste de {$data[$uid]['poste']}<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <input type=\"hidden\" name=\"uid\" value=\"$uid\" />
                     <label>Prénom :</label>
                     <input type=\"text\" class=\"form-control mb-3\" name=\"prenom\" value=\"{$data[$uid]['prenom']}\" required>
@@ -72,7 +96,7 @@ function traitementUserValidation($uid){
                     <label>Numério de téléphone :</label>
                     <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>
                     <label>Description du poste :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"poste\" placeholder=\"Exemple : Responsable de Production\" maxlength=\"30\" value=\"{$data[$uid]['poste']}\" required>
+                    <input type=\"text\" class=\"form-control mb-3\" name=\"poste\" placeholder=\"Exemple : Responsable de Production\" maxlength=\"40\" value=\"{$data[$uid]['poste']}\" required>
                     <label>Attribution du rôle :</label>
                     $selecteur
                     <center>
@@ -128,7 +152,9 @@ function valideUser(){
                     });
                 }
             </script>
-            <?php return "<div class=\"alert alert-success\" role=\"alert\"><b>Validé !</b> Le compte est maintenant autorisé à ce connecter. Cliquez <u onclick=\"sendMailEvolutionCompte()\">ICI</u> pour envoyer un email d'information.</div>";
+            <?php
+            insertActivity($_SESSION['uid'],"Modification des informations de {$_POST['prenom']} {$_POST['nom']}.");
+            return "<div class=\"alert alert-success\" role=\"alert\"><b>Validé !</b> Le compte est maintenant autorisé à ce connecter. Cliquez <u onclick=\"sendMailEvolutionCompte()\">ICI</u> pour envoyer un email d'information, cliquez <a href=\"?uid={$_GET['uid']}\">ici</a> pour actualiser.</div>";
         }else{
             return "<div class=\"alert alert-warning\" role=\"alert\"><b>Erreur :</b> des données sont manquantes.</div>";
         }

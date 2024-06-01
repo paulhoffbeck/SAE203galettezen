@@ -4,7 +4,7 @@
         "prenom": "Xavier",
         "email": "xavier.dupont@galetezen.com",
         "telephone": "02-22-22-22-22",
-        "poste": "chomeur",
+        "poste": "Responsable Commercial",
         "mot_de_passe": "$2y$10$.2tGSEZCxwMGr\/LDan5JhOOXRtCPUR9828q8.m.F358bQf0HeDaIy",
         "role_uid": "6647aa89001db",
         "last_activity": 1717158984
@@ -13,10 +13,10 @@
         "nom": "Ligonnes",
         "prenom": "Pierre",
         "email": "pierre.ligonnes@galetezen.com",
-        "telephone": "02-12-12-12-12",
-        "poste": "chomeur",
+        "telephone": "09-99-81-82-79",
+        "poste": "Responsable Logistique Internationale",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89001db",
+        "role_uid": "665a04755e407",
         "last_activity": 1717147249
     },
     "gzi789": {
@@ -24,7 +24,7 @@
         "prenom": "Marie",
         "email": "marie.martin@galetezen.com",
         "telephone": "02-33-33-33-33",
-        "poste": "chomeur",
+        "poste": "Expert Technico Commercial",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "6647aa89001db",
         "last_activity": 1717095330
@@ -36,97 +36,97 @@
         "telephone": "03-33-33-33-33",
         "poste": "Responsable Resources Humaines",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89002dc"
+        "role_uid": "665a035650403"
     },
     "ghi789": {
         "nom": "Bernard",
         "prenom": "Emmanuel",
         "email": "emmanuel.bernard@galetezen.com",
         "telephone": "04-44-44-44-44",
-        "poste": "cuisinier",
+        "poste": "Responsable de Communication",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89003ed"
+        "role_uid": "6647aa89001db"
     },
     "jkl012": {
         "nom": "Durand",
         "prenom": "Sophie",
         "email": "sophie.durand@galetezen.com",
-        "telephone": "05-55-55-55-55",
+        "telephone": "09-55-55-55-55",
         "poste": "Comptable",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89004fe"
+        "role_uid": "665a03c3872a2"
     },
     "mno345": {
         "nom": "Lefevre",
         "prenom": "Julien",
         "email": "julien.lefevre@galetezen.com",
         "telephone": "06-66-66-66-66",
-        "poste": "directeur",
+        "poste": "Responsable Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89005gf"
+        "role_uid": "665a04001ed75"
     },
     "pqr678": {
         "nom": "Petit",
         "prenom": "Isabelle",
         "email": "isabelle.petit@galetezen.com",
-        "telephone": "07-77-77-77-77",
-        "poste": "stagiaire",
+        "telephone": "09-77-77-77-77",
+        "poste": "Ouvrier de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89006hg"
+        "role_uid": "665a04001ed75"
     },
     "stu901": {
         "nom": "Robert",
         "prenom": "Thomas",
         "email": "thomas.robert@galetezen.com",
         "telephone": "08-88-88-88-88",
-        "poste": "Ouvrier de Production - St Malo",
+        "poste": "Ouvrier de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89007ih"
+        "role_uid": "665a04001ed75"
     },
     "vwx234": {
         "nom": "Moreau",
         "prenom": "Claire",
         "email": "claire.moreau@galetezen.com",
         "telephone": "09-99-99-99-99",
-        "poste": "RH",
+        "poste": "Agent de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89008ji"
+        "role_uid": "665a04001ed75"
     },
     "yzb567": {
         "nom": "Simon",
         "prenom": "Etienne",
         "email": "etienne.simon@galetezen.com",
         "telephone": "01-11-11-11-11",
-        "poste": "cuisinier",
+        "poste": "Responsable R&D",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89009kj"
+        "role_uid": "665a05425e958"
     },
     "cde890": {
         "nom": "Richard",
         "prenom": "Elodie",
         "email": "elodie.richard@galetezen.com",
         "telephone": "02-22-22-22-21",
-        "poste": "comptabilit\u00e9",
+        "poste": "Comtable - Alternante",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89010kl"
+        "role_uid": "665a03c3872a2"
     },
     "fgh123": {
         "nom": "Michel",
         "prenom": "Paul",
         "email": "paul.michel@galetezen.com",
         "telephone": "03-33-33-33-32",
-        "poste": "directeur",
+        "poste": "Directeur Secr\u00e9tariat",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89011lm"
+        "role_uid": "665a03b8df9b6"
     },
     "ijk456": {
         "nom": "Garcia",
         "prenom": "Helene",
         "email": "helene.garcia@galetezen.com",
-        "telephone": "04-44-44-44-43",
-        "poste": "stagiaire",
+        "telephone": "09-44-44-44-43",
+        "poste": "Comptable",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89012mn"
+        "role_uid": "665a03c3872a2"
     },
     "lmn789": {
         "nom": "Perrin",
@@ -135,16 +135,16 @@
         "telephone": "05-55-55-55-54",
         "poste": "alternant",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89013no"
+        "role_uid": ""
     },
     "opq012": {
         "nom": "Fabre",
         "prenom": "Laura",
         "email": "laura.fabre@galetezen.com",
         "telephone": "06-66-66-66-65",
-        "poste": "RH",
+        "poste": "Charg\u00e9e des Relations Ecoles",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89014op"
+        "role_uid": "665a035650403"
     },
     "rst345": {
         "nom": "Fontaine",
@@ -153,7 +153,7 @@
         "telephone": "07-77-77-77-76",
         "poste": "cuisinier",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89015pq"
+        "role_uid": ""
     },
     "uvw678": {
         "nom": "Benoit",
@@ -162,16 +162,16 @@
         "telephone": "08-88-88-88-87",
         "poste": "comptabilit\u00e9",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89016qr"
+        "role_uid": ""
     },
     "xyz901": {
         "nom": "Dupuis",
         "prenom": "Antoine",
         "email": "antoine.dupuis@galetezen.com",
         "telephone": "09-99-99-99-98",
-        "poste": "directeur",
+        "poste": "Responsable des Syst\u00e8mes d'Informations",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89017rs"
+        "role_uid": "665a03278e373"
     },
     "abc234": {
         "nom": "Gauthier",
@@ -180,17 +180,17 @@
         "telephone": "01-11-11-11-12",
         "poste": "stagiaire",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89018st"
+        "role_uid": ""
     },
     "6659953053cfa": {
         "nom": "Hubert",
         "prenom": "T\u00e9o",
         "email": "teohubert00@gmail.com",
-        "poste": "stagiaire",
+        "poste": "Developpeur Projet",
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "66599b314b005",
-        "last_activity": 1717174209
+        "last_activity": 1717240096
     },
     "6659d93fe52f1": {
         "nom": "Despres",

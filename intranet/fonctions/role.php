@@ -41,6 +41,7 @@ function createRole($name){
             throw new Exception("Impossible de sauvegarder les modifications dans la base de données.");
         }
         echo "<div class='alert alert-success'>Vous avez ajouté le rôle $name à la base de données.</div>";
+        insertActivity($_SESSION['uid'],"Création d'un nouve rôle $name.");
     } catch (Exception $e) {
         echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
     }
@@ -94,6 +95,7 @@ function permissionEditor($roleUID){
                 throw new Exception("Erreur lors de la structuration des permissions du groupe.");
             }
             $result = file_put_contents('database/role.json', $newJson);
+            insertActivity($_SESSION['uid'],"Modification des permissions du rôle {$DB_role[$roleUID]['name']}.");
             if ($result === false) {
                 throw new Exception("Impossible de sauvegarder les modifications dans la base de données.");
             }
@@ -146,7 +148,7 @@ function getMembreRoleListe($roleUID){
         echo "<table class='table text-center'>";
         echo "<thead><tr><th>Prénom Nom</th><th>Profil</th></tr></thead><tbody>";
         foreach($DB_users as $key => $data) {
-            if($data['role_uid'] === $roleUID){
+            if(isset($data['role_uid']) && $data['role_uid'] === $roleUID){
                 echo "<tr><td>".$data['prenom']." ".$data['nom']."</td><td><a class='btn btn-indigo btn-sm' href=''>?</button></td><tr>";
             }
         }
@@ -168,7 +170,7 @@ function loadSessionPermissions($roleUID) {
         echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
     }
 }
-function hasPermission($categorie,$permission,$returnIndex){
+function hasPermission($categorie,$permission,$returnIndex = false){
     if(isset($_SESSION['role_permissions'][$categorie][$permission]) && $_SESSION['role_permissions'][$categorie][$permission] === "true"){
         return true;
     }else{

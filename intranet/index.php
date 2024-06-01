@@ -24,6 +24,31 @@
         </div>
       </div>
     </div>
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card-header">
+          Chiffres RH
+        </div>
+        <div class="card-body">
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          Activitées
+        </div>
+        <div class="card-body">
+          <div style="overflow-y: auto; max-height: 200px;">
+            <table class="table table-hovered">
+              <?php afficheTableActivities() ?>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -4,8 +4,8 @@ function connexionApplication(){
         $json = file_get_contents('./database/user.json');
         $donnee = json_decode($json, true);
         foreach($donnee as $uid => $user){
-            if ($user['role_uid'] != ""){
-                if($user['email'] === $_POST['email']){
+            if($user['email'] === $_POST['email']){
+                if ($user['role_uid'] != ""){
                     if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])){
                         $_SESSION['uid'] = $uid;
                         $_SESSION['nom'] = $user['nom'];
@@ -16,9 +16,9 @@ function connexionApplication(){
                         loadSessionPermissions($user['role_uid']);
                         header("Refresh:0");
                     }
+                }else{
+                    return "<div class=\"alert alert-warning\"><b>Connexion :</b>Vous n'êtes pas autorisé à vous connecter.</div>";
                 }
-            }else{
-                return "<div class=\"alert alert-warning\"><b>Connexion :</b>Vous n'êtes pas autorisé à vous connecter.</div>";
             }
         }
         return "<div class=\"alert alert-warning\"><b>Connexion :</b> Données de connexion incorrects.</div>"; 
@@ -43,13 +43,14 @@ function connexionFormulaire(){
                     }else{
                         echo '<div class="login-form">
                             <form method="post">
-                                <div class="form-group">
+                                <div class="form-group mb-3">
                                     <label>Adresse mail :</label>
                                     <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail" required>
                                 </div>
-                                <div class="form-group mt-2">
-                                    <label>Mot de passe :</label>
-                                    <input type="password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe" required>
+                                <label for="input-password">Mot de Passe :</label>
+                                <div class="input-group mb-3">
+                                    <input type="password" id="input-password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe" required>
+                                    <span class="input-group-text" onclick="viewinput(\'input-password\')"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                 </div>
                                 <br>
                                 <center>
