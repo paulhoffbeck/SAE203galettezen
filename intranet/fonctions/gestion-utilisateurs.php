@@ -61,8 +61,16 @@ function traitementUserValidation($uid){
     }else{
         $image = "./img/collaborateur/pasdepp.png";
     }
-    $interface = "
-    <div class=\"col-lg-8\">
+    $interface = "<div class=\"col-lg-8\">";
+    if(isset($_POST['ChangeUserPassword']) && $_SESSION['uid']){
+        if(changePasswordUser($_POST['uid'],$_POST['mot_de_passe1'],$_POST['mot_de_passe2'])){
+            $interface .= "<div class=\"alert alert-success mt-2 mb-2\">Le mot de passe de ".getUserNameByUid($_POST['uid'])." à correctement été appliqué pour sa prochaine connexion.</div>";
+            insertActivity($_SESSION['uid'],"Modification du mot de passe de ".getUserNameByUid($_POST['uid']).".",2);
+        }else{
+            $interface .= "<div class=\"alert alert-warning mt-2 mb-2\">Une erreur n'a pas permis de changer le mot de passe. Verifiez si votre mot de passe est correct et que les 2 nouveaux mots de passes soit identiques.</div>";
+        }
+    }
+    $interface .= "
         <div class=\"card\">
             <div class=\"card-header\">
                 Traitement de l'intégration de {$data[$uid]['prenom']} {$data[$uid]['nom']}
@@ -100,12 +108,40 @@ function traitementUserValidation($uid){
                     <label>Attribution du rôle :</label>
                     $selecteur
                     <center>
-                        <button type=\"submit\" name=\"valideUser\" class=\"btn btn-azur mb-2\"><i class=\"fa-solid fa-user-check\"></i> Valider</button>
+                        <button type=\"submit\" name=\"valideUser\" class=\"btn btn-azur\"><i class=\"fa-solid fa-user-check\"></i> Valider</button>
+                        <button type=\"button\" class=\"btn btn btn-outline-azur\" data-bs-toggle=\"modal\" data-bs-target=\"#ModificationMotDePasse$uid\"><i class=\"fa-solid fa-key\"></i> Mot de Passe</button></td>
                     </center>
                 </form>
             </div>
         </div>
     </div>";
+    $interface .= '<div class="modal fade" id="ModificationMotDePasse'.$uid.'" tabindex="-1" aria-labelledby="ModificationMotDePasse'.$uid.'Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModificationMotDePasse'.$uid.'Label"> Modifier le mot de passe</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nouveau mot de passe :</label>
+                            <input type="password" class="form-control" name="mot_de_passe1" placeholder="Entrez votre nouveau mot de passe">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>Confirmer le mot de passe :</label>
+                            <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
+                        </div>
+                        <input type="hidden" name="uid" value="'.$uid.'">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="ChangeUserPassword" class="btn btn-azur">Valider</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>';
     return $interface;
 }
 
