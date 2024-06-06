@@ -31,6 +31,7 @@ include '../functions/functions.php';
             <div class="text-center">
                     <h1>Qui sommes-nous ?</h1>
                     <h5>Par soucis de transparence, voici toutes nos équipes !</h5>
+                    <p>Nous sommes une équipe de passionnés de crêpes et de galettes qui ont a coeur de partager leur passion pour la culture bretonne !</p>
                 </div>
                 <div class="container">
                     <div class="row">
