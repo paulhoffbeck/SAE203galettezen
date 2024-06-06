@@ -40,6 +40,7 @@ function connexionFormulaire(){
                     <center><h3 class="mb-3">Connexion</h3></center>';
                     echo connexionApplication();
                     if(isset($_SESSION['uid'])){
+                        header('Location: index.php');
                         echo '<a href="index.php"> Connexion validé, rendez-vous à l\'acceuil</a>';
                     }else{
                         echo '<div class="login-form">

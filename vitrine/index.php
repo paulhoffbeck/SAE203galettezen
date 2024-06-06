@@ -1,5 +1,5 @@
 <?php
-include '../fonction/interface.php';
+include '../fonctions/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
