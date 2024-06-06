@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connexion</title>
+    <title>Partenaires</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
@@ -16,9 +16,11 @@ require_once('fonctions/main.php');
 alreadylogin();
 head();
 navbar();
+modifier();
+
+partenaires(affiche());
 
 
-footer();
 ?>
 
 </body>

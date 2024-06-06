@@ -122,4 +122,10 @@ function collaborateur(){
         </div>';
     }
 }
+
+
+
+
+
+
 ?>
