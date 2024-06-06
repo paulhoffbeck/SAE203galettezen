@@ -9,6 +9,7 @@ require_once(__DIR__ . '/connexion.php');
 require_once(__DIR__ . '/general.php');
 require_once(__DIR__ . '/role.php');
 require_once(__DIR__ . '/collaborateur.php');
+require_once(__DIR__ . '/partenaire.php');
 require_once(__DIR__ . '/dashboard.php');
 require_once(__DIR__ . '/file-manager/repo-file.php');
 require_once(__DIR__ . '/file-manager/download.php');
