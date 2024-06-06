@@ -6,29 +6,101 @@
                 "liste-role": "true",
                 "create-role": "true",
                 "perms-role": "true",
-                "modifier-role-user": "true",
-                "add-role-user": "true",
-                "delet-collaborateur": "true"
+                "activity-level-danger": "true",
+                "activity-level-warning": "true"
             },
             "modo": {
-                "partenaires": "true",
-                "create-collaborator": "true",
-                "edit-collaborator": "true"
+                "liste-new-user": "true",
+                "liste-user": "true",
+                "create-user": "true",
+                "edit-base-user": "true",
+                "edit-personnal-user": "true",
+                "edit-role-user": "true",
+                "partenaires": "true"
             },
             "general": {
                 "acces-file-manager": "true",
                 "view-collaborator-liste": "true",
-                "view-collaborator-details": "true",
-                "edit-self-informations": "true"
+                "view-collaborator-details": "true"
             }
         }
     },
-    "6647aa89001db": {
-        "name": "Commercial",
+    "665a031785562": {
+        "name": "Direction",
         "permissions": {
-            "admin": {
-                "manage-role": "true"
-            },
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a035650403": {
+        "name": "Service des Ressources Humaines",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a03c3872a2": {
+        "name": "Service Comptabilit\u00e9",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "6647aa89001db": {
+        "name": "Service Commercial",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a03278e373": {
+        "name": "Service Informatique",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a03b8df9b6": {
+        "name": "Secr\u00e9tariat",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a0558c0ad1": {
+        "name": "Service des Achats",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a04755e407": {
+        "name": "Service Logistique",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a04001ed75": {
+        "name": "Service Production",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": []
+        }
+    },
+    "665a05425e958": {
+        "name": "Service R&D",
+        "permissions": {
+            "admin": [],
             "modo": [],
             "general": []
         }
