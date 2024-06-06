@@ -13,8 +13,7 @@ echo'
 </div>';
 }
 
-function  navbar(){ 
-echo '
+function  navbar(){ ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-azur sticky-top">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,18 +42,21 @@ echo '
             <li><a class="dropdown-item" href="">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
-        </li>
+        <?php if(hasPermission("general","acces-file-manager",false)){ ?>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
+          </li>
+        <?php }if(hasPermission("general","link-wiki",false)){ ?>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
+          </li>
+        <?php } ?>
       </ul>
       <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Bonjour '.$_SESSION['prenom'].' '.strtoupper($_SESSION['nom']).'
+            Bonjour <?= $_SESSION['prenom'].' '.strtoupper($_SESSION['nom']) ?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="profil.php">Profil</a></li>
@@ -65,8 +67,8 @@ echo '
       </form>
     </div>
   </div>
-</nav>';
-}
+</nav>
+<?php }
 
 function footer(){
 

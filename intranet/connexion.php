@@ -16,11 +16,22 @@ require_once('fonctions/main.php');
 head();
 
 echo "<main class\"flex-fill\">";
-connexion();
+connexionFormulaire();
 echo "</main>";
 
 footer();
 ?>
 
+<script>
+  function viewinput(input){
+    var input = document.getElementById(input);
+    console.log(input);
+    if (input.type == "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+  }
+</script>
 </body>
 </html>
