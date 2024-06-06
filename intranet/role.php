@@ -1,4 +1,4 @@
-<?php require_once("fonctions/main.php"); alreadylogin();?>
+<?php require_once("fonctions/main.php"); alreadylogin(); hasPermission("admin","liste-role",true); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,22 +19,24 @@
                     </div>
                     <div class="card-body">
                         <?php 
-                        if(isset($_POST['create_role'])){
+                        if(hasPermission("admin","create-role",false) && isset($_POST['create_role'])){
                             createRole($_POST['role_name']);
                         } ?>
                         <table class="table">
                             <tbody>
-                                <tr>
-                                    <form method="POST" class="form">
-                                        <td>
-                                            <input type="text" name="role_name" id="role_name" class="form-control form-control-sm" placeholder="Nouveau rôle" required>
-                                        </td>
-                                        <td>
-                                            <button type="submit" name="create_role" class="btn btn-sm btn-turquoise">Créer</button>
-                                        </td>
-                                    </form>
-                                </tr>
-                                <?php loadRoleListe() ?>
+                                <?php if(hasPermission("admin","create-role",false)){ ?>
+                                    <tr>
+                                        <form method="POST" class="form">
+                                            <td>
+                                                <input type="text" name="role_name" id="role_name" class="form-control form-control-sm" placeholder="Nouveau rôle" required>
+                                            </td>
+                                            <td>
+                                                <button type="submit" name="create_role" class="btn btn-sm btn-turquoise">Créer</button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                <?php }
+                                loadRoleListe() ?>
                             </tbody>
                         </table>
                     </div>
@@ -51,17 +53,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            Modification des permissions de "<?= getRoleName($_GET['uid']) ?>"
-                        </div>
-                        <div class="card-body">
-                            <?php permissionEditor($_GET['uid']) ?>
+                <?php if(hasPermission("admin","perms-role",false)){ ?>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Modification des permissions de "<?= getRoleName($_GET['uid']) ?>"
+                            </div>
+                            <div class="card-body">
+                                <?php permissionEditor($_GET['uid']) ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php } ?>
+                <?php }
+            } ?>
         </div>
     </div>
 

@@ -3,19 +3,24 @@
         "liste-role": "Aficher la liste des rôles et leurs permissions.",
         "create-role": "Créer un nouveau rôle dans la liste.",
         "perms-role": "Modifier les permissions de tous les rôles de la liste.",
-        "modifier-role-user": "Modifier le rôle d'un utilisateur possédant déjà un rôle.",
-        "add-role-user": "Ajouter un rôle à un utilisateur n'en possédant pas (Recrutement).",
-        "delet-collaborateur": "Supprimer un collaborateur de la liste = Supprimer un compte utilisateur."
+        "activity-level-danger": "Afficher les activités de niveaux Critique.",
+        "activity-level-warning": "Afficher les activités de niveaux Avertissement."
     },
     "modo":{
-        "partenaires": "Créer, modifier ou supprimer des partenaires.",
-        "create-collaborator": "Créer un nouveau collaborateur depuis la liste.",
-        "edit-collaborator": "Modifier les informations d'un collaborateur."
+        "liste-new-user": "Afficher la liste des nouveaux compte en attente de validation.",
+        "liste-user": "Afficher la liste des utilisateurs/collaborateur.",
+        "create-user": "Créer un nouveau utilisateurs/collaborateur.",
+        "edit-base-user": "Modifier les informations de base d'un utilisateurs/collaborateur.",
+        "edit-personnal-user": "Modifier les informations personnelles d'un utilisateurs/collaborateur.",
+        "edit-role-user": "Modifier le rôle d'accès d'un utilisateurs/collaborateur.",
+
+        "partenaires": "Créer, modifier ou supprimer des partenaires."
     },
     "general":{
         "acces-file-manager": "Accéder à l'espace de fichiers partagés.",
         "view-collaborator-liste": "Afficher la liste des collaborateurs.",
         "view-collaborator-details": "Afficher le détails des informations d'un collaborateur depuis la liste.",
-        "edit-self-informations": "Modifier les informations de son profil."
+        "profil": "Afficher les informations sur son profil et les modifiers.",
+        "link-wiki": "Accéder au lien direct vers le Wiki."
     }
 }
