@@ -1,7 +1,5 @@
 <?php
-
 function head(){
-//var_dump($_SESSION);
 echo'
 <div class="bg-azur p-3">
   <div class="row">
@@ -15,8 +13,7 @@ echo'
 </div>';
 }
 
-function  navbar(){ 
-echo '
+function  navbar(){ ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-azur sticky-top">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +25,6 @@ echo '
           <a class="nav-link text-white" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="role.php">Rôles</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-white" href="partenaire.php">Partenaires</a>
         </li>
         <li class="nav-item">
@@ -39,18 +33,30 @@ echo '
         <li class="nav-item">
           <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gestion</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="user-management.php">Membres</a></li>
+            <li><a class="dropdown-item" href="role.php">Rôles</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="">Something else here</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
-        </li>
+        <?php if(hasPermission("general","acces-file-manager",false)){ ?>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
+          </li>
+        <?php }if(hasPermission("general","link-wiki",false)){ ?>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
+          </li>
+        <?php } ?>
       </ul>
       <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Bonjour '.$_SESSION['prenom'].' '.strtoupper($_SESSION['nom']).'
+            Bonjour <?= $_SESSION['prenom'].' '.strtoupper($_SESSION['nom']) ?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="profil.php">Profil</a></li>
@@ -61,8 +67,8 @@ echo '
       </form>
     </div>
   </div>
-</nav>';
-}
+</nav>
+<?php }
 
 function footer(){
 
