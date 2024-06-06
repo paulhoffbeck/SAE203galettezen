@@ -83,11 +83,7 @@ function collaborateur(){
             <td>'. $role['name'] .'<br>'. $user['poste'].'</td>
             <td>'. $user['email'].'</td> 
             <td>'.$user['telephone'].'</td>
-            <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button>';
-            if($_SESSION['uid'] == $key){
-                echo '<button type="button" class="btn btn-sm btn-azur" data-bs-toggle="modal" data-bs-target="#'.$key.'1"> Modification </button></td>';
-            }
-            echo '</td>
+            <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button></td>
             </tr> ';
         }
     }
@@ -96,75 +92,34 @@ function collaborateur(){
 
     // création des modaux
     $json = file_get_contents('./database/user.json');
-            $donnee = json_decode($json, true);
-    foreach ($donnee as $key => $employee) {
-    echo'<div class="modal fade" id="'.$key.'" tabindex="-1" aria-labelledby="'.$key.'lLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="'.$key.'Label">'.strtoupper($employee['nom']) .' '. $employee['prenom'] .'</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">';
-                    // Contenu visible dans le modal
-                    if(file_exists('./img/collaborateur/'. $key .'.png')){
-                        echo '<img src="./img/collaborateur/'.$key.'.png" width="350px">';}
-                    else{
-                        echo '<img src="./img/collaborateur/pasdepp.png" width="350px">';}
-                    echo'<p> Nom: <b>'.strtoupper($employee['nom']) . '</b><br>
-                    Prénom: <b>' . $employee['prenom'] . '</b><br>
-                    '.$employee['prenom'].' occupe le poste de <b>' . $employee['poste'] . '</b>.<br>
-                    Vous pouvez contacter '.$employee['prenom'].' au <b>' . $employee['telephone'] . '</b>, ou à l\'adresse<b> ' . $employee['email'] . '</b>.<br>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                </div>
-            </div>
-        </div>
-    </div>';
-    }
+    $donnee = json_decode($json, true);
 
     foreach ($donnee as $key => $employee) {
-        echo'<div class="modal fade" id="'.$key.'1" tabindex="-1" aria-labelledby="'.$key.'1lLabel" aria-hidden="true">
+        echo'<div class="modal fade" id="'.$key.'" tabindex="-1" aria-labelledby="'.$key.'lLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="'.$key.'1Label"> Modifiez votre profil</h1>
+                        <h1 class="modal-title fs-5" id="'.$key.'Label">'.strtoupper($employee['nom']) .' '. $employee['prenom'] .'</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">';
                         // Contenu visible dans le modal
-                        echo '
-                        <form method="post">
-                            <div class="form-group">
-                                <label>Changez votre mot de passe :</label>
-                                <input type="password" class="form-control" name="mot_de_passe1" placeholder="Entrez votre nouveau mot de passe">
-                            </div>
-                            <div class="form-group">
-                                <label>Validez le changement de mot de passe :</label>
-                                <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
-                            </div>
-                        </form>';
-                        /*$json = file_get_contents('./database/user.json');
-                        $donnee = json_decode($json, true);
-                        
-                        if($_POST['mot_de_passe1'] == $_POST['mot_de_passe2']){
-                            $employee['mot_de_passse'] = $_POST['mot_de_passe2'];
-
-                            $jason = json_encode($key);
-                            $cheminFichier = './database/user.json';
-                            file_put_contents($cheminFichier, s$jason);
-                        }
-                        else { echo "Mot de passe différent";}*/
-                    echo '</div>
+                        if(file_exists('./img/collaborateur/'. $key .'.png')){
+                            echo '<img src="./img/collaborateur/'.$key.'.png" width="350px">';}
+                        else{
+                            echo '<img src="./img/collaborateur/pasdepp.png" width="350px">';}
+                        echo'<p> Nom: <b>'.strtoupper($employee['nom']) . '</b><br>
+                        Prénom: <b>' . $employee['prenom'] . '</b><br>
+                        '.$employee['prenom'].' occupe le poste de <b>' . $employee['poste'] . '</b>.<br>
+                        Vous pouvez contacter '.$employee['prenom'].' au <b>' . $employee['telephone'] . '</b>, ou à l\'adresse<b> ' . $employee['email'] . '</b>.<br>
+                        </p>
+                    </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-azur">Valider</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                     </div>
                 </div>
             </div>
         </div>';
-        }
+    }
 }
 ?>
