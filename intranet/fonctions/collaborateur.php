@@ -8,6 +8,22 @@ if(isset($_SESSION['uid'])){
     updateActivityNow();
 }
 
+function modifjson(){
+    if(isset($_POST['ma_checkbox']) && $_POST['ma_checkbox'] == '1') {
+        // Charge le contenu du fichier JSON
+        $data = file_get_contents('fichier.json');
+        // Convertit le JSON en tableau associatif
+        $jsonArray = json_decode($data, true);
+        // Modifie les données selon vos besoins
+        $jsonArray['modification'] = 'Ceci est une modification';
+        // Convertit le tableau associatif en JSON
+        $jsonData = json_encode($jsonArray);
+        // Écrit les données dans le fichier JSON
+        file_put_contents('fichier.json', $jsonData);
+        echo "Le fichier JSON a été modifié avec succès !";
+    }
+}
+
 function collaborateur(){
     ?>
     <script>
@@ -33,6 +49,7 @@ function collaborateur(){
         <thead>
             <tr>
                 <form method="post">
+                    <th class="bg-turquoise border-turquoise"></th>
                     <th class="bg-turquoise border-turquoise">Filtre</th>
                     <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="nom" placeholder="Chercher par Nom"></th>
                     <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="prenom" placeholder="Chercher par Prénom"></th>
@@ -47,6 +64,7 @@ function collaborateur(){
                 </form>
             </tr>
             <tr>
+                <th>Visibilité</th>
                 <th>Photo</th>
                 <th>Nom</th>
                 <th>Prenom</th>
@@ -73,6 +91,17 @@ function collaborateur(){
             ){
 
             echo'<tr>';
+            if($user["visibilite"] == true){   
+                $fourn='checked';
+            }
+            else{
+                $fourn='';
+            }
+
+            echo '<form id="monFormulaire" method="POST" action="index.php">
+                <td> <input type="checkbox" type="submit" name="newfour" '.$fourn.' form="monFormulaire"> </td>
+            </form>';
+            
             if(file_exists('./img/collaborateur/'. $key .'.png')){
                 echo '<td> <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="./img/collaborateur/'.$key.'.png" width="28px"> </td>';}
             else{
