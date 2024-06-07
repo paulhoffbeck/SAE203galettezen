@@ -7,17 +7,8 @@
         "poste": "Responsable Commercial",
         "mot_de_passe": "$2y$10$NvC5pogz4LGgHFX8CEZbC.p.8IAmt6QhTPDfPNRyCsn5sZBrPYOTy",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717256441
-    },
-    "djf456": {
-        "nom": "Ligonnes",
-        "prenom": "Pierre",
-        "email": "pierre.ligonnes@galetezen.com",
-        "telephone": "09-99-81-82-79",
-        "poste": "Responsable Logistique Internationale",
-        "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a04755e407",
-        "last_activity": 1717147249
+        "last_activity": 1717256441,
+        "visibilite": true
     },
     "gzi789": {
         "nom": "Martin",
@@ -27,7 +18,8 @@
         "poste": "Expert Technico Commercial",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "6647aa89001db",
-        "last_activity": 1717095330
+        "last_activity": 1717095330,
+        "visibilite": true
     },
     "det56": {
         "nom": "Martin",
@@ -36,7 +28,8 @@
         "telephone": "03-33-33-33-33",
         "poste": "Responsable Resources Humaines",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a035650403"
+        "role_uid": "665a035650403",
+        "visibilite": true
     },
     "ghi789": {
         "nom": "Bernard",
@@ -45,7 +38,8 @@
         "telephone": "04-44-44-44-44",
         "poste": "Responsable de Communication",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "6647aa89001db"
+        "role_uid": "6647aa89001db",
+        "visibilite": true
     },
     "jkl012": {
         "nom": "Durand",
@@ -54,7 +48,8 @@
         "telephone": "09-55-55-55-55",
         "poste": "Comptable",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a03c3872a2"
+        "role_uid": "665a03c3872a2",
+        "visibilite": true
     },
     "mno345": {
         "nom": "Lefevre",
@@ -63,7 +58,8 @@
         "telephone": "06-66-66-66-66",
         "poste": "Responsable Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a04001ed75"
+        "role_uid": "665a04001ed75",
+        "visibilite": true
     },
     "pqr678": {
         "nom": "Petit",
@@ -72,7 +68,8 @@
         "telephone": "09-77-77-77-77",
         "poste": "Ouvrier de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a04001ed75"
+        "role_uid": "665a04001ed75",
+        "visibilite": false
     },
     "stu901": {
         "nom": "Robert",
@@ -81,7 +78,19 @@
         "telephone": "08-88-88-88-88",
         "poste": "Ouvrier de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a04001ed75"
+        "role_uid": "665a04001ed75",
+        "visibilite": false
+    },
+    "djf456": {
+        "nom": "Ligonnes",
+        "prenom": "Pierre",
+        "email": "pierre.ligonnes@galetezen.com",
+        "telephone": "09-99-81-82-79",
+        "poste": "Responsable Logistique Internationale",
+        "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
+        "role_uid": "665a04755e407",
+        "last_activity": 1717147249,
+        "visibilite": false
     },
     "vwx234": {
         "nom": "Moreau",
@@ -90,7 +99,8 @@
         "telephone": "09-99-99-99-99",
         "poste": "Agent de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a04001ed75"
+        "role_uid": "665a04001ed75",
+        "visibilite": false
     },
     "yzb567": {
         "nom": "Simon",
@@ -99,7 +109,8 @@
         "telephone": "01-11-11-11-11",
         "poste": "Responsable R&D",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a05425e958"
+        "role_uid": "665a05425e958",
+        "visibilite": false
     },
     "cde890": {
         "nom": "Richard",
@@ -108,7 +119,8 @@
         "telephone": "02-22-22-22-21",
         "poste": "Comtable - Alternante",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a03c3872a2"
+        "role_uid": "665a03c3872a2",
+        "visibilite": false
     },
     "fgh123": {
         "nom": "Michel",
@@ -117,7 +129,8 @@
         "telephone": "03-33-33-33-32",
         "poste": "Directeur Secr\u00e9tariat",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a03b8df9b6"
+        "role_uid": "665a03b8df9b6",
+        "visibilite": false
     },
     "ijk456": {
         "nom": "Garcia",
@@ -126,7 +139,8 @@
         "telephone": "09-44-44-44-43",
         "poste": "Comptable",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a03c3872a2"
+        "role_uid": "665a03c3872a2",
+        "visibilite": false
     },
     "lmn789": {
         "nom": "Perrin",
@@ -135,7 +149,8 @@
         "telephone": "05-55-55-55-54",
         "poste": "alternant",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a04755e407"
+        "role_uid": "665a04755e407",
+        "visibilite": true
     },
     "opq012": {
         "nom": "Fabre",
@@ -144,7 +159,8 @@
         "telephone": "06-66-66-66-65",
         "poste": "Charg\u00e9e des Relations Ecoles",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a035650403"
+        "role_uid": "665a035650403",
+        "visibilite": true
     },
     "rst345": {
         "nom": "Fontaine",
@@ -153,7 +169,8 @@
         "telephone": "07-77-77-77-76",
         "poste": "cuisinier",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": ""
+        "role_uid": "",
+        "visibilite": true
     },
     "uvw678": {
         "nom": "Benoit",
@@ -162,7 +179,8 @@
         "telephone": "08-88-88-88-87",
         "poste": "comptabilit\u00e9",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": ""
+        "role_uid": "",
+        "visibilite": true
     },
     "xyz901": {
         "nom": "Dupuis",
@@ -171,7 +189,8 @@
         "telephone": "09-99-99-99-98",
         "poste": "Responsable des Syst\u00e8mes d'Informations",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "665a03278e373"
+        "role_uid": "665a03278e373",
+        "visibilite": true
     },
     "abc234": {
         "nom": "Gauthier",
@@ -180,7 +199,8 @@
         "telephone": "01-11-11-11-12",
         "poste": "stagiaire",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": ""
+        "role_uid": "",
+        "visibilite": true
     },
     "6659953053cfa": {
         "nom": "Hubert",
@@ -190,7 +210,8 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1717256522
+        "last_activity": 1717256522,
+        "visibilite": true
     },
     "6659d93fe52f1": {
         "nom": "Despres",
@@ -200,7 +221,8 @@
         "role_uid": "66599b314b005",
         "telephone": "01-02-03-04-05",
         "poste": "Developpeur Projet",
-        "last_activity": 1717679829
+        "last_activity": 1717739199,
+        "visibilite": true
     },
     "6659da5784fa0": {
         "nom": "Collet",
@@ -210,6 +232,7 @@
         "role_uid": "66599b314b005",
         "telephone": "02-03-04-05-06",
         "poste": "Developpeur Projet",
-        "last_activity": 1717165152
+        "last_activity": 1717165152,
+        "visibilite": true
     }
 }
