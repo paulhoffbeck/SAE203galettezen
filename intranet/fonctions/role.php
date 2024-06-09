@@ -47,18 +47,20 @@ function createRole($name){
     }
 }
 function getRoleName($roleUID) {
-    try {
-        $json = file_get_contents('database/role.json'); 
-        if ($json === false) {
-            throw new Exception("Impossible de trouver la base de données des rôles.");
-        }    
-        $DB_role = json_decode($json, true);
-        if ($DB_role === null) {
-            throw new Exception("Erreur lors du charger la base de données des rôles.");
+    if(!empty($roleUID)){
+        try {
+            $json = file_get_contents('database/role.json'); 
+            if ($json === false) {
+                throw new Exception("Impossible de trouver la base de données des rôles.");
+            }    
+            $DB_role = json_decode($json, true);
+            if ($DB_role === null) {
+                throw new Exception("Erreur lors du charger la base de données des rôles.");
+            }
+            return $DB_role[$roleUID]['name'];
+        } catch (Exception $e) {
+            echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
         }
-        return $DB_role[$roleUID]['name'];
-    } catch (Exception $e) {
-        echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
     }
 }
 function getPermissions($roleUID) {

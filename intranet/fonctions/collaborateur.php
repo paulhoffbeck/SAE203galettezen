@@ -48,7 +48,7 @@ function collaborateur(){ ?>
                     echo'</th>
                     <th class="bg-ciel border-ciel"><input class="bg-ciel border-0" type="email" name="email" placeholder="Chercher par Email"></th>
                     <th class="bg-ciel border-ciel"><input class="bg-ciel border-0" type="tel" name="telephone" placeholder="Chercher par Téléphone"></th>
-                    <th class="bg-ciel border-ciel"><button type="submit" name="rechercher" class="btn btn-pastel">Appliquer</button></th>
+                    <th class="bg-ciel border-ciel"><button type="submit" name="rechercher" class="btn btn-sm btn-pastel">Appliquer</button></th>
                 </form>
             </tr>
             <tr>
@@ -69,12 +69,12 @@ function collaborateur(){ ?>
 
     extract($_POST);
     foreach ($donnee as $key => $user) {
-        if((!empty($nom) && strtolower($nom) == strtolower($user['nom']))
-            ||(!empty($prenom) && strtolower($prenom) == strtolower($user['prenom']))
-            ||(!empty($email) && strtolower($email) == strtolower($user['email']))
-            ||(!empty($telephone) && $telephone == $user['telephone'])
-            ||(!empty($poste) && $poste == $user['role_uid']
-            ||(empty($nom) && empty($prenom) && empty($email) && empty($telephone) && empty($poste)))
+        if( !empty($user['role_uid'])
+            && ((empty($nom) || strtolower($nom) == strtolower($user['nom']))
+            && (empty($prenom) || strtolower($prenom) == strtolower($user['prenom']))
+            && (empty($email) || strtolower($email) == strtolower($user['email']))
+            && (empty($telephone) || $telephone == $user['telephone'])
+            && (empty($poste) || $poste == $user['role_uid']))
             ){
 
             echo'<tr>';
@@ -85,7 +85,7 @@ function collaborateur(){ ?>
                 echo '</td>
                 <td>'. $user['nom'].'</td>
                 <td>'. $user['prenom'].'</td> 
-                <td>'. $role['name'] .'<br><small>'. $user['poste'].'</small></td>
+                <td>'. getRoleName($user['role_uid']) .'<br><small>'. $user['poste'].'</small></td>
                 <td><a href="mailto:'. $user['email'].'">'. $user['email'].'</a></td> 
                 <td>'.$user['telephone'].'</td>
                 <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button></td>
