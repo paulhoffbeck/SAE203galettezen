@@ -29,7 +29,7 @@
           <h1 class="display-4">Accès interdit</h1>
           <h1 class="display-1 text-danger font-weight-bold">403</h1>
           <p class="lead">Vous ne pouvez pas accéder à cette ressource, désolé.</p>
-          <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
+          <a href="index.php" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
       </div>
     </div>
@@ -40,7 +40,7 @@
           <h1 class="display-4">Page non trouvée</h1>
           <h1 class="display-1 text-danger font-weight-bold">404</h1>
           <p class="lead">Désolé, nous n'avons pas trouvé la page que vous cherchez ...</p>
-          <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
+          <a href="index.php" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
       </div>
       <div class="col-lg-3 d-none d-lg-block">
@@ -53,7 +53,7 @@
         <center>
           <h1 class="display-4">Oups..., il y a une erreur !</h1>
           <p class="lead">Il semblerait qu'il y ait eu une erreur quelque part...</p>
-          <a href="index.html" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
+          <a href="index.php" class="btn btn-lg btn-block btn-outline-danger mt-3">Retourner à l'accueil</a>
         </center>
       </div>
       <div class="col-lg-3 d-none d-lg-block">
