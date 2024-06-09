@@ -72,13 +72,13 @@ function footer() {
                         <h5 class="text-uppercase">Partenaires</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Airbus</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="partenaires.php">Airbus</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Stade Rennais</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="partenaires.php">Stade Rennais</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Amora</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="partenaires.php">Amora</a>
                             </li>
                         </ul>
                     </div>
