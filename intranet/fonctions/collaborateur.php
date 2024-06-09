@@ -79,7 +79,7 @@ function collaborateur(){ ?>
 
             echo'<tr>';
                 if(file_exists('./img/collaborateur/'. $key .'.png')){
-                    echo '<td> <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="./img/collaborateur/'.$key.'.png" width="28px"> </td>';}
+                    echo '<td> <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="profile-img" src="./img/collaborateur/'.$key.'.png" width="28px"> </td>';}
                 else{
                     echo '<td> <img src="./img/collaborateur/pasdepp.png" width="28px"> </td>';} 
                 echo '</td>
