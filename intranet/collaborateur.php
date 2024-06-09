@@ -24,5 +24,16 @@ footer();
 
 ?>
 
+<script>
+//Fonction JS pour agrandir la photo de profil dans le tableau
+function bigImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+    }
+function normalImg(x) {
+    x.style.height = "28px";
+    x.style.width = "28px";
+    }
+</script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     },
     "gzi789": {
         "nom": "Dansmonverre",
-        "prenom": "Mélanie",
+        "prenom": "M\u00e9lanie",
         "email": "melanie.dansmonverre@galetezen.com",
         "telephone": "02-33-33-33-33",
         "poste": "Expert Technico Commercial",
@@ -63,7 +63,7 @@
     },
     "pqr678": {
         "nom": "Ponsable",
-        "prenom": "Thérèse",
+        "prenom": "Th\u00e9r\u00e8se",
         "email": "therese.ponsable@galetezen.com",
         "telephone": "09-77-77-77-77",
         "poste": "Ouvrier de Production",
@@ -93,7 +93,7 @@
         "visibilite": false
     },
     "vwx234": {
-        "nom": "Boréale",
+        "nom": "Bor\u00e9ale",
         "prenom": "Aurore",
         "email": "aurore.boreale@galetezen.com",
         "telephone": "09-99-99-99-99",
@@ -133,7 +133,7 @@
         "visibilite": false
     },
     "ijk456": {
-        "nom": "Lapêche",
+        "nom": "Lap\u00eache",
         "prenom": "Ella",
         "email": "ella.lapeche@galetezen.com",
         "telephone": "09-44-44-44-43",
@@ -173,7 +173,7 @@
         "visibilite": true
     },
     "uvw678": {
-        "nom": "Fébienléchose",
+        "nom": "F\u00e9bienl\u00e9chose",
         "prenom": "Lazare",
         "email": "lazare.febienlechose@galetezen.com",
         "telephone": "08-88-88-88-87",
@@ -210,7 +210,7 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1717256522,
+        "last_activity": 1717932967,
         "visibilite": true
     },
     "6659d93fe52f1": {
