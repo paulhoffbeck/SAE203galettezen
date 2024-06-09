@@ -10,11 +10,16 @@ function loadRoleListe(){
             throw new Exception("Erreur lors du charger la base de données des rôles.");
         }
         foreach ($DB_role as $uid => $role){
-            if(isset($_GET['uid']) && $_GET['uid'] === $uid){
-                echo "<tr><td>{$role['name']}</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-outline-ciel'>Détails</a></td></tr>";
-            }else{
-                echo "<tr><td>{$role['name']}</td><td><a href='role.php?uid=".$uid."' class='btn btn-sm btn-azur'>Détails</a></td></tr>";
+            echo "<tr>";
+            echo "<td>{$role['name']}</td>";
+            if(hasPermission("modo","members-role",false) || hasPermission("modo","view-perms-role",false) || hasPermission("modo","edit-perms-role",false)){
+                if(isset($_GET['uid']) && $_GET['uid'] === $uid){
+                    echo "<td><a href='role.php?uid=".$uid."' class=\"btn btn-sm btn-outline-ciel\"><i class=\"fa-solid fa-info\"></i></a></td>";
+                }else{
+                    echo "<td><a href='role.php?uid=".$uid."' class=\"btn btn-sm btn-azur\"><i class=\"fa-solid fa-info\"></i></a></td></tr>";
+                }
             }
+            echo "</tr>";
         }
     } catch (Exception $e) {
         echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
@@ -74,6 +79,34 @@ function getPermissions($roleUID) {
             throw new Exception("Erreur lors du charger la base de données des rôles.");
         }
         return $DB_role[$roleUID]['permissions'];
+    } catch (Exception $e) {
+        echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
+    }
+}
+function permissionViewer($roleUID){
+    try {
+        if(isset($_POST['updatePermissions'])){
+            updatePermissions($roleUID,$_POST);
+        }
+        $activPermissions = getPermissions($roleUID);
+        $json = file_get_contents('database/permissions.json'); 
+        if ($json === false) {
+            throw new Exception("Impossible de trouver la base de données des permissions.");
+        }
+        $DB_permissions = json_decode($json, true);
+        if ($DB_permissions === null) {
+            throw new Exception("Erreur lors du charger la base de données des permissions.");
+        }
+        foreach (array("admin"=>"Administration", "modo"=>"Modération", "general"=>"Générales") as $categorie => $name){
+            echo "<h4 class='mt-3'>Permissions $name</h4>";
+            foreach ($DB_permissions[$categorie] as $key => $text) {
+                if(isset($activPermissions[$categorie][$key])){
+                    echo "<i class=\"fa-solid fa-square-check text-success\"></i> $text<br>";
+                }else{
+                    echo "<i class=\"fa-solid fa-square-xmark text-danger\"></i> $text<br>";
+                }
+            }
+        }
     } catch (Exception $e) {
         echo '<div class="alert alert-danger"><b>Erreur :</b> ' . $e->getMessage().'</div>';
     }
@@ -151,7 +184,7 @@ function getMembreRoleListe($roleUID){
         echo "<thead><tr><th>Prénom Nom</th><th>Profil</th></tr></thead><tbody>";
         foreach($DB_users as $key => $data) {
             if(isset($data['role_uid']) && $data['role_uid'] === $roleUID){
-                echo "<tr><td>".$data['prenom']." ".$data['nom']."</td><td><a class='btn btn-indigo btn-sm' href=''>?</button></td><tr>";
+                echo "<tr><td>".$data['prenom']." ".$data['nom']."</td><td><a class='btn btn-indigo btn-sm' target=\"BLANK_\" href='user-management.php?uid=$key'><i class=\"fa-solid fa-user-pen\"></i></button></td><tr>";
             }
         }
         echo "</tbody></table>";

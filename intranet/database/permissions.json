@@ -1,25 +1,27 @@
 {
     "admin":{
-        "liste-role": "Aficher la liste des rôles et leurs permissions.",
-        "create-role": "Créer un nouveau rôle dans la liste.",
-        "perms-role": "Modifier les permissions de tous les rôles de la liste.",
-        "activity-level-danger": "Afficher les activités de niveaux Critique.",
-        "activity-level-warning": "Afficher les activités de niveaux Avertissement."
+        "edit-perms-role": "<i class=\"fa-solid fa-ranking-star\"></i> Modifier les permissions de tous les rôles de la liste.",
+        "create-role": "<i class=\"fa-solid fa-ranking-star\"></i> Créer un nouveau rôle dans la liste.",
+
+        "activity-level-danger": "<i class=\"fa-solid fa-clock-rotate-left\"></i> Afficher les activités de niveaux Critique.",
+        "activity-level-warning": "<i class=\"fa-solid fa-clock-rotate-left\"></i> Afficher les activités de niveaux Avertissement."
     },
     "modo":{
-        "liste-new-user": "Afficher la liste des nouveaux compte en attente de validation.",
-        "liste-user": "Afficher la liste des utilisateurs/collaborateur.",
-        "create-user": "Créer un nouveau utilisateurs/collaborateur.",
-        "edit-base-user": "Modifier les informations de base d'un utilisateurs/collaborateur.",
-        "edit-personnal-user": "Modifier les informations personnelles d'un utilisateurs/collaborateur.",
-        "edit-role-user": "Modifier le rôle d'accès d'un utilisateurs/collaborateur.",
+        "liste-role": "<i class=\"fa-solid fa-ranking-star\"></i> Afficher la page des rôles ainsi que la liste des rôles.",
+        "members-role": "<i class=\"fa-solid fa-ranking-star\"></i> Afficher la liste des membres d'un rôles.",
+        "view-perms-role": "<i class=\"fa-solid fa-ranking-star\"></i> Afficher les permissions de tous les rôles de la liste.",
 
-        "partenaires": "Créer, modifier ou supprimer des partenaires."
+        "liste-new-user": "<i class=\"fa-solid fa-users\"></i> Afficher la liste des nouveaux comptes en attente de validation.",
+        "treatment-new-user": "<i class=\"fa-solid fa-users\"></i>  Traiter un nouveau compte en attente de validation.",
+        "edit-base-user": "<i class=\"fa-solid fa-users\"></i>  Modifier les informations d'un compte utilisateur (Nom, Prenom, Téléphone).",
+        "edit-role-user": "<i class=\"fa-solid fa-users\"></i>  Définir un nouveau rôle/poste à un compte utilisateur.",
+        "edit-password-user": "<i class=\"fa-solid fa-users\"></i>  Modifier le mot de passe d'un compte utilisateur.",
+        "manage-partenaires": "<i class=\"fa-solid fa-handshake-angle\"></i> Gérer les partenaires."
     },
     "general":{
-        "acces-file-manager": "Accéder à l'espace de fichiers partagés.",
-        "view-collaborator-liste": "Afficher la liste des collaborateurs.",
-        "view-collaborator-details": "Afficher le détails des informations d'un collaborateur depuis la liste.",
+        "acces-file-manager": "<i class=\"fa-solid fa-folder-tree\"></i> Accéder à l'espace de fichiers partagés.",
+        "page-collaborateur": "<i class=\"fa-regular fa-address-card\"></i> Accéder à la page des utilisateurs/collaborateur avec leurs coordonnées.",
+        "page-clients": "<i class=\"fa-solid fa-basket-shopping\"></i> Afficher la liste des clients et leurs informations.",
         "profil": "Afficher les informations sur son profil et les modifiers.",
         "link-wiki": "Accéder au lien direct vers le Wiki."
     }

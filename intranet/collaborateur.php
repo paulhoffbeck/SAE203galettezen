@@ -20,6 +20,7 @@
 <?php
 
 require_once ("fonctions/main.php");
+hasPermission("general","page-collaborateur",true);
 alreadylogin();
 head();
 navbar();

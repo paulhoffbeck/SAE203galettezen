@@ -18,9 +18,11 @@ function userEnAttenteValidation(){
                 <div class=\"ms-2 me-auto\">
                     <div class=\"fw-bold\">{$user['prenom']} {$user['nom']}</div>
                     <small></small>
-                </div>
-                <a href=\"?uid=$uid\" class=\"btn btn-outline-azur btn-sm rounded-pill\"><i class=\"fa-solid fa-unlock\"></i> Traiter</a>
-            </li>";
+                </div>";
+                if(hasPermission("modo","treatment-new-user")){
+                    $interface .= "<a href=\"?uid=$uid\" class=\"btn btn-outline-azur btn-sm rounded-pill\"><i class=\"fa-solid fa-unlock\"></i> Traiter</a>";
+                }
+            $interface .= "</li>";
         }
     }
     $interface .= "</ol>";
@@ -48,6 +50,9 @@ function traitementUserValidation($uid){
     $data = json_decode(file_get_contents('./database/user.json'), true);
     $roles = json_decode(file_get_contents('./database/role.json'), true);
     $selecteur = "<select name=\"role_uid\" class=\"form-control mb-4\" required>";
+    if(empty($data[$uid]['role_uid']) && !hasPermission("modo","treatment-new-user")){
+        return;
+    }
     foreach ($roles as $key => $role){
         if($key == $data[$uid]['role_uid']){
             $selecteur .= "<option value=\"$key\" selected>{$role['name']}</option>";
@@ -97,51 +102,62 @@ function traitementUserValidation($uid){
                     </div>
                     <br>
                     <input type=\"hidden\" name=\"uid\" value=\"$uid\" />
-                    <label>Prénom :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"prenom\" value=\"{$data[$uid]['prenom']}\" required>
-                    <label>Nom :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"nom\" value=\"{$data[$uid]['nom']}\" required>
-                    <label>Numério de téléphone :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>
-                    <label>Description du poste :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"poste\" placeholder=\"Exemple : Responsable de Production\" maxlength=\"40\" value=\"{$data[$uid]['poste']}\" required>
-                    <label>Attribution du rôle :</label>
-                    $selecteur
-                    <center>
-                        <button type=\"submit\" name=\"valideUser\" class=\"btn btn-azur\"><i class=\"fa-solid fa-user-check\"></i> Valider</button>
-                        <button type=\"button\" class=\"btn btn btn-outline-azur\" data-bs-toggle=\"modal\" data-bs-target=\"#ModificationMotDePasse$uid\"><i class=\"fa-solid fa-key\"></i> Mot de Passe</button></td>
-                    </center>
+                    ";
+                    if(hasPermission("modo","edit-base-user")){
+                    $interface .= "<label>Prénom :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"prenom\" value=\"{$data[$uid]['prenom']}\" required>
+                        <label>Nom :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"nom\" value=\"{$data[$uid]['nom']}\" required>
+                        <label>Numério de téléphone :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>";
+                    }
+                    if(hasPermission("modo","edit-role-user")){
+                    $interface .= "
+                        <label>Description du poste :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"poste\" placeholder=\"Exemple : Responsable de Production\" maxlength=\"40\" value=\"{$data[$uid]['poste']}\" required>
+                        <label>Attribution du rôle :</label>
+                        $selecteur";
+                    }
+                    $interface .= "<center>";
+                        if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user")){
+                        $interface .= "<button type=\"submit\" name=\"valideUser\" class=\"btn btn-azur\"><i class=\"fa-solid fa-user-check\"></i> Valider</button>";
+                        }if(hasPermission("modo","edit-password-user")){
+                            $interface .= "<button type=\"button\" class=\"btn btn btn-outline-azur\" data-bs-toggle=\"modal\" data-bs-target=\"#ModificationMotDePasse$uid\"><i class=\"fa-solid fa-key\"></i> Mot de Passe</button></td>";
+                        }
+                    $interface .= "</center>
                 </form>
             </div>
         </div>
     </div>";
-    $interface .= '<div class="modal fade" id="ModificationMotDePasse'.$uid.'" tabindex="-1" aria-labelledby="ModificationMotDePasse'.$uid.'Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="ModificationMotDePasse'.$uid.'Label"> Modifier le mot de passe</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    if(hasPermission("modo","edit-password-user")){
+        $interface .= '<div class="modal fade" id="ModificationMotDePasse'.$uid.'" tabindex="-1" aria-labelledby="ModificationMotDePasse'.$uid.'Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModificationMotDePasse'.$uid.'Label"> Modifier le mot de passe</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form method="post">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Nouveau mot de passe :</label>
+                                <input type="password" class="form-control" name="mot_de_passe1" placeholder="Entrez votre nouveau mot de passe">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label>Confirmer le mot de passe :</label>
+                                <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
+                            </div>
+                            <input type="hidden" name="uid" value="'.$uid.'">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="ChangeUserPassword" class="btn btn-azur">Valider</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </form>
                 </div>
-                <form method="post">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Nouveau mot de passe :</label>
-                            <input type="password" class="form-control" name="mot_de_passe1" placeholder="Entrez votre nouveau mot de passe">
-                        </div>
-                        <div class="form-group mt-3">
-                            <label>Confirmer le mot de passe :</label>
-                            <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
-                        </div>
-                        <input type="hidden" name="uid" value="'.$uid.'">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="ChangeUserPassword" class="btn btn-azur">Valider</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    </div>
-                </form>
             </div>
-        </div>
-    </div>';
+        </div>';
+    }
     return $interface;
 }
 
