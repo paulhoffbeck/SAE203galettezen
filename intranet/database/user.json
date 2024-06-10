@@ -112,7 +112,7 @@
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a05425e958",
         "visibilite": true,
-        "last_activity": 1718020614
+        "last_activity": 1718022485
     },
     "cde890": {
         "nom": "Javel",
@@ -217,7 +217,7 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1718020779,
+        "last_activity": 1718022776,
         "visibilite": false
     },
     "6659d93fe52f1": {
@@ -241,5 +241,15 @@
         "poste": "Developpeur Projet",
         "last_activity": 1717165152,
         "visibilite": false
+    },
+    "6666f2641a667": {
+        "nom": "hoffbeck",
+        "prenom": "paul",
+        "email": "galettepaulo@gmail.com",
+        "mot_de_passe": "$2y$10$iaVhlIsUuiTKTJpWq5BeF.nEHQbpoT6fFDkPysm\/9ZblyoPAjD9YC",
+        "role_uid": "",
+        "telephone": "",
+        "poste": "",
+        "code_validation": 953843
     }
 }
