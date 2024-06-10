@@ -99,6 +99,27 @@ function footer() {
     ';
 }
 
+function traitementcontact(){
+    $nom = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $mail = $_POST['email'];
+    $sujet = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message =filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+    $date = date('Y-m-d');
+
+    $nouveaucontact = array(
+        'nom' => $nom,
+        'mail' => $mail,
+        'sujet' => $sujet,
+        'message' => $message,
+        'date' => $date
+    );
+    var_dump($message);
+    $fichier = file_get_contents('../intranet/database/contactlist.json');
+    $data = json_decode($fichier, true);
+    $nouveautab[] = $nouveaucontact;
+    $newjson = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents('../intranet/database/contactlist.json', $newjson);
+}
 
 
 ?> 
