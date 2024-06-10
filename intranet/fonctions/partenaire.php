@@ -15,6 +15,7 @@ function partenaires($tab){
 
     <?php
 
+
     // Création du tableau
 
     echo '<div class="container mb-5">
