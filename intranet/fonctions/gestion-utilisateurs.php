@@ -75,6 +75,10 @@ function traitementUserValidation($uid){
             $interface .= "<div class=\"alert alert-warning mt-2 mb-2\">Une erreur n'a pas permis de changer le mot de passe. Verifiez si votre mot de passe est correct et que les 2 nouveaux mots de passes soit identiques.</div>";
         }
     }
+    $visible = "";
+    if($data[$uid]['visibilite'] === true){
+        $visible = "checked";
+    }
     $interface .= "
         <div class=\"card\">
             <div class=\"card-header\">
@@ -109,7 +113,11 @@ function traitementUserValidation($uid){
                         <label>Nom :</label>
                         <input type=\"text\" class=\"form-control mb-3\" name=\"nom\" value=\"{$data[$uid]['nom']}\" required>
                         <label>Numério de téléphone :</label>
-                        <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>";
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>
+                        <div class=\"form-check form-switch mb-3\">
+                            <input class=\"form-check-input\" type=\"checkbox\" name=\"visibilite\" id=\"SwitchCheckAffiche\" $visible value=\"true\">
+                            <label class=\"form-check-label\" for=\"SwitchCheckAffiche\">Afficher l'utilisateur sur la vitrine</label>
+                        </div>";
                     }
                     if(hasPermission("modo","edit-role-user")){
                     $interface .= "
@@ -182,6 +190,11 @@ function valideUser(){
             if($data[$uid]['poste'] != $_POST['poste']){
                 $modifications .= "votre affetation de poste était \"{$data[$uid]['poste']}\" est à été modifié en {$_POST['poste']}, ";
                 $data[$uid]['poste'] = $_POST['poste'];
+            }
+            if($_POST['visibilite'] === "true"){
+                $data[$uid]['visibilite'] = true;
+            }else{
+                $data[$uid]['visibilite'] = false;
             }
             $data[$uid]['role_uid'] = $_POST['role_uid'];
             $modifications = substr_replace($modifications, ".", -2);
