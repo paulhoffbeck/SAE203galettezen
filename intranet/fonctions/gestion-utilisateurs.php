@@ -18,9 +18,11 @@ function userEnAttenteValidation(){
                 <div class=\"ms-2 me-auto\">
                     <div class=\"fw-bold\">{$user['prenom']} {$user['nom']}</div>
                     <small></small>
-                </div>
-                <a href=\"?uid=$uid\" class=\"btn btn-outline-azur btn-sm rounded-pill\"><i class=\"fa-solid fa-unlock\"></i> Traiter</a>
-            </li>";
+                </div>";
+                if(hasPermission("modo","treatment-new-user")){
+                    $interface .= "<a href=\"?uid=$uid\" class=\"btn btn-outline-azur btn-sm rounded-pill\"><i class=\"fa-solid fa-unlock\"></i> Traiter</a>";
+                }
+            $interface .= "</li>";
         }
     }
     $interface .= "</ol>";
@@ -48,6 +50,9 @@ function traitementUserValidation($uid){
     $data = json_decode(file_get_contents('./database/user.json'), true);
     $roles = json_decode(file_get_contents('./database/role.json'), true);
     $selecteur = "<select name=\"role_uid\" class=\"form-control mb-4\" required>";
+    if(empty($data[$uid]['role_uid']) && !hasPermission("modo","treatment-new-user")){
+        return;
+    }
     foreach ($roles as $key => $role){
         if($key == $data[$uid]['role_uid']){
             $selecteur .= "<option value=\"$key\" selected>{$role['name']}</option>";
@@ -69,6 +74,10 @@ function traitementUserValidation($uid){
         }else{
             $interface .= "<div class=\"alert alert-warning mt-2 mb-2\">Une erreur n'a pas permis de changer le mot de passe. Verifiez si votre mot de passe est correct et que les 2 nouveaux mots de passes soit identiques.</div>";
         }
+    }
+    $visible = "";
+    if($data[$uid]['visibilite'] === true){
+        $visible = "checked";
     }
     $interface .= "
         <div class=\"card\">
@@ -97,51 +106,66 @@ function traitementUserValidation($uid){
                     </div>
                     <br>
                     <input type=\"hidden\" name=\"uid\" value=\"$uid\" />
-                    <label>Prénom :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"prenom\" value=\"{$data[$uid]['prenom']}\" required>
-                    <label>Nom :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"nom\" value=\"{$data[$uid]['nom']}\" required>
-                    <label>Numério de téléphone :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>
-                    <label>Description du poste :</label>
-                    <input type=\"text\" class=\"form-control mb-3\" name=\"poste\" placeholder=\"Exemple : Responsable de Production\" maxlength=\"40\" value=\"{$data[$uid]['poste']}\" required>
-                    <label>Attribution du rôle :</label>
-                    $selecteur
-                    <center>
-                        <button type=\"submit\" name=\"valideUser\" class=\"btn btn-azur\"><i class=\"fa-solid fa-user-check\"></i> Valider</button>
-                        <button type=\"button\" class=\"btn btn btn-outline-azur\" data-bs-toggle=\"modal\" data-bs-target=\"#ModificationMotDePasse$uid\"><i class=\"fa-solid fa-key\"></i> Mot de Passe</button></td>
-                    </center>
+                    ";
+                    if(hasPermission("modo","edit-base-user")){
+                    $interface .= "<label>Prénom :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"prenom\" value=\"{$data[$uid]['prenom']}\" required>
+                        <label>Nom :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"nom\" value=\"{$data[$uid]['nom']}\" required>
+                        <label>Numério de téléphone :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"telephone\" placeholder=\"Au format 00-00-00-00-00\" value=\"{$data[$uid]['telephone']}\" required>
+                        <div class=\"form-check form-switch mb-3\">
+                            <input class=\"form-check-input\" type=\"checkbox\" name=\"visibilite\" id=\"SwitchCheckAffiche\" $visible value=\"true\">
+                            <label class=\"form-check-label\" for=\"SwitchCheckAffiche\">Afficher l'utilisateur sur la vitrine</label>
+                        </div>";
+                    }
+                    if(hasPermission("modo","edit-role-user")){
+                    $interface .= "
+                        <label>Description du poste :</label>
+                        <input type=\"text\" class=\"form-control mb-3\" name=\"poste\" placeholder=\"Exemple : Responsable de Production\" maxlength=\"40\" value=\"{$data[$uid]['poste']}\" required>
+                        <label>Attribution du rôle :</label>
+                        $selecteur";
+                    }
+                    $interface .= "<center>";
+                        if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user")){
+                        $interface .= "<button type=\"submit\" name=\"valideUser\" class=\"btn btn-azur\"><i class=\"fa-solid fa-user-check\"></i> Valider</button>";
+                        }if(hasPermission("modo","edit-password-user")){
+                            $interface .= "<button type=\"button\" class=\"btn btn btn-outline-azur\" data-bs-toggle=\"modal\" data-bs-target=\"#ModificationMotDePasse$uid\"><i class=\"fa-solid fa-key\"></i> Mot de Passe</button></td>";
+                        }
+                    $interface .= "</center>
                 </form>
             </div>
         </div>
     </div>";
-    $interface .= '<div class="modal fade" id="ModificationMotDePasse'.$uid.'" tabindex="-1" aria-labelledby="ModificationMotDePasse'.$uid.'Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="ModificationMotDePasse'.$uid.'Label"> Modifier le mot de passe</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    if(hasPermission("modo","edit-password-user")){
+        $interface .= '<div class="modal fade" id="ModificationMotDePasse'.$uid.'" tabindex="-1" aria-labelledby="ModificationMotDePasse'.$uid.'Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModificationMotDePasse'.$uid.'Label"> Modifier le mot de passe</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form method="post">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Nouveau mot de passe :</label>
+                                <input type="password" class="form-control" name="mot_de_passe1" placeholder="Entrez votre nouveau mot de passe">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label>Confirmer le mot de passe :</label>
+                                <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
+                            </div>
+                            <input type="hidden" name="uid" value="'.$uid.'">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="ChangeUserPassword" class="btn btn-azur">Valider</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </form>
                 </div>
-                <form method="post">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Nouveau mot de passe :</label>
-                            <input type="password" class="form-control" name="mot_de_passe1" placeholder="Entrez votre nouveau mot de passe">
-                        </div>
-                        <div class="form-group mt-3">
-                            <label>Confirmer le mot de passe :</label>
-                            <input type="password" class="form-control" name="mot_de_passe2" placeholder="Confirmez votre nouveau mot de passe">
-                        </div>
-                        <input type="hidden" name="uid" value="'.$uid.'">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="ChangeUserPassword" class="btn btn-azur">Valider</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    </div>
-                </form>
             </div>
-        </div>
-    </div>';
+        </div>';
+    }
     return $interface;
 }
 
@@ -166,6 +190,11 @@ function valideUser(){
             if($data[$uid]['poste'] != $_POST['poste']){
                 $modifications .= "votre affetation de poste était \"{$data[$uid]['poste']}\" est à été modifié en {$_POST['poste']}, ";
                 $data[$uid]['poste'] = $_POST['poste'];
+            }
+            if($_POST['visibilite'] === "true"){
+                $data[$uid]['visibilite'] = true;
+            }else{
+                $data[$uid]['visibilite'] = false;
             }
             $data[$uid]['role_uid'] = $_POST['role_uid'];
             $modifications = substr_replace($modifications, ".", -2);
@@ -197,74 +226,7 @@ function valideUser(){
     }
 }
 
-function changePPUser($uid){
-    if(isset($_FILES["newpp"]) && $_FILES["newpp"]["error"] == 0){
-        $allowed = ["jpg" => "image/jpeg", "jpeg" => "image/jpeg", "png" => "image/png", "gif" => "image/gif"];
-        $filename = $_FILES["newpp"]["name"];
-        $filetype = $_FILES["newpp"]["type"];
-        $filesize = $_FILES["newpp"]["size"];
-        $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        if(!array_key_exists($ext, $allowed)){
-            die("Erreur : Format de fichier non autorisé.");
-        }
-        $maxsize = 5 * 1024 * 1024;
-        if($filesize > $maxsize){
-            die("Erreur : La taille du fichier dépasse la limite autorisée.");
-        }
-        if(in_array($filetype, $allowed)){
-            $target_dir = "./img/collaborateur/";
-            $target_file = $target_dir . $uid . ".png";
-            switch ($filetype) {
-                case "image/jpeg":
-                    $image = imagecreatefromjpeg($_FILES["newpp"]["tmp_name"]);
-                    break;
-                case "image/gif":
-                    $image = imagecreatefromgif($_FILES["newpp"]["tmp_name"]);
-                    break;
-                case "image/png":
-                    $image = imagecreatefrompng($_FILES["newpp"]["tmp_name"]);
-                    break;
-                default:
-                    die("Erreur : Format de fichier non supporté.");
-            }
-            if(imagepng($image, $target_file)){
-                imagedestroy($image);
-                echo "<div class=\"alert alert-success mt-2 mb-2\">La photo a été téléchargée et convertie avec succès.</div>";
-            }else{
-                echo "<div class=\"alert alert-warning mt-2 mb-2\">Erreur lors de la sauvegarde de l'image, veuillez recommancer.</div>";
-            }
-        }else{
-            echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.</div>";
-        }
-    }else{
-        switch ($_FILES["newpp"]["error"]) {
-            case UPLOAD_ERR_INI_SIZE:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le fichier téléchargé dépasse la taille maximale autorisée.</div>";
-                break;
-            case UPLOAD_ERR_FORM_SIZE:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le fichier téléchargé dépasse la taille maximale autorisée par le formulaire.</div>";
-                break;
-            case UPLOAD_ERR_PARTIAL:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le fichier n'a été que partiellement téléchargé.</div>";
-                break;
-            case UPLOAD_ERR_NO_FILE:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Aucun fichier n'a été téléchargé</div>.";
-                break;
-            case UPLOAD_ERR_NO_TMP_DIR:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Un dossier temporaire est manquant.</div>";
-                break;
-            case UPLOAD_ERR_CANT_WRITE:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Échec de l'écriture du fichier sur le disque.</div>";
-                break;
-            case UPLOAD_ERR_EXTENSION:
-                echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le téléchargement du fichier a été arrêté par une extension PHP.</div>";
-                break;
-            default:
-                echo "Erreur inconnue : " . $_FILES["newpp"]["error"];
-                break;
-            }
-    }
-}
+
 function changePasswordUser($uid,$newPassword,$newPasswordConfirmation,$lastPassword = NULL){
     if($newPassword === $newPasswordConfirmation){
         $json = file_get_contents('./database/user.json');

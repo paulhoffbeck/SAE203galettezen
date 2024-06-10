@@ -250,18 +250,6 @@ function SelectionContextMenuDetails($elementUID) {
     <?php head(); navbar() ?>
     <div class="container-fluid mb-3">
         <div class="row">
-            <div class="col-xl-2 col-md-12 mt-3">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        Favoris
-                        <button type="button" class="btn btn-sm btn-ciel ml-auto"><i class="fa-solid fa-heart-circle-plus"></i></button>
-                    </div>
-                    <div class="card-body">
-                        <table class="table">
-                        </table>
-                    </div>
-                </div>
-            </div>
             <div class="col-xl col-md-12 mt-3">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
