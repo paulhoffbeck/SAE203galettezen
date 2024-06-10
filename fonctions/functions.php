@@ -31,8 +31,8 @@ function sidebar() {
         <br>
         <br>
         <br>
-        <img src="../intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
-        <img src="../intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
+        <img src="./intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
+        <img src="./intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
     </nav>
         
     ';
@@ -114,11 +114,11 @@ function traitementcontact(){
         'message' => $message,
         'date' => $date
     );
-    $fichier = file_get_contents('../intranet/database/contactlist.json');
+    $fichier = file_get_contents('./intranet/database/contactlist.json');
     $data = json_decode($fichier, true);
     $data[$uid] = $nouveaucontact;
     $newjson = json_encode($data, JSON_PRETTY_PRINT);
-    file_put_contents('../intranet/database/contactlist.json', $newjson);
+    file_put_contents('./intranet/database/contactlist.json', $newjson);
 }
 
 
