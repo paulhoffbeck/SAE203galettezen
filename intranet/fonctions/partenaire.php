@@ -70,7 +70,7 @@ function partenaires($tab){
         
         if($value["montrer"]=="oui"){$montre='checked';}else{$montre='';} 
         echo("<td> <input type='checkbox' name='newmontrer' ".$montre."><label for 'newmontrer'>montrer </p></td>");
-        echo("<td> <input type=\"file\" name=\"newimage\" class=\"form-control\" accept=\"image/*\"></td>");
+        echo("<td> <input type=\"file\" name=\"image\" class=\"form-control\" accept=\"image/*\"></td>");
         echo("<td> <input name='newlien' class='form-control' value='".$value["lien"]."'></td>");
         echo("<td> <textarea name='newdesc' class='form-control' >".$value["description"]."</textarea></td>");
 
