@@ -2,7 +2,7 @@
 
 function valideCodeConfirmation($code) {
     $userTable = json_decode(file_get_contents('database/user.json', true), true);
-    if(isset($code) && $code == $userTable[$_GET['uid']]['code_validation']){
+    if(isset($code) && isset($userTable[$_GET['uid']]) && $code == $userTable[$_GET['uid']]['code_validation']){
         unset($userTable[$_GET['uid']]['code_validation']);
         $file = json_encode($userTable, JSON_PRETTY_PRINT);
         file_put_contents("database/user.json",$file);
