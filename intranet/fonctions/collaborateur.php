@@ -24,47 +24,34 @@ function modifjson(){
     }
 }
 
-function collaborateur(){
-    ?>
-    <script>
-    //Fonction JS pour agrandir la photo de profil dans le tableau
-    function bigImg(x) {
-        x.style.height = "100px";
-        x.style.width = "100px";
-        }
-    function normalImg(x) {
-        x.style.height = "28px";
-        x.style.width = "28px";
-        }
-    </script>
+function collaborateur(){ ?>
 
     <?php
 
     // Création du tableau
         $json = file_get_contents('./database/role.json');
         $roles = json_decode($json, true);
-    echo '<div class="container mb-5">
+    echo '<div class="container-fluid mb-5">
     <h1 class="my-4">Liste de nos collaborateurs</h1>
+    <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <form method="post">
-                    <th class="bg-turquoise border-turquoise"></th>
-                    <th class="bg-turquoise border-turquoise">Filtre</th>
-                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="nom" placeholder="Chercher par Nom"></th>
-                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="prenom" placeholder="Chercher par Prénom"></th>
-                    <th class="bg-turquoise border-turquoise"><select class="bg-turquoise border-0" type="text" name="poste">
+                    <th class="bg-ciel border-ciel">Filtre</th>
+                    <th class="bg-ciel border-ciel"><input class="bg-ciel border-0" type="text" name="nom" placeholder="Chercher par Nom"></th>
+                    <th class="bg-ciel border-ciel"><input class="bg-ciel border-0" type="text" name="prenom" placeholder="Chercher par Prénom"></th>
+                    <th class="bg-ciel border-ciel"><select class="bg-ciel border-0" type="text" name="poste">
                         <option value="">Chercher par rôle</option>';
                         foreach ($roles as $key => $role) {
                         echo '<option value="'.$key.'">'.$role['name'].'</option>';}
                     echo'</th>
-                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="email" name="email" placeholder="Chercher par Email"></th>
-                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="tel" name="telephone" placeholder="Chercher par Téléphone"></th>
-                    <th class="bg-turquoise border-turquoise"><button type="submit" name="rechercher" class="btn btn-pastel">Appliquer</button></th>
+                    <th class="bg-ciel border-ciel"><input class="bg-ciel border-0" type="email" name="email" placeholder="Chercher par Email"></th>
+                    <th class="bg-ciel border-ciel"><input class="bg-ciel border-0" type="tel" name="telephone" placeholder="Chercher par Téléphone"></th>
+                    <th class="bg-ciel border-ciel"><button type="submit" name="rechercher" class="btn btn-sm btn-pastel">Appliquer</button></th>
                 </form>
             </tr>
             <tr>
-                <th>Visibilité</th>
                 <th>Photo</th>
                 <th>Nom</th>
                 <th>Prenom</th>
@@ -82,41 +69,30 @@ function collaborateur(){
 
     extract($_POST);
     foreach ($donnee as $key => $user) {
-        if((!empty($nom) && strtolower($nom) == strtolower($user['nom']))
-            ||(!empty($prenom) && strtolower($prenom) == strtolower($user['prenom']))
-            ||(!empty($email) && strtolower($email) == strtolower($user['email']))
-            ||(!empty($telephone) && $telephone == $user['telephone'])
-            ||(!empty($poste) && $poste == $user['role_uid']
-            ||(empty($nom) && empty($prenom) && empty($email) && empty($telephone) && empty($poste)))
+        if( !empty($user['role_uid'])
+            && ((empty($nom) || strtolower($nom) == strtolower($user['nom']))
+            && (empty($prenom) || strtolower($prenom) == strtolower($user['prenom']))
+            && (empty($email) || strtolower($email) == strtolower($user['email']))
+            && (empty($telephone) || $telephone == $user['telephone'])
+            && (empty($poste) || $poste == $user['role_uid']))
             ){
 
             echo'<tr>';
-            if($user["visibilite"] == true){   
-                $fourn='checked';
-            }
-            else{
-                $fourn='';
-            }
-
-            echo '<form id="monFormulaire" method="POST" action="index.php">
-                <td> <input type="checkbox" type="submit" name="newfour" '.$fourn.' form="monFormulaire"> </td>
-            </form>';
-            
-            if(file_exists('./img/collaborateur/'. $key .'.png')){
-                echo '<td> <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="./img/collaborateur/'.$key.'.png" width="28px"> </td>';}
-            else{
-                echo '<td> <img src="./img/collaborateur/pasdepp.png" width="28px"> </td>';} 
-            echo '</td>
-            <td>'. $user['nom'].'</td>
-            <td>'. $user['prenom'].'</td> 
-            <td>'. $role['name'] .'<br>'. $user['poste'].'</td>
-            <td>'. $user['email'].'</td> 
-            <td>'.$user['telephone'].'</td>
-            <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button></td>
+                if(file_exists('./img/collaborateur/'. $key .'.png')){
+                    echo '<td> <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" class="profile-img" src="./img/collaborateur/'.$key.'.png" width="28px"> </td>';}
+                else{
+                    echo '<td> <img src="./img/collaborateur/pasdepp.png" width="28px"> </td>';} 
+                echo '</td>
+                <td>'. $user['nom'].'</td>
+                <td>'. $user['prenom'].'</td> 
+                <td>'. getRoleName($user['role_uid']) .'<br><small>'. $user['poste'].'</small></td>
+                <td><a href="mailto:'. $user['email'].'">'. $user['email'].'</a></td> 
+                <td>'.$user['telephone'].'</td>
+                <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button></td>
             </tr> ';
         }
     }
-    echo'</tbody></table></div>';
+    echo'</tbody></table></div></div>';
 
 
     // création des modaux

@@ -1,3 +1,7 @@
+<?php
+$betaUserUID = ["vwx234", "lmn789", "xyz901", "ghi789", "ijk456", "det56", "rst345", "6659953053cfa"];
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,36 +16,21 @@
     <main>
         <div class="container marketing mt-5">
             <div class="row">
-                <div class="col-lg-4 text-center">
-                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../intranet/img/collaborateur/stu901.png" alt="Image de profil de Thomas Robert">
-                    <h2 class="fw-normal">Thomas Robert</h2>
-                    <p>
-                        Ouvrier de Production - St Malo<br>
-                        <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">thomas.robert@galetezen.com</span><br>
-                        <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Mot de Passe : <code>bonjour</code></span><br>
-                    </p>
-                    <p><a class="btn btn-secondary" href="#">S'y connecter »</a></p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../intranet/img/collaborateur/jkl012.png" alt="Image de profil de Thomas Robert">
-                    <h2 class="fw-normal">Sophie Durand</h2>
-                    <p>
-                        Comptable<br>
-                        <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">sophie.durand@galetezen.com</span><br>
-                        <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Mot de Passe : <code>bonjour</code></span><br>
-                    </p>
-                    <p><a class="btn btn-secondary" href="#">S'y connecter »</a></p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../intranet/img/collaborateur/det56.png" alt="Image de profil de Thomas Robert">
-                    <h2 class="fw-normal">Martin Lucie</h2>
-                    <p>
-                        Responsable Resources Humaines<br>
-                        <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">lucie.martin@galetezen.com</span><br>
-                        <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Mot de Passe : <code>bonjour</code></span><br>
-                    </p>
-                    <p><a class="btn btn-secondary" href="#">S'y connecter »</a></p>
-                </div>
+                <?php
+                $data = json_decode(file_get_contents('./../intranet/database/user.json'), true);
+                foreach($betaUserUID as $uid){ ?>
+                    <div class="col-lg-4 text-center mb-3">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../intranet/img/collaborateur/<?= $uid ?>.png" alt="Image de profil de Thomas Robert">
+                        <h2 class="fw-normal"><?= $data[$uid]['prenom'] ?> <?= $data[$uid]['nom'] ?></h2>
+                        <p>
+                            <?= $data[$uid]['poste'] ?><br>
+                            <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill"><?= $data[$uid]['email'] ?></span><br>
+                            <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Mot de Passe : <code>bonjour</code></span><br>
+                        </p>
+                        <p><a class="btn btn-secondary" href="">S'y connecter »</a></p>
+                    </div>
+                <?php }
+                ?>
             </div>
         </div>
     </main>

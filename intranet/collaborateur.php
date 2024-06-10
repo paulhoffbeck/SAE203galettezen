@@ -10,9 +10,17 @@
   </head>
 
 <body  class="bg-pastel">
+<style>
+.profile-img {
+    height: 28px;
+    width: 28px;
+    transition: height 0.3s ease, width 0.3s ease;
+}
+</style>
 <?php
 
 require_once ("fonctions/main.php");
+hasPermission("general","page-collaborateur",true);
 alreadylogin();
 head();
 navbar();
@@ -23,6 +31,16 @@ collaborateur();
 footer();
 
 ?>
-
+<script type="text/javascript">
+//Fonction JS pour agrandir la photo de profil dans le tableau
+function bigImg(x) {
+    x.style.height = "100px";
+    x.style.width = "100px";
+    }
+function normalImg(x) {
+    x.style.height = "28px";
+    x.style.width = "28px";
+    }
+</script>
 </body>
 </html>

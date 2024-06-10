@@ -3,42 +3,67 @@
         "name": "Administrateur",
         "permissions": {
             "admin": {
-                "liste-role": "true",
+                "edit-perms-role": "true",
                 "create-role": "true",
-                "perms-role": "true",
                 "activity-level-danger": "true",
                 "activity-level-warning": "true"
             },
             "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
                 "liste-new-user": "true",
-                "liste-user": "true",
-                "create-user": "true",
+                "treatment-new-user": "true",
                 "edit-base-user": "true",
-                "edit-personnal-user": "true",
                 "edit-role-user": "true",
-                "partenaires": "true"
+                "edit-password-user": "true",
+                "manage-partenaires": "true"
             },
             "general": {
                 "acces-file-manager": "true",
-                "view-collaborator-liste": "true",
-                "view-collaborator-details": "true"
+                "page-collaborateur": "true",
+                "page-clients": "true",
+                "profil": "true",
+                "link-wiki": "true"
             }
         }
     },
     "665a031785562": {
         "name": "Direction",
         "permissions": {
-            "admin": [],
-            "modo": [],
-            "general": []
+            "admin": {
+                "activity-level-warning": "true"
+            },
+            "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
         }
     },
     "665a035650403": {
         "name": "Service des Ressources Humaines",
         "permissions": {
             "admin": [],
-            "modo": [],
-            "general": []
+            "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true",
+                "treatment-new-user": "true",
+                "edit-base-user": "true",
+                "edit-role-user": "true",
+                "edit-password-user": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
         }
     },
     "665a03c3872a2": {
@@ -46,23 +71,46 @@
         "permissions": {
             "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
         }
     },
     "6647aa89001db": {
         "name": "Service Commercial",
         "permissions": {
             "admin": [],
-            "modo": [],
-            "general": []
+            "modo": {
+                "manage-partenaires": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
         }
     },
     "665a03278e373": {
         "name": "Service Informatique",
         "permissions": {
-            "admin": [],
-            "modo": [],
-            "general": []
+            "admin": {
+                "edit-perms-role": "true",
+                "create-role": "true",
+                "activity-level-danger": "true",
+                "activity-level-warning": "true"
+            },
+            "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
         }
     },
     "665a03b8df9b6": {
@@ -70,7 +118,11 @@
         "permissions": {
             "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
         }
     },
     "665a0558c0ad1": {
@@ -78,7 +130,11 @@
         "permissions": {
             "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
         }
     },
     "665a04755e407": {
@@ -86,7 +142,11 @@
         "permissions": {
             "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
         }
     },
     "665a04001ed75": {
@@ -94,7 +154,10 @@
         "permissions": {
             "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
         }
     },
     "665a05425e958": {
@@ -102,7 +165,10 @@
         "permissions": {
             "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
         }
     }
 }
