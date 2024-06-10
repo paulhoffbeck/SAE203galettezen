@@ -26,7 +26,7 @@ function  navbar(){ ?>
           </li>
           <?php if(hasPermission("general","page-clients")): ?>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Clients</a>
+              <a class="nav-link text-white" href="clients.php">Clients</a>
             </li>
           <?php endif;
           if(hasPermission("modo","manage-partenaires")): ?>
