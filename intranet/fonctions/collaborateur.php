@@ -8,27 +8,10 @@ if(isset($_SESSION['uid'])){
     updateActivityNow();
 }
 
-function modifjson(){
-    if(isset($_POST['ma_checkbox']) && $_POST['ma_checkbox'] == '1') {
-        // Charge le contenu du fichier JSON
-        $data = file_get_contents('fichier.json');
-        // Convertit le JSON en tableau associatif
-        $jsonArray = json_decode($data, true);
-        // Modifie les données selon vos besoins
-        $jsonArray['modification'] = 'Ceci est une modification';
-        // Convertit le tableau associatif en JSON
-        $jsonData = json_encode($jsonArray);
-        // Écrit les données dans le fichier JSON
-        file_put_contents('fichier.json', $jsonData);
-        echo "Le fichier JSON a été modifié avec succès !";
-    }
-}
 
-function collaborateur(){ ?>
+function collaborateur(){
 
-    <?php
-
-    // Création du tableau
+    // Barre du filte
         $json = file_get_contents('./database/role.json');
         $roles = json_decode($json, true);
     echo '<div class="container-fluid mb-5">
@@ -127,10 +110,5 @@ function collaborateur(){ ?>
         </div>';
     }
 }
-
-
-
-
-
 
 ?>

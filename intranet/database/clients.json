@@ -51,7 +51,7 @@
         "telephone": "06-12-34-56-78",
         "email": "carlos.garcia@gmail.com",
         "adresse": {
-            "pays": "Spain",
+            "pays": "Espagne",
             "code_postal": "08001",
             "ville": "Barcelona",
             "rue": "4 La Rambla"
@@ -66,7 +66,7 @@
         "telephone": "04-12-34-56-78",
         "email": "luca.rossi@gmail.com",
         "adresse": {
-            "pays": "Italy",
+            "pays": "Italie",
             "code_postal": "00100",
             "ville": "Rome",
             "rue": "5 Via Condotti"
@@ -81,7 +81,7 @@
         "telephone": "03-12-34-56-78",
         "email": "jin.lee@gmail.com",
         "adresse": {
-            "pays": "South Korea",
+            "pays": "Cor\u00e9e du Sud",
             "code_postal": "04524",
             "ville": "Seoul",
             "rue": "6 Gangnam-daero"
@@ -96,7 +96,7 @@
         "telephone": "02-12-34-56-78",
         "email": "hans.muller@gmail.com",
         "adresse": {
-            "pays": "Germany",
+            "pays": "Allemagne",
             "code_postal": "10115",
             "ville": "Berlin",
             "rue": "7 Unter den Linden"
@@ -111,7 +111,7 @@
         "telephone": "01-12-34-56-78",
         "email": "amit.kumar@gmail.com",
         "adresse": {
-            "pays": "India",
+            "pays": "Inde",
             "code_postal": "110001",
             "ville": "New Delhi",
             "rue": "8 Connaught Place"
@@ -126,7 +126,7 @@
         "telephone": "08-12-34-56-78",
         "email": "yuki.nakamura@gmail.com",
         "adresse": {
-            "pays": "Japan",
+            "pays": "Japon",
             "code_postal": "100-0001",
             "ville": "Tokyo",
             "rue": "9 Chiyoda"
@@ -141,12 +141,447 @@
         "telephone": "09-12-34-56-78",
         "email": "ana.lopez@gmail.com",
         "adresse": {
-            "pays": "Mexico",
+            "pays": "Mexique",
             "code_postal": "01000",
             "ville": "Mexico City",
             "rue": "10 Paseo de la Reforma"
         },
         "entreprise_ou_particuliers": "Entreprise",
         "langue": "Espagnol"
+    },
+    "jkl023": {
+        "nom": "Kovacs",
+        "prenom": "Balint",
+        "date_de_naissance": "1985-03-12",
+        "telephone": "06-87-65-43-21",
+        "email": "balint.kovacs@example.hu",
+        "adresse": {
+            "pays": "Hongrie",
+            "code_postal": "1051",
+            "ville": "Budapest",
+            "rue": "1 Szent Istvan ter"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Hongrois"
+    },
+    "jkl024": {
+        "nom": "Nowak",
+        "prenom": "Anna",
+        "date_de_naissance": "1990-04-22",
+        "telephone": "06-23-45-67-89",
+        "email": "anna.nowak@example.pl",
+        "adresse": {
+            "pays": "Pologne",
+            "code_postal": "00-001",
+            "ville": "Warszawa",
+            "rue": "10 Krakowskie Przedmiescie"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Polonais"
+    },
+    "jkl025": {
+        "nom": "Ivanov",
+        "prenom": "Alexei",
+        "date_de_naissance": "1988-06-14",
+        "telephone": "06-34-56-78-90",
+        "email": "alexei.ivanov@example.ru",
+        "adresse": {
+            "pays": "Russie",
+            "code_postal": "101000",
+            "ville": "Moscow",
+            "rue": "15 Tverskaya Street"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Russe"
+    },
+    "jkl026": {
+        "nom": "Hansen",
+        "prenom": "Lars",
+        "date_de_naissance": "1987-05-03",
+        "telephone": "06-12-34-56-78",
+        "email": "lars.hansen@example.dk",
+        "adresse": {
+            "pays": "Danemark",
+            "code_postal": "1000",
+            "ville": "Copenhagen",
+            "rue": "20 Stroget"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Danois"
+    },
+    "jkl027": {
+        "nom": "Nielsen",
+        "prenom": "Emma",
+        "date_de_naissance": "1992-11-21",
+        "telephone": "06-98-76-54-32",
+        "email": "emma.nielsen@example.dk",
+        "adresse": {
+            "pays": "Danemark",
+            "code_postal": "8000",
+            "ville": "Aarhus",
+            "rue": "10 Banegardspladsen"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Danois"
+    },
+    "jkl028": {
+        "nom": "Garcia",
+        "prenom": "Miguel",
+        "date_de_naissance": "1993-08-30",
+        "telephone": "06-23-45-67-89",
+        "email": "miguel.garcia@example.es",
+        "adresse": {
+            "pays": "Espagne",
+            "code_postal": "28001",
+            "ville": "Madrid",
+            "rue": "3 Gran Via"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Espagnol"
+    },
+    "jkl029": {
+        "nom": "Martinez",
+        "prenom": "Luis",
+        "date_de_naissance": "1982-07-18",
+        "telephone": "06-45-67-89-01",
+        "email": "luis.martinez@example.es",
+        "adresse": {
+            "pays": "Espagne",
+            "code_postal": "08002",
+            "ville": "Barcelona",
+            "rue": "12 Passeig de Gracia"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Espagnol"
+    },
+    "jkl030": {
+        "nom": "Bernard",
+        "prenom": "Luc",
+        "date_de_naissance": "1979-02-12",
+        "telephone": "06-34-56-78-90",
+        "email": "luc.bernard@example.fr",
+        "adresse": {
+            "pays": "France",
+            "code_postal": "69002",
+            "ville": "Lyon",
+            "rue": "15 Place Bellecour"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Fran\u00e7ais"
+    },
+    "jkl031": {
+        "nom": "Pavlov",
+        "prenom": "Dmitri",
+        "date_de_naissance": "1985-11-06",
+        "telephone": "06-23-45-67-89",
+        "email": "dmitri.pavlov@example.ru",
+        "adresse": {
+            "pays": "Russie",
+            "code_postal": "190000",
+            "ville": "Saint Petersburg",
+            "rue": "22 Nevsky Prospekt"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Russe"
+    },
+    "jkl032": {
+        "nom": "Bianchi",
+        "prenom": "Marco",
+        "date_de_naissance": "1984-05-22",
+        "telephone": "06-34-56-78-90",
+        "email": "marco.bianchi@example.it",
+        "adresse": {
+            "pays": "Italie",
+            "code_postal": "50123",
+            "ville": "Firenze",
+            "rue": "5 Via Roma"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Italien"
+    },
+    "jkl033": {
+        "nom": "Rossi",
+        "prenom": "Giulia",
+        "date_de_naissance": "1991-12-14",
+        "telephone": "06-98-76-54-32",
+        "email": "giulia.rossi@example.it",
+        "adresse": {
+            "pays": "Italie",
+            "code_postal": "00184",
+            "ville": "Roma",
+            "rue": "14 Via del Corso"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Italien"
+    },
+    "jkl034": {
+        "nom": "Dubois",
+        "prenom": "Sophie",
+        "date_de_naissance": "1990-03-18",
+        "telephone": "06-12-34-56-78",
+        "email": "sophie.dubois@example.fr",
+        "adresse": {
+            "pays": "France",
+            "code_postal": "33000",
+            "ville": "Bordeaux",
+            "rue": "25 Rue Sainte-Catherine"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Fran\u00e7ais"
+    },
+    "jkl035": {
+        "nom": "Schmidt",
+        "prenom": "Thomas",
+        "date_de_naissance": "1983-01-09",
+        "telephone": "06-98-76-54-32",
+        "email": "thomas.schmidt@example.de",
+        "adresse": {
+            "pays": "Allemagne",
+            "code_postal": "80331",
+            "ville": "Munchen",
+            "rue": "8 Marienplatz"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Allemand"
+    },
+    "jkl036": {
+        "nom": "Muller",
+        "prenom": "Klaus",
+        "date_de_naissance": "1987-10-27",
+        "telephone": "06-45-67-89-01",
+        "email": "klaus.muller@example.de",
+        "adresse": {
+            "pays": "Allemagne",
+            "code_postal": "50667",
+            "ville": "Koln",
+            "rue": "22 Hohenzollernring"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Allemand"
+    },
+    "jkl037": {
+        "nom": "Jansen",
+        "prenom": "Hendrik",
+        "date_de_naissance": "1992-07-13",
+        "telephone": "06-98-76-54-32",
+        "email": "hendrik.jansen@example.nl",
+        "adresse": {
+            "pays": "Pays-Bas",
+            "code_postal": "1012",
+            "ville": "Amsterdam",
+            "rue": "6 Dam Square"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Neerlandais"
+    },
+    "jkl038": {
+        "nom": "Santos",
+        "prenom": "Ana",
+        "date_de_naissance": "1989-11-19",
+        "telephone": "06-34-56-78-90",
+        "email": "ana.santos@example.pt",
+        "adresse": {
+            "pays": "Portugal",
+            "code_postal": "1100-038",
+            "ville": "Lisboa",
+            "rue": "15 Rua Augusta"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Portugais"
+    },
+    "jkl039": {
+        "nom": "Petrov",
+        "prenom": "Nikolai",
+        "date_de_naissance": "1984-02-14",
+        "telephone": "06-23-45-67-89",
+        "email": "nikolai.petrov@example.bg",
+        "adresse": {
+            "pays": "Bulgarie",
+            "code_postal": "1000",
+            "ville": "Sofia",
+            "rue": "10 Vitosha Boulevard"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Bulgare"
+    },
+    "jkl040": {
+        "nom": "Williams",
+        "prenom": "John",
+        "date_de_naissance": "1980-08-22",
+        "telephone": "06-12-34-56-78",
+        "email": "john.williams@example.co.uk",
+        "adresse": {
+            "pays": "Royaume-Uni",
+            "code_postal": "SW1A 1AA",
+            "ville": "London",
+            "rue": "10 Downing Street"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Anglais"
+    },
+    "jkl041": {
+        "nom": "Larsen",
+        "prenom": "Erik",
+        "date_de_naissance": "1982-03-10",
+        "telephone": "06-45-67-89-01",
+        "email": "erik.larsen@example.no",
+        "adresse": {
+            "pays": "Norvege",
+            "code_postal": "0159",
+            "ville": "Oslo",
+            "rue": "20 Karl Johans gate"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Norvegien"
+    },
+    "jkl042": {
+        "nom": "Jokinen",
+        "prenom": "Olli",
+        "date_de_naissance": "1978-12-02",
+        "telephone": "06-34-56-78-90",
+        "email": "olli.jokinen@example.fi",
+        "adresse": {
+            "pays": "Finlande",
+            "code_postal": "00100",
+            "ville": "Helsinki",
+            "rue": "12 Mannerheimintie"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Finnois"
+    },
+    "jkl043": {
+        "nom": "Kova",
+        "prenom": "Mate",
+        "date_de_naissance": "1991-07-15",
+        "telephone": "06-45-67-89-01",
+        "email": "mate.kova@example.hr",
+        "adresse": {
+            "pays": "Croatie",
+            "code_postal": "10000",
+            "ville": "Zagreb",
+            "rue": "5 Ilica"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Croate"
+    },
+    "jkl044": {
+        "nom": "Novak",
+        "prenom": "Jana",
+        "date_de_naissance": "1987-09-30",
+        "telephone": "06-23-45-67-89",
+        "email": "jana.novak@example.cz",
+        "adresse": {
+            "pays": "Republique Tcheque",
+            "code_postal": "11000",
+            "ville": "Prague",
+            "rue": "8 Narodni"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Tcheque"
+    },
+    "jkl045": {
+        "nom": "Vasilev",
+        "prenom": "Andrei",
+        "date_de_naissance": "1983-11-25",
+        "telephone": "06-34-56-78-90",
+        "email": "andrei.vasilev@example.ro",
+        "adresse": {
+            "pays": "Roumanie",
+            "code_postal": "010001",
+            "ville": "Bucuresti",
+            "rue": "20 Bulevardul Unirii"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Roumain"
+    },
+    "jkl046": {
+        "nom": "Bach",
+        "prenom": "Karl",
+        "date_de_naissance": "1990-05-12",
+        "telephone": "06-23-45-67-89",
+        "email": "karl.bach@example.at",
+        "adresse": {
+            "pays": "Autriche",
+            "code_postal": "1010",
+            "ville": "Wien",
+            "rue": "5 Graben"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Allemand"
+    },
+    "jkl047": {
+        "nom": "Volkov",
+        "prenom": "Pavel",
+        "date_de_naissance": "1992-08-17",
+        "telephone": "06-98-76-54-32",
+        "email": "pavel.volkov@example.by",
+        "adresse": {
+            "pays": "Bielorussie",
+            "code_postal": "220030",
+            "ville": "Minsk",
+            "rue": "10 Nezavisimosti Avenue"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Russe"
+    },
+    "jkl048": {
+        "nom": "Kumar",
+        "prenom": "Ravi",
+        "date_de_naissance": "1986-01-29",
+        "telephone": "06-34-56-78-90",
+        "email": "ravi.kumar@example.in",
+        "adresse": {
+            "pays": "Inde",
+            "code_postal": "110001",
+            "ville": "New Delhi",
+            "rue": "30 Connaught Place"
+        },
+        "entreprise_ou_particuliers": "Entreprises",
+        "langue": "Hindi"
+    },
+    "jkl049": {
+        "nom": "Nagy",
+        "prenom": "Istvan",
+        "date_de_naissance": "1981-10-10",
+        "telephone": "06-12-34-56-78",
+        "email": "istvan.nagy@example.hu",
+        "adresse": {
+            "pays": "Hongrie",
+            "code_postal": "1088",
+            "ville": "Budapest",
+            "rue": "2 Rakoczi ut"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Hongrois"
+    },
+    "jkl050": {
+        "nom": "Horvat",
+        "prenom": "Ana",
+        "date_de_naissance": "1988-04-18",
+        "telephone": "06-23-45-67-89",
+        "email": "ana.horvat@example.hr",
+        "adresse": {
+            "pays": "Croatie",
+            "code_postal": "21000",
+            "ville": "Split",
+            "rue": "10 Dioklecijanova"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Croate"
+    },
+    "jkl051": {
+        "nom": "Silva",
+        "prenom": "Miguel",
+        "date_de_naissance": "1985-12-07",
+        "telephone": "06-45-67-89-01",
+        "email": "miguel.silva@example.pt",
+        "adresse": {
+            "pays": "Portugal",
+            "code_postal": "4000-432",
+            "ville": "Porto",
+            "rue": "5 Rua de Santa Catarina"
+        },
+        "entreprise_ou_particuliers": "Particuliers",
+        "langue": "Portugais"
     }
 }

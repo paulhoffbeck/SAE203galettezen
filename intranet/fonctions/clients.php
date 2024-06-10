@@ -25,7 +25,7 @@ function client(){
     <tbody>';
     foreach ($donnee as $key => $user) {
         echo '<tr>
-        <td>'. $user['nom'].'</td>
+        <td>'. strtoupper($user['nom']).'</td>
         <td>'. $user['prenom'].'</td> 
         <td>'. $user['date_de_naissance'].'</td>
         <td><a href="mailto:'. $user['email'].'">'. $user['email'].'</td> 
