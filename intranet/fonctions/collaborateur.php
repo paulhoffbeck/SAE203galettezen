@@ -88,7 +88,12 @@ function collaborateur(){ ?>
                 <td>'. getRoleName($user['role_uid']) .'<br><small>'. $user['poste'].'</small></td>
                 <td><a href="mailto:'. $user['email'].'">'. $user['email'].'</a></td> 
                 <td>'.$user['telephone'].'</td>
-                <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button></td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </a>
+                        <a href="user-management.php?uid='.$key.'" class="btn btn-azur btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </td>
             </tr> ';
         }
     }
