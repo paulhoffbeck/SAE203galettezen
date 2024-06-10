@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-lg-4 col-md-8 col-12">
+        <div class="card">
+            <div class="card-body">
+                <center><h3 class="mb-3">Connexion</h3></center>
+                __NOTIFICATION__
+                <div class="login-form">
+                    <form method="post">
+                        <div class="form-group mb-3">
+                            <label>Adresse mail :</label>
+                            <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail" value="__INPUT_EMAIL__" required>
+                        </div>
+                        <label for="input-password">Mot de Passe :</label>
+                        <div class="input-group mb-3">
+                            <input type="password" id="input-password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe" required>
+                            <span class="input-group-text" onclick="viewinput('input-password')"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                        </div>
+                        <br>
+                        <center>
+                            <button type="submit" class="btn btn-azur"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+<br>
+<p> Pas encore inscrit : <a href="inscription.php"> Inscrivez-vous </a> </p>
+<br>
+</div>
+<script>
+  function viewinput(input){
+    var input = document.getElementById(input);
+    console.log(input);
+    if (input.type == "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+  }
+</script>
