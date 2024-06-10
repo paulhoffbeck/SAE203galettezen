@@ -72,7 +72,7 @@
         "poste": "Ouvrier de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a04001ed75",
-        "visibilite": false
+        "visibilite": true
     },
     "stu901": {
         "nom": "Golo",
@@ -82,7 +82,7 @@
         "poste": "Ouvrier de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a04001ed75",
-        "visibilite": false
+        "visibilite": true
     },
     "djf456": {
         "nom": "Ligonnes",
@@ -93,7 +93,7 @@
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a04755e407",
         "last_activity": 1717147249,
-        "visibilite": false
+        "visibilite": true
     },
     "vwx234": {
         "nom": "Bor\u00e9ale",
@@ -103,17 +103,18 @@
         "poste": "Agent de Production",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a04001ed75",
-        "visibilite": false
+        "visibilite": true
     },
     "yzb567": {
-        "nom": "Reprendraisbienunptitouimerci",
-        "prenom": "Jean",
+        "nom": "Houtan",
+        "prenom": "Laurent",
         "email": "jean.reprendraisbienunptitouimerci@galetezen.com",
         "telephone": "01-11-11-11-11",
         "poste": "Responsable R&D",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a05425e958",
-        "visibilite": false
+        "visibilite": true,
+        "last_activity": 1718022485
     },
     "cde890": {
         "nom": "Javel",
@@ -123,7 +124,7 @@
         "poste": "Comtable - Alternante",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a03c3872a2",
-        "visibilite": false
+        "visibilite": true
     },
     "fgh123": {
         "nom": "Lage",
@@ -133,7 +134,7 @@
         "poste": "Directeur Secr\u00e9tariat",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a03b8df9b6",
-        "visibilite": false
+        "visibilite": true
     },
     "ijk456": {
         "nom": "Lap\u00eache",
@@ -143,7 +144,7 @@
         "poste": "Comptable",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a03c3872a2",
-        "visibilite": false,
+        "visibilite": true,
         "last_activity": 1717965262
     },
     "lmn789": {
@@ -218,8 +219,8 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1718018001,
-        "visibilite": true
+        "last_activity": 1718022776,
+        "visibilite": false
     },
     "6659d93fe52f1": {
         "nom": "Despres",
@@ -230,7 +231,7 @@
         "telephone": "01-02-03-04-05",
         "poste": "Developpeur Projet",
         "last_activity": 1717739199,
-        "visibilite": true
+        "visibilite": false
     },
     "6659da5784fa0": {
         "nom": "Collet",
@@ -240,9 +241,18 @@
         "role_uid": "66599b314b005",
         "telephone": "02-03-04-05-06",
         "poste": "Developpeur Projet",
-
         "last_activity": 1717165152,
+        "visibilite": false
+    },
+    "6666f2641a667": {
+        "nom": "Hoffbeck",
+        "prenom": "Paul",
+        "email": "galettepaulo@gmail.com",
+        "mot_de_passe": "$2y$10$iaVhlIsUuiTKTJpWq5BeF.nEHQbpoT6fFDkPysm\/9ZblyoPAjD9YC",
+        "role_uid": "",
+        "telephone": "",
+        "poste": "",
+        "code_validation": 953843,
         "visibilite": true
-
     }
 }

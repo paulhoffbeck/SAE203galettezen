@@ -16,7 +16,7 @@
 <div class="container mt-3 mb-3">
     <?php
     if(isset($_POST['uploadNewPP']) && isset($_SESSION['uid'])){
-        changePPUser($_SESSION['uid']);
+        changeImage("./img/collaborateur/",$_SESSION['uid'].".png");
     }if(isset($_POST['changePersonnalPassword']) && isset($_SESSION['uid'])){
         if(changePasswordUser($_SESSION['uid'],$_POST['NewPassword'],$_POST['ConfirmNewPassword'],$_POST['ActualPassword'])){
             echo "<div class=\"alert alert-success mt-2 mb-2\">Votre mot de passe à bien été modifié pour votre prochainne connexion.</div>";
@@ -60,7 +60,7 @@
                     <form method="post" enctype="multipart/form-data" class="mt-3">
                         <label>Selectionnez une nouvelle photo :</label>
                         <div class="input-group">
-                            <input type="file" name="newpp" class="form-control" accept="image/*" required>
+                            <input type="file" name="image" class="form-control" accept="image/*" required>
                             <button type="submit" name="uploadNewPP" class="input-group-text btn btn-outline-azur"><i class="fa-solid fa-camera"></i> Changer la photo</button>
                         </div>
                     </form>

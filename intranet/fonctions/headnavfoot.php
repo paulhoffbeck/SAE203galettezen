@@ -51,6 +51,7 @@ function  navbar(){ ?>
                 <?php endif; ?>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="settings.php">Réglages</a></li>
+                <li><a class="dropdown-item" href="create-user.php">Créer un compte</a></li>
               </ul>
             </li>
           <?php endif;
