@@ -14,6 +14,7 @@
     session_start();
     require_once __DIR__ . '/controleurs/UserController.php';
     require_once __DIR__ . '/controleurs/AccountController.php';
+    require_once __DIR__ . '/controleurs/ContactController.php';
     include __DIR__ . '/vues/navbar.php';
 
     $page = $_GET['page'] ?? 'index';
@@ -27,6 +28,10 @@
         case 'login':
             $controller = new AccountController();
             $controller->logger();
+            break;
+        case 'contact':
+            $controller = new ContactController();
+            $controller->interface();
             break;
         default:
             echo 'Page not found';

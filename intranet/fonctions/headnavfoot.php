@@ -63,7 +63,7 @@ function  navbar(){ ?>
 
           if(hasPermission("general","access-contact")): ?>
             <li class="nav-item">
-              <a class="nav-link text-white" href="contact.php">Contact</a>
+              <a class="nav-link text-white" href="index.php?page=contact"><span class="badge rounded-pill text-bg-light"><i class="fa-solid fa-code"></i></span> Contact</a>
             </li>
           <?php endif;
 
