@@ -22,8 +22,8 @@
         "visibilite": true
     },
     "det56": {
-        "nom": "Eva",
-        "prenom": "Sion",
+        "nom": "Sion",
+        "prenom": "Eva",
         "email": "eva.sion@galetezen.com",
         "telephone": "03-33-33-33-33",
         "poste": "Responsable Resources Humaines",
@@ -39,7 +39,8 @@
         "poste": "Responsable de Communication",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "6647aa89001db",
-        "visibilite": true
+        "visibilite": true,
+        "last_activity": 1717998657
     },
     "jkl012": {
         "nom": "Chtron",
@@ -140,17 +141,19 @@
         "poste": "Comptable",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a03c3872a2",
-        "visibilite": false
+        "visibilite": false,
+        "last_activity": 1717965262
     },
     "lmn789": {
         "nom": "Dicule",
         "prenom": "Terry",
         "email": "terry.dicule@galetezen.com",
         "telephone": "05-55-55-55-54",
-        "poste": "alternant",
+        "poste": "Alternant",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a04755e407",
-        "visibilite": true
+        "visibilite": true,
+        "last_activity": 1717965111
     },
     "opq012": {
         "nom": "Skacerlagueul",
@@ -160,17 +163,19 @@
         "poste": "Charg\u00e9e des Relations Ecoles",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a035650403",
-        "visibilite": true
+        "visibilite": true,
+        "last_activity": 1717964871
     },
     "rst345": {
         "nom": "Touille",
         "prenom": "Sacha",
         "email": "sacha.touille@galetezen.com",
         "telephone": "07-77-77-77-76",
-        "poste": "cuisinier",
+        "poste": "Directeur",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
-        "role_uid": "",
-        "visibilite": true
+        "role_uid": "665a031785562",
+        "visibilite": true,
+        "last_activity": 1717965518
     },
     "uvw678": {
         "nom": "F\u00e9bienl\u00e9chose",
@@ -190,7 +195,8 @@
         "poste": "Responsable des Syst\u00e8mes d'Informations",
         "mot_de_passe": "$2y$10$aYye8N6uyOAG6zK7esFbeuDcBkdc\/NUR.lokg1oEMe5WDkBcMJWji",
         "role_uid": "665a03278e373",
-        "visibilite": true
+        "visibilite": true,
+        "last_activity": 1717965148
     },
     "abc234": {
         "nom": "Fer",
@@ -210,7 +216,7 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1717932967,
+        "last_activity": 1718018001,
         "visibilite": true
     },
     "6659d93fe52f1": {
