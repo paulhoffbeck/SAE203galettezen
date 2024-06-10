@@ -9,6 +9,8 @@
         "role_uid": "6647aa89001db",
         "last_activity": 1717256441,
         "visibilite": true
+
+       
     },
     "gzi789": {
         "nom": "Dansmonverre",
@@ -238,7 +240,9 @@
         "role_uid": "66599b314b005",
         "telephone": "02-03-04-05-06",
         "poste": "Developpeur Projet",
+
         "last_activity": 1717165152,
         "visibilite": true
+
     }
 }
