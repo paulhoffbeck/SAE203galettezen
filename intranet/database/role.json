@@ -24,7 +24,8 @@
                 "page-collaborateur": "true",
                 "page-clients": "true",
                 "profil": "true",
-                "link-wiki": "true"
+                "link-wiki": "true",
+                "access-contact": "true"
             }
         }
     },

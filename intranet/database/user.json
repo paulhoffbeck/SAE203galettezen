@@ -9,8 +9,6 @@
         "role_uid": "6647aa89001db",
         "last_activity": 1717256441,
         "visibilite": true
-
-       
     },
     "gzi789": {
         "nom": "Dansmonverre",
@@ -219,7 +217,7 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1718022776,
+        "last_activity": 1718023203,
         "visibilite": false
     },
     "6659d93fe52f1": {
@@ -249,10 +247,10 @@
         "prenom": "Paul",
         "email": "galettepaulo@gmail.com",
         "mot_de_passe": "$2y$10$iaVhlIsUuiTKTJpWq5BeF.nEHQbpoT6fFDkPysm\/9ZblyoPAjD9YC",
-        "role_uid": "",
-        "telephone": "",
-        "poste": "",
-        "code_validation": 953843,
-        "visibilite": true
+        "role_uid": "66599b314b005",
+        "telephone": "77-77-77-77-77",
+        "poste": "D\u00e9veloppeur Projet",
+        "visibilite": true,
+        "last_activity": 1718027738
     }
 }
