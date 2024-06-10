@@ -145,11 +145,11 @@ function recherche($txt){
 }
 
 function changeImagePart(){
-    if(isset($_FILES["newimage"]) && $_FILES["newimage"]["error"] == 0){
+    if(isset($_FILES["image"])){if($_FILES["image"]["error"] == 0) {
         $allowed = ["jpg" => "image/jpeg", "jpeg" => "image/jpeg", "png" => "image/png", "gif" => "image/gif"];
-        $filename = $_FILES["newimage"]["name"];
-        $filetype = $_FILES["newimage"]["type"];
-        $filesize = $_FILES["newimage"]["size"];
+        $filename = $_FILES["image"]["name"];
+        $filetype = $_FILES["image"]["type"];
+        $filesize = $_FILES["image"]["size"];
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if(!array_key_exists($ext, $allowed)){
             die("Erreur : Format de fichier non autorisé.");
@@ -164,13 +164,13 @@ function changeImagePart(){
             $target_file = $target_dir . $uid . ".png";
             switch ($filetype) {
                 case "image/jpeg":
-                    $image = imagecreatefromjpeg($_FILES["newimage"]["tmp_name"]);
+                    $image = imagecreatefromjpeg($_FILES["image"]["tmp_name"]);
                     break;
                 case "image/gif":
-                    $image = imagecreatefromgif($_FILES["newimage"]["tmp_name"]);
+                    $image = imagecreatefromgif($_FILES["image"]["tmp_name"]);
                     break;
                 case "image/png":
-                    $image = imagecreatefrompng($_FILES["newimage"]["tmp_name"]);
+                    $image = imagecreatefrompng($_FILES["image"]["tmp_name"]);
                     break;
                 default:
                     die("Erreur : Format de fichier non supporté.");
@@ -185,7 +185,7 @@ function changeImagePart(){
             echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.</div>";
         }
     }else{
-        switch ($_FILES["newimage"]["error"]) {
+        switch ($_FILES["image"]["error"]) {
             case UPLOAD_ERR_INI_SIZE:
                 echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le fichier téléchargé dépasse la taille maximale autorisée.</div>";
                 break;
@@ -208,9 +208,10 @@ function changeImagePart(){
                 echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le téléchargement du fichier a été arrêté par une extension PHP.</div>";
                 break;
             default:
-                echo "Erreur inconnue : " . $_FILES["newimage"]["error"];
+                echo "Erreur inconnue : " . $_FILES["image"]["error"];
                 break;
             }
+        }
     }
 }
 ?>
