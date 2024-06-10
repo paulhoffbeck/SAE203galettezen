@@ -9,6 +9,8 @@
         "role_uid": "6647aa89001db",
         "last_activity": 1717256441,
         "visibilite": true
+
+       
     },
     "gzi789": {
         "nom": "Dansmonverre",
@@ -243,13 +245,14 @@
         "visibilite": false
     },
     "6666f2641a667": {
-        "nom": "hoffbeck",
-        "prenom": "paul",
+        "nom": "Hoffbeck",
+        "prenom": "Paul",
         "email": "galettepaulo@gmail.com",
         "mot_de_passe": "$2y$10$iaVhlIsUuiTKTJpWq5BeF.nEHQbpoT6fFDkPysm\/9ZblyoPAjD9YC",
         "role_uid": "",
         "telephone": "",
         "poste": "",
-        "code_validation": 953843
+        "code_validation": 953843,
+        "visibilite": true
     }
 }

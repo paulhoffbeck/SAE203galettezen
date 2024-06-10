@@ -1,1 +1,45 @@
-{}
+{
+    "66632cd184e9c": {
+        "name": "bonjoure",
+        "parent_uid": "66632cb3991fc",
+        "type": "folder",
+        "owner": "6659da5784fa0",
+        "share": {
+            "access": {
+                "public": [
+                    "upload",
+                    "view"
+                ]
+            },
+            "type": "public"
+        }
+    },
+    "66632ccb44bdd": {
+        "name": "coucou",
+        "parent_uid": "66632cb3991fc",
+        "type": "folder",
+        "owner": "6659da5784fa0",
+        "share": {
+            "type": "private"
+        }
+    },
+    "66632cb3991fc": {
+        "name": "salut",
+        "parent_uid": "racine",
+        "type": "folder",
+        "owner": "6659da5784fa0",
+        "share": {
+            "type": "private"
+        }
+    },
+    "66632dbba8990": {
+        "name": "bonjoure - raccourci",
+        "type": "shortcut",
+        "parent_uid": "racine",
+        "link": "66632cd184e9c",
+        "owner": "6659da5784fa0",
+        "share": {
+            "type": "private"
+        }
+    }
+}
