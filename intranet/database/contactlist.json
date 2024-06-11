@@ -1,17 +1,65 @@
-[
-    {
-        "nom": "G\u00e9n\u00e9ration R&T",
-        "mail": "generation.rt@gmail.com",
-        "sujet": "Demande de partenariat",
-        "message": "Bonjour, votre entreprises est g\u00e9niale ! \r\nEnvoie l&#39;argent stp\r\nmerci ! ",
-        "date": "2024-06-10"
-    },
-    {
+{
+    "1": {
         "nom": "Hilfberg",
         "mail": "g.hilfberg@manger.com",
         "sujet": "Grosse commande",
-        "message": "Bonjour, j&#39;ai extr\u00eamement faim, est il possible de m&#39;envoyer 100 000 tonnes de cr\u00eapes pour demain ? merci !",
+        "message": "Bonjour, j'ai extr\u00eamement faim, est-il possible de m'envoyer 100 000 tonnes de cr\u00eapes pour demain ? Merci !",
         "date": "2024-06-10"
+    },
+    "2": {
+        "nom": "Dupont",
+        "mail": "dupont@example.com",
+        "sujet": "Demande d'information",
+        "message": "Bonjour, pourriez-vous m'envoyer des informations sur vos services de livraison ? Merci d'avance.",
+        "date": "2024-06-09"
+    },
+    "4": {
+        "nom": "Garcia",
+        "mail": "garcia@example.com",
+        "sujet": "Demande de partenariat",
+        "message": "Bonjour, je repr\u00e9sente une entreprise int\u00e9ress\u00e9e par un partenariat avec la v\u00f4tre. Serait-il possible d'organiser une r\u00e9union pour discuter des d\u00e9tails ?",
+        "date": "2024-06-07"
+    },
+    "5": {
+        "nom": "Martin",
+        "mail": "martin@example.com",
+        "sujet": "Demande de devis",
+        "message": "Bonjour, je souhaiterais obtenir un devis pour la livraison de produits alimentaires pour notre \u00e9v\u00e9nement annuel. Merci.",
+        "date": "2024-06-06"
+    },
+    "6": {
+        "nom": "Lefevre",
+        "mail": "lefevre@example.com",
+        "sujet": "Suggestion",
+        "message": "Bonjour, j'ai une suggestion pour am\u00e9liorer votre service de livraison. Serait-il possible d'en discuter avec un responsable ?",
+        "date": "2024-06-05"
+    },
+    "7": {
+        "nom": "Kumar",
+        "mail": "kumar@example.com",
+        "sujet": "Probl\u00e8me technique",
+        "message": "Bonjour, j'ai rencontr\u00e9 un probl\u00e8me technique lors de ma derni\u00e8re commande en ligne. Pouvez-vous m'aider ?",
+        "date": "2024-06-04"
+    },
+    "8": {
+        "nom": "Li",
+        "mail": "li@example.com",
+        "sujet": "Feedback",
+        "message": "Bonjour, je voudrais donner un feedback positif sur la qualit\u00e9 de vos produits. Merci pour le bon service.",
+        "date": "2024-06-03"
+    },
+    "9": {
+        "nom": "Brown",
+        "mail": "brown@example.com",
+        "sujet": "Annulation de commande",
+        "message": "Bonjour, je souhaite annuler ma commande pass\u00e9e hier. Pouvez-vous confirmer l'annulation ?",
+        "date": "2024-06-02"
+    },
+    "10": {
+        "nom": "Rodriguez",
+        "mail": "rodriguez@example.com",
+        "sujet": "Demande de remboursement",
+        "message": "Bonjour, je n'ai pas re\u00e7u les produits command\u00e9s et je demande un remboursement imm\u00e9diat. Merci.",
+        "date": "2024-06-01"
     }
-    
-]
+}

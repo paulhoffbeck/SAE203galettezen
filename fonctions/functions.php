@@ -31,8 +31,8 @@ function sidebar() {
         <br>
         <br>
         <br>
-        <img src="../intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
-        <img src="../intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
+        <img src="./intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
+        <img src="./intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
     </nav>
         
     ';
@@ -100,11 +100,12 @@ function footer() {
 }
 
 function traitementcontact(){
+    $uid=uniqid();
     $nom = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $mail = $_POST['email'];
     $sujet = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
     $message =filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-    $date = date('Y-m-d');
+    $date = date('d/m/Y');
 
     $nouveaucontact = array(
         'nom' => $nom,
@@ -113,12 +114,11 @@ function traitementcontact(){
         'message' => $message,
         'date' => $date
     );
-    var_dump($message);
-    $fichier = file_get_contents('../intranet/database/contactlist.json');
+    $fichier = file_get_contents('./intranet/database/contactlist.json');
     $data = json_decode($fichier, true);
-    $nouveautab[] = $nouveaucontact;
+    $data[$uid] = $nouveaucontact;
     $newjson = json_encode($data, JSON_PRETTY_PRINT);
-    file_put_contents('../intranet/database/contactlist.json', $newjson);
+    file_put_contents('./intranet/database/contactlist.json', $newjson);
 }
 
 

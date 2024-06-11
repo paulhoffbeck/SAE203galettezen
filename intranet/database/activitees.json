@@ -209,14 +209,19 @@
         "message": "Modification des informations de Xavier Dupont.",
         "level": 1
     },
-    "1718098354": {
-        "user": "6659da5784fa0",
-        "message": "Modification des informations de Simon Collet.",
+    "1718023177": {
+        "user": "6659953053cfa",
+        "message": "Modification des informations de Paul Hoffbeck.",
         "level": 1
     },
-    "1718098394": {
-        "user": "6659da5784fa0",
-        "message": "Modification des informations de Simon Collet.",
+    "1718023636": {
+        "user": "6666f2641a667",
+        "message": "Modification des permissions du r\u00f4le Administrateur.",
+        "level": 1
+    },
+    "1718023641": {
+        "user": "6666f2641a667",
+        "message": "Modification des permissions du r\u00f4le Administrateur.",
         "level": 1
     }
 }
