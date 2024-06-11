@@ -31,8 +31,8 @@ function sidebar() {
         <br>
         <br>
         <br>
-        <img src="../intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
-        <img src="../intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
+        <img src="./intranet/img/sitevitrine/drapeaubreton.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">
+        <img src="./intranet/img/sitevitrine/drapeaufrancais.jpg" class="rounded-circle" alt="Cinque Terre" width="70" height="70">  
     </nav>
         
     ';
@@ -72,13 +72,13 @@ function footer() {
                         <h5 class="text-uppercase">Partenaires</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Airbus</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="partenaires.php">Airbus</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Stade Rennais</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="partenaires.php">Stade Rennais</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Amora</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="partenaires.php">Amora</a>
                             </li>
                         </ul>
                     </div>
@@ -99,6 +99,27 @@ function footer() {
     ';
 }
 
+function traitementcontact(){
+    $uid=uniqid();
+    $nom = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $mail = $_POST['email'];
+    $sujet = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message =filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+    $date = date('d/m/Y');
+
+    $nouveaucontact = array(
+        'nom' => $nom,
+        'mail' => $mail,
+        'sujet' => $sujet,
+        'message' => $message,
+        'date' => $date
+    );
+    $fichier = file_get_contents('./intranet/database/contactlist.json');
+    $data = json_decode($fichier, true);
+    $data[$uid] = $nouveaucontact;
+    $newjson = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents('./intranet/database/contactlist.json', $newjson);
+}
 
 
 ?> 

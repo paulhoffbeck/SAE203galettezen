@@ -1,58 +1,74 @@
 {
-    "HEINZ": {
-        "image": "Heinz_logo1957.png",
-        "description": "Fabricant mondial de produits alimentaires célèbres pour son ketchup.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.heinz.com",
-        "montrer": "oui"
+    "WRYQE7": {
+        "image": "WRYQE7.png",
+        "description": "Fabricant mondial de produits alimentaires c\u00e9l\u00e8bres pour son ketchup.",
+        "lien": "https:\/\/www.heinz.com",
+        "montrer": "oui",
+        "fournisseur": "oui",
+        "nom": "HEINZ"
     },
-    "COOPERL": {
-        "image": "Logo_cooperl.png",
-        "description": "Leader français dans la production porcine et de charcuterie.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.cooperl.com",
-        "montrer": "oui"
+    "HF0GLC": {
+        "image": "HF0GLC.png",
+        "description": "Leader fran\u00e7ais dans la production porcine et de charcuterie.",
+        "lien": "https:\/\/www.cooperl.com",
+        "montrer": "oui",
+        "fournisseur": "oui",
+        "nom": "COOPERL"
     },
-    "EUREDEN": {
+    "AI8WES": {
         "image": "Logo_Eureden.png",
-        "description": "Coopérative bretonne spécialisée dans l'agroalimentaire et l'agriculture.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.eureden.com",
-        "montrer": "oui"
+        "description": "Coop\u00e9rative bretonne sp\u00e9cialis\u00e9e dans l'agroalimentaire et l'agriculture.",
+        "lien": "https:\/\/www.eureden.com",
+        "montrer": "oui",
+        "fournisseur": "non",
+        "nom": "EUREDEN"
     },
-    "AIRBUS": {
+    "OC3N6Y": {
         "image": "logo-Airbus.jpg",
-        "description": "Multinationale européenne, leader dans l'aérospatiale et la défense.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.airbus.com",
-        "montrer": "oui"
+        "description": "Multinationale europ\u00e9enne, leader dans l'a\u00e9rospatiale et la d\u00e9fense.",
+        "lien": "https:\/\/www.airbus.com",
+        "montrer": "oui",
+        "fournisseur": "non",
+        "nom": "AIRBUS"
     },
-    "AMORA": {
+    "I13ZXJ": {
         "image": "Logoamora.png",
-        "description": "Marque française renommée pour ses moutardes et condiments.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.amora.fr",
-        "montrer": "oui"
+        "description": "Marque fran\u00e7aise renomm\u00e9e pour ses moutardes et condiments.",
+        "lien": "https:\/\/www.amora.fr",
+        "montrer": "oui",
+        "fournisseur": "oui",
+        "nom": "AMORA"
     },
-    "TEMPETE DE L'OUEST": {
+    "HTA292": {
         "image": "logotempetedelouest.jpg",
-        "description": "Entreprise bretonne spécialisée dans les produits de la mer.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.tempetedelouest.fr",
-        "montrer": "oui"
+        "description": "Entreprise bretonne sp\u00e9cialis\u00e9e dans les produits de la mer.",
+        "lien": "https:\/\/www.tempetedelouest.fr",
+        "montrer": "oui",
+        "fournisseur": "oui",
+        "nom": "TEMPETE DE L OUEST"
     },
-    "REGION BRETAGNE": {
+    "TD4YER": {
         "image": "region-bretagne.png",
-        "description": "Administration régionale de Bretagne, soutenant l'économie locale.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.bretagne.bzh",
-        "montrer": "oui"
+        "description": "Administration r\u00e9gionale de Bretagne, soutenant l'\u00e9conomie locale.",
+        "lien": "https:\/\/www.bretagne.bzh",
+        "montrer": "oui",
+        "fournisseur": "non",
+        "nom": "REGION BRETAGNE"
     },
-    "STADE RENNAIS": {
+    "AGJCOX": {
         "image": "Staderennais.png",
-        "description": "Club de football professionnel basé à Rennes, en Bretagne.",
-        "email": "xavier.dupont@galetezen.com",
-        "lien": "https://www.staderennais.com",
-        "montrer": "oui"
+        "description": "Club de football professionnel bas\u00e9 \u00e0 Rennes, en Bretagne.",
+        "lien": "https:\/\/www.staderennais.com",
+        "montrer": "oui",
+        "fournisseur": "non",
+        "nom": "STADE RENNAIS"
+    },
+    "66681c19a9a63": {
+        "image": "",
+        "description": "sdv s ",
+        "lien": "sdvs",
+        "montrer": true,
+        "fournisseur": false,
+        "nom": "oinsdv"
     }
 }

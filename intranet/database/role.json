@@ -3,34 +3,173 @@
         "name": "Administrateur",
         "permissions": {
             "admin": {
-                "liste-role": "true",
+                "edit-perms-role": "true",
                 "create-role": "true",
-                "perms-role": "true",
-                "modifier-role-user": "true",
-                "add-role-user": "true",
-                "delet-collaborateur": "true"
+                "activity-level-danger": "true",
+                "activity-level-warning": "true"
             },
             "modo": {
-                "partenaires": "true",
-                "create-collaborator": "true",
-                "edit-collaborator": "true"
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true",
+                "treatment-new-user": "true",
+                "edit-base-user": "true",
+                "edit-role-user": "true",
+                "edit-password-user": "true",
+                "manage-partenaires": "true"
             },
             "general": {
                 "acces-file-manager": "true",
-                "view-collaborator-liste": "true",
-                "view-collaborator-details": "true",
-                "edit-self-informations": "true"
+                "page-collaborateur": "true",
+                "page-clients": "true",
+                "profil": "true",
+                "link-wiki": "true",
+                "access-contact": "true"
+            }
+        }
+    },
+    "665a031785562": {
+        "name": "Direction",
+        "permissions": {
+            "admin": {
+                "activity-level-warning": "true"
+            },
+            "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
+        }
+    },
+    "665a035650403": {
+        "name": "Service des Ressources Humaines",
+        "permissions": {
+            "admin": [],
+            "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true",
+                "treatment-new-user": "true",
+                "edit-base-user": "true",
+                "edit-role-user": "true",
+                "edit-password-user": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
+        }
+    },
+    "665a03c3872a2": {
+        "name": "Service Comptabilit\u00e9",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
             }
         }
     },
     "6647aa89001db": {
-        "name": "Commercial",
+        "name": "Service Commercial",
+        "permissions": {
+            "admin": [],
+            "modo": {
+                "manage-partenaires": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
+        }
+    },
+    "665a03278e373": {
+        "name": "Service Informatique",
         "permissions": {
             "admin": {
-                "manage-role": "true"
+                "edit-perms-role": "true",
+                "create-role": "true",
+                "activity-level-danger": "true",
+                "activity-level-warning": "true"
             },
+            "modo": {
+                "liste-role": "true",
+                "members-role": "true",
+                "view-perms-role": "true",
+                "liste-new-user": "true"
+            },
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
+        }
+    },
+    "665a03b8df9b6": {
+        "name": "Secr\u00e9tariat",
+        "permissions": {
+            "admin": [],
             "modo": [],
-            "general": []
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
+        }
+    },
+    "665a0558c0ad1": {
+        "name": "Service des Achats",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
+        }
+    },
+    "665a04755e407": {
+        "name": "Service Logistique",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true",
+                "page-clients": "true"
+            }
+        }
+    },
+    "665a04001ed75": {
+        "name": "Service Production",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
+        }
+    },
+    "665a05425e958": {
+        "name": "Service R&D",
+        "permissions": {
+            "admin": [],
+            "modo": [],
+            "general": {
+                "acces-file-manager": "true",
+                "page-collaborateur": "true"
+            }
         }
     }
 }

@@ -1,4 +1,7 @@
-<?php require_once ("fonctions/main.php"); ?>
+<?php require_once ("fonctions/main.php");
+if(!hasPermission("modo","edit-base-user",false) && !hasPermission("modo","edit-role-user",false) && !hasPermission("modo","edit-password-user",false) && !hasPermission("modo","liste-new-user",false)){
+    header("Location:index.php");
+} ?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -21,24 +24,27 @@
 <?php alreadylogin(); head(); navbar(); ?>
 <div class="container mt-3 mb-3">
     <div class="row">
-        <div class="col-lg-3">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseValidation" role="button" aria-expanded="false" aria-controls="collapseValidation">
-                    Comptes en attentes
-                    <span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><?= demandeValidationUserNumber() ?> demande(s)</span>
+        <div class="col-lg-4">
+            <?php if(hasPermission("modo","liste-new-user",false)){ ?>
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseValidation" role="button" aria-expanded="false" aria-controls="collapseValidation">
+                        Comptes en attentes
+                        <span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill"><?= demandeValidationUserNumber() ?> demande(s)</span>
+                    </div>
+                    <div class="card-body collapse" id="collapseValidation">
+                        <?= userEnAttenteValidation() ?>
+                    </div>
                 </div>
-                <div class="card-body collapse" id="collapseValidation">
-                    <?= userEnAttenteValidation() ?>
+            <?php }if(hasPermission("modo","edit-base-user",false) || hasPermission("modo","edit-role-user",false) || hasPermission("modo","edit-password-user",false)){ ?>
+                <div class="card">
+                    <div class="card-header">
+                        Comptes Actifs
+                    </div>
+                    <div class="card-body">
+                        <?= activeUser() ?>
+                    </div>
                 </div>
-            </div>
-            <div class="card mt-3">
-                <div class="card-header">
-                    Comptes Actifs
-                </div>
-                <div class="card-body">
-                    <?= activeUser() ?>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         <?php if(isset($_GET['uid'])){
             echo traitementUserValidation($_GET['uid']);
