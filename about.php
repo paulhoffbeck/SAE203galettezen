@@ -1,5 +1,6 @@
+
 <?php
-include '../fonctions/functions.php';
+include './fonctions/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +10,7 @@ include '../fonctions/functions.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
@@ -24,7 +25,7 @@ include '../fonctions/functions.php';
                         <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
                     </button>        
             <div class="d-flex align-items-center">
-                        <img src="../intranet/img/logo.png" alt="logo" style="width: 80px;">
+                        <img src="./intranet/img/logo.png" alt="logo" style="width: 80px;">
                         
             </div>
             </div>
@@ -36,18 +37,18 @@ include '../fonctions/functions.php';
                 <div class="container">
                     <div class="row">
                     <?php
-                    $fichierutilisateur = file_get_contents('../intranet/database/user.json');
+                    $fichierutilisateur = file_get_contents('./intranet/database/user.json');
                     $tableauutilisateur = json_decode($fichierutilisateur, true);
                     foreach ($tableauutilisateur as $keys => $user) {
                     if($user['visibilite'] == true ){
                         echo '<div class="col-3 mb-4">';
                         echo '<div class="card mb-4 d-flex h-100 flex-column" style="width: 18rem;">';
                         
-                        $imagePath = '../intranet/img/collaborateur/' . $keys . '.png';
+                        $imagePath = './intranet/img/collaborateur/' . $keys . '.png';
                         if (file_exists($imagePath)) {
                             echo '<img src="' . htmlspecialchars($imagePath) . '" class="card-img-top" alt="Image de ' . htmlspecialchars($user['prenom']) . ' ' . htmlspecialchars($user['nom']) . '" style="height: 200px; object-fit: cover;">';
                         } else {
-                            echo '<img src="../intranet/img/collaborateur/pasdepp.png" class="card-img-top" alt="Image par défaut" style="height: 200px; object-fit: cover;">';
+                            echo '<img src="./intranet/img/collaborateur/pasdepp.png" class="card-img-top" alt="Image par défaut" style="height: 200px; object-fit: cover;">';
                         }
                         echo '<div class="card-body">';
                         echo '<h5 class="card-title">' . htmlspecialchars($user['nom']) . ' ' . htmlspecialchars($user['prenom']) . '</h5>';

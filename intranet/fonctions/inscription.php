@@ -2,7 +2,7 @@
 
 function valideCodeConfirmation($code) {
     $userTable = json_decode(file_get_contents('database/user.json', true), true);
-    if(isset($code) && $code == $userTable[$_GET['uid']]['code_validation']){
+    if(isset($code) && isset($userTable[$_GET['uid']]) && $code == $userTable[$_GET['uid']]['code_validation']){
         unset($userTable[$_GET['uid']]['code_validation']);
         $file = json_encode($userTable, JSON_PRETTY_PRINT);
         file_put_contents("database/user.json",$file);
@@ -19,7 +19,7 @@ function register(){
         }
         $mail = $_POST["email"];
         $domaine = explode("@",$mail)[1];
-        if ($_POST['needDomaine'] && $domaine != "galetezen.com") {
+        if (isset($_POST['needDomaine']) && $domaine != "galetezen.com") {
             return "Votre adresse email n'est pas autorisée à créer un compte sur notre site.";
         }else{
             $alea = rand(100000,999999);
@@ -98,6 +98,54 @@ function inscriptionFormulaire(){
                           <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">[DEMO] Imposer le domaine @galetezen.com</label>
                         </div>
                         <center><button type=\"submit\" name=\"register\" class=\"btn btn-azur mt-3\"><i class=\"fa-solid fa-paper-plane\"></i> S'inscrire</button></center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>";
+}
+function adminInscriptionFormulaire(){
+    $alert = "";
+    if(isset($_POST['register'])){
+        $result = register();
+        if($result === true){
+            $alert = "<div class=\"alert alert-success\"><b>Inscription !</b> Un message à été envoyé à l'adresse mail indiquée pour poursuivre l'inscription. Vous pouvez fermer cette page.</div>";
+        }else{
+            $alert = "<div class=\"alert alert-warning\"><b>Erreur :</b> $result</div>";
+        }
+    }
+    return "
+    <br>
+    <div class=\"row justify-content-center\">
+        <div class=\"col-lg-4 col-md-8 col-12\">
+            <div class=\"card\">
+                <div class=\"card-body\">
+                    <div class=\"text-center\">
+                        <h4>Créer un compte</h4>
+                    </div>
+                    $alert
+                    <form method=\"POST\" class=\"mt-3\">
+                        <div class=\"form-group mt-2\">
+                            <label for=\"prenom\">Prénom :</label>
+                            <input type=\"text\" class=\"form-control\" id=\"prenom\" name=\"prenom\" required>
+                        </div>
+                        <div class=\"form-group mt-2\">
+                            <label for=\"nom\">Nom :</label>
+                            <input type=\"text\" class=\"form-control\" id=\"nom\" name=\"nom\" required>
+                        </div>
+                        <div class=\"form-group mt-2\">
+                            <label for=\"email\">Email :</label>
+                            <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" required>
+                        </div>
+                        <div class=\"form-group mt-2\">
+                            <label for=\"password\">Mot de passe :</label>
+                            <input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" required>
+                        </div>
+                        <div class=\"form-group mt-2\">
+                            <label for=\"password\">Confirmation de Mot de passe :</label>
+                            <input type=\"password\" class=\"form-control\" id=\"cpassword\" name=\"cpassword\" required>
+                        </div>
+                        <center><button type=\"submit\" name=\"register\" class=\"btn btn-azur mt-3\"><i class=\"fa-solid fa-paper-plane\"></i> Créer le compte</button></center>
                     </form>
                 </div>
             </div>

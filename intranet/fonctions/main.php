@@ -20,4 +20,5 @@ require_once(__DIR__ . '/clients.php');
 if(isset($_SESSION['uid'])){
     loadSessionPermissions($_SESSION['role_uid']);
 }
+
 ?>

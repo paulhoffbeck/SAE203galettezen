@@ -51,6 +51,7 @@ function  navbar(){ ?>
                 <?php endif; ?>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="settings.php">Réglages</a></li>
+                <li><a class="dropdown-item" href="create-user.php">Créer un compte</a></li>
               </ul>
             </li>
           <?php endif;
@@ -59,6 +60,13 @@ function  navbar(){ ?>
               <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
             </li>
           <?php endif;
+
+          if(hasPermission("general","access-contact")): ?>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="contact.php">Contact</a>
+            </li>
+          <?php endif;
+
           if(hasPermission("general","link-wiki")): ?>
             <li class="nav-item">
               <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>

@@ -71,7 +71,14 @@ function collaborateur(){
                 <td>'. getRoleName($user['role_uid']) .'<br><small>'. $user['poste'].'</small></td>
                 <td><a href="mailto:'. $user['email'].'">'. $user['email'].'</a></td> 
                 <td>'.$user['telephone'].'</td>
-                <td> <button type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </button></td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a type="button" class="btn btn-sm btn-ciel" data-bs-toggle="modal" data-bs-target="#'.$key.'"> Profil </a>';
+                        if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user") || hasPermission("modo","edit-password-user") || hasPermission("modo","liste-new-user")):
+                            echo '<a href="user-management.php?uid='.$key.'" class="btn btn-azur btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
+                        endif;
+                    echo '</div>
+                </td>
             </tr> ';
         }
     }
