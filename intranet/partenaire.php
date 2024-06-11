@@ -17,7 +17,6 @@ require_once('fonctions/main.php');
 alreadylogin();
 head();
 navbar();
-var_dump($_POST);
 changeImagePart();
 echo("<br>");
 if(isset($_POST["elementadel"])){
