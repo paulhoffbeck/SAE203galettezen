@@ -31,13 +31,11 @@ include './fonctions/functions.php';
                         
             </div>
             </div>
-
-                <div class="text-center">
+            <div class="text-center">
                     <h1>GaleteZen</h1>
                     <h5>Entreprise malouine de crêpes et galettes</h5>
                     <p>France, Allemagne, Etats-Unis, Japon, Russie, Afrique du Sud... Grâce à nous la bonne galette bretonne est exportée partout dans le monde !</p>
                     <p>Avec des produits locaux et de qualités, emportez un bout de Bretagne partout dans le monde avec GaleteZen</p>
-                    <h3>Quelques exemples de nos produits :<h3>
                 </div>
                
 
@@ -50,17 +48,17 @@ include './fonctions/functions.php';
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <img src="./intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
+                                <img src="./intranet/img/sitevitrine/rue.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                            <img src="./intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
+                            <img src="./intranet/img/sitevitrine/truck.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                            <img src="./intranet/img/sitevitrine/galete1.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
+                            <img src="./intranet/img/sitevitrine/truck2.jpg" alt="galette1" class="d-block w-50 h-50 img-fluid">
                             </div>
                         </div>
                     </div>
