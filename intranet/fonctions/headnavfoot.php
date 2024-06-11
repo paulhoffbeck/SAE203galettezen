@@ -26,7 +26,7 @@ function  navbar(){ ?>
           </li>
           <?php if(hasPermission("general","page-clients")): ?>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Clients</a>
+              <a class="nav-link text-white" href="clients.php">Clients</a>
             </li>
           <?php endif;
           if(hasPermission("modo","manage-partenaires")): ?>
@@ -60,6 +60,13 @@ function  navbar(){ ?>
               <a class="nav-link text-white" href="file-manager.php?path=racine">Fichiers</a>
             </li>
           <?php endif;
+
+          if(hasPermission("general","access-contact")): ?>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="contact.php">Contact</a>
+            </li>
+          <?php endif;
+
           if(hasPermission("general","link-wiki")): ?>
             <li class="nav-item">
               <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
