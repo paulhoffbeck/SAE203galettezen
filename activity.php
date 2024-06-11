@@ -44,7 +44,7 @@ include './fonctions/functions.php';
                                 <img src="./intranet/img/sitevitrine/galete4.jpeg" class="card-img-top" alt="test">
                                 <div class="card-body">
                                     <h5 class="card-title">Nos galettes</h5>
-                                    <p class="card-text">Imaginez-vous savourer une délicieuse galette bretonne GaleteZen, croustillante à l'extérieur et moelleuse à l'intérieur, garnie de fromage fondu, de jambon savoureux et d'un œuf parfaitement coulant, le tout accompagné d'un verre de cidre frais. Un véritable festin pour vos papilles !</p>
+                                    <p class="card-text">Imaginez-vous savourer une délicieuse galette malouine GaleteZen, croustillante à l'extérieur et moelleuse à l'intérieur, garnie de fromage fondu, de jambon savoureux et d'un œuf parfaitement coulant, le tout accompagné d'un verre de cidre frais. Un véritable festin pour vos papilles !</p>
                                     <a href="#" class="btn btn-ketchup">Déguster ma galette</a>
                                 </div>
                         </div>
