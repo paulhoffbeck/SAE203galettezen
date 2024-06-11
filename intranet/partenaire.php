@@ -13,16 +13,19 @@
 
 <?php
 require_once('fonctions/main.php');
+
 alreadylogin();
 head();
 navbar();
-modifier();
-changeImagePart();
-var_dump($_FILES);
-echo("<br>");
 var_dump($_POST);
-
+changeImagePart();
+echo("<br>");
+if(isset($_POST["elementadel"])){
+  suppr($_POST["elementadel"]);
+}
+modifier();
 partenaires(affiche());
+
 
 
 ?>
