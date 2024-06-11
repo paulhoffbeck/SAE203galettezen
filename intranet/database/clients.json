@@ -154,7 +154,7 @@
         "prenom": "Balint",
         "date_de_naissance": "1985-03-12",
         "telephone": "06-87-65-43-21",
-        "email": "balint.kovacs@example.hu",
+        "email": "balint.kovacs@gmail.com",
         "adresse": {
             "pays": "Hongrie",
             "code_postal": "1051",
@@ -169,7 +169,7 @@
         "prenom": "Anna",
         "date_de_naissance": "1990-04-22",
         "telephone": "06-23-45-67-89",
-        "email": "anna.nowak@example.pl",
+        "email": "anna.nowak@gmail.com",
         "adresse": {
             "pays": "Pologne",
             "code_postal": "00-001",
@@ -184,7 +184,7 @@
         "prenom": "Alexei",
         "date_de_naissance": "1988-06-14",
         "telephone": "06-34-56-78-90",
-        "email": "alexei.ivanov@example.ru",
+        "email": "alexei.ivanov@gmail.com",
         "adresse": {
             "pays": "Russie",
             "code_postal": "101000",
@@ -199,7 +199,7 @@
         "prenom": "Lars",
         "date_de_naissance": "1987-05-03",
         "telephone": "06-12-34-56-78",
-        "email": "lars.hansen@example.dk",
+        "email": "lars.hansen@gmail.com",
         "adresse": {
             "pays": "Danemark",
             "code_postal": "1000",
@@ -214,7 +214,7 @@
         "prenom": "Emma",
         "date_de_naissance": "1992-11-21",
         "telephone": "06-98-76-54-32",
-        "email": "emma.nielsen@example.dk",
+        "email": "emma.nielsen@gmail.com",
         "adresse": {
             "pays": "Danemark",
             "code_postal": "8000",
@@ -229,7 +229,7 @@
         "prenom": "Miguel",
         "date_de_naissance": "1993-08-30",
         "telephone": "06-23-45-67-89",
-        "email": "miguel.garcia@example.es",
+        "email": "miguel.garcia@gmail.com",
         "adresse": {
             "pays": "Espagne",
             "code_postal": "28001",
@@ -244,7 +244,7 @@
         "prenom": "Luis",
         "date_de_naissance": "1982-07-18",
         "telephone": "06-45-67-89-01",
-        "email": "luis.martinez@example.es",
+        "email": "luis.martinez@gmail.com",
         "adresse": {
             "pays": "Espagne",
             "code_postal": "08002",
@@ -259,7 +259,7 @@
         "prenom": "Luc",
         "date_de_naissance": "1979-02-12",
         "telephone": "06-34-56-78-90",
-        "email": "luc.bernard@example.fr",
+        "email": "luc.bernard@gmail.com",
         "adresse": {
             "pays": "France",
             "code_postal": "69002",
@@ -274,7 +274,7 @@
         "prenom": "Dmitri",
         "date_de_naissance": "1985-11-06",
         "telephone": "06-23-45-67-89",
-        "email": "dmitri.pavlov@example.ru",
+        "email": "dmitri.pavlov@gmail.com",
         "adresse": {
             "pays": "Russie",
             "code_postal": "190000",
@@ -289,7 +289,7 @@
         "prenom": "Marco",
         "date_de_naissance": "1984-05-22",
         "telephone": "06-34-56-78-90",
-        "email": "marco.bianchi@example.it",
+        "email": "marco.bianchi@gmail.com",
         "adresse": {
             "pays": "Italie",
             "code_postal": "50123",
@@ -304,7 +304,7 @@
         "prenom": "Giulia",
         "date_de_naissance": "1991-12-14",
         "telephone": "06-98-76-54-32",
-        "email": "giulia.rossi@example.it",
+        "email": "giulia.rossi@gmail.com",
         "adresse": {
             "pays": "Italie",
             "code_postal": "00184",
@@ -319,7 +319,7 @@
         "prenom": "Sophie",
         "date_de_naissance": "1990-03-18",
         "telephone": "06-12-34-56-78",
-        "email": "sophie.dubois@example.fr",
+        "email": "sophie.dubois@gmail.com",
         "adresse": {
             "pays": "France",
             "code_postal": "33000",
@@ -334,7 +334,7 @@
         "prenom": "Thomas",
         "date_de_naissance": "1983-01-09",
         "telephone": "06-98-76-54-32",
-        "email": "thomas.schmidt@example.de",
+        "email": "thomas.schmidt@gmail.com",
         "adresse": {
             "pays": "Allemagne",
             "code_postal": "80331",
@@ -349,7 +349,7 @@
         "prenom": "Klaus",
         "date_de_naissance": "1987-10-27",
         "telephone": "06-45-67-89-01",
-        "email": "klaus.muller@example.de",
+        "email": "klaus.muller@gmail.com",
         "adresse": {
             "pays": "Allemagne",
             "code_postal": "50667",
@@ -364,7 +364,7 @@
         "prenom": "Hendrik",
         "date_de_naissance": "1992-07-13",
         "telephone": "06-98-76-54-32",
-        "email": "hendrik.jansen@example.nl",
+        "email": "hendrik.jansen@gmail.com",
         "adresse": {
             "pays": "Pays-Bas",
             "code_postal": "1012",
@@ -379,7 +379,7 @@
         "prenom": "Ana",
         "date_de_naissance": "1989-11-19",
         "telephone": "06-34-56-78-90",
-        "email": "ana.santos@example.pt",
+        "email": "ana.santos@gmail.com",
         "adresse": {
             "pays": "Portugal",
             "code_postal": "1100-038",
@@ -394,7 +394,7 @@
         "prenom": "Nikolai",
         "date_de_naissance": "1984-02-14",
         "telephone": "06-23-45-67-89",
-        "email": "nikolai.petrov@example.bg",
+        "email": "nikolai.petrov@gmail.com",
         "adresse": {
             "pays": "Bulgarie",
             "code_postal": "1000",
@@ -409,7 +409,7 @@
         "prenom": "John",
         "date_de_naissance": "1980-08-22",
         "telephone": "06-12-34-56-78",
-        "email": "john.williams@example.co.uk",
+        "email": "john.williams@gmail.com",
         "adresse": {
             "pays": "Royaume-Uni",
             "code_postal": "SW1A 1AA",
@@ -424,7 +424,7 @@
         "prenom": "Erik",
         "date_de_naissance": "1982-03-10",
         "telephone": "06-45-67-89-01",
-        "email": "erik.larsen@example.no",
+        "email": "erik.larsen@gmail.com",
         "adresse": {
             "pays": "Norvege",
             "code_postal": "0159",
@@ -439,7 +439,7 @@
         "prenom": "Olli",
         "date_de_naissance": "1978-12-02",
         "telephone": "06-34-56-78-90",
-        "email": "olli.jokinen@example.fi",
+        "email": "olli.jokinen@gmail.com",
         "adresse": {
             "pays": "Finlande",
             "code_postal": "00100",
@@ -454,7 +454,7 @@
         "prenom": "Mate",
         "date_de_naissance": "1991-07-15",
         "telephone": "06-45-67-89-01",
-        "email": "mate.kova@example.hr",
+        "email": "mate.kova@gmail.com",
         "adresse": {
             "pays": "Croatie",
             "code_postal": "10000",
@@ -469,7 +469,7 @@
         "prenom": "Jana",
         "date_de_naissance": "1987-09-30",
         "telephone": "06-23-45-67-89",
-        "email": "jana.novak@example.cz",
+        "email": "jana.novak@gmail.com",
         "adresse": {
             "pays": "Republique Tcheque",
             "code_postal": "11000",
@@ -484,7 +484,7 @@
         "prenom": "Andrei",
         "date_de_naissance": "1983-11-25",
         "telephone": "06-34-56-78-90",
-        "email": "andrei.vasilev@example.ro",
+        "email": "andrei.vasilev@gmail.com",
         "adresse": {
             "pays": "Roumanie",
             "code_postal": "010001",
@@ -499,7 +499,7 @@
         "prenom": "Karl",
         "date_de_naissance": "1990-05-12",
         "telephone": "06-23-45-67-89",
-        "email": "karl.bach@example.at",
+        "email": "karl.bach@gmail.com",
         "adresse": {
             "pays": "Autriche",
             "code_postal": "1010",
@@ -514,7 +514,7 @@
         "prenom": "Pavel",
         "date_de_naissance": "1992-08-17",
         "telephone": "06-98-76-54-32",
-        "email": "pavel.volkov@example.by",
+        "email": "pavel.volkov@gmail.com",
         "adresse": {
             "pays": "Bielorussie",
             "code_postal": "220030",
@@ -529,7 +529,7 @@
         "prenom": "Ravi",
         "date_de_naissance": "1986-01-29",
         "telephone": "06-34-56-78-90",
-        "email": "ravi.kumar@example.in",
+        "email": "ravi.kumar@gmail.com",
         "adresse": {
             "pays": "Inde",
             "code_postal": "110001",
@@ -544,7 +544,7 @@
         "prenom": "Istvan",
         "date_de_naissance": "1981-10-10",
         "telephone": "06-12-34-56-78",
-        "email": "istvan.nagy@example.hu",
+        "email": "istvan.nagy@gmail.com",
         "adresse": {
             "pays": "Hongrie",
             "code_postal": "1088",
@@ -559,7 +559,7 @@
         "prenom": "Ana",
         "date_de_naissance": "1988-04-18",
         "telephone": "06-23-45-67-89",
-        "email": "ana.horvat@example.hr",
+        "email": "ana.horvat@gmail.com",
         "adresse": {
             "pays": "Croatie",
             "code_postal": "21000",
@@ -574,7 +574,7 @@
         "prenom": "Miguel",
         "date_de_naissance": "1985-12-07",
         "telephone": "06-45-67-89-01",
-        "email": "miguel.silva@example.pt",
+        "email": "miguel.silva@gmail.com",
         "adresse": {
             "pays": "Portugal",
             "code_postal": "4000-432",

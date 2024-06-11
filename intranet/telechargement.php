@@ -56,13 +56,12 @@ echo '
     </table></div></div>';
   ?>
   <script>
-  window.print()
+  window.print();
   </script>
   <?php
   header("refresh:1;url=clients.php");
 }
 telechargement($_GET['key']);
-
 ?>
 </body>
 </html>
