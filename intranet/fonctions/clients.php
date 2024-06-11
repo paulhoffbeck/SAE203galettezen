@@ -121,9 +121,26 @@ if (isset($_POST["nom"])) {
         <td>'.$user['adresse']['pays'].'<br><small>'. $user['langue'].'</small></td>
         <td>'.$user['adresse']['ville'].', '.$user['adresse']['code_postal'].'<br><small>'. $user['adresse']['rue'].'</small></td>
         <td><a href="telechargement.php?key='.$key.'"><i class="fa-solid fa-download"></i></a></td>
+        <td>
+            <form  method="POST"> 
+                <input type="hidden" name="elementasup" value="'.$key.'">
+                <button type="submit" class="btn btn-danger">Supprimer</button>
+            </form>
+        </td>
         </tr>';
     }
     echo '</tbody></table></div></div>';
-}
+    
+    if($_POST['elementasup']) {
+    $uid = $_POST['elementasup'];
+    $json = file_get_contents('./database/clients.json');
+    $donnee = json_decode($json, true);
 
+    unset($donnee[$uid]);
+
+    $file = json_encode($donnee, JSON_PRETTY_PRINT);
+    file_put_contents("./database/clients.json", $file);
+    header("Refresh:0");
+    }
+}
 ?>
