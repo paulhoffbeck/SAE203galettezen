@@ -17,26 +17,32 @@ function partenaires($tab){
 
 
     // Création du tableau
-
-    echo '<div class="container mb-5">
-    <h1 class="my-4">Liste de nos Partenaires</h1>
+    
+    echo('<br>');
+    echo '<div class="container mb-5">';
+    
+    echo('<br>');
+    echo '<h1 class="my-4">Liste de nos Partenaires</h1>
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <form method="POST">
                     <th class="bg-turquoise border-turquoise">Rechercher un nom</th>
-                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="nom" placeholder="Chercher par Nom"></th>
+                    <th class="bg-turquoise border-turquoise"><input class="bg-turquoise border-0" type="text" name="nomchercher" placeholder="Chercher par Nom"></th>
                     <th class="bg-turquoise border-turquoise"><button type="submit" name="rechercher" class="btn btn-pastel">Appliquer</button></th>
                 </form>
+                    <th class="bg-turquoise border-turquoise">
+                        <button onclick="affAjouter()" name="ajouter" class="btn btn-pastel">+</button>
+                    </th>
             </tr>
 
         </thead>
-    </table>
-
-
+    </table>';
+ajoutpart();
+echo'
     <table class="table table-striped table-bordered table-hover">
     <thead>
-        <tr class="sticky-top">
+        <tr>
             <th>logo</th>
             <th>Nom</th>
             <th>fournisseur</th>
@@ -45,6 +51,7 @@ function partenaires($tab){
             <th>lien</th>
             <th>description</th>
             <th>modifier</th>
+            <th>supprimer</th>
         </tr>
     </thead>
     
@@ -81,14 +88,18 @@ function partenaires($tab){
         <input type=\"hidden\" name=\"cle\" value=".$key.">
         </td> 
         </form>");
+        echo("<td><form  method='POST'> 
+        <input type=\"hidden\" name=\"elementadel\" value='$key'>
+        <button type=\"submit\" class=\"btn btn-danger\">supprimer</button>
+        </form></td>");
     }
     echo'</tbody></table></div>';
 
 }
 
 function affiche(){
-    if (isset($_POST["nom"])){
-        $donnee = recherche($_POST["nom"]);
+    if (isset($_POST["nomchercher"])){
+        $donnee = recherche($_POST["nomchercher"]);
     }else{
         $json = file_get_contents('database/partenaire.json');
         $donnee = json_decode($json, true);
@@ -98,7 +109,7 @@ function affiche(){
 
 
 function modifier(){
-    if(isset($_POST["cle"])){
+    if(isset($_POST["cle"]) && isset($_POST["newnom"])){
 
         $json = file_get_contents('./database/partenaire.json');
         $donnee = json_decode($json, true);
@@ -215,4 +226,75 @@ function changeImagePart(){
         }
     }
 }
+
+function ajoutpart(){
+    echo("<div class='container' id='ajouter'><table class='table'><tr><form method='POST' enctype='multipart/form-data'>");
+    $uid = uniqid();
+
+    echo("<td><input placeholder='nom' name='nom' class='form-control' required></td>");
+    echo("<td><input type='checkbox' name='fournisseur'><label for='fournisseur'>fournisseur</label></td>");
+    echo("<td><input type='checkbox' name='montrer' checked><label for='montrer'>montrer</label></td>");
+    echo("<td><input type='file' name='image' class='form-control' accept='image/*'></td>");
+    echo("<td><input placeholder='lien' name='lien' class='form-control' required></td>");
+    echo("<td><textarea placeholder='desciption' name='description' class='form-control' required></textarea></td>");
+    echo("<td>
+            <button type='submit' class='btn btn-primary'>creer</button>
+            <input type='hidden' name='cle' value='$uid'>
+          </td>");
+    echo("</form></tr></table> </div>");
+
+    if(isset($_POST["nom"])){
+        $test = false;
+        $json = file_get_contents('./database/partenaire.json');
+        $donnee = json_decode($json, true);
+
+        foreach ($donnee as $key => $value) {
+            if($_POST["nom"] == $value["nom"]){
+                $test = true;
+            }
+        }
+
+        if (!$test){
+            $imagePath = '';
+            if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK){
+                $uploadDir = '/img/partenaire/';
+                $uploadFile = $uploadDir . $uid . '.png';
+                if(move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)){
+                    $imagePath = $uploadFile;
+                }
+            }
+
+            $data = array(
+                "image" => $imagePath,
+                "description" => $_POST["description"],
+                "lien" => $_POST["lien"],
+                "montrer" => isset($_POST["montrer"]) ? true : false,
+                "fournisseur" => isset($_POST["fournisseur"]) ? true : false,
+                "nom" => $_POST["nom"]
+            );
+
+            $donnee[$uid] = $data;
+            $file = json_encode($donnee, JSON_PRETTY_PRINT);
+            file_put_contents("./database/partenaire.json", $file);
+        }
+    }
+}
+
+function suppr($id){
+    $json = file_get_contents('./database/partenaire.json');
+    $donnee = json_decode($json, true);
+
+    unset($donnee[$id]);
+
+    $file = json_encode($donnee, JSON_PRETTY_PRINT);
+    file_put_contents("./database/partenaire.json", $file);
+}
 ?>
+<script>
+function affAjouter() {
+   
+        document.getElementById("ajouter").classList.toggle('d-none');
+
+}
+
+</script>
