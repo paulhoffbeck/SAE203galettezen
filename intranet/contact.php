@@ -43,7 +43,7 @@ foreach($tableauutilisateur as $key => $contact) {
     echo '</div>';
     echo '<form action="" method="POST">';
     echo '<input type="hidden" name="contact_id" value="' . $key . '">';
-    echo '<button type="submit" class="btn btn-danger" name="supprimer_contact">Supprimer</button>';
+    echo '<button type="submit" class="btn btn-danger text-center" name="supprimer_contact">Supprimer</button>';
     echo '</form>';
     
     echo'</p>';
