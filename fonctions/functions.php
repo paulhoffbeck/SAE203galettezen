@@ -136,5 +136,5 @@ function traitementcontact(){
     </script>
 
 <?php
-require_once("partenaires.php");
+require_once("./fonctions/partenaires.php");
 ?>
