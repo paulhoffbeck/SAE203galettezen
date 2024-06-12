@@ -130,9 +130,8 @@ if (isset($_POST["nom"])) {
         </tr>';
     }
     echo '</tbody></table></div></div>';
-    
-    if($_POST['elementasup']) {
-    $uid = $_POST['elementasup'];
+}
+function supprimer($uid){
     $json = file_get_contents('./database/clients.json');
     $donnee = json_decode($json, true);
 
@@ -140,7 +139,6 @@ if (isset($_POST["nom"])) {
 
     $file = json_encode($donnee, JSON_PRETTY_PRINT);
     file_put_contents("./database/clients.json", $file);
-    header("Refresh:0");
+    header("refresh:1;url=clients.php");
     }
-}
 ?>
