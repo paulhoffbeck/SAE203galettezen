@@ -32,13 +32,14 @@ function partenaires($tab){
                     <th class="bg-turquoise border-turquoise"><button type="submit" name="rechercher" class="btn btn-pastel">Appliquer</button></th>
                 </form>
                     <th class="bg-turquoise border-turquoise">
-                        <button onclick="affAjouter()" name="ajouter" class="btn btn-pastel">+</button>
+                        <button  name="ajouter" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-pastel">+</button>
+
                     </th>
             </tr>
 
         </thead>
     </table>';
-ajoutpart();
+
 echo'
     <table class="table table-striped table-bordered table-hover">
     <thead>
@@ -71,7 +72,7 @@ echo'
         // ");
         echo("<tr><form method='POST'enctype=\"multipart/form-data\">");
 
-        echo("<td><img onmouseover=\"bigImg(this)\" onmouseout=\"normalImg(this)\" src=\"./img/parter/".$value["image"]."\" width=\"28px\"></td>");
+        echo("<td><img onmouseover=\"bigImg(this)\" onmouseout=\"normalImg(this)\" src=\"./img/parter/".$key.".png\" width=\"28px\"></td>");
         echo("<td> <input name='newnom' class='form-control' value='".$value["nom"]."'></td>");
         if($value["fournisseur"]=="oui"){$fourn='checked';}else{$fourn='';} 
         echo("<td> <input type='checkbox' name='newfour' ".$fourn."><label for 'newfour'>fournisseur</p></td>");
@@ -100,7 +101,9 @@ echo'
 function affiche(){
     if (isset($_POST["nomchercher"])){
         $donnee = recherche($_POST["nomchercher"]);
+
     }else{
+        ajoutpart();
         $json = file_get_contents('database/partenaire.json');
         $donnee = json_decode($json, true);
     }
@@ -124,7 +127,7 @@ function modifier(){
         else{
             $donnee[$_POST["cle"]]["montrer"]="non";
         }
-        $donnee[$_POST["cle"]]["image"]=$_POST["cle"].".png";
+        changeImage('/img/parter/',$_POST["cle"].".png");
         $donnee[$_POST["cle"]]["lien"]=$_POST["newlien"];
         $donnee[$_POST["cle"]]["description"]=$_POST["newdesc"];
 
@@ -228,20 +231,38 @@ function changeImagePart(){
 }
 
 function ajoutpart(){
-    echo("<div class='container' id='ajouter'><table class='table'><tr><form method='POST' enctype='multipart/form-data'>");
     $uid = uniqid();
 
-    echo("<td><input placeholder='nom' name='nom' class='form-control' required></td>");
-    echo("<td><input type='checkbox' name='fournisseur'><label for='fournisseur'>fournisseur</label></td>");
-    echo("<td><input type='checkbox' name='montrer' checked><label for='montrer'>montrer</label></td>");
-    echo("<td><input type='file' name='image' class='form-control' accept='image/*'></td>");
-    echo("<td><input placeholder='lien' name='lien' class='form-control' required></td>");
-    echo("<td><textarea placeholder='desciption' name='description' class='form-control' required></textarea></td>");
-    echo("<td>
+
+    echo'<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Ajouter un partenaire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">';
+
+
+    echo("<form method='POST'><input placeholder='nom' name='nom' class='form-control mb-3' required>");
+    echo("<input type='checkbox' name='fournisseur'><label for='fournisseur' class='mb-3'>fournisseur </label> <br>");
+    echo("<input type='checkbox' name='montrer' class='mb-3' checked><label for='montrer'>montrer</label>");
+    echo("<input type='file' name='image' class='form-control  mb-3' accept='image/*'>");
+    echo("<input placeholder='lien' name='lien' class='form-control  mb-3' required>");
+    echo("<textarea placeholder='desciption' name='description' class='form-control mb-3' required></textarea>");
+    echo("
             <button type='submit' class='btn btn-primary'>creer</button>
             <input type='hidden' name='cle' value='$uid'>
-          </td>");
-    echo("</form></tr></table> </div>");
+          ");
+    echo("</form> ");
+
+echo'</div>
+
+    </div>
+  </div>
+</div>';
+
+
 
     if(isset($_POST["nom"])){
         $test = false;
@@ -254,29 +275,27 @@ function ajoutpart(){
             }
         }
 
-        if (!$test){
+        if ($test == false){
             $imagePath = '';
             if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK){
-                $uploadDir = '/img/partenaire/';
-                $uploadFile = $uploadDir . $uid . '.png';
-                if(move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)){
-                    $imagePath = $uploadFile;
-                }
+                $Dir = '/img/parter/';
+                $fichier = $uid.".png";
+                changeImage($Dir,$fichier);
             }
 
             $data = array(
-                "image" => $imagePath,
                 "description" => $_POST["description"],
                 "lien" => $_POST["lien"],
                 "montrer" => isset($_POST["montrer"]) ? true : false,
                 "fournisseur" => isset($_POST["fournisseur"]) ? true : false,
                 "nom" => $_POST["nom"]
             );
-
             $donnee[$uid] = $data;
-            $file = json_encode($donnee, JSON_PRETTY_PRINT);
-            file_put_contents("./database/partenaire.json", $file);
         }
+        
+        $file = json_encode($donnee, JSON_PRETTY_PRINT);
+        file_put_contents("./database/partenaire.json", $file);
+             
     }
 }
 
@@ -290,11 +309,4 @@ function suppr($id){
     file_put_contents("./database/partenaire.json", $file);
 }
 ?>
-<script>
-function affAjouter() {
-   
-        document.getElementById("ajouter").classList.toggle('d-none');
 
-}
-
-</script>
