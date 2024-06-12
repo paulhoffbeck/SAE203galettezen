@@ -23,6 +23,7 @@
         "page-collaborateur": "<i class=\"fa-regular fa-address-card\"></i> Accéder à la page des utilisateurs/collaborateur avec leurs coordonnées.",
         "page-clients": "<i class=\"fa-solid fa-basket-shopping\"></i> Afficher la liste des clients et leurs informations.",
         "profil": "<i class=\"fa-solid fa-address-card\"></i> Afficher les informations sur son profil et les modifiers.",
-        "link-wiki": "<i class=\"fa-solid fa-file-lines\"></i> Accéder au lien direct vers le Wiki."
+        "link-wiki": "<i class=\"fa-solid fa-file-lines\"></i> Accéder au lien direct vers le Wiki.",
+        "access-contact": "<i class=\"fa-regular fa-envelope\"></i> Acceder a la liste des demandes de contact."
     }
 }
