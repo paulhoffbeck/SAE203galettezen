@@ -178,7 +178,7 @@ function SelectionContextMenuDetails($elementUID) {
         sharedData = <?= json_encode($sharedInitialesData) ?>;
         function loadSharedInterface(sharedDataLocal) {
             const sharedInterfaceDiv = document.getElementById('shared-interface');
-            fetch('./fonctions/file-manager/shared-interface.php', {
+            fetch('./fonctions/limitedAccess/shared-interface.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
