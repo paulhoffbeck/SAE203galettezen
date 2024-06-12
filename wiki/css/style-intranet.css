@@ -1,0 +1,289 @@
+/* Class de la couleurs Indigo */
+.bg-indigo {
+    background-color: #03045F !important;
+}
+.text-indigo {
+    color: #03045F !important;
+}
+.border-indigo {
+    border-color: #03045F !important;
+}
+.btn-indigo {
+    color: #fff;
+    background-color: #03045F;
+    border-color: #03045F;
+}
+.btn-indigo:hover {
+    color: #fff;
+    background-color: #02043E;
+    border-color: #01032D;
+}
+.btn-outline-indigo {
+    color: #03045F;
+    background-color: transparent;
+    border-color: #03045F;
+}
+.btn-outline-indigo:hover {
+    color: #fff;
+    background-color: #03045F;
+    border-color: #03045F;
+}
+.list-group-item-indigo {
+    color: #03045F;
+    background-color: #E8E9F5;
+}
+.list-group-item-indigo.active {
+    color: #fff;
+    background-color: #03045F;
+    border-color: #03045F;
+}
+.badge-indigo {
+    color: #fff;
+    background-color: #03045F;
+}
+.table-indigo, .table-indigo > th, .table-indigo > td {
+    background-color: #E8E9F5;
+}
+.table-bordered.table-indigo, .table-bordered.table-indigo > th, .table-bordered.table-indigo > td {
+    border: 1px solid #03045F;
+}
+.table-hover .table-indigo:hover, .table-hover .table-indigo:hover > th, .table-hover .table-indigo:hover > td {
+    background-color: #DADBEB;
+}
+
+
+
+/* Class de la couleurs Azur */
+.bg-azur {
+    background-color: #0078B8 !important;
+}
+.text-azur {
+    color: #0078B8 !important;
+}
+.border-azur {
+    border-color: #0078B8 !important;
+}
+.btn-azur {
+    color: #fff;
+    background-color: #0078B8;
+    border-color: #0078B8;
+}
+.btn-azur:hover {
+    color: #fff;
+    background-color: #005E91;
+    border-color: #00527D;
+}
+.btn-outline-azur {
+    color: #0078B8;
+    background-color: transparent;
+    border-color: #0078B8;
+}
+.btn-outline-azur:hover {
+    color: #fff;
+    background-color: #0078B8;
+    border-color: #0078B8;
+}
+.list-group-item-azur {
+    color: #0078B8;
+    background-color: #D9EBF8;
+}
+.list-group-item-azur.active {
+    color: #fff;
+    background-color: #0078B8;
+    border-color: #0078B8;
+}
+.badge-azur {
+    color: #fff;
+    background-color: #0078B8;
+}
+.table-azur, .table-azur > th, .table-azur > td {
+    background-color: #D9EBF8;
+}
+.table-bordered.table-azur, .table-bordered.table-azur > th, .table-bordered.table-azur > td {
+    border: 1px solid #0078B8;
+}
+.table-hover .table-azur:hover, .table-hover .table-azur:hover > th, .table-hover .table-azur:hover > td {
+    background-color: #B3D6ED;
+}
+
+
+
+
+/* Class de la couleurs Turquoise */
+.bg-turquoise {
+    background-color: #00B6DA !important;
+}
+.text-turquoise {
+    color: #00B6DA !important;
+}
+.border-turquoise {
+    border-color: #00B6DA !important;
+}
+.btn-turquoise {
+    color: #fff;
+    background-color: #00B6DA;
+    border-color: #00B6DA;
+}
+.btn-turquoise:hover {
+    color: #fff;
+    background-color: #0091AB;
+    border-color: #007D95;
+}
+.btn-outline-turquoise {
+    color: #00B6DA;
+    background-color: transparent;
+    border-color: #00B6DA;
+}
+.btn-outline-turquoise:hover {
+    color: #fff;
+    background-color: #00B6DA;
+    border-color: #00B6DA;
+}
+.list-group-item-turquoise {
+    color: #00B6DA;
+    background-color: #E6F7FA;
+}
+.list-group-item-turquoise.active {
+    color: #fff;
+    background-color: #00B6DA;
+    border-color: #00B6DA;
+}
+.badge-turquoise {
+    color: #fff;
+    background-color: #00B6DA;
+}
+.table-turquoise, .table-turquoise > th, .table-turquoise > td {
+    background-color: #E6F7FA;
+}
+.table-bordered.table-turquoise, .table-bordered.table-turquoise > th, .table-bordered.table-turquoise > td {
+    border: 1px solid #00B6DA;
+}
+.table-hover .table-turquoise:hover, .table-hover .table-turquoise:hover > th, .table-hover .table-turquoise:hover > td {
+    background-color: #B3E1EC;
+}
+
+
+
+
+
+/* Class de la couleurs Ciel */
+.bg-ciel {
+    background-color: #93E1F0 !important;
+}
+.text-ciel {
+    color: #93E1F0 !important;
+}
+.border-ciel {
+    border-color: #93E1F0 !important;
+}
+.btn-ciel {
+    color: #000;
+    background-color: #93E1F0;
+    border-color: #93E1F0;
+}
+.btn-ciel:hover {
+    color: #000;
+    background-color: #6CCADC;
+    border-color: #55BEC9;
+}
+.btn-outline-ciel {
+    color: #93E1F0;
+    background-color: transparent;
+    border-color: #93E1F0;
+}
+.btn-outline-ciel:hover {
+    color: #fff;
+    background-color: #93E1F0;
+    border-color: #93E1F0;
+}
+.list-group-item-ciel {
+    color: #93E1F0;
+    background-color: #E5F7FA;
+}
+.list-group-item-ciel.active {
+    color: #000;
+    background-color: #93E1F0;
+    border-color: #93E1F0;
+}
+.badge-ciel {
+    color: #000;
+    background-color: #93E1F0;
+}
+.table-ciel,
+.table-ciel > th,
+.table-ciel > td {
+    background-color: #E5F7FA;
+}
+.table-bordered.table-ciel,
+.table-bordered.table-ciel > th,
+.table-bordered.table-ciel > td {
+    border: 1px solid #93E1F0;
+}
+.table-hover .table-ciel:hover,
+.table-hover .table-ciel:hover > th,
+.table-hover .table-ciel:hover > td {
+    background-color: #C2F0F8;
+}
+
+
+
+
+
+/* Class de la couleurs Pastel */
+.bg-pastel {
+    background-color: #CEF1F9 !important;
+}
+.text-pastel {
+    color: #CEF1F9 !important;
+}
+.border-pastel {
+    border-color: #CEF1F9 !important;
+}
+.btn-pastel {
+    color: #000;
+    background-color: #CEF1F9;
+    border-color: #CEF1F9;
+}
+.btn-pastel:hover {
+    color: #000;
+    background-color: #ADEBFA;
+    border-color: #9ADFF6;
+}
+.btn-outline-pastel {
+    color: #CEF1F9;
+    background-color: transparent;
+    border-color: #CEF1F9;
+}
+.btn-outline-pastel:hover {
+    color: #fff;
+    background-color: #CEF1F9;
+    border-color: #CEF1F9;
+}
+.list-group-item-pastel {
+    color: #CEF1F9;
+    background-color: #F1FCFD;
+}
+.list-group-item-pastel.active {
+    color: #000;
+    background-color: #CEF1F9;
+    border-color: #CEF1F9;
+}
+.badge-pastel {
+    color: #000;
+    background-color: #CEF1F9;
+}
+.table-pastel,
+.table-pastel > th,
+.table-pastel > td {
+    background-color: #F1FCFD;
+}
+.table-bordered.table-pastel,
+.table-bordered.table-pastel > th,
+.table-bordered.table-pastel > td {
+    border: 1px solid #CEF1F9;
+}
+.table-hover .table-pastel:hover,
+.table-hover .table-pastel:hover > th,
+.table-hover .table-pastel:hover > td {
+    background-color: #D9F7FC;
+}
