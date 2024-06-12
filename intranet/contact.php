@@ -39,14 +39,14 @@ foreach($tableauutilisateur as $key => $contact) {
     echo '<p class="card-text">Publié le : ' . $contact['date'] . '</p>';
     echo '<p class="card-text">De Mr/Mme : ' . $contact['nom'] . '</p>';
     echo '<p class="card-text">' . $contact['message'] . '</p>';
+    echo '<p class="card-text"><a href="mailto:'.$contact['mail'] .'">'.$contact['mail'].'</a></p>' ;
+    echo '</div>';
     echo '<form action="" method="POST">';
     echo '<input type="hidden" name="contact_id" value="' . $key . '">';
     echo '<button type="submit" class="btn btn-danger" name="supprimer_contact">Supprimer</button>';
     echo '</form>';
-    echo '</div>';
-    echo '<p class="card-footer"><a href="mailto:' . $contact['mail'] . '">' . $contact['mail'] . '</a></p>';
     
-
+    echo'</p>';
     echo '</div>';
     echo '</div>';
     
