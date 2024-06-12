@@ -17,8 +17,8 @@
                         <h1 class="fw-light text-white">Wiki GaleteZen</h1>
                         <p class="lead text-white">Vous trouverez ici un guide détaillé sur le fonctionnement de l'ensemble des fonctionnalités disponibles dans notre solution technique. Cette page décrit en détail le site, l'utilisation des différentes fonctionnalités de votre projet, et fournit également la liste des identifiants et mots de passe nécessaires pour tester le site.</p>
                         <p>
-                            <a href="../index.php" class="btn btn-primary my-2">Vitrine</a>
-                            <a href="../intranet/index.php" class="btn btn-secondary my-2">Intranet</a>
+                            <a href="<?php echo $_SERVER['SERVER_ADDR']; ?>/index.php" class="btn btn-primary my-2">Vitrine</a>
+                            <a href="<?php echo $_SERVER['SERVER_ADDR']; ?>:8080/index.php" class="btn btn-secondary my-2">Intranet</a>
                         </p>
                     </div>
                 </div>
