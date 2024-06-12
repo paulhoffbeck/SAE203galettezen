@@ -62,13 +62,5 @@
         "montrer": "oui",
         "fournisseur": "non",
         "nom": "STADE RENNAIS"
-    },
-    "66681c19a9a63": {
-        "image": "",
-        "description": "sdv s ",
-        "lien": "sdvs",
-        "montrer": true,
-        "fournisseur": false,
-        "nom": "oinsdv"
     }
 }
