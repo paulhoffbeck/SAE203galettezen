@@ -72,7 +72,7 @@ echo'
         // ");
         echo("<tr><form method='POST'enctype=\"multipart/form-data\">");
 
-        echo("<td><img onmouseover=\"bigImg(this)\" onmouseout=\"normalImg(this)\" src=\"./img/parter/".$value["image"]."\" width=\"28px\"></td>");
+        echo("<td><img onmouseover=\"bigImg(this)\" onmouseout=\"normalImg(this)\" src=\"./img/parter/".$key.".png\" width=\"28px\"></td>");
         echo("<td> <input name='newnom' class='form-control' value='".$value["nom"]."'></td>");
         if($value["fournisseur"]=="oui"){$fourn='checked';}else{$fourn='';} 
         echo("<td> <input type='checkbox' name='newfour' ".$fourn."><label for 'newfour'>fournisseur</p></td>");
@@ -127,7 +127,6 @@ function modifier(){
         else{
             $donnee[$_POST["cle"]]["montrer"]="non";
         }
-        $donnee[$_POST["cle"]]["image"]=$_POST["cle"].".png";
         changeImage('/img/parter/',$_POST["cle"].".png");
         $donnee[$_POST["cle"]]["lien"]=$_POST["newlien"];
         $donnee[$_POST["cle"]]["description"]=$_POST["newdesc"];
@@ -285,7 +284,6 @@ echo'</div>
             }
 
             $data = array(
-                "image" => $uid.".png",
                 "description" => $_POST["description"],
                 "lien" => $_POST["lien"],
                 "montrer" => isset($_POST["montrer"]) ? true : false,
