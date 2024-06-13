@@ -83,15 +83,20 @@ function footer() {
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Tous droits réservés</h5>
+                        <h5 class="text-uppercase">Nous contacter</h5>
                         <ul class="list-unstyled mb-0">
-                            <li>
-                                <a class="text-body text-crue text-decoration-none link-light">Galetezen Enterprise ©</a>
-                            </li>
-                            </li>
+                            <li><i class="fas fa-envelope"></i> contact@galetezen.com </li>
+                            <li><i class="fas fa-phone"></i> 02 99 84 12 35 </li>
+                            
+                            
                         </ul>
                     </div>
                     
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="text-center text-crue">© GaleteZen Entreprise - Tous droits réservés</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -119,6 +124,7 @@ function traitementcontact(){
     $data[$uid] = $nouveaucontact;
     $newjson = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents('./intranet/database/contactlist.json', $newjson);
+    echo "<script type='text/javascript'>alert('Envoie Confirmé');</script>";
 }
 
 
@@ -136,5 +142,5 @@ function traitementcontact(){
     </script>
 
 <?php
-require_once("partenaires.php");
+require_once("./fonctions/partenaires.php");
 ?>
