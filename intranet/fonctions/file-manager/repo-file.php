@@ -1,6 +1,33 @@
 <?php
 $_ENV['FILE_REPOSITORY'] = "/var/repository/";
 
+function AllowAccessByHeritedPermissions($elementUID,$userUID,$roleUID){
+    $DB_files = loadJson('database/files.json');
+    if($elementUID === "racine" || $DB_files[$elementUID]['owner'] === $userUID || isset($DB_files[$elementUID]['share']['access']['public']) || isset($DB_files[$elementUID]['share']['access']['user-'.$userUID]) || isset($DB_files[$elementUID]['share']['access']['role-'.$roleUID])){
+        return true;
+    }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
+        return AllowAccessByHeritedPermissions($DB_files[$elementUID]['parent_uid'],$userUID,$roleUID);
+    }
+    return false;
+}
+function listeTextePermissionsForPublic($permissions){
+    $textReturn = "";
+    if($permissions['type'] == 'public'){
+        $actions = [
+            'upload' => 'download',
+            'download' => "upload",
+            'perms' => "scale-balanced",
+            'rename' => "pencil",
+            'delet' => "trash-can"
+        ];
+        foreach ($actions as $action => $icon) {
+            $classes = in_array($action, $permissions['access']['public']) ? "text-azur" : "text-pastel";
+            $textReturn .= "<i class='fa-solid fa-$icon $classes'></i> ";
+        }
+    }
+    return $textReturn;
+}
+
 function loadJson($filename) {
     $data = file_get_contents($filename);
     return json_decode($data, true);
