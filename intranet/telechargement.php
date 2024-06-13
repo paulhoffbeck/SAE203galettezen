@@ -17,7 +17,7 @@ function telechargement($key){
     $json = file_get_contents('./database/clients.json');
     $donnee = json_decode($json, true);
     $user = $donnee[$key];
-echo '
+    echo '
     <h1 class="my-4 text-center">Fiche du client '. strtoupper($user['nom']). ' '. $user['prenom'].'</h1>
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
