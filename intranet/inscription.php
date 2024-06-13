@@ -28,5 +28,34 @@ echo "</main>";
 footer();
 ?>
 
+<script>
+  function viewinput(input){
+    var input = document.getElementById(input);
+    if (input.type == "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+  }
+</script>
+<script>
+    // Sélection des éléments input et du message d'erreur
+    const passwordInput = document.getElementById('input-password');
+    const confirmPasswordInput = document.getElementById('input-cpassword');
+    const diffMdpMessage = document.getElementById('diff-mdp');
+
+    // Fonction de vérification des mots de passe
+    function checkPasswords() {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            diffMdpMessage.classList.remove('d-none');
+        } else {
+            diffMdpMessage.classList.add('d-none');
+        }
+    }
+
+    // Ajout des gestionnaires d'événements pour les champs de mot de passe
+    passwordInput.addEventListener('input', checkPasswords);
+    confirmPasswordInput.addEventListener('input', checkPasswords);
+</script>
 </body>
 </html>

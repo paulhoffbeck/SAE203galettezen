@@ -43,15 +43,23 @@ function connexionFormulaire(){
                         header('Location: index.php');
                         echo '<a href="index.php"> Connexion validé, rendez-vous à l\'acceuil</a>';
                     }else{
+                        $value_email = "";
+                        if(isset($_GET['email'])){
+                            $value_email = $_GET['email'];
+                        }
+                        $value_password = "";
+                        if(isset($_GET['password'])){
+                            $value_password = $_GET['password'];
+                        }
                         echo '<div class="login-form">
                             <form method="post">
                                 <div class="form-group mb-3">
                                     <label>Adresse mail :</label>
-                                    <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail" required>
+                                    <input type="email" class="form-control" name="email" placeholder="Entrez votre adresse mail" value="'.$value_email.'" required>
                                 </div>
                                 <label for="input-password">Mot de Passe :</label>
                                 <div class="input-group mb-3">
-                                    <input type="password" id="input-password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe" required>
+                                    <input type="password" id="input-password" class="form-control" name="mot_de_passe" placeholder="Entrez votre mot de passe" value="'.$value_password.'" required>
                                     <span class="input-group-text" onclick="viewinput(\'input-password\')"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                 </div>
                                 <br>

@@ -1,5 +1,5 @@
 <?php
-require_once("./repo-file.php");
+require_once("./../file-manager/repo-file.php");
 function addMemberOfShared($typeANDuid,$elementUID){
     $files = loadJson("./../../database/files.json");
     if(isset($files['shared']['access']) && isset($files['shared']['access'][$typeANDuid])){
