@@ -11,31 +11,36 @@
     <?php include 'fonctions/navbar.php'; ?>
     <main>
         <div class="container marketing mt-5">
-        <h5>La page collaborateur fait appel à la fonction collaborateur du dossier fonction. Sur cette fonction, on y retrouve plusieurs fonctionnalité :
+        
+        <h5> La page partenaires permet d'afficher tous les partenaires de notre entreprise. elle contient les fonctions suivantes : </h5> 
         <ul>
-            <li>Le tableau de présentation des collaborateurs</li>
+            <li>Le tableau de présentation des partenaires</li>
             <li>Un filtre de recherche</li>
-            <li>La fonctionnalité pour <b>observer</b> les informations des collaborateurs</li>
-        </ul></h5>
-        <h5>La tableau</h6>
-        Tout comme pour la page client, la page collaborateur contient un tableau d'affichage des collaborateur.<br>
-        Grace à l'outil "foreach()" nous ajoutons une ligne au tableau pour chaque collaborateur présent dans le fichier collaborateurs.json.<br>
-        Nous récupérons les informations dans des variables ($user) et les affichons en fonction de ce que nous souhaitons faire.<br>
-        Les champs renseigner sont :
-        <ul>
-            <li>La photo de profil</li>
-            <li>Le nom</li>
-            <li>Le prénom</li>
-            <li>Le poste</li>
-            <li>L'adresse mail</li>
-            <li>Le numéro de téléphone</li>
+            <li>la posibilité de modifier les informations des partenaires</li>
+            <li>La fonctionnalité pour ajouter des partenaires</li>
+            <li>La fonctionnalité pour supprimer des partenaires</li>
         </ul>
-        <h5>Le filtre de recherche</h6>
-        Le filtre de recherche effectue un tri. Soit le champs envoyer est vide, alors le filtre ne tient pas compte de ce champ, 
-        soit il va chercher dans le ficher collaborateur.json afin de trier la ou les valeur(s) voulu. Cette condition est vérifier par un simple "if".<br>
-        Par défaut, si aucun filtre n'est envoyer, tous les collaborateurs sont affichés.
-        <br>
 
+        <h3>le tableau</h3>
+        Le tableau fonctionne avec une boucle foreach() qui, en fonction des permissions de l'utilisateur va soi afficher un tableau basique, soi afficher un tableau avec chaque ligne etant un formulaire. 
+        la fonction partenaire($tab) prend en paramettre une array qu'il affichera ensuite sous forme de tableau.
+        <br>
+        <h3>la recherche par nom</h3>
+        la recherche par nom se fait grace a une boucle foreach() qui elle meme  contient une boucle for(). Elle vient tester pour tous les noms toutes les suites de caracteres qui ont la meme longueur que la chaine rechercher.
+        la fonction affiche() va decider d'afficher ce tableau dans dans la fonction partenaires au lieu du tableau en entier.
+        <br>
+        <h3>modification de partenaires</h3>
+        Pour modifier les partenaires, nous utilisons un formulaire pour les personnes ayant les droits de modification. en effet, nous allons recuperer l'id du partenaire et venir modifier ses informations dans le fichier json. Pour la modification d'image, nous utilisons la fonction changeImage() que nous avons creer et nous utilisons la variable $_FILES pour enregister les fichiers.
+        <br>
+        <h3>La fonctionnalité pour ajouter des partenaires</h3>
+        Pour ajouter un partenaire, nous avons creer un modal qui contient un formulaire et qui vient tester par le nom si un partenaire existe deja Sinon, il l'ajoute dans la base de donnée et si une image est donnée, il va l'enregister dans le dossier img/parter.
+        <br>
+        <h3>La fonctionnalité pour supprimer des partenaires</h3>
+        Pour supprimer un partenaire, nous creons un formulaire qui ne contient que un bouton et a pour champ caché l'id du partenaire.
+
+
+    
+    
         </div>
     </main>
   <!-- Bootstrap Bundle with Popper -->
