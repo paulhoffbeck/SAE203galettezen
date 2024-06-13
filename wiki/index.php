@@ -79,6 +79,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/partenaires.jpg" alt="" width="100%">
+                            <div class="card-body">
+                                <p class="card-text">Decouvrez comment nous avons réalisé la page partenaires.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="./partenaires.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
