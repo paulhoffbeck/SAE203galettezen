@@ -55,7 +55,7 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img class="bd-placeholder-img card-img-top h-100" src="./img/user-card.png" alt="" width="100%">
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/clients.png" alt="" width="100%">
                             <div class="card-body">
                                 <p class="card-text">Découvrez comment nous avons réaliser la page d'affichage des clients et toutes ses fonctionnalités.</p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -68,7 +68,7 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img class="bd-placeholder-img card-img-top h-100" src="./img/user-card.png" alt="" width="100%">
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/collaborateurs.png" alt="" width="100%">
                             <div class="card-body">
                                 <p class="card-text">Découvrez comment nous avons réaliser la page d'affichage de nos employés/collaborateurs et toutes ses fonctionnalités.</p>
                                 <div class="d-flex justify-content-between align-items-center">
