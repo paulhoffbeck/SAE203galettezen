@@ -47,19 +47,22 @@ echo'
             <th>logo</th>
             <th>Nom</th>
             <th>fournisseur</th>
-            <th>montrer</th>
-            <th>image</th>
-            <th>lien</th>
-            <th>description</th>
-            <th>modifier</th>
-            <th>supprimer</th>
-        </tr>
+            <th>montrer</th>';
+            if(hasPermission("modo","manage-partenaires")){
+            echo'<th>image</th>';}
+            echo'<th>lien</th>
+            <th>description</th>';
+            if(hasPermission("modo","manage-partenaires")){
+            echo'<th>modifier</th>
+                 <th>supprimer</th>';
+            }
+        echo'</tr>
     </thead>
     
     <tbody>';
     
     foreach ($tab as $key => $value) {
-
+        if(hasPermission("modo","manage-partenaires")){
         //echo("
         //      <tr>
         //      <td><img onmouseover=\"bigImg(this)\" onmouseout=\"normalImg(this)\" src=\"./img/parter/".$value["image"]."\" width=\"28px\"></td>
@@ -93,9 +96,21 @@ echo'
         <input type=\"hidden\" name=\"elementadel\" value='$key'>
         <button type=\"submit\" class=\"btn btn-danger\">supprimer</button>
         </form></td>");
+    }else{
+        echo("
+              <tr>
+              <td><img onmouseover=\"bigImg(this)\" onmouseout=\"normalImg(this)\" src=\"./img/parter/$key.png\" width=\"28px\"></td>
+              <td>".$value["nom"]."</td>
+              <td>".$value["fournisseur"]."</td>
+              <td>".$value["montrer"]."</td>
+              <td>".$value["lien"]."</td>
+              <td>".$value["description"]."</td>
+             </tr>
+         ");
     }
+}
     echo'</tbody></table></div>';
-
+    
 }
 
 function affiche(){
@@ -244,7 +259,7 @@ function ajoutpart(){
         <div class="modal-body p-3">';
 
 
-    echo("<form method='POST'><input placeholder='nom' name='nom' class='form-control mb-3' required>");
+    echo("<form method='POST' enctype='multipart/form-data'><input placeholder='nom' name='nom' class='form-control mb-3' required>");
     echo("<input type='checkbox' name='fournisseur'><label for='fournisseur' class='mb-3'>fournisseur </label> <br>");
     echo("<input type='checkbox' name='montrer' class='mb-3' checked><label for='montrer'>montrer</label>");
     echo("<input type='file' name='image' class='form-control  mb-3' accept='image/*'>");
@@ -278,7 +293,7 @@ echo'</div>
         if ($test == false){
 
             if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK){
-                $Dir = 'img/parter/';
+                $Dir = './img/parter/';
                 $fichier = $_POST["cle"].".png";
                 changeImage($Dir,$fichier);
             }

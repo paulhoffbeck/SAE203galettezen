@@ -10,14 +10,14 @@ function partenaires(){
         if ($value["montrer"]=="oui") {
         echo("<div class=\"col-3 mb-4\">
                 <div class=\"card mb-4 d-flex h-100 flex-column\">
-                    <img src=\"./intranet/img/parter/".$value["image"]."\" class=\"card-img-top img-fluid\" alt=\"\"\>
+                    <img src=\"./intranet/img/parter/$key.png\" class=\"card-img-top img-fluid\" alt=\"\"\>
                     <div class=\"card-body\">
 
                         <h5 class=\"card-title border-top pt-2\">".$value["nom"]."</h5>
 
                         <p class=\"card-text\">".$value["description"]."</p>
                     </div>
-                    <div class=\"cart-footer text-center\"><a href=\"".$value["lien"]."\" class=\"btn btn-moutarde mt-auto\">visiter</a></div>\"
+                    <div class=\"cart-footer text-center\"><a href=\"".$value["lien"]."\" class=\"btn btn-moutarde mt-auto\">visiter</a></div>  
                 </div>
             </div>
             ");

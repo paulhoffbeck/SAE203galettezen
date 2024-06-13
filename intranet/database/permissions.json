@@ -11,6 +11,7 @@
         "members-role": "<i class=\"fa-solid fa-ranking-star\"></i> Afficher la liste des membres d'un rôles.",
         "view-perms-role": "<i class=\"fa-solid fa-ranking-star\"></i> Afficher les permissions de tous les rôles de la liste.",
 
+        "create-user": "<i class=\"fa-solid fa-users\"></i> Création d'un utilisateur de manière administrative.",
         "liste-new-user": "<i class=\"fa-solid fa-users\"></i> Afficher la liste des nouveaux comptes en attente de validation.",
         "treatment-new-user": "<i class=\"fa-solid fa-users\"></i>  Traiter un nouveau compte en attente de validation.",
         "edit-base-user": "<i class=\"fa-solid fa-users\"></i>  Modifier les informations d'un compte utilisateur (Nom, Prenom, Téléphone).",

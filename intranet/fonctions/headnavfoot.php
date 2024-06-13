@@ -29,17 +29,17 @@ function  navbar(){ ?>
               <a class="nav-link text-white" href="clients.php">Clients</a>
             </li>
           <?php endif;
-          if(hasPermission("modo","manage-partenaires")): ?>
+           ?>
             <li class="nav-item">
               <a class="nav-link text-white" href="partenaire.php">Partenaires</a>
             </li>
-          <?php endif;
+          <?php
           if(hasPermission("general","page-collaborateur")): ?>
             <li class="nav-item">
               <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
             </li>
           <?php endif;
-          if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user") || hasPermission("modo","edit-password-user") || hasPermission("modo","liste-new-user") || hasPermission("modo","liste-role")): ?>
+          if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user") || hasPermission("modo","edit-password-user") || hasPermission("modo","liste-new-user") || hasPermission("modo","liste-role") || hasPermission("modo","create-user")): ?>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gestion</a>
               <ul class="dropdown-menu">
@@ -48,10 +48,11 @@ function  navbar(){ ?>
                 <?php endif;
                 if(hasPermission("modo","liste-role")): ?>
                   <li><a class="dropdown-item" href="role.php">Rôles</a></li>
+                <?php endif;
+                if(hasPermission("modo","create-user")): ?>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="create-user.php">Créer un compte</a></li>
                 <?php endif; ?>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="settings.php">Réglages</a></li>
-                <li><a class="dropdown-item" href="create-user.php">Créer un compte</a></li>
               </ul>
             </li>
           <?php endif;
