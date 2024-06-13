@@ -1,5 +1,6 @@
 <?php require_once("fonctions/main.php"); alreadylogin(); ?>
 <?php
+$_ENV['FILE_REPOSITORY'] = "/var/repository/";
 if(!isset($_GET['path'])){
     header("Location:?path=racine");
 }
@@ -7,38 +8,24 @@ if(!isset($_GET['path'])){
 
 
 
-
-function AllowAccessByHeritedPermissions($elementUID,$userUID,$roleUID){
+function deletElement($elementUID){
     $DB_files = loadJson('database/files.json');
-    if($elementUID === "racine" || $DB_files[$elementUID]['owner'] === $userUID || isset($DB_files[$elementUID]['share']['access']['public']) || isset($DB_files[$elementUID]['share']['access']['user-'.$userUID]) || isset($DB_files[$elementUID]['share']['access']['role-'.$roleUID])){
-        return true;
-    }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
-        return AllowAccessByHeritedPermissions($DB_files[$elementUID]['parent_uid'],$userUID,$roleUID);
-    }
-    return false;
-}
-function listeTextePermissionsForShared($permissions){
-    echo "N/A";
-}
-function listeTextePermissionsForPublic($permissions){
-    $textReturn = "";
-    if($permissions['type'] == 'public'){
-        $actions = [
-            'upload' => 'download',
-            'download' => "upload",
-            'perms' => "scale-balanced",
-            'rename' => "pencil",
-            'delet' => "trash-can"
-        ];
-        foreach ($actions as $action => $icon) {
-            $classes = in_array($action, $permissions['access']['public']) ? "text-azur" : "text-pastel";
-            $textReturn .= "<i class='fa-solid fa-$icon $classes'></i> ";
+    if($DB_files[$elementUID]['type'] == 'file'){
+        if (file_exists($_ENV['FILE_REPOSITORY'] . $elementUID)) {
+            unlink($_ENV['FILE_REPOSITORY'] . $elementUID);
         }
     }
-    return $textReturn;
+    if($DB_files[$elementUID]['type'] == 'folder'){
+        foreach($DB_files as $uid => $element){
+            if($element['parent_uid'] === $elementUID){
+                deletElement($uid);
+            }
+        }
+    }
+    unset($DB_files[$elementUID]);
+    saveJson('database/files.json', $DB_files,false);
+    // header("Refresh:0");
 }
-
-
 
 
 
@@ -91,7 +78,9 @@ function SelectionContextMenuDetails($elementUID) {
             <form method="POST" class="btn-group" role="group" aria-label="Basic example">
                 <button type="submit" name="create_shortcut" value="<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-link"></i> Raccourcis</button>
                 <a href="?path=<?= $DB_files[$elementUID]['parent_uid'] ?>&move=<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-up-down-left-right"></i> Déplacer</a>
-                <button type="button" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
+                <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"rename")){ ?>
+                    <button type="submit" name="delet_element" value="<?= $elementUID ?>" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
+                <?php } ?>
             </form>
         </div>
         <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"perms")){ ?>
@@ -178,7 +167,7 @@ function SelectionContextMenuDetails($elementUID) {
         sharedData = <?= json_encode($sharedInitialesData) ?>;
         function loadSharedInterface(sharedDataLocal) {
             const sharedInterfaceDiv = document.getElementById('shared-interface');
-            fetch('./fonctions/file-manager/shared-interface.php', {
+            fetch('./fonctions/limitedAccess/js-shared-interface.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -196,7 +185,6 @@ function SelectionContextMenuDetails($elementUID) {
         function addMemberShare(caller, action) {
             let typeANDuid, permName, newState, data;
             let element = '<?= $elementUID ?>';
-
             if (action == 'add') {
                 typeANDuid = document.querySelector('#selecteurUserRole').value;
                 data = { action: action, typeANDuid: typeANDuid, element: element };
@@ -210,7 +198,7 @@ function SelectionContextMenuDetails($elementUID) {
                 data = { action: action, typeANDuid: typeANDuid, permName: permName, newState: newState, element: element };
             }
 
-            fetch('./fonctions/file-manager/js-shared-modifier.php', {
+            fetch('./fonctions/limitedAccess/js-shared-modifier.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -232,10 +220,25 @@ function SelectionContextMenuDetails($elementUID) {
         }
         loadSharedInterface(sharedData)
     </script>
-<?php }
+<?php } ?>
 
 
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

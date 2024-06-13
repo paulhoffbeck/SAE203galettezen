@@ -5,11 +5,12 @@ require_once('fonctions/functions.php');
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>GaleteZen - Accueil</title>
+    <title>GaleteZen - About</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
@@ -25,8 +26,9 @@ require_once('fonctions/functions.php');
                         <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
                     </button>        
             <div class="d-flex align-items-center">
+                    <a href="index.php"> 
                         <img src="./intranet/img/logo.png" alt="logo" style="width: 80px;">
-                        
+                    </a>                        
             </div>
             </div>
             <div class="text-center">
@@ -40,7 +42,7 @@ require_once('fonctions/functions.php');
                     $fichierutilisateur = file_get_contents('./intranet/database/user.json');
                     $tableauutilisateur = json_decode($fichierutilisateur, true);
                     foreach ($tableauutilisateur as $keys => $user) {
-                    if($user['visibilite'] == true ){
+                    if(isset($user['visibilite']) && $user['visibilite'] == true ){
                         echo '<div class="col-3 mb-4">';
                         echo '<div class="card mb-4 d-flex h-100 flex-column" style="width: 18rem;">';
                         

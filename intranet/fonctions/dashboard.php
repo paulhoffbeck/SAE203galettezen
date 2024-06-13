@@ -14,7 +14,7 @@ function compareToSortByLastActivity($a, $b) {
 function lastUserActivity(){
     $data = json_decode(file_get_contents('./database/user.json'), true);
     $data = array_filter($data, function($user) {
-        return isset($user['last_activity']);
+        return isset($user['last_activity']); 
     });
     uasort($data, 'compareToSortByLastActivity');
     $now = time();
