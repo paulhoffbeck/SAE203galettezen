@@ -45,6 +45,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="roles.php">Rôles</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gestion-users.php">Gestion Membres</a>
+                </li>
             </ul>
         </div>
     </div>
