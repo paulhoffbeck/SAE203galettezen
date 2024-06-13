@@ -20,14 +20,14 @@ $betaUserUID = ["vwx234", "lmn789", "xyz901", "ghi789", "ijk456", "det56", "rst3
                 $data = json_decode(file_get_contents('./../intranet/database/user.json'), true);
                 foreach($betaUserUID as $uid){ ?>
                     <div class="col-lg-4 text-center mb-3">
-                        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="../intranet/img/collaborateur/<?= $uid ?>.png" alt="Image de profil de Thomas Robert">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="./intra-img/collaborateur/<?= $uid ?>.png" alt="Image de profil de <?= $data[$uid]['prenom'] ?> <?= $data[$uid]['nom'] ?>">
                         <h2 class="fw-normal"><?= $data[$uid]['prenom'] ?> <?= $data[$uid]['nom'] ?></h2>
                         <p>
                             <?= $data[$uid]['poste'] ?><br>
                             <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill"><?= $data[$uid]['email'] ?></span><br>
                             <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Mot de Passe : <code>bonjour</code></span><br>
                         </p>
-                        <p><a class="btn btn-secondary" href="<?php echo $_SERVER['SERVER_ADDR']; ?>:8080/index.php?email=<?= $data[$uid]['email'] ?>&password=bonjour">S'y connecter »</a></p>
+                        <p><a class="btn btn-secondary" href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:8080/index.php?email=<?= $data[$uid]['email'] ?>&password=bonjour">S'y connecter »</a></p>
                     </div>
                 <?php }
                 ?>
