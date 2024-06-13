@@ -22,7 +22,7 @@ require_once('fonctions/functions.php');
                         <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
                     </button>        
                     <div class="d-flex align-items-center">
-                        <img src="./intranet/img/logo.png" alt="logo" style="width: 80px;">
+                        <img src="./intranet/img/logo.png" alt="logo" class="img-thumbnail border border-primary rounded" style="width: 80px;">
                     </div>
                 </div>
                 <div class="text-center text-white mt-5">
