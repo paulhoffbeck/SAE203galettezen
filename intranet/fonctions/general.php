@@ -46,7 +46,7 @@ function getUserNameByUid($userUID){
             echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer.</div>";
         }
     }else{
-        switch ($_FILES["newpp"]["error"]) {
+        switch ($_FILES["image"]["error"]) {
             case UPLOAD_ERR_INI_SIZE:
                 echo "<div class=\"alert alert-warning mt-2 mb-2\"><b>Erreur :</b> Le fichier téléchargé dépasse la taille maximale autorisée.</div>";
                 break;

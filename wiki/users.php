@@ -9,7 +9,7 @@ $betaUserUID = ["vwx234", "lmn789", "xyz901", "ghi789", "ijk456", "det56", "rst3
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki GaleteZen</title>
     <!-- Bootstrap CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <?php include 'fonctions/navbar.php'; ?>
