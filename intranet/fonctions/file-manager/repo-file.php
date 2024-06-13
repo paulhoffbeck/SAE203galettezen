@@ -32,19 +32,21 @@ function loadJson($filename) {
     $data = file_get_contents($filename);
     return json_decode($data, true);
 }
-function saveJson($filename, $data) {
-    function compareByTypeAndName($a, $b) {
-        if ($a['type'] === 'folder' && $b['type'] !== 'folder') {
-            return -1;
-        } elseif ($a['type'] !== 'folder' && $b['type'] === 'folder') {
-            return 1;
+function saveJson($filename, $data, $sort = true) {
+    if($sort){
+        function compareByTypeAndName($a, $b) {
+            if ($a['type'] === 'folder' && $b['type'] !== 'folder') {
+                return -1;
+            } elseif ($a['type'] !== 'folder' && $b['type'] === 'folder') {
+                return 1;
+            }
+            return strcasecmp($a['name'], $b['name']);
         }
-        return strcasecmp($a['name'], $b['name']);
+        function sortArrayByTypeAndName(&$data) {
+            uasort($data, 'compareByTypeAndName');
+        }
+        sortArrayByTypeAndName($data);
     }
-    function sortArrayByTypeAndName(&$data) {
-        uasort($data, 'compareByTypeAndName');
-    }
-    sortArrayByTypeAndName($data);
     $jsonData = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($filename, $jsonData);
 }
@@ -130,6 +132,9 @@ if(isset($_POST['move_file_here'])){
         saveJson('database/files.json', $DB_files);
     }
     header('Location: ?path='.$_GET['path']);
+}
+if(isset($_POST['delet_element'])){
+    deletElement($_POST['delet_element']);
 }
 
 function Aff_Users_Options(){

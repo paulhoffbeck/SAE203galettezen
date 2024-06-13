@@ -1,5 +1,6 @@
 <?php require_once("fonctions/main.php"); alreadylogin(); ?>
 <?php
+$_ENV['FILE_REPOSITORY'] = "/var/repository/";
 if(!isset($_GET['path'])){
     header("Location:?path=racine");
 }
@@ -7,8 +8,24 @@ if(!isset($_GET['path'])){
 
 
 
-
-
+function deletElement($elementUID){
+    $DB_files = loadJson('database/files.json');
+    if($DB_files[$elementUID]['type'] == 'file'){
+        if (file_exists($_ENV['FILE_REPOSITORY'] . $elementUID)) {
+            unlink($_ENV['FILE_REPOSITORY'] . $elementUID);
+        }
+    }
+    if($DB_files[$elementUID]['type'] == 'folder'){
+        foreach($DB_files as $uid => $element){
+            if($element['parent_uid'] === $elementUID){
+                deletElement($uid);
+            }
+        }
+    }
+    unset($DB_files[$elementUID]);
+    saveJson('database/files.json', $DB_files,false);
+    // header("Refresh:0");
+}
 
 
 
@@ -61,7 +78,9 @@ function SelectionContextMenuDetails($elementUID) {
             <form method="POST" class="btn-group" role="group" aria-label="Basic example">
                 <button type="submit" name="create_shortcut" value="<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-link"></i> Raccourcis</button>
                 <a href="?path=<?= $DB_files[$elementUID]['parent_uid'] ?>&move=<?= $elementUID ?>" class="btn btn-sm btn-ciel"><i class="fa-solid fa-up-down-left-right"></i> Déplacer</a>
-                <button type="button" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
+                <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"rename")){ ?>
+                    <button type="submit" name="delet_element" value="<?= $elementUID ?>" class="btn btn-sm btn-outline-indigo"><i class="fa-regular fa-trash-can"></i> Supprimer</button>
+                <?php } ?>
             </form>
         </div>
         <?php if(FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],"perms")){ ?>
