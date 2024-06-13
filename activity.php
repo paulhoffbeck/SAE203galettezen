@@ -1,5 +1,5 @@
 <?php
-include './fonctions/functions.php';
+require_once('fonctions/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -55,8 +55,10 @@ include './fonctions/functions.php';
                             <div class="card-body">
                                 <h5 class="card-title">Nos galettes saucisses</h5>
                                 <p class="card-text">Imaginez-vous croquer dans une galette saucisse, où la galette de sarrasin légèrement grillée enveloppe une saucisse parfaitement assaisonnée, accompagnée d'une pointe de moutarde Amora à l'ancienne. Une explosion de saveurs bretonnes qui éveillera tous vos sens !</p>
-                                <a href="#" class="btn btn-ketchup">Déguster ma galette saucisse</a>
                             </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-ketchup text-center">Déguster ma galette saucisse</a>
+                                </div>
                         </div>
                     </div>    
                     <div class="col-md-3">
@@ -65,7 +67,9 @@ include './fonctions/functions.php';
                                 <div class="card-body">
                                     <h5 class="card-title">Nos crêpes</h5>
                                     <p class="card-text">Savourez des crêpes bretonnes, fines et délicatement dorées, garnies de beurre fondant et de sucre, ou encore d'un caramel au beurre salé maison. Un véritable délice qui vous transporte au cœur de la Bretagne à chaque bouchée !</p>
-                                    <a href="#" class="btn btn-ketchup">Déguster ma crêpe</a>
+                                </div>
+                                <div class="card-footer">
+                                <a href="#" class="btn btn-ketchup text-center">Déguster ma crêpe</a>
                                 </div>
                         </div>
                     </div>
@@ -75,7 +79,9 @@ include './fonctions/functions.php';
                                 <div class="card-body">
                                     <h5 class="card-title">Notre caramel</h5>
                                     <p class="card-text">Laissez-vous séduire par l'onctuosité du caramel au beurre salé, une symphonie de saveurs sucrées et salées qui enrobe délicieusement vos papilles, vous transportant dans un tourbillon de gourmandise à chaque dégustation.</p>
-                                    <a href="#" class="btn btn-ketchup">Goûter notre Caramel</a>
+                                </div>
+                                <div class="card-footer">
+                                <a href="#" class="btn btn-ketchup text-center">Déguster mon caramel</a>
                                 </div>
                         </div>
                     </div>

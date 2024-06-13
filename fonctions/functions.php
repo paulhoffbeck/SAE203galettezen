@@ -124,6 +124,7 @@ function traitementcontact(){
     $data[$uid] = $nouveaucontact;
     $newjson = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents('./intranet/database/contactlist.json', $newjson);
+    echo "<script type='text/javascript'>alert('Envoie Confirmé');</script>";
 }
 
 
@@ -141,5 +142,5 @@ function traitementcontact(){
     </script>
 
 <?php
-require_once("partenaires.php");
+require_once("./fonctions/partenaires.php");
 ?>
