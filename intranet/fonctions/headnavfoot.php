@@ -39,7 +39,7 @@ function  navbar(){ ?>
               <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
             </li>
           <?php endif;
-          if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user") || hasPermission("modo","edit-password-user") || hasPermission("modo","liste-new-user") || hasPermission("modo","liste-role")): ?>
+          if(hasPermission("modo","edit-base-user") || hasPermission("modo","edit-role-user") || hasPermission("modo","edit-password-user") || hasPermission("modo","liste-new-user") || hasPermission("modo","liste-role") || hasPermission("modo","create-user")): ?>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gestion</a>
               <ul class="dropdown-menu">
