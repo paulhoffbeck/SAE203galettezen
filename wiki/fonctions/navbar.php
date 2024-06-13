@@ -36,6 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="clients.php">Clients</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="collaborateur.php">Collaborateurs</a>
+                </li>
             </ul>
         </div>
     </div>
