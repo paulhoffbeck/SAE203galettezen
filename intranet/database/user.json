@@ -217,7 +217,7 @@
         "telephone": "01-11-11-11-12",
         "mot_de_passe": "$2y$10$vekDDqEcU02YwyHc5aBVCuSZ8Ou\/d0rwZSFZT9MmKGFZmtO0KTFfK",
         "role_uid": "66599b314b005",
-        "last_activity": 1718215549,
+        "last_activity": 1718106958,
         "visibilite": false
     },
     "6659d93fe52f1": {
@@ -251,6 +251,17 @@
         "telephone": "77-77-77-77-77",
         "poste": "D\u00e9veloppeur Projet",
         "visibilite": true,
-        "last_activity": 1718112341
+        "last_activity": 1718105555
+    },
+    "66683a75b5709": {
+        "nom": "Boussin",
+        "prenom": "L\u00e9na",
+        "email": "lboussin.2005@gmail.com",
+        "mot_de_passe": "$2y$10$6aK.d4oHC4CWbq7JvqQVMOKZ4d.9aI89QHtHTY6Ocj\/\/AtyltGvR2",
+        "role_uid": "66599b314b005",
+        "telephone": "01-02-03-04-05",
+        "poste": "developpeur projet",
+        "visibilite": true,
+        "last_activity": 1718142524
     }
 }
