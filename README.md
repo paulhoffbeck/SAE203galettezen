@@ -10,7 +10,23 @@
 
 
 ## Site Vitrine
-
+- index.php
+- partenaires.php
+- about.php
+- history.php
+- activity
+- contact
+- functions
 
 
 ## Intranet
+-index.php
+-clients.php
+-partenaires.php
+-collaborateurs.php
+-gestion.php
+-files.php
+-contact.php
+-wiki.php
+-functions
+-database

@@ -69,7 +69,7 @@ function  navbar(){ ?>
 
           if(hasPermission("general","link-wiki")): ?>
             <li class="nav-item">
-              <a class="nav-link text-white" href="../wiki/index.php">Wiki</a>
+              <a class="nav-link text-white" href="http://<?php echo $_SERVER['SERVER_ADDR']; ?>:70/index.php">Wiki</a>
             </li>
           <?php endif; ?>
         </ul>

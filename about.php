@@ -41,7 +41,7 @@ require_once('fonctions/functions.php');
                     $fichierutilisateur = file_get_contents('./intranet/database/user.json');
                     $tableauutilisateur = json_decode($fichierutilisateur, true);
                     foreach ($tableauutilisateur as $keys => $user) {
-                    if($user['visibilite'] == true ){
+                    if(isset($user['visibilite']) && $user['visibilite'] == true ){
                         echo '<div class="col-3 mb-4">';
                         echo '<div class="card mb-4 d-flex h-100 flex-column" style="width: 18rem;">';
                         

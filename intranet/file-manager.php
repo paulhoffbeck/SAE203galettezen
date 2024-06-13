@@ -178,7 +178,7 @@ function SelectionContextMenuDetails($elementUID) {
         sharedData = <?= json_encode($sharedInitialesData) ?>;
         function loadSharedInterface(sharedDataLocal) {
             const sharedInterfaceDiv = document.getElementById('shared-interface');
-            fetch('./fonctions/limitedAccess/shared-interface.php', {
+            fetch('./fonctions/limitedAccess/js-shared-interface.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -196,7 +196,6 @@ function SelectionContextMenuDetails($elementUID) {
         function addMemberShare(caller, action) {
             let typeANDuid, permName, newState, data;
             let element = '<?= $elementUID ?>';
-
             if (action == 'add') {
                 typeANDuid = document.querySelector('#selecteurUserRole').value;
                 data = { action: action, typeANDuid: typeANDuid, element: element };
@@ -210,7 +209,7 @@ function SelectionContextMenuDetails($elementUID) {
                 data = { action: action, typeANDuid: typeANDuid, permName: permName, newState: newState, element: element };
             }
 
-            fetch('./fonctions/file-manager/js-shared-modifier.php', {
+            fetch('./fonctions/limitedAccess/js-shared-modifier.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
