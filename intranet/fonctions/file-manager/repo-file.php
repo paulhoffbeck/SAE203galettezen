@@ -1,23 +1,52 @@
 <?php
 $_ENV['FILE_REPOSITORY'] = "/var/repository/";
 
+function AllowAccessByHeritedPermissions($elementUID,$userUID,$roleUID){
+    $DB_files = loadJson('database/files.json');
+    if($elementUID === "racine" || $DB_files[$elementUID]['owner'] === $userUID || isset($DB_files[$elementUID]['share']['access']['public']) || isset($DB_files[$elementUID]['share']['access']['user-'.$userUID]) || isset($DB_files[$elementUID]['share']['access']['role-'.$roleUID])){
+        return true;
+    }elseif($DB_files[$elementUID]['share']['type'] === "herited"){
+        return AllowAccessByHeritedPermissions($DB_files[$elementUID]['parent_uid'],$userUID,$roleUID);
+    }
+    return false;
+}
+function listeTextePermissionsForPublic($permissions){
+    $textReturn = "";
+    if($permissions['type'] == 'public'){
+        $actions = [
+            'upload' => 'download',
+            'download' => "upload",
+            'perms' => "scale-balanced",
+            'rename' => "pencil",
+            'delet' => "trash-can"
+        ];
+        foreach ($actions as $action => $icon) {
+            $classes = in_array($action, $permissions['access']['public']) ? "text-azur" : "text-pastel";
+            $textReturn .= "<i class='fa-solid fa-$icon $classes'></i> ";
+        }
+    }
+    return $textReturn;
+}
+
 function loadJson($filename) {
     $data = file_get_contents($filename);
     return json_decode($data, true);
 }
-function saveJson($filename, $data) {
-    function compareByTypeAndName($a, $b) {
-        if ($a['type'] === 'folder' && $b['type'] !== 'folder') {
-            return -1;
-        } elseif ($a['type'] !== 'folder' && $b['type'] === 'folder') {
-            return 1;
+function saveJson($filename, $data, $sort = true) {
+    if($sort){
+        function compareByTypeAndName($a, $b) {
+            if ($a['type'] === 'folder' && $b['type'] !== 'folder') {
+                return -1;
+            } elseif ($a['type'] !== 'folder' && $b['type'] === 'folder') {
+                return 1;
+            }
+            return strcasecmp($a['name'], $b['name']);
         }
-        return strcasecmp($a['name'], $b['name']);
+        function sortArrayByTypeAndName(&$data) {
+            uasort($data, 'compareByTypeAndName');
+        }
+        sortArrayByTypeAndName($data);
     }
-    function sortArrayByTypeAndName(&$data) {
-        uasort($data, 'compareByTypeAndName');
-    }
-    sortArrayByTypeAndName($data);
     $jsonData = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($filename, $jsonData);
 }
@@ -103,6 +132,9 @@ if(isset($_POST['move_file_here'])){
         saveJson('database/files.json', $DB_files);
     }
     header('Location: ?path='.$_GET['path']);
+}
+if(isset($_POST['delet_element'])){
+    deletElement($_POST['delet_element']);
 }
 
 function Aff_Users_Options(){

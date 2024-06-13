@@ -44,10 +44,49 @@
                         <div class="card shadow-sm">
                             <img class="bd-placeholder-img card-img-top h-100" src="./img/user-card.png" alt="" width="100%">
                             <div class="card-body">
-                                <p class="card-text">Explorez l'interface intranet de GaleteZen de manière interactive en vous connectant avec nos utilisateurs de démonstration. Découvrez comment nos fonctionnalités peuvent répondre à vos besoins..</p>
+                                <p class="card-text">Explorez l'interface intranet de GaleteZen de manière interactive en vous connectant avec nos utilisateurs de démonstration. Découvrez comment nos fonctionnalités peuvent répondre à vos besoins.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="./users.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/clients.png" alt="" width="100%">
+                            <div class="card-body">
+                                <p class="card-text">Découvrez comment nous avons réaliser la page d'affichage des clients et toutes ses fonctionnalités.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="./clients.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/file-manager.png" alt="" width="100%">
+                            <div class="card-body">
+                                <p class="card-text">Le gestionnaire de fichiers est un outil qui permet de stocker et d'organiser des ressources de différents formats, accessibles depuis tous vos équipements, et de les partager facilement.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="./gestion-fichier.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/collaborateurs.png" alt="" width="100%">
+                            <div class="card-body">
+                                <p class="card-text">Découvrez comment nous avons réaliser la page d'affichage de nos employés/collaborateurs et toutes ses fonctionnalités.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="./collaborateur.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
                                     </div>
                                 </div>
                             </div>
