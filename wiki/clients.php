@@ -38,25 +38,25 @@
             </ul>
             <li>La langue parlé</li>
         </ul>
-        <h5>L'ajout d'utilisateur</h6>
+        <h5>L'ajout d'utilisateur</h5>
         Pour ajouter un utilisateur, nous utilisons un modal bootstrap. Un modal est une petite fenêtre qui s'ouvre directement sur la page actuelle afin d'y afficher n'importe quelle type d'information.<br>
         Dans le corps du modal nous intégrons un formulaire avec tous les champs qui sont ceux afficher dans le tableau.<br>
         Nous ajoutons un petit bouton d'envoi qui transmet ce formulaire pour traiter l'ajout.<br>
         <br>
-        <h5>La modification d'un utilisateur</h6>
+        <h5>La modification d'un utilisateur</h5>
         Pour la modification d'un utilisateur nous reprenons le même model que pour l'ajout, c'est à dire le modal. Nous créons un modal à l'aide du foreach pour chaque client en fonction de son uid.<br>
         Lorsque nous sélectionnons un profil de client pour le modifier, l'uid du client est envoyer et c'est ce modal en fonction des caractéristique du client qui est afficher.<br>
         Nous reprenons le format du formulaire de création mais inserons dans les champs "value" les informations du clients pour quelles soit modifier si nécessaire.<br>
         Lors du renvoi de ce formulaire toutes les informations sont récupérées et ré-écrites dans le fichier json en remplacement des anciennes.
         <br>
         <br>
-        <h5>La suppression d'un utilisateur</h6>
+        <h5>La suppression d'un utilisateur</h5>
         Pour la suppression, la procédure est toute simple. Nous avons créer une fonction (aussi utilisé pour les partenaires) qui supprime toutes les informations en fonction de l'uid envoyer.<br>
         Lorsque nous appuyons sur le bouton de suppression, un formuliare en méthode POST est envoyé avec comme paramètre l'uid du client. 
         Sur la page client, si une variable "$_POST" avec le nom de suppression est détecté, la fonction de suppression est appelé. La fonction supprime toutes les informations en fonction de l'uid à l'aide de l'outil "unset()".
         <br>
         <br>
-        <h5>Le téléchargement de la fiche client</h6>
+        <h5>Le téléchargement de la fiche client</h5>
         Dans le cahier des charges, nous devions créer une fonctionnalité pour télécharger une fiche client. Pour cela, nous avons créé une page annexe qui est appelé pour un bouton et qui envoie en méthode GET l'uid du client.<br>
         La fonction de téléchargement récupère l'uid et créer un tableau avec ces informations là. Puis à la fin de la page un script javascript est appelé pour "imprimé" la page actuelle via "window.print()".<br>
         Cela permet de télécharger ou d'imprimé la page avec les informations du client. Finalement un header effectue un renvoie automatique sur la page de base avec le tableau. 
