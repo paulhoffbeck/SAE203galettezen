@@ -48,10 +48,11 @@ function  navbar(){ ?>
                 <?php endif;
                 if(hasPermission("modo","liste-role")): ?>
                   <li><a class="dropdown-item" href="role.php">Rôles</a></li>
+                <?php endif;
+                if(hasPermission("modo","create-user")): ?>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="create-user.php">Créer un compte</a></li>
                 <?php endif; ?>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="settings.php">Réglages</a></li>
-                <li><a class="dropdown-item" href="create-user.php">Créer un compte</a></li>
               </ul>
             </li>
           <?php endif;
