@@ -35,6 +35,11 @@
         soit il va chercher dans le ficher collaborateur.json afin de trier la ou les valeur(s) voulu. Cette condition est vérifier par un simple "if".<br>
         Par défaut, si aucun filtre n'est envoyer, tous les collaborateurs sont affichés.
         <br>
+        <h5>Informations</h6>
+        Nous avons créé un modal afin de connaitre les informations plus précise des collaborateurs. Comme pour la page client, nous créons un modal pour chaque collaborateur en fonction de l'uid.
+        Lorsque nous appuyons sur un bouton d'un collaborateur, le modal avec les informations de celui ci est affiché avec les mêmes paramètres que le tableau en plus visible. 
+        Par exemple la photo de profil est plus visible que dans le tableau.
+        <br>
 
         </div>
     </main>

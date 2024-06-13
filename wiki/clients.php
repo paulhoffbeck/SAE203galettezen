@@ -43,7 +43,6 @@
         Dans le corps du modal nous intégrons un formulaire avec tous les champs qui sont ceux afficher dans le tableau.<br>
         Nous ajoutons un petit bouton d'envoi qui transmet ce formulaire pour traiter l'ajout.<br>
         <br>
-        <br>
         <h5>La modification d'un utilisateur</h6>
         Pour la modification d'un utilisateur nous reprenons le même model que pour l'ajout, c'est à dire le modal. Nous créons un modal à l'aide du foreach pour chaque client en fonction de son uid.<br>
         Lorsque nous sélectionnons un profil de client pour le modifier, l'uid du client est envoyer et c'est ce modal en fonction des caractéristique du client qui est afficher.<br>
