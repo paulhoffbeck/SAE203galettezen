@@ -44,13 +44,13 @@ function footer() {
             <section>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">A propos</h5>
+                        <h5 class="text-uppercase">À propos</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Qui sommes-nous ?</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="about.php">Qui sommes-nous ?</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Notre Histoire</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="history.php">Notre Histoire</a>
                             </li>
                         </ul>
                     </div>
@@ -58,13 +58,13 @@ function footer() {
                         <h5 class="text-uppercase">Nos Produits</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Galettes Saucisses</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="activity.php">Galettes Saucisses</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Galettes</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="activity.php">Galettes</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Crêpes</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="activity.php">Crêpes</a>
                             </li>
                         </ul>
                     </div>

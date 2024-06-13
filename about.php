@@ -25,8 +25,9 @@ include './fonctions/functions.php';
                         <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
                     </button>        
             <div class="d-flex align-items-center">
+                    <a href="index.php"> 
                         <img src="./intranet/img/logo.png" alt="logo" style="width: 80px;">
-                        
+                    </a>                        
             </div>
             </div>
             <div class="text-center">
