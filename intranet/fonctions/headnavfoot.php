@@ -29,11 +29,11 @@ function  navbar(){ ?>
               <a class="nav-link text-white" href="clients.php">Clients</a>
             </li>
           <?php endif;
-          if(hasPermission("modo","manage-partenaires")): ?>
+           ?>
             <li class="nav-item">
               <a class="nav-link text-white" href="partenaire.php">Partenaires</a>
             </li>
-          <?php endif;
+          <?php
           if(hasPermission("general","page-collaborateur")): ?>
             <li class="nav-item">
               <a class="nav-link text-white" href="collaborateur.php">Collaborateurs</a>
