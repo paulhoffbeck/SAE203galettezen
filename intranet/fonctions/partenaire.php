@@ -278,7 +278,7 @@ echo'</div>
         if ($test == false){
             $imagePath = '';
             if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK){
-                $Dir = '/img/parter/';
+                $Dir = 'img/parter/';
                 $fichier = $uid.".png";
                 changeImage($Dir,$fichier);
             }
