@@ -43,7 +43,18 @@
                     <a class="nav-link" href="collaborateur.php">Collaborateurs</a>
                 </li>
                 <li class="nav-item">
+
                     <a class="nav-link" href="partenaires.php">Partenaires</a>
+                </li>
+              <li>
+                    <a class="nav-link" href="roles.php">Rôles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gestion-users.php">Gestion Membres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vitrine.php">Vitrine</a>
+
                 </li>
             </ul>
         </div>
