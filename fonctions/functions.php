@@ -44,13 +44,13 @@ function footer() {
             <section>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">A propos</h5>
+                        <h5 class="text-uppercase">À propos</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Qui sommes-nous ?</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="about.php">Qui sommes-nous ?</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Notre Histoire</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="history.php">Notre Histoire</a>
                             </li>
                         </ul>
                     </div>
@@ -58,13 +58,13 @@ function footer() {
                         <h5 class="text-uppercase">Nos Produits</h5>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Galettes Saucisses</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="activity.php">Galettes Saucisses</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Galettes</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="activity.php">Galettes</a>
                             </li>
                             <li>
-                                <a class="text-body text-crue text-decoration-none link-light" href="#!">Crêpes</a>
+                                <a class="text-body text-crue text-decoration-none link-light" href="activity.php">Crêpes</a>
                             </li>
                         </ul>
                     </div>
@@ -83,15 +83,20 @@ function footer() {
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Tous droits réservés</h5>
+                        <h5 class="text-uppercase">Nous contacter</h5>
                         <ul class="list-unstyled mb-0">
-                            <li>
-                                <a class="text-body text-crue text-decoration-none link-light">Galetezen Enterprise ©</a>
-                            </li>
-                            </li>
+                            <li><i class="fas fa-envelope"></i> contact@galetezen.com </li>
+                            <li><i class="fas fa-phone"></i> 02 99 84 12 35 </li>
+                            
+                            
                         </ul>
                     </div>
                     
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="text-center text-crue">© GaleteZen Entreprise - Tous droits réservés</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -119,6 +124,7 @@ function traitementcontact(){
     $data[$uid] = $nouveaucontact;
     $newjson = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents('./intranet/database/contactlist.json', $newjson);
+    echo "<script type='text/javascript'>alert('Envoie Confirmé');</script>";
 }
 
 
@@ -136,5 +142,5 @@ function traitementcontact(){
     </script>
 
 <?php
-require_once("partenaires.php");
+require_once("./fonctions/partenaires.php");
 ?>

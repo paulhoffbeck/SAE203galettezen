@@ -18,6 +18,10 @@ hasPermission("general","page-collaborateur",true);
 alreadylogin();
 head();
 navbar();
+if(isset($_POST['elementasup'])){
+  supprimer($_POST['elementasup']);
+}
+
 
 client();
 
