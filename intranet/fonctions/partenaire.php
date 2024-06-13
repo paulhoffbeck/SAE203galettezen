@@ -244,7 +244,7 @@ function ajoutpart(){
         <div class="modal-body p-3">';
 
 
-    echo("<form method='POST'><input placeholder='nom' name='nom' class='form-control mb-3' required>");
+    echo("<form method='POST' enctype='multipart/form-data'><input placeholder='nom' name='nom' class='form-control mb-3' required>");
     echo("<input type='checkbox' name='fournisseur'><label for='fournisseur' class='mb-3'>fournisseur </label> <br>");
     echo("<input type='checkbox' name='montrer' class='mb-3' checked><label for='montrer'>montrer</label>");
     echo("<input type='file' name='image' class='form-control  mb-3' accept='image/*'>");
@@ -278,7 +278,7 @@ echo'</div>
         if ($test == false){
 
             if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK){
-                $Dir = 'img/parter/';
+                $Dir = './img/parter/';
                 $fichier = $_POST["cle"].".png";
                 changeImage($Dir,$fichier);
             }
