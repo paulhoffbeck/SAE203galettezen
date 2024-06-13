@@ -56,6 +56,10 @@
                     <a class="nav-link" href="vitrine.php">Vitrine</a>
 
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="permissions.php">Permissions</a>
+
+                </li>
             </ul>
         </div>
     </div>
