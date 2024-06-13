@@ -34,6 +34,9 @@
                     <a class="nav-link" href="users.php">Utilisateurs</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="gestion-fichier.php">Fichiers</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="clients.php">Clients</a>
                 </li>
                 <li class="nav-item">
