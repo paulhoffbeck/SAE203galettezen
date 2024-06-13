@@ -60,7 +60,7 @@
                                 <p class="card-text">Le gestionnaire de fichiers est un outil qui permet de stocker et d'organiser des ressources de différents formats, accessibles depuis tous vos équipements, et de les partager facilement.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="./file-manager.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
+                                        <a href="./gestion-fichier.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
                                     </div>
                                 </div>
                             </div>
