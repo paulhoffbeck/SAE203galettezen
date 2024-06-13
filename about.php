@@ -1,6 +1,6 @@
 
 <?php
-include './fonctions/functions.php';
+require_once('fonctions/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">

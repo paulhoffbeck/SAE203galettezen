@@ -6,9 +6,6 @@ function partenaires(){
 
     echo("<div class=\"container mt-5\">
     <div class='row'>");
-
-
-    
     foreach($partTable as $key => $value){
         if ($value["montrer"]=="oui") {
         echo("<div class=\"col-3 mb-4\">
@@ -19,8 +16,8 @@ function partenaires(){
                         <h5 class=\"card-title border-top pt-2\">".$value["nom"]."</h5>
 
                         <p class=\"card-text\">".$value["description"]."</p>
-                        <a href=\"".$value["lien"]."\" class=\"btn btn-moutarde mt-auto\">visiter</a>
                     </div>
+                    <div class=\"cart-footer text-center\"><a href=\"".$value["lien"]."\" class=\"btn btn-moutarde mt-auto\">visiter</a></div>\"
                 </div>
             </div>
             ");

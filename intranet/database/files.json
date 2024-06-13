@@ -41,5 +41,15 @@
         "share": {
             "type": "private"
         }
+    },
+    "6669de74848ff": {
+        "name": "Fiches de Commandes.pdf",
+        "parent_uid": "racine",
+        "type": "file",
+        "owner": "6659953053cfa",
+        "size": 157848,
+        "share": {
+            "type": "private"
+        }
     }
 }

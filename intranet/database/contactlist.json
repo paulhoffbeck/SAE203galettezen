@@ -1,51 +1,37 @@
 {
-    "1": {
-        "nom": "Hilfberg",
-        "mail": "g.hilfberg@manger.com",
+    "66684dd5edebd": {
+        "nom": "michel",
+        "mail": "michel@sardou.fr",
+        "sujet": "Les lacs du connemara",
+        "message": "Terre br\u00fbl\u00e9e au vent, des landes de pierres\r\nAutour des lacs, c&#39;est pour les vivants\r\nUn peu d&#39;enfer, le Connemara\r\n",
+        "date": "11\/06\/2024"
+    },
+    "66684eabdbb4a": {
+        "nom": "Jean Claude Van Damn",
+        "mail": "Jcvd@jcvd.com",
+        "sujet": "Plus d&#39;eau dans 20-30 ans",
+        "message": "J&#39;adore l&#39;eau, dans 20-30 ans y en aura plus.",
+        "date": "11\/06\/2024"
+    },
+    "66684efe04fb7": {
+        "nom": "Melissandre",
+        "mail": "melissandre@mcdonald.fr",
         "sujet": "Grosse commande",
-        "message": "Bonjour, j'ai extr\u00eamement faim, est-il possible de m'envoyer 100 000 tonnes de cr\u00eapes pour demain ? Merci !",
-        "date": "2024-06-10"
+        "message": "Bonjour, j&#39;aurais besoin d&#39;une commande exceptionnelle de 100 000 tonnes de cr\u00eapes (PS : Il y avait que 4 paquets de chips)",
+        "date": "11\/06\/2024"
     },
-    "2": {
-        "nom": "Dupont",
-        "mail": "dupont@example.com",
-        "sujet": "Demande d'information",
-        "message": "Bonjour, pourriez-vous m'envoyer des informations sur vos services de livraison ? Merci d'avance.",
-        "date": "2024-06-09"
+    "66684fee4ee09": {
+        "nom": "Shrek",
+        "mail": "Shrek@marais.com",
+        "sujet": "All Star",
+        "message": "Somebody once told me the world is gonna roll me\r\nI ain&#39;t the sharpest tool in the shed\r\nShe was looking kind of dumb with her finger and her thumb\r\nIn the shape of an &#39;L&#39; on her forehead",
+        "date": "11\/06\/2024"
     },
-    "4": {
-        "nom": "Garcia",
-        "mail": "garcia@example.com",
-        "sujet": "Demande de partenariat",
-        "message": "Bonjour, je repr\u00e9sente une entreprise int\u00e9ress\u00e9e par un partenariat avec la v\u00f4tre. Serait-il possible d'organiser une r\u00e9union pour discuter des d\u00e9tails ?",
-        "date": "2024-06-07"
-    },
-    "5": {
-        "nom": "Martin",
-        "mail": "martin@example.com",
-        "sujet": "Demande de devis",
-        "message": "Bonjour, je souhaiterais obtenir un devis pour la livraison de produits alimentaires pour notre \u00e9v\u00e9nement annuel. Merci.",
-        "date": "2024-06-06"
-    },
-    "6": {
-        "nom": "Lefevre",
-        "mail": "lefevre@example.com",
-        "sujet": "Suggestion",
-        "message": "Bonjour, j'ai une suggestion pour am\u00e9liorer votre service de livraison. Serait-il possible d'en discuter avec un responsable ?",
-        "date": "2024-06-05"
-    },
-    "7": {
-        "nom": "Kumar",
-        "mail": "kumar@example.com",
-        "sujet": "Probl\u00e8me technique",
-        "message": "Bonjour, j'ai rencontr\u00e9 un probl\u00e8me technique lors de ma derni\u00e8re commande en ligne. Pouvez-vous m'aider ?",
-        "date": "2024-06-04"
-    },
-    "8": {
-        "nom": "Li",
-        "mail": "li@example.com",
-        "sujet": "Feedback",
-        "message": "Bonjour, je voudrais donner un feedback positif sur la qualit\u00e9 de vos produits. Merci pour le bon service.",
-        "date": "2024-06-03"
+    "66685050974f7": {
+        "nom": "G\u00e9n\u00e9ration R&T",
+        "mail": "generation.rt@gmail.com",
+        "sujet": "Partenariat RDD",
+        "message": "Bonjour, votre entreprise est un moteur du secteur malouin, c&#39;est pour cela que nous vous proposons un partenariat pour notre remise des dipl\u00f4mes.\r\nEn attente de votre r\u00e9ponse",
+        "date": "11\/06\/2024"
     }
 }
