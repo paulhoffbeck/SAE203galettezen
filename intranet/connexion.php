@@ -25,7 +25,6 @@ footer();
 <script>
   function viewinput(input){
     var input = document.getElementById(input);
-    console.log(input);
     if (input.type == "password") {
       input.type = "text";
     } else {
