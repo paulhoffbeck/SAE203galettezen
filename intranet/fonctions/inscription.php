@@ -81,18 +81,21 @@ function inscriptionFormulaire(){
                             <label for=\"nom\">Nom :</label>
                             <input type=\"text\" class=\"form-control\" id=\"nom\" name=\"nom\" required>
                         </div>
-                        <div class=\"form-group mt-2\">
+                        <div class=\"form-group mt-2 mb-2\">
                             <label for=\"email\">Email :</label>
                             <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" required>
                         </div>
-                        <div class=\"form-group mt-2\">
-                            <label for=\"password\">Mot de passe :</label>
-                            <input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" required>
+                        <label for=\"input-password\">Mot de passe :</label>
+                        <div class=\"input-group mb-3\">
+                            <input type=\"password\" class=\"form-control\" id=\"input-password\" name=\"password\" required>
+                            <span class=\"input-group-text\" onclick=\"viewinput('input-password')\"><i class=\"fa fa-eye\" aria-hidden=\"true\"></i></span>
                         </div>
-                        <div class=\"form-group mt-2\">
-                            <label for=\"password\">Confirmation de Mot de passe :</label>
-                            <input type=\"password\" class=\"form-control\" id=\"cpassword\" name=\"cpassword\" required>
+                        <label for=\"input-cpassword\">Confirmation de Mot de passe :</label>
+                        <div class=\"input-group\">
+                            <input type=\"password\" class=\"form-control\" id=\"input-cpassword\" name=\"cpassword\" required>
+                            <span class=\"input-group-text\" onclick=\"viewinput('input-cpassword')\"><i class=\"fa fa-eye\" aria-hidden=\"true\"></i></span>
                         </div>
+                        <small class=\"text-danger d-none\" id=\"diff-mdp\">Les mots de passes doivents être identiques.</small>
                         <div class=\"form-check form-switch mt-3\">
                           <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" name=\"needDomaine\" value=\"true\" checked>
                           <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">[DEMO] Imposer le domaine @galetezen.com</label>
@@ -133,17 +136,20 @@ function adminInscriptionFormulaire(){
                             <label for=\"nom\">Nom :</label>
                             <input type=\"text\" class=\"form-control\" id=\"nom\" name=\"nom\" required>
                         </div>
-                        <div class=\"form-group mt-2\">
+                        <div class=\"form-group mt-2 mb-2\">
                             <label for=\"email\">Email :</label>
                             <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" required>
                         </div>
-                        <div class=\"form-group mt-2\">
-                            <label for=\"password\">Mot de passe :</label>
-                            <input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" required>
+                        <label for=\"input-password\">Mot de passe :</label>
+                        <div class=\"input-group\">
+                            <input type=\"password\" class=\"form-control\" id=\"input-password\" name=\"password\" required>
+                            <span class=\"input-group-text\" onclick=\"viewinput('input-password')\"><i class=\"fa fa-eye\" aria-hidden=\"true\"></i></span>
                         </div>
-                        <div class=\"form-group mt-2\">
-                            <label for=\"password\">Confirmation de Mot de passe :</label>
-                            <input type=\"password\" class=\"form-control\" id=\"cpassword\" name=\"cpassword\" required>
+                        <small class=\"text-danger d-none\" id=\"diff-mdp\">Les mots de passes doivents être identiques.</small>
+                        <label for=\"input-cpassword\">Confirmation de Mot de passe :</label>
+                        <div class=\"input-group mb-3 mt-3\">
+                            <input type=\"password\" class=\"form-control\" id=\"input-cpassword\" name=\"cpassword\" required>
+                            <span class=\"input-group-text\" onclick=\"viewinput('input-cpassword')\"><i class=\"fa fa-eye\" aria-hidden=\"true\"></i></span>
                         </div>
                         <center><button type=\"submit\" name=\"register\" class=\"btn btn-azur mt-3\"><i class=\"fa-solid fa-paper-plane\"></i> Créer le compte</button></center>
                     </form>
