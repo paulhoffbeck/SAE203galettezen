@@ -76,7 +76,7 @@ function traitementUserValidation($uid){
         }
     }
     $visible = "";
-    if($data[$uid]['visibilite'] === true){
+    if(isset($data[$uid]['visibilite']) && $data[$uid]['visibilite'] === true){
         $visible = "checked";
     }
     $interface .= "
