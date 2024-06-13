@@ -12,8 +12,8 @@ if(isset($_SESSION['uid'])){
 function collaborateur(){
 
     // Barre du filte
-        $json = file_get_contents('./database/role.json');
-        $roles = json_decode($json, true);
+    $json = file_get_contents('./database/role.json');
+    $roles = json_decode($json, true);
     echo '<div class="container-fluid mb-5">
     <h1 class="my-4">Liste de nos collaborateurs</h1>
     <div class="table-responsive">
@@ -46,7 +46,7 @@ function collaborateur(){
         </thead>
     <tbody>';
 
-    // Condition pour les traitement
+    // Condition pour les traitements
     $json = file_get_contents('./database/user.json');
     $donnee = json_decode($json, true);
 
@@ -67,7 +67,7 @@ function collaborateur(){
                     echo '<td> <img src="./img/collaborateur/pasdepp.png" width="28px"> </td>';} 
                 echo '</td>
                 <td>'. $user['nom'].'</td>
-                <td>'. $user['prenom'].'</td> 
+                <td>'. $user['prenom'].'</td>
                 <td>'. getRoleName($user['role_uid']) .'<br><small>'. $user['poste'].'</small></td>
                 <td><a href="mailto:'. $user['email'].'">'. $user['email'].'</a></td> 
                 <td>'.$user['telephone'].'</td>
