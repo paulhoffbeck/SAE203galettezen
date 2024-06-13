@@ -276,10 +276,10 @@ echo'</div>
         }
 
         if ($test == false){
-            $imagePath = '';
+
             if(isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK){
                 $Dir = 'img/parter/';
-                $fichier = $uid.".png";
+                $fichier = $_POST["cle"].".png";
                 changeImage($Dir,$fichier);
             }
 
@@ -290,7 +290,7 @@ echo'</div>
                 "fournisseur" => isset($_POST["fournisseur"]) ? true : false,
                 "nom" => $_POST["nom"]
             );
-            $donnee[$uid] = $data;
+            $donnee[$_POST["cle"]] = $data;
         }
         
         $file = json_encode($donnee, JSON_PRETTY_PRINT);
