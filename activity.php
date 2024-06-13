@@ -56,18 +56,16 @@ require_once('fonctions/functions.php');
                     <div class="col-md-3">
                         <div class="card mb-4 h-100 d-flex flex-column">
                             <img src="./intranet/img/sitevitrine/galettesaucisse.jpeg" class="card-img-top" alt="test">
-<<<<<<< HEAD
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <div>
                                     <h5 class="card-title text-center">Nos galettes saucisses</h5>
                                     <p class="card-text text-center">Imaginez-vous croquer dans une galette saucisse, où la galette de sarrasin légèrement grillée enveloppe une saucisse parfaitement assaisonnée, accompagnée d'une pointe de moutarde Amora à l'ancienne. Une explosion de saveurs bretonnes qui éveillera tous vos sens !</p>
                                 </div>
                                 <a href="https://fr.wikipedia.org/wiki/Galette-saucisse" class="btn btn-ketchup mt-auto align-self-center">Déguster ma galette saucisse</a>
-=======
+
                             <div class="card-body">
                                 <h5 class="card-title">Nos galettes saucisses</h5>
                                 <p class="card-text">Imaginez-vous croquer dans une galette saucisse, où la galette de sarrasin légèrement grillée enveloppe une saucisse parfaitement assaisonnée, accompagnée d'une pointe de moutarde Amora à l'ancienne. Une explosion de saveurs bretonnes qui éveillera tous vos sens !</p>
->>>>>>> d5608134210845be98807ab12987e7dc5aa9ceb5
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn btn-ketchup text-center">Déguster ma galette saucisse</a>
@@ -75,14 +73,12 @@ require_once('fonctions/functions.php');
                         </div>
                     </div>    
                     <div class="col-md-3">
-<<<<<<< HEAD
                         <div class="card mb-4 h-100 d-flex flex-column">
                             <img src="./intranet/img/sitevitrine/crepes.jpeg" class="card-img-top" alt="test">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <div>
                                     <h5 class="card-title text-center">Nos crêpes</h5>
                                     <p class="card-text text-center">Savourez des crêpes bretonnes, fines et délicatement dorées, garnies de beurre fondant et de sucre, ou encore d'un caramel au beurre salé maison. Un véritable délice qui vous transporte au cœur de la Bretagne à chaque bouchée !</p>
-=======
                         <div class="card mb-4 h-100">
                                 <img src="./intranet/img/sitevitrine/crepes.jpeg" class="card-img-top" alt="test">
                                 <div class="card-body">
@@ -91,21 +87,20 @@ require_once('fonctions/functions.php');
                                 </div>
                                 <div class="card-footer">
                                 <a href="#" class="btn btn-ketchup text-center">Déguster ma crêpe</a>
->>>>>>> d5608134210845be98807ab12987e7dc5aa9ceb5
                                 </div>
                                 <a href="https://fr.wikipedia.org/wiki/Cr%C3%AApe_bretonne" class="btn btn-ketchup mt-auto align-self-center">Déguster ma crêpe</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
-<<<<<<< HEAD
+
                         <div class="card mb-4 h-100 d-flex flex-column"> 
                             <img src="./intranet/img/sitevitrine/caramel.jpeg" class="card-img-top" alt="test">
                             <div class="card-body d-flex flex-column justify-content-between"> 
                                 <div>
                                     <h5 class="card-title text-center">Notre caramel</h5>
                                     <p class="card-text text-center">Laissez-vous séduire par l'onctuosité du caramel au beurre salé, une symphonie de saveurs sucrées et salées qui enrobe délicieusement vos papilles, vous transportant dans un tourbillon de gourmandise à chaque dégustation.</p>
-=======
+
                         <div class="card mb-4 h-100">
                                 <img src="./intranet/img/sitevitrine/caramel.jpeg" class="card-img-top" alt="test">
                                 <div class="card-body">
@@ -114,7 +109,7 @@ require_once('fonctions/functions.php');
                                 </div>
                                 <div class="card-footer">
                                 <a href="#" class="btn btn-ketchup text-center">Déguster mon caramel</a>
->>>>>>> d5608134210845be98807ab12987e7dc5aa9ceb5
+
                                 </div>
                                 <a href="https://fr.wikipedia.org/wiki/Caramel_au_beurre_sal%C3%A9" class="btn btn-ketchup mt-auto align-self-center">Goûter notre Caramel</a> 
                             </div>
