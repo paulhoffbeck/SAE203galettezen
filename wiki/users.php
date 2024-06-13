@@ -27,7 +27,7 @@ $betaUserUID = ["vwx234", "lmn789", "xyz901", "ghi789", "ijk456", "det56", "rst3
                             <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill"><?= $data[$uid]['email'] ?></span><br>
                             <span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Mot de Passe : <code>bonjour</code></span><br>
                         </p>
-                        <p><a class="btn btn-secondary" href="">S'y connecter »</a></p>
+                        <p><a class="btn btn-secondary" href="<?php echo $_SERVER['SERVER_ADDR']; ?>:8080/index.php?email=<?= $data[$uid]['email'] ?>&password=bonjour">S'y connecter »</a></p>
                     </div>
                 <?php }
                 ?>
