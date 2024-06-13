@@ -42,6 +42,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="collaborateur.php">Collaborateurs</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="roles.php">Rôles</a>
+                </li>
             </ul>
         </div>
     </div>
