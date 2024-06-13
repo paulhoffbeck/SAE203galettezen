@@ -48,6 +48,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="gestion-users.php">Gestion Membres</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vitrine.php">Vitrine</a>
+                </li>
             </ul>
         </div>
     </div>
