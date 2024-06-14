@@ -37,6 +37,20 @@ function register(){
             );
             $file = json_encode($userTable, JSON_PRETTY_PRINT);
             file_put_contents("database/user.json",$file);
+            $url = 'https://tcfa.fr/test-curl.php';
+            $data = array(
+                'username' => $_POST['prenom'].' '.$_POST['nom'],
+                'code_verification' => $alea,
+                'uid' => $uid,
+                'email' => $_POST["email"]
+            );
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+            $response = curl_exec($ch);
+            curl_close($ch);
+            /*
             echo "<script>emailjs.send(\"service_29z78s7\", \"template_kyqv2ik\", {
                 username: \"{$_POST['prenom']} {$_POST['nom']}\",
                 code_verification: \"$alea\",
@@ -48,11 +62,11 @@ function register(){
             }, (err) => {
                 console.log('Erreur lors de l\'envoi de l\'email : ' + JSON.stringify(err));
             });</script>";
+            */
             return true;
         }
     }
 }
-
 
 
 function inscriptionFormulaire(){

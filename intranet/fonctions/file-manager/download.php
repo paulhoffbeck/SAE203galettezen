@@ -23,7 +23,6 @@ function downloaderRessource($elementUID){
     if(isset($DB_files[$elementUID]) && $DB_files[$elementUID]['type'] == 'file' && FindPermissions($elementUID,$_SESSION['uid'],$_SESSION['role_uid'],'download')){
         $file = $_ENV['FILE_REPOSITORY'] . $elementUID;
         $downloadFileName = $DB_files[$elementUID]['name'];
-        var_dump(file_exists($file));
         if (file_exists($file)) {
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
