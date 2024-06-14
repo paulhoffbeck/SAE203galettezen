@@ -88,11 +88,6 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="./partenaires.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
-
-                                      
-                                      
-                                      
-                                      
                                     </div>
                                 </div>
                             </div>
@@ -132,6 +127,19 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="./permissions.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">                                      
+                            <img class="bd-placeholder-img card-img-top h-100" src="./img/mail.png" alt="" width="100%">
+                            <div class="card-body">
+                                <p class="card-text">Découvrez comment nous avons réaliser les envoie de mail sur notre site web grace a l'api emailjs</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="./mail.php" class="btn btn-sm btn-outline-secondary">Consulter</a>
                                     </div>
                                 </div>
                             </div>

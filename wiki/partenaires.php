@@ -12,7 +12,7 @@
     <main>
         <div class="container marketing mt-5">
         
-        <h5> La page partenaires permet d'afficher tous les partenaires de notre entreprise. elle contient les fonctions suivantes : </h5> 
+        <h3> La page partenaires permet d'afficher tous les partenaires de notre entreprise. elle contient les fonctions suivantes : </h3> 
         <ul>
             <li>Le tableau de présentation des partenaires</li>
             <li>Un filtre de recherche</li>
@@ -21,21 +21,21 @@
             <li>La fonctionnalité pour supprimer des partenaires</li>
         </ul>
 
-        <h3>le tableau</h3>
+        <h5>le tableau</h5>
         Le tableau fonctionne avec une boucle foreach() qui, en fonction des permissions de l'utilisateur va soi afficher un tableau basique, soi afficher un tableau avec chaque ligne etant un formulaire. 
         la fonction partenaire($tab) prend en paramettre une array qu'il affichera ensuite sous forme de tableau.
         <br>
-        <h3>la recherche par nom</h3>
+        <h5>la recherche par nom</h5>
         la recherche par nom se fait grace a une boucle foreach() qui elle meme  contient une boucle for(). Elle vient tester pour tous les noms toutes les suites de caracteres qui ont la meme longueur que la chaine rechercher.
         la fonction affiche() va decider d'afficher ce tableau dans dans la fonction partenaires au lieu du tableau en entier.
         <br>
-        <h3>modification de partenaires</h3>
+        <h5>modification de partenaires</h5>
         Pour modifier les partenaires, nous utilisons un formulaire pour les personnes ayant les droits de modification. en effet, nous allons recuperer l'id du partenaire et venir modifier ses informations dans le fichier json. Pour la modification d'image, nous utilisons la fonction changeImage() que nous avons creer et nous utilisons la variable $_FILES pour enregister les fichiers.
         <br>
-        <h3>La fonctionnalité pour ajouter des partenaires</h3>
+        <h5>La fonctionnalité pour ajouter des partenaires</h5>
         Pour ajouter un partenaire, nous avons creer un modal qui contient un formulaire et qui vient tester par le nom si un partenaire existe deja Sinon, il l'ajoute dans la base de donnée et si une image est donnée, il va l'enregister dans le dossier img/parter.
         <br>
-        <h3>La fonctionnalité pour supprimer des partenaires</h3>
+        <h5>La fonctionnalité pour supprimer des partenaires</h5>
         Pour supprimer un partenaire, nous creons un formulaire qui ne contient que un bouton et a pour champ caché l'id du partenaire.
 
 
